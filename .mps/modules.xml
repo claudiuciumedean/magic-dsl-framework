@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/Deployment/Deployment.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/Microservice/Microservice.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/MicroserviceDSL.build/MicroserviceDSL.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/MicroserviceSandbox/MicroserviceSandbox.msd" folder="" />
+    </projectModules>
+  </component>
+</project>

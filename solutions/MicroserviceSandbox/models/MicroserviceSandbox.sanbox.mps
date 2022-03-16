@@ -65,6 +65,7 @@
         <property id="8568306897850702782" name="route" index="1U0Mo4" />
         <child id="8414754229339498052" name="data" index="je10B" />
         <child id="6302204855854753571" name="errorMessage" index="1hwKFe" />
+        <child id="6302204855855013636" name="successMessage" index="1hzNbD" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -101,6 +102,9 @@
       </node>
       <node concept="1hBKNC" id="5tPVuO6VXnS" role="1hBKNI" />
       <node concept="1hBKNF" id="5tPVuO6Wbxg" role="1hAkf$" />
+      <node concept="1hBKNE" id="5tPVuO71wwH" role="1hzNbD">
+        <property role="1hAwxF" value="Customer created succesfully" />
+      </node>
     </node>
     <node concept="1U0Mo6" id="5tPVuO6WreL" role="1a5GJw">
       <property role="1U0Mo4" value="/customers" />
@@ -138,6 +142,9 @@
       <node concept="1hBKNE" id="5tPVuO6XZnz" role="1hwKFe">
         <property role="1hAwxF" value="No customer found with the provided id" />
       </node>
+      <node concept="1hBKNE" id="5tPVuO71wwJ" role="1hzNbD">
+        <property role="1hAwxF" value="Customer updated succesfully" />
+      </node>
     </node>
     <node concept="1U0Mo6" id="5tPVuO6YfsU" role="1a5GJw">
       <property role="1U0Mo4" value="/customer" />
@@ -147,11 +154,11 @@
         <ref role="1yCgEW" node="1xSoLHEUDlV" resolve="customers" />
       </node>
       <node concept="1hBKNF" id="5tPVuO6Yftt" role="1hwsOj" />
-      <node concept="1hBKNE" id="5tPVuO6Yfu_" role="1hAkf$">
-        <property role="1hAwxF" value="Successfully deleted the customer" />
-      </node>
       <node concept="1hBKNE" id="5tPVuO6YfuB" role="1hwKFe">
         <property role="1hAwxF" value="No customer found with the provided id" />
+      </node>
+      <node concept="1hBKNE" id="5tPVuO6ZlRX" role="1hzNbD">
+        <property role="1hAwxF" value="Successfully deleted the customer" />
       </node>
     </node>
     <node concept="1MBK3g" id="1xSoLHEUDlV" role="1MBK3h">

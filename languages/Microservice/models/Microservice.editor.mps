@@ -268,12 +268,23 @@
           </node>
         </node>
         <node concept="3F0ifn" id="5tPVuO6XIrb" role="3EZMnx">
-          <property role="3F0ifm" value="with error message" />
+          <property role="3F0ifm" value="with success message" />
         </node>
         <node concept="3F1sOY" id="5tPVuO6XItr" role="3EZMnx">
+          <ref role="1NtTu8" to="b4dw:5tPVuO6YHW4" resolve="successMessage" />
+        </node>
+        <node concept="3F0ifn" id="5tPVuO6XIrt" role="3EZMnx">
+          <node concept="ljvvj" id="5tPVuO6YHXY" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="5tPVuO6YHYD" role="3EZMnx">
+          <property role="3F0ifm" value="and reporting error message" />
+        </node>
+        <node concept="3F1sOY" id="5tPVuO6YHZj" role="3EZMnx">
           <ref role="1NtTu8" to="b4dw:5tPVuO6XIsz" resolve="errorMessage" />
         </node>
-        <node concept="3F0ifn" id="5tPVuO6XIrt" role="3EZMnx" />
+        <node concept="3F0ifn" id="5tPVuO6YHZZ" role="3EZMnx" />
         <node concept="ljvvj" id="4qZeZ7u1$aW" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>

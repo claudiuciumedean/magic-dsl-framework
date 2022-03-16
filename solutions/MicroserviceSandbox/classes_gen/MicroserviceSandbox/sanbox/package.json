@@ -1,15 +1,16 @@
 {
-  "name": "microservice",
-  "version": "1.0.0",
+  "name": "CustomerService",
+  "version": "1.0",
   "description": "",
-  "main": "index.js",
+  "main": "CustomerService.js",
   "scripts": {
-    "start": "node OrdersNodeJsMyMicroservice.js"
+    "start": "node CustomerService.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "uuid": "^8.3.2"
   }
 }

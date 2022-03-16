@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module namespace="MicroserviceSandbox" type="solution" uuid="8b512059-79a2-4825-b4a1-622dfe06d0bb">
+  <dependencies>
+    <module kind="cl" ref="c2a6432b-e821-404b-af0e-22b30531f868(Deployment)" />
+    <module kind="cl" ref="e995fbb6-0310-461a-be22-cc66f48262f1(Microservice)" />
+    <module kind="cl" ref="990507d3-3527-4c54-bfe9-0ca3c9c6247a(com.dslfoundry.plaintextgen)" />
+  </dependencies>
+  <uses>
+    <language id="l:c2a6432b-e821-404b-af0e-22b30531f868:Deployment" />
+    <language id="l:e995fbb6-0310-461a-be22-cc66f48262f1:Microservice" />
+  </uses>
+  <classpath>
+    <entry path="." />
+  </classpath>
+  <sources descriptor="MicroserviceSandbox.msd" jar="MicroserviceSandbox-src.jar" />
+</module>

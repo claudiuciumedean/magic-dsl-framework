@@ -88,24 +88,9 @@
     <property role="EcuMT" value="8568306897850702780" />
     <property role="TrG5h" value="Operation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="4qZeZ7u1NLh" role="1TKVEl">
-      <property role="IQ2nx" value="5097859213204864081" />
-      <property role="TrG5h" value="dataResponsibility" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
     <node concept="1TJgyi" id="7rCJrCcUTIY" role="1TKVEl">
       <property role="IQ2nx" value="8568306897850702782" />
       <property role="TrG5h" value="route" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="1TJgyi" id="1xSoLHEUDt7" role="1TKVEl">
-      <property role="IQ2nx" value="1763268223524575047" />
-      <property role="TrG5h" value="expectedPayload" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="1TJgyi" id="1xSoLHEUDt8" role="1TKVEl">
-      <property role="IQ2nx" value="1763268223524575048" />
-      <property role="TrG5h" value="deliveredPayload" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="PrWs8" id="1xSoLHEUDss" role="PzmwI">
@@ -113,6 +98,27 @@
     </node>
     <node concept="PrWs8" id="45hWeqLMSyT" role="PzmwI">
       <ref role="PrY4T" node="45hWeqLMSyQ" resolve="IOperationType" />
+    </node>
+    <node concept="PrWs8" id="5tPVuO6UI5v" role="PzmwI">
+      <ref role="PrY4T" node="5tPVuO6UI42" resolve="IExpectedPayloadType" />
+    </node>
+    <node concept="PrWs8" id="5tPVuO6VbN3" role="PzmwI">
+      <ref role="PrY4T" node="5tPVuO6VaS8" resolve="IDeliveredPayloadType" />
+    </node>
+    <node concept="PrWs8" id="5tPVuO6X27f" role="PzmwI">
+      <ref role="PrY4T" node="5tPVuO6X23V" resolve="IQueryParam" />
+    </node>
+    <node concept="1TJgyj" id="7j7dAdBZMp4" role="1TKVEi">
+      <property role="IQ2ns" value="8414754229339498052" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="data" />
+      <ref role="20lvS9" node="5XT76wXQ1rj" resolve="DataTypeReference" />
+    </node>
+    <node concept="1TJgyj" id="5tPVuO6XIsz" role="1TKVEi">
+      <property role="IQ2ns" value="6302204855854753571" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="errorMessage" />
+      <ref role="20lvS9" node="5tPVuO6UI47" resolve="Message" />
     </node>
   </node>
   <node concept="1TIwiD" id="1xSoLHETQfb">
@@ -209,6 +215,96 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="operationMethod" />
       <ref role="20lvS9" node="45hWeqLO7cu" resolve="OperationMethod" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5XT76wXQ1rj">
+    <property role="EcuMT" value="6879561139824891603" />
+    <property role="TrG5h" value="DataTypeReference" />
+    <node concept="1TJgyj" id="5XT76wXQ1rk" role="1TKVEi">
+      <property role="20lbJX" value="fLJekj4/1" />
+      <property role="IQ2ns" value="6879561139824891604" />
+      <property role="20kJfa" value="dataType" />
+      <ref role="20lvS9" node="1xSoLHETQfb" resolve="DataType" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5tPVuO6UxXp">
+    <property role="EcuMT" value="6302204855853915993" />
+    <property role="3GE5qa" value="OperationMethod" />
+    <property role="TrG5h" value="GetEntity" />
+    <ref role="1TJDcQ" node="45hWeqLO7cu" resolve="OperationMethod" />
+  </node>
+  <node concept="1TIwiD" id="5tPVuO6UI41">
+    <property role="EcuMT" value="6302204855853965569" />
+    <property role="TrG5h" value="PayloadType" />
+    <property role="3GE5qa" value="PayloadType" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+  </node>
+  <node concept="PlHQZ" id="5tPVuO6UI42">
+    <property role="EcuMT" value="6302204855853965570" />
+    <property role="3GE5qa" value="PayloadType" />
+    <property role="TrG5h" value="IExpectedPayloadType" />
+    <node concept="1TJgyj" id="5tPVuO6UI43" role="1TKVEi">
+      <property role="IQ2ns" value="6302204855853965571" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="payloadType" />
+      <ref role="20lvS9" node="5tPVuO6UI41" resolve="PayloadType" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5tPVuO6UI45">
+    <property role="EcuMT" value="6302204855853965573" />
+    <property role="3GE5qa" value="PayloadType" />
+    <property role="TrG5h" value="Entity" />
+    <ref role="1TJDcQ" node="5tPVuO6UI41" resolve="PayloadType" />
+  </node>
+  <node concept="1TIwiD" id="5tPVuO6UI46">
+    <property role="EcuMT" value="6302204855853965574" />
+    <property role="3GE5qa" value="PayloadType" />
+    <property role="TrG5h" value="EntityID" />
+    <ref role="1TJDcQ" node="5tPVuO6UI41" resolve="PayloadType" />
+  </node>
+  <node concept="1TIwiD" id="5tPVuO6UI47">
+    <property role="EcuMT" value="6302204855853965575" />
+    <property role="3GE5qa" value="PayloadType" />
+    <property role="TrG5h" value="Message" />
+    <ref role="1TJDcQ" node="5tPVuO6UI41" resolve="PayloadType" />
+    <node concept="1TJgyi" id="5tPVuO6VYm6" role="1TKVEl">
+      <property role="IQ2nx" value="6302204855854294406" />
+      <property role="TrG5h" value="message" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5tPVuO6VaS8">
+    <property role="EcuMT" value="6302204855854083592" />
+    <property role="3GE5qa" value="PayloadType" />
+    <property role="TrG5h" value="IDeliveredPayloadType" />
+    <node concept="1TJgyj" id="5tPVuO6VaS9" role="1TKVEi">
+      <property role="IQ2ns" value="6302204855854083593" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="payloadType" />
+      <ref role="20lvS9" node="5tPVuO6UI41" resolve="PayloadType" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5tPVuO6VpW8">
+    <property role="EcuMT" value="6302204855854145288" />
+    <property role="3GE5qa" value="PayloadType" />
+    <property role="TrG5h" value="Empty" />
+    <ref role="1TJDcQ" node="5tPVuO6UI41" resolve="PayloadType" />
+  </node>
+  <node concept="1TIwiD" id="5tPVuO6V_IL">
+    <property role="EcuMT" value="6302204855854193585" />
+    <property role="3GE5qa" value="PayloadType" />
+    <property role="TrG5h" value="Entities" />
+    <ref role="1TJDcQ" node="5tPVuO6UI41" resolve="PayloadType" />
+  </node>
+  <node concept="PlHQZ" id="5tPVuO6X23V">
+    <property role="EcuMT" value="6302204855854571771" />
+    <property role="3GE5qa" value="PayloadType" />
+    <property role="TrG5h" value="IQueryParam" />
+    <node concept="1TJgyj" id="5tPVuO6X23Y" role="1TKVEi">
+      <property role="IQ2ns" value="6302204855854571774" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="queryParam" />
+      <ref role="20lvS9" node="5tPVuO6UI41" resolve="PayloadType" />
     </node>
   </node>
 </model>

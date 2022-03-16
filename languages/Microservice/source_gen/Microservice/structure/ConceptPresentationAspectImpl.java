@@ -13,14 +13,25 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CreateEntity;
   private ConceptPresentation props_DELETE;
   private ConceptPresentation props_DataType;
+  private ConceptPresentation props_DataTypeReference;
   private ConceptPresentation props_DeleteEntity;
+  private ConceptPresentation props_Empty;
+  private ConceptPresentation props_Entities;
+  private ConceptPresentation props_Entity;
+  private ConceptPresentation props_EntityID;
   private ConceptPresentation props_GetEntities;
+  private ConceptPresentation props_GetEntity;
+  private ConceptPresentation props_IDeliveredPayloadType;
+  private ConceptPresentation props_IExpectedPayloadType;
   private ConceptPresentation props_IOperationMethod;
   private ConceptPresentation props_IOperationType;
+  private ConceptPresentation props_IQueryParam;
+  private ConceptPresentation props_Message;
   private ConceptPresentation props_Microservice;
   private ConceptPresentation props_Operation;
   private ConceptPresentation props_OperationMethod;
   private ConceptPresentation props_OperationType;
+  private ConceptPresentation props_PayloadType;
   private ConceptPresentation props_READ;
   private ConceptPresentation props_UPDATE;
   private ConceptPresentation props_UpdateEntity;
@@ -58,6 +69,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DataType = cpb.create();
         }
         return props_DataType;
+      case LanguageConceptSwitch.DataTypeReference:
+        if (props_DataTypeReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5f791c683dd816d3L, 0x5f791c683dd816d4L, "dataType", "", "");
+          props_DataTypeReference = cpb.create();
+        }
+        return props_DataTypeReference;
       case LanguageConceptSwitch.DeleteEntity:
         if (props_DeleteEntity == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -65,6 +83,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DeleteEntity = cpb.create();
         }
         return props_DeleteEntity;
+      case LanguageConceptSwitch.Empty:
+        if (props_Empty == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Empty");
+          props_Empty = cpb.create();
+        }
+        return props_Empty;
+      case LanguageConceptSwitch.Entities:
+        if (props_Entities == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Entities");
+          props_Entities = cpb.create();
+        }
+        return props_Entities;
+      case LanguageConceptSwitch.Entity:
+        if (props_Entity == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Entity");
+          props_Entity = cpb.create();
+        }
+        return props_Entity;
+      case LanguageConceptSwitch.EntityID:
+        if (props_EntityID == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("EntityID");
+          props_EntityID = cpb.create();
+        }
+        return props_EntityID;
       case LanguageConceptSwitch.GetEntities:
         if (props_GetEntities == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -72,6 +118,25 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GetEntities = cpb.create();
         }
         return props_GetEntities;
+      case LanguageConceptSwitch.GetEntity:
+        if (props_GetEntity == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("GetEntity");
+          props_GetEntity = cpb.create();
+        }
+        return props_GetEntity;
+      case LanguageConceptSwitch.IDeliveredPayloadType:
+        if (props_IDeliveredPayloadType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IDeliveredPayloadType = cpb.create();
+        }
+        return props_IDeliveredPayloadType;
+      case LanguageConceptSwitch.IExpectedPayloadType:
+        if (props_IExpectedPayloadType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IExpectedPayloadType = cpb.create();
+        }
+        return props_IExpectedPayloadType;
       case LanguageConceptSwitch.IOperationMethod:
         if (props_IOperationMethod == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -84,6 +149,19 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IOperationType = cpb.create();
         }
         return props_IOperationType;
+      case LanguageConceptSwitch.IQueryParam:
+        if (props_IQueryParam == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IQueryParam = cpb.create();
+        }
+        return props_IQueryParam;
+      case LanguageConceptSwitch.Message:
+        if (props_Message == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Message");
+          props_Message = cpb.create();
+        }
+        return props_Message;
       case LanguageConceptSwitch.Microservice:
         if (props_Microservice == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -112,6 +190,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OperationType = cpb.create();
         }
         return props_OperationType;
+      case LanguageConceptSwitch.PayloadType:
+        if (props_PayloadType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("PayloadType");
+          props_PayloadType = cpb.create();
+        }
+        return props_PayloadType;
       case LanguageConceptSwitch.READ:
         if (props_READ == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

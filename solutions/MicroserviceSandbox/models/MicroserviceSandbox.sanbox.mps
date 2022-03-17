@@ -55,6 +55,7 @@
         <child id="1763268223524553726" name="value" index="1M$y3_" />
       </concept>
       <concept id="8568306897850702777" name="Microservice.structure.Microservice" flags="ng" index="1U0Mo3">
+        <property id="2192478790266924018" name="language" index="3L7hg_" />
         <property id="1763268223524365240" name="description" index="1MBK2z" />
         <property id="1763268223524365227" name="version" index="1MBK2K" />
         <property id="8568306897850702779" name="port" index="1U0Mo1" />
@@ -93,6 +94,7 @@
     <property role="1U0Mo1" value="5000" />
     <property role="1MBK2K" value="1.0" />
     <property role="1MBK2z" value="Service for customer accounts" />
+    <property role="3L7hg_" value="NodeJs" />
     <node concept="1U0Mo6" id="5tPVuO6VXnK" role="1a5GJw">
       <property role="1U0Mo4" value="/customer" />
       <node concept="3KwofT" id="5tPVuO6VXnM" role="3KwesD" />
@@ -103,7 +105,7 @@
       <node concept="1hBKNC" id="5tPVuO6VXnS" role="1hBKNI" />
       <node concept="1hBKNF" id="5tPVuO6Wbxg" role="1hAkf$" />
       <node concept="1hBKNE" id="5tPVuO71wwH" role="1hzNbD">
-        <property role="1hAwxF" value="Customer created succesfully" />
+        <property role="1hAwxF" value="Customer created successfully" />
       </node>
     </node>
     <node concept="1U0Mo6" id="5tPVuO6WreL" role="1a5GJw">

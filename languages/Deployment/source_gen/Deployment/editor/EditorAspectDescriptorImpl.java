@@ -18,9 +18,7 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
     SAbstractConcept cncpt = ((SAbstractConcept) concept);
     switch (conceptIndex.index(cncpt)) {
       case 0:
-        return Collections.<ConceptEditor>singletonList(new Dockerfile_Editor());
-      case 1:
-        return Collections.<ConceptEditor>singletonList(new Package_Editor());
+        return Collections.<ConceptEditor>singletonList(new DeploymentConfig_Editor());
       default:
     }
     return Collections.<ConceptEditor>emptyList();
@@ -28,5 +26,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
 
 
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d850dc4L), MetaIdFactory.conceptId(0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d85275eL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d850dc4L)).seal();
 }

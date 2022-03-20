@@ -90,6 +90,8 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
     switch (conceptIndex2.index(cncpt)) {
       case 0:
         return Collections.<SubstituteMenu>singletonList(new DataTypeReference_SubstituteMenu());
+      case 1:
+        return Collections.<SubstituteMenu>singletonList(new MicroserviceReference_SubstituteMenu());
       default:
     }
     return Collections.<SubstituteMenu>emptyList();
@@ -97,5 +99,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
   private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1878631b6ae763cbL), MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5f791c683dd816d3L), MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae107L), MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L), MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bbcL)).seal();
   private static final ConceptSwitchIndex conceptIndex1 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06ecae08L), MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae102L), MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d117cdL), MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1cb88b6L), MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06f420fbL)).seal();
-  private static final ConceptSwitchIndex conceptIndex2 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5f791c683dd816d3L)).seal();
+  private static final ConceptSwitchIndex conceptIndex2 = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5f791c683dd816d3L), MetaIdFactory.conceptId(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x675907eeb91f484bL)).seal();
 }

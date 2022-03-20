@@ -28,13 +28,14 @@ public final class LanguageConceptSwitch {
   public static final int IQueryParam = 16;
   public static final int Message = 17;
   public static final int Microservice = 18;
-  public static final int Operation = 19;
-  public static final int OperationMethod = 20;
-  public static final int OperationType = 21;
-  public static final int PayloadType = 22;
-  public static final int READ = 23;
-  public static final int UPDATE = 24;
-  public static final int UpdateEntity = 25;
+  public static final int MicroserviceReference = 19;
+  public static final int Operation = 20;
+  public static final int OperationMethod = 21;
+  public static final int OperationType = 22;
+  public static final int PayloadType = 23;
+  public static final int READ = 24;
+  public static final int UPDATE = 25;
+  public static final int UpdateEntity = 26;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xe995fbb60310461aL, 0xbe22cc66f48262f1L);
@@ -57,6 +58,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x5775eded06f420fbL, IQueryParam);
     builder.put(0x5775eded06eae107L, Message);
     builder.put(0x76e8bdba0ceb9bb9L, Microservice);
+    builder.put(0x675907eeb91f484bL, MicroserviceReference);
     builder.put(0x76e8bdba0ceb9bbcL, Operation);
     builder.put(0x4151f0e6b1d0731eL, OperationMethod);
     builder.put(0x4151f0e6b1c68c22L, OperationType);

@@ -13,8 +13,7 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
-  /*package*/ final ConceptDescriptor myConceptDockerfile = createDescriptorForDockerfile();
-  /*package*/ final ConceptDescriptor myConceptPackage = createDescriptorForPackage();
+  /*package*/ final ConceptDescriptor myConceptDeploymentConfig = createDescriptorForDeploymentConfig();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -25,21 +24,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
+    deps.aggregatedLanguage(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, "Microservice");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptDockerfile, myConceptPackage);
+    return Arrays.asList(myConceptDeploymentConfig);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
-      case LanguageConceptSwitch.Dockerfile:
-        return myConceptDockerfile;
-      case LanguageConceptSwitch.Package:
-        return myConceptPackage;
+      case LanguageConceptSwitch.DeploymentConfig:
+        return myConceptDeploymentConfig;
       default:
         return null;
     }
@@ -50,21 +48,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
-  private static ConceptDescriptor createDescriptorForDockerfile() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Deployment", "Dockerfile", 0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d850dc4L);
+  private static ConceptDescriptor createDescriptorForDeploymentConfig() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Deployment", "DeploymentConfig", 0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d850dc4L);
     b.class_(false, false, true);
     b.origin("r:d65c3470-1169-4d9a-a5dd-2196914085f2(Deployment.structure)/535292525704187332");
     b.version(2);
-    b.property("from", 0x76dbdb74d850dc7L).type(PrimitiveTypeId.STRING).origin("535292525704187335").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForPackage() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Deployment", "Package", 0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d85275eL);
-    b.class_(false, false, true);
-    b.origin("r:d65c3470-1169-4d9a-a5dd-2196914085f2(Deployment.structure)/535292525704193886");
-    b.version(2);
-    b.property("serviceName", 0x46bf3bf1de066d5fL).type(PrimitiveTypeId.STRING).origin("5097859213204811103").done();
-    b.property("version", 0x46bf3bf1de069082L).type(PrimitiveTypeId.STRING).origin("5097859213204820098").done();
+    b.property("maintainer", 0x76dbdb74d850dc7L).type(PrimitiveTypeId.STRING).origin("535292525704187335").done();
+    b.aggregate("microservice", 0x675907eeb91f484eL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x675907eeb91f484bL).optional(false).ordered(true).multiple(false).origin("7446992180723271758").done();
     return b.create();
   }
 }

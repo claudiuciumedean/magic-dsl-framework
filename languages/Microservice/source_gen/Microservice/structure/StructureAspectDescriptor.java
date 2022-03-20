@@ -32,6 +32,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptIQueryParam = createDescriptorForIQueryParam();
   /*package*/ final ConceptDescriptor myConceptMessage = createDescriptorForMessage();
   /*package*/ final ConceptDescriptor myConceptMicroservice = createDescriptorForMicroservice();
+  /*package*/ final ConceptDescriptor myConceptMicroserviceReference = createDescriptorForMicroserviceReference();
   /*package*/ final ConceptDescriptor myConceptOperation = createDescriptorForOperation();
   /*package*/ final ConceptDescriptor myConceptOperationMethod = createDescriptorForOperationMethod();
   /*package*/ final ConceptDescriptor myConceptOperationType = createDescriptorForOperationType();
@@ -54,7 +55,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptCREATE, myConceptCreateEntity, myConceptDELETE, myConceptDataType, myConceptDataTypeReference, myConceptDeleteEntity, myConceptEmpty, myConceptEntities, myConceptEntity, myConceptEntityID, myConceptGetEntities, myConceptGetEntity, myConceptIDeliveredPayloadType, myConceptIExpectedPayloadType, myConceptIOperationMethod, myConceptIOperationType, myConceptIQueryParam, myConceptMessage, myConceptMicroservice, myConceptOperation, myConceptOperationMethod, myConceptOperationType, myConceptPayloadType, myConceptREAD, myConceptUPDATE, myConceptUpdateEntity);
+    return Arrays.asList(myConceptCREATE, myConceptCreateEntity, myConceptDELETE, myConceptDataType, myConceptDataTypeReference, myConceptDeleteEntity, myConceptEmpty, myConceptEntities, myConceptEntity, myConceptEntityID, myConceptGetEntities, myConceptGetEntity, myConceptIDeliveredPayloadType, myConceptIExpectedPayloadType, myConceptIOperationMethod, myConceptIOperationType, myConceptIQueryParam, myConceptMessage, myConceptMicroservice, myConceptMicroserviceReference, myConceptOperation, myConceptOperationMethod, myConceptOperationType, myConceptPayloadType, myConceptREAD, myConceptUPDATE, myConceptUpdateEntity);
   }
 
   @Override
@@ -99,6 +100,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptMessage;
       case LanguageConceptSwitch.Microservice:
         return myConceptMicroservice;
+      case LanguageConceptSwitch.MicroserviceReference:
+        return myConceptMicroserviceReference;
       case LanguageConceptSwitch.Operation:
         return myConceptOperation;
       case LanguageConceptSwitch.OperationMethod:
@@ -281,6 +284,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("language", 0x1e6d3fd7ef702bf2L).type(PrimitiveTypeId.STRING).origin("2192478790266924018").done();
     b.aggregate("data", 0x1878631b6ae763caL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1878631b6ae763cbL).optional(true).ordered(true).multiple(true).origin("1763268223524365258").done();
     b.aggregate("operations", 0x76dbdb74d7b7657L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bbcL).optional(true).ordered(true).multiple(true).origin("535292525703558743").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForMicroserviceReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "MicroserviceReference", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x675907eeb91f484bL);
+    b.class_(false, false, false);
+    b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/7446992180723271755");
+    b.version(2);
+    b.associate("microservice", 0x675907eeb91f484cL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L).optional(false).origin("7446992180723271756").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForOperation() {

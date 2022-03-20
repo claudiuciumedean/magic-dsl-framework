@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class Dockerfile_Editor extends DefaultNodeEditor {
+public class DeploymentConfig_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new Dockerfile_EditorBuilder_a(editorContext, node).createCell();
+    return new DeploymentConfig_EditorBuilder_a(editorContext, node).createCell();
   }
 }

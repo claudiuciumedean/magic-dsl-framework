@@ -4,42 +4,127 @@ package Deployment.generator.templates;
 
 import jetbrains.mps.generator.runtime.Generated;
 import jetbrains.mps.generator.impl.query.QueryProviderBase;
-import jetbrains.mps.generator.template.PropertyMacroContext;
+import jetbrains.mps.generator.template.BaseMappingRuleContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.generator.template.PropertyMacroContext;
 import java.util.Map;
-import jetbrains.mps.generator.impl.query.PropertyValueQuery;
+import jetbrains.mps.generator.impl.query.MapRootRuleCondition;
 import java.util.HashMap;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.generator.impl.query.QueryKey;
+import jetbrains.mps.generator.template.MapRootRuleContext;
+import jetbrains.mps.generator.impl.GenerationFailureException;
+import jetbrains.mps.generator.impl.query.PropertyValueQuery;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.annotations.Nullable;
-import jetbrains.mps.generator.impl.GenerationFailureException;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 
 @Generated
 public class QueriesGenerated extends QueryProviderBase {
   public QueriesGenerated() {
     super(1);
   }
+  public static boolean rule_Condition_0_0(final BaseMappingRuleContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz).equals("NodeJs");
+  }
+  public static boolean rule_Condition_0_1(final BaseMappingRuleContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz).equals("Python");
+  }
+  public static boolean rule_Condition_0_2(final BaseMappingRuleContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz).equals("NodeJs");
+  }
+  public static boolean rule_Condition_0_3(final BaseMappingRuleContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz).equals("Python");
+  }
+  public static Object propertyMacro_GetValue_1_0(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.maintainer$57CV);
+  }
+  public static Object propertyMacro_GetValue_1_1(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL);
+  }
   public static Object propertyMacro_GetValue_2_0(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.serviceName$tmNR);
+    return SPropertyOperations.getString(_context.getNode(), PROPS.maintainer$57CV);
   }
-  public static Object propertyMacro_GetValue_2_1(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.version$Be8O);
+  public static Object propertyMacro_GetValue_3_0(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL);
   }
-  public static Object propertyMacro_GetValue_2_2(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.serviceName$tmNR);
+  public static Object propertyMacro_GetValue_3_1(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.version$irqw);
   }
-  public static Object propertyMacro_GetValue_2_3(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.serviceName$tmNR);
+  public static Object propertyMacro_GetValue_3_2(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_3_3(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_5_0(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL).toLowerCase();
+  }
+  public static Object propertyMacro_GetValue_5_1(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.port$TFqt);
+  }
+  public static Object propertyMacro_GetValue_5_2(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.port$TFqt);
+  }
+  public static Object propertyMacro_GetValue_5_3(final PropertyMacroContext _context) {
+    return (SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL) + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz)).toLowerCase();
+  }
+  public static Object propertyMacro_GetValue_5_4(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL).toLowerCase();
+  }
+  private final Map<String, MapRootRuleCondition> mrrcMethods = new HashMap<String, MapRootRuleCondition>();
+  {
+    int i = 0;
+    mrrcMethods.put("535292525704188653", new MRRC(i++));
+    mrrcMethods.put("7446992180723519484", new MRRC(i++));
+    mrrcMethods.put("4332595091774650010", new MRRC(i++));
+    mrrcMethods.put("4332595091774712369", new MRRC(i++));
+  }
+  @Override
+  @NotNull
+  public MapRootRuleCondition getMapRootRuleCondition(@NotNull QueryKey identity) {
+    MapRootRuleCondition query = identity.forTemplateNode(mrrcMethods);
+    return (query != null ? query : super.getMapRootRuleCondition(identity));
+  }
+  private static class MRRC implements MapRootRuleCondition {
+    private final int methodKey;
+    public MRRC(int methodKey) {
+      this.methodKey = methodKey;
+    }
+    @Override
+    public boolean check(@NotNull MapRootRuleContext ctx) throws GenerationFailureException {
+      switch (methodKey) {
+        case 0:
+          return QueriesGenerated.rule_Condition_0_0(ctx);
+        case 1:
+          return QueriesGenerated.rule_Condition_0_1(ctx);
+        case 2:
+          return QueriesGenerated.rule_Condition_0_2(ctx);
+        case 3:
+          return QueriesGenerated.rule_Condition_0_3(ctx);
+        default:
+          throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no condition method for rule %s (key: #%d)", ctx.getTemplateReference(), methodKey));
+      }
+    }
   }
   private final Map<String, PropertyValueQuery> pvqMethods = new HashMap<String, PropertyValueQuery>();
   {
     int i = 0;
-    pvqMethods.put("5097859213204814285", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "serviceName"));
-    pvqMethods.put("5097859213204820622", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "version"));
-    pvqMethods.put("5097859213204817832", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "serviceName"));
-    pvqMethods.put("5097859213204810803", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "serviceName"));
+    pvqMethods.put("4332595091774430192", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "maintainer"));
+    pvqMethods.put("4332595091774431267", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "microservice"));
+    pvqMethods.put("4332595091774448773", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "maintainer"));
+    pvqMethods.put("4332595091774651470", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "name"));
+    pvqMethods.put("4332595091774659302", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "version"));
+    pvqMethods.put("4332595091774666837", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "microservice"));
+    pvqMethods.put("4332595091774673952", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "microservice"));
+    pvqMethods.put("4332595091774874793", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "dockerImage"));
+    pvqMethods.put("4332595091775058289", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "port"));
+    pvqMethods.put("4332595091774885945", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "port"));
+    pvqMethods.put("4332595091774901717", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "dockerContainer"));
+    pvqMethods.put("4332595091774893343", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "dockerImage"));
   }
   @NotNull
   @Override
@@ -57,21 +142,45 @@ public class QueriesGenerated extends QueryProviderBase {
     public Object evaluate(@NotNull PropertyMacroContext ctx) throws GenerationFailureException {
       switch (methodKey) {
         case 0:
-          return QueriesGenerated.propertyMacro_GetValue_2_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_1_0(ctx);
         case 1:
-          return QueriesGenerated.propertyMacro_GetValue_2_1(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_1_1(ctx);
         case 2:
-          return QueriesGenerated.propertyMacro_GetValue_2_2(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_2_0(ctx);
         case 3:
-          return QueriesGenerated.propertyMacro_GetValue_2_3(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_0(ctx);
+        case 4:
+          return QueriesGenerated.propertyMacro_GetValue_3_1(ctx);
+        case 5:
+          return QueriesGenerated.propertyMacro_GetValue_3_2(ctx);
+        case 6:
+          return QueriesGenerated.propertyMacro_GetValue_3_3(ctx);
+        case 7:
+          return QueriesGenerated.propertyMacro_GetValue_5_0(ctx);
+        case 8:
+          return QueriesGenerated.propertyMacro_GetValue_5_1(ctx);
+        case 9:
+          return QueriesGenerated.propertyMacro_GetValue_5_2(ctx);
+        case 10:
+          return QueriesGenerated.propertyMacro_GetValue_5_3(ctx);
+        case 11:
+          return QueriesGenerated.propertyMacro_GetValue_5_4(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
     }
   }
 
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink microservice$Ai5f = MetaAdapterFactory.getContainmentLink(0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d850dc4L, 0x675907eeb91f484eL, "microservice");
+    /*package*/ static final SReferenceLink microservice$ZUJs = MetaAdapterFactory.getReferenceLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x675907eeb91f484bL, 0x675907eeb91f484cL, "microservice");
+  }
+
   private static final class PROPS {
-    /*package*/ static final SProperty serviceName$tmNR = MetaAdapterFactory.getProperty(0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d85275eL, 0x46bf3bf1de066d5fL, "serviceName");
-    /*package*/ static final SProperty version$Be8O = MetaAdapterFactory.getProperty(0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d85275eL, 0x46bf3bf1de069082L, "version");
+    /*package*/ static final SProperty language$7eaz = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L, 0x1e6d3fd7ef702bf2L, "language");
+    /*package*/ static final SProperty maintainer$57CV = MetaAdapterFactory.getProperty(0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d850dc4L, 0x76dbdb74d850dc7L, "maintainer");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty version$irqw = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L, 0x1878631b6ae763abL, "version");
+    /*package*/ static final SProperty port$TFqt = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L, 0x76e8bdba0ceb9bbbL, "port");
   }
 }

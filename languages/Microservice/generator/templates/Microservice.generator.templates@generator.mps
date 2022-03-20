@@ -2069,7 +2069,7 @@
     </node>
   </node>
   <node concept="356sEV" id="1THfXvJsFiZ">
-    <property role="TrG5h" value="name" />
+    <property role="TrG5h" value="app" />
     <property role="3Le9LX" value=".py" />
     <node concept="356WMU" id="1THfXvJsJRk" role="356KY_">
       <node concept="356sEK" id="1THfXvJsJRl" role="383Ya9">
@@ -2340,22 +2340,6 @@
     </node>
     <node concept="n94m4" id="1THfXvJsFj1" role="lGtFl">
       <ref role="n9lRv" to="b4dw:7rCJrCcUTIT" resolve="Microservice" />
-    </node>
-    <node concept="17Uvod" id="1THfXvJsK8n" role="lGtFl">
-      <property role="2qtEX9" value="name" />
-      <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
-      <node concept="3zFVjK" id="1THfXvJsK8q" role="3zH0cK">
-        <node concept="3clFbS" id="1THfXvJsK8r" role="2VODD2">
-          <node concept="3clFbF" id="1THfXvJsK8x" role="3cqZAp">
-            <node concept="2OqwBi" id="1THfXvJsK8s" role="3clFbG">
-              <node concept="3TrcHB" id="1THfXvJsK8v" role="2OqNvi">
-                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-              </node>
-              <node concept="30H73N" id="1THfXvJsK8w" role="2Oq$k0" />
-            </node>
-          </node>
-        </node>
-      </node>
     </node>
   </node>
   <node concept="jVnub" id="1THfXvJsHOX">

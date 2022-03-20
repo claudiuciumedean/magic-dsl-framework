@@ -9,13 +9,11 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int Dockerfile = 0;
-  public static final int Package = 1;
+  public static final int DeploymentConfig = 0;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xc2a6432be821404bL, 0xaf0e22b30531f868L);
-    builder.put(0x76dbdb74d850dc4L, Dockerfile);
-    builder.put(0x76dbdb74d85275eL, Package);
+    builder.put(0x76dbdb74d850dc4L, DeploymentConfig);
     myIndex = builder.seal();
   }
 

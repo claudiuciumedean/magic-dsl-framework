@@ -8,12 +8,9 @@
   <imports />
   <registry>
     <language id="c2a6432b-e821-404b-af0e-22b30531f868" name="Deployment">
-      <concept id="535292525704193886" name="Deployment.structure.Package" flags="ng" index="1aU9FD">
-        <property id="5097859213204811103" name="serviceName" index="2oIlqI" />
-        <property id="5097859213204820098" name="version" index="2oIqHN" />
-      </concept>
-      <concept id="535292525704187332" name="Deployment.structure.Dockerfile" flags="ng" index="1aUb1N">
-        <property id="535292525704187335" name="from" index="1aUb1K" />
+      <concept id="535292525704187332" name="Deployment.structure.DeploymentConfig" flags="ng" index="1aUb1N">
+        <property id="535292525704187335" name="maintainer" index="1aUb1K" />
+        <child id="7446992180723271758" name="microservice" index="3uh$Yw" />
       </concept>
     </language>
     <language id="e995fbb6-0310-461a-be22-cc66f48262f1" name="Microservice">
@@ -34,6 +31,9 @@
         <child id="6302204855853965571" name="payloadType" index="1hBKNI" />
       </concept>
       <concept id="6302204855853915993" name="Microservice.structure.GetEntity" flags="ng" index="1hBZaO" />
+      <concept id="7446992180723271755" name="Microservice.structure.MicroserviceReference" flags="ng" index="3uh$Y_">
+        <reference id="7446992180723271756" name="microservice" index="3uh$Yy" />
+      </concept>
       <concept id="6879561139824891603" name="Microservice.structure.DataTypeReference" flags="ng" index="1yCgEV">
         <reference id="6879561139824891604" name="dataType" index="1yCgEW" />
       </concept>
@@ -86,15 +86,12 @@
       </concept>
     </language>
   </registry>
-  <node concept="1aUb1N" id="tHJrtdxisa">
-    <property role="1aUb1K" value="&quot;node&quot;" />
-  </node>
   <node concept="1U0Mo3" id="tHJrtdxpL5">
     <property role="TrG5h" value="CustomerService" />
-    <property role="1U0Mo1" value="5000" />
+    <property role="1U0Mo1" value="3000" />
     <property role="1MBK2K" value="1.0" />
     <property role="1MBK2z" value="Service for customer accounts" />
-    <property role="3L7hg_" value="NodeJs" />
+    <property role="3L7hg_" value="Python" />
     <node concept="1U0Mo6" id="5tPVuO6VXnK" role="1a5GJw">
       <property role="1U0Mo4" value="/customer" />
       <node concept="3KwofT" id="5tPVuO6VXnM" role="3KwesD" />
@@ -237,9 +234,168 @@
       </node>
     </node>
   </node>
-  <node concept="1aU9FD" id="tHJrtdxq2P">
-    <property role="2oIlqI" value="CustomerService" />
-    <property role="2oIqHN" value="1.0" />
+  <node concept="1aUb1N" id="3Kwu4vCP2OY">
+    <property role="1aUb1K" value="Claudiu" />
+    <node concept="3uh$Y_" id="3Kwu4vCP2P0" role="3uh$Yw">
+      <ref role="3uh$Yy" node="tHJrtdxpL5" resolve="CustomerService" />
+    </node>
+  </node>
+  <node concept="1U0Mo3" id="3Kwu4vCRahh">
+    <property role="TrG5h" value="ItemsService" />
+    <property role="1U0Mo1" value="3000" />
+    <property role="1MBK2K" value="1.0" />
+    <property role="1MBK2z" value="Service for customer accounts" />
+    <property role="3L7hg_" value="NodeJs" />
+    <node concept="1U0Mo6" id="3Kwu4vCRahi" role="1a5GJw">
+      <property role="1U0Mo4" value="/customer" />
+      <node concept="3KwofT" id="3Kwu4vCRahj" role="3KwesD" />
+      <node concept="3K_yPg" id="3Kwu4vCRahk" role="3KABxh" />
+      <node concept="1yCgEV" id="3Kwu4vCRahl" role="je10B">
+        <ref role="1yCgEW" node="3Kwu4vCRahQ" resolve="customers" />
+      </node>
+      <node concept="1hBKNC" id="3Kwu4vCRahm" role="1hBKNI" />
+      <node concept="1hBKNF" id="3Kwu4vCRahn" role="1hAkf$" />
+      <node concept="1hBKNE" id="3Kwu4vCRaho" role="1hzNbD">
+        <property role="1hAwxF" value="Customer created successfully" />
+      </node>
+    </node>
+    <node concept="1U0Mo6" id="3Kwu4vCRahp" role="1a5GJw">
+      <property role="1U0Mo4" value="/customers" />
+      <node concept="3Kwof7" id="3Kwu4vCRahq" role="3KwesD" />
+      <node concept="3K_FnI" id="3Kwu4vCRahr" role="3KABxh" />
+      <node concept="1yCgEV" id="3Kwu4vCRahs" role="je10B">
+        <ref role="1yCgEW" node="3Kwu4vCRahQ" resolve="customers" />
+      </node>
+      <node concept="1hA7b_" id="3Kwu4vCRaht" role="1hBKNI" />
+      <node concept="1hAVps" id="3Kwu4vCRahu" role="1hAkf$" />
+    </node>
+    <node concept="1U0Mo6" id="3Kwu4vCRahv" role="1a5GJw">
+      <property role="1U0Mo4" value="/customer" />
+      <node concept="1hBZaO" id="3Kwu4vCRahw" role="3KwesD" />
+      <node concept="3K_FnI" id="3Kwu4vCRahx" role="3KABxh" />
+      <node concept="1yCgEV" id="3Kwu4vCRahy" role="je10B">
+        <ref role="1yCgEW" node="3Kwu4vCRahQ" resolve="customers" />
+      </node>
+      <node concept="1hBKNC" id="3Kwu4vCRahz" role="1hAkf$" />
+      <node concept="1hBKNF" id="3Kwu4vCRah$" role="1hwsOj" />
+      <node concept="1hBKNE" id="3Kwu4vCRah_" role="1hwKFe">
+        <property role="1hAwxF" value="No customer found with the provided id" />
+      </node>
+    </node>
+    <node concept="1U0Mo6" id="3Kwu4vCRahA" role="1a5GJw">
+      <property role="1U0Mo4" value="/customer" />
+      <node concept="3Kwof6" id="3Kwu4vCRahB" role="3KwesD" />
+      <node concept="3K_yPh" id="3Kwu4vCRahC" role="3KABxh" />
+      <node concept="1yCgEV" id="3Kwu4vCRahD" role="je10B">
+        <ref role="1yCgEW" node="3Kwu4vCRahQ" resolve="customers" />
+      </node>
+      <node concept="1hBKNF" id="3Kwu4vCRahE" role="1hwsOj" />
+      <node concept="1hBKNC" id="3Kwu4vCRahF" role="1hBKNI" />
+      <node concept="1hA7b_" id="3Kwu4vCRahG" role="1hAkf$" />
+      <node concept="1hBKNE" id="3Kwu4vCRahH" role="1hwKFe">
+        <property role="1hAwxF" value="No customer found with the provided id" />
+      </node>
+      <node concept="1hBKNE" id="3Kwu4vCRahI" role="1hzNbD">
+        <property role="1hAwxF" value="Customer updated succesfully" />
+      </node>
+    </node>
+    <node concept="1U0Mo6" id="3Kwu4vCRahJ" role="1a5GJw">
+      <property role="1U0Mo4" value="/customer" />
+      <node concept="3KwesE" id="3Kwu4vCRahK" role="3KwesD" />
+      <node concept="3K_yPu" id="3Kwu4vCRahL" role="3KABxh" />
+      <node concept="1yCgEV" id="3Kwu4vCRahM" role="je10B">
+        <ref role="1yCgEW" node="3Kwu4vCRahQ" resolve="customers" />
+      </node>
+      <node concept="1hBKNF" id="3Kwu4vCRahN" role="1hwsOj" />
+      <node concept="1hBKNE" id="3Kwu4vCRahO" role="1hwKFe">
+        <property role="1hAwxF" value="No customer found with the provided id" />
+      </node>
+      <node concept="1hBKNE" id="3Kwu4vCRahP" role="1hzNbD">
+        <property role="1hAwxF" value="Successfully deleted the customer" />
+      </node>
+    </node>
+    <node concept="1MBK3g" id="3Kwu4vCRahQ" role="1MBK3h">
+      <property role="TrG5h" value="customers" />
+      <node concept="1Pa9Pv" id="3Kwu4vCRahR" role="1M$y3_">
+        <node concept="1PaTwC" id="3Kwu4vCRahS" role="1PaQFQ">
+          <node concept="3oM_SD" id="3Kwu4vCRahT" role="1PaTwD">
+            <property role="3oM_SC" value="[{" />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="3Kwu4vCRahU" role="1PaQFQ">
+          <node concept="3oM_SD" id="3Kwu4vCRahV" role="1PaTwD">
+            <property role="3oM_SC" value="&quot;id&quot;:" />
+          </node>
+          <node concept="3oM_SD" id="3Kwu4vCRahW" role="1PaTwD">
+            <property role="3oM_SC" value="123," />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="3Kwu4vCRahX" role="1PaQFQ">
+          <node concept="3oM_SD" id="3Kwu4vCRahY" role="1PaTwD">
+            <property role="3oM_SC" value="&quot;name&quot;:" />
+          </node>
+          <node concept="3oM_SD" id="3Kwu4vCRahZ" role="1PaTwD">
+            <property role="3oM_SC" value="&quot;Cool" />
+          </node>
+          <node concept="3oM_SD" id="3Kwu4vCRair" role="1PaTwD">
+            <property role="3oM_SC" value="shoes&quot;," />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="3Kwu4vCRai0" role="1PaQFQ">
+          <node concept="3oM_SD" id="3Kwu4vCRai1" role="1PaTwD">
+            <property role="3oM_SC" value="&quot;size&quot;:" />
+          </node>
+          <node concept="3oM_SD" id="3Kwu4vCRai2" role="1PaTwD">
+            <property role="3oM_SC" value="42" />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="3Kwu4vCRai3" role="1PaQFQ">
+          <node concept="3oM_SD" id="3Kwu4vCRai4" role="1PaTwD">
+            <property role="3oM_SC" value="}," />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="3Kwu4vCRai5" role="1PaQFQ">
+          <node concept="3oM_SD" id="3Kwu4vCRai6" role="1PaTwD">
+            <property role="3oM_SC" value="{" />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="3Kwu4vCRai7" role="1PaQFQ">
+          <node concept="3oM_SD" id="3Kwu4vCRai8" role="1PaTwD">
+            <property role="3oM_SC" value="&quot;id&quot;:" />
+          </node>
+          <node concept="3oM_SD" id="3Kwu4vCRai9" role="1PaTwD">
+            <property role="3oM_SC" value="124," />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="3Kwu4vCRaia" role="1PaQFQ">
+          <node concept="3oM_SD" id="3Kwu4vCRaib" role="1PaTwD">
+            <property role="3oM_SC" value="&quot;name&quot;:" />
+          </node>
+          <node concept="3oM_SD" id="3Kwu4vCRaic" role="1PaTwD">
+            <property role="3oM_SC" value="&quot;Very" />
+          </node>
+          <node concept="3oM_SD" id="3Kwu4vCRaiv" role="1PaTwD">
+            <property role="3oM_SC" value="cool" />
+          </node>
+          <node concept="3oM_SD" id="3Kwu4vCRaiz" role="1PaTwD">
+            <property role="3oM_SC" value="shoes&quot;," />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="3Kwu4vCRaid" role="1PaQFQ">
+          <node concept="3oM_SD" id="3Kwu4vCRaie" role="1PaTwD">
+            <property role="3oM_SC" value="&quot;size&quot;:" />
+          </node>
+          <node concept="3oM_SD" id="3Kwu4vCRaif" role="1PaTwD">
+            <property role="3oM_SC" value="43" />
+          </node>
+        </node>
+        <node concept="1PaTwC" id="3Kwu4vCRaig" role="1PaQFQ">
+          <node concept="3oM_SD" id="3Kwu4vCRaih" role="1PaTwD">
+            <property role="3oM_SC" value="}]" />
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
 </model>
 

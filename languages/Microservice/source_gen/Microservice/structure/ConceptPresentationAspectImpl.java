@@ -28,6 +28,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_IQueryParam;
   private ConceptPresentation props_Message;
   private ConceptPresentation props_Microservice;
+  private ConceptPresentation props_MicroserviceReference;
   private ConceptPresentation props_Operation;
   private ConceptPresentation props_OperationMethod;
   private ConceptPresentation props_OperationType;
@@ -169,6 +170,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Microservice = cpb.create();
         }
         return props_Microservice;
+      case LanguageConceptSwitch.MicroserviceReference:
+        if (props_MicroserviceReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x675907eeb91f484bL, 0x675907eeb91f484cL, "microservice", "", "");
+          props_MicroserviceReference = cpb.create();
+        }
+        return props_MicroserviceReference;
       case LanguageConceptSwitch.Operation:
         if (props_Operation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

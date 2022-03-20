@@ -318,5 +318,15 @@
       <ref role="20lvS9" node="5tPVuO6UI41" resolve="PayloadType" />
     </node>
   </node>
+  <node concept="1TIwiD" id="6tp1YUT7Oxb">
+    <property role="EcuMT" value="7446992180723271755" />
+    <property role="TrG5h" value="MicroserviceReference" />
+    <node concept="1TJgyj" id="6tp1YUT7Oxc" role="1TKVEi">
+      <property role="IQ2ns" value="7446992180723271756" />
+      <property role="20kJfa" value="microservice" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7rCJrCcUTIT" resolve="Microservice" />
+    </node>
+  </node>
 </model>
 

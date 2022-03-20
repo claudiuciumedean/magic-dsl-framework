@@ -9,28 +9,20 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
-  private ConceptPresentation props_Dockerfile;
-  private ConceptPresentation props_Package;
+  private ConceptPresentation props_DeploymentConfig;
 
   @Override
   @Nullable
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
-      case LanguageConceptSwitch.Dockerfile:
-        if (props_Dockerfile == null) {
+      case LanguageConceptSwitch.DeploymentConfig:
+        if (props_DeploymentConfig == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Dockerfile");
-          props_Dockerfile = cpb.create();
+          cpb.rawPresentation("DeploymentConfig");
+          props_DeploymentConfig = cpb.create();
         }
-        return props_Dockerfile;
-      case LanguageConceptSwitch.Package:
-        if (props_Package == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Package");
-          props_Package = cpb.create();
-        }
-        return props_Package;
+        return props_DeploymentConfig;
     }
     return null;
   }

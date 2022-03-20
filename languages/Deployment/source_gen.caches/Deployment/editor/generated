@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="682c16mbipjnyfu2wvm5o53texkyzk8">
-  <files names="Dockerfile_Editor.java:Dockerfile_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:Package_Editor.java:Package_EditorBuilder_a.java" />
+<product version="3" modelHash="9zi5gq2jn8xen39am1m1vb4znkmqmn1">
+  <files names="DeploymentConfig_Editor.java:DeploymentConfig_EditorBuilder_a.java:EditorAspectDescriptorImpl.java" />
 </product>
 

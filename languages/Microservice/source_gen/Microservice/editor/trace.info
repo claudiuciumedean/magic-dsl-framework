@@ -20,7 +20,14 @@
       <unit at="26,0,98,0" name="Microservice.editor.DataTypeReference_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="17,0,102,0" name="Microservice.editor.EditorAspectDescriptorImpl" />
+      <unit at="17,0,104,0" name="Microservice.editor.EditorAspectDescriptorImpl" />
+    </file>
+    <file name="MicroserviceReference_SubstituteMenu.java">
+      <unit at="90,0,93,0" name="Microservice.editor.MicroserviceReference_SubstituteMenu$CONCEPTS" />
+      <unit at="94,0,97,0" name="Microservice.editor.MicroserviceReference_SubstituteMenu$LINKS" />
+      <unit at="49,0,68,0" name="Microservice.editor.MicroserviceReference_SubstituteMenu$SMP_ReferenceScope_ri9f3j_a" />
+      <unit at="68,0,89,0" name="Microservice.editor.MicroserviceReference_SubstituteMenu$SMP_Subconcepts_ri9f3j_b" />
+      <unit at="26,0,98,0" name="Microservice.editor.MicroserviceReference_SubstituteMenu" />
     </file>
   </root>
   <root nodeRef="r:4b2a205d-ef78-4f2b-81c3-ead6ffdc77d1(Microservice.editor)/1763268223524553713">

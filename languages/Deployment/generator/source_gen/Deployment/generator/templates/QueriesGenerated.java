@@ -67,12 +67,9 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.port$TFqt);
   }
   public static Object propertyMacro_GetValue_5_2(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.port$TFqt);
-  }
-  public static Object propertyMacro_GetValue_5_3(final PropertyMacroContext _context) {
     return (SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL) + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz)).toLowerCase();
   }
-  public static Object propertyMacro_GetValue_5_4(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetValue_5_3(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL).toLowerCase();
   }
   private final Map<String, MapRootRuleCondition> mrrcMethods = new HashMap<String, MapRootRuleCondition>();
@@ -122,7 +119,6 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("4332595091774673952", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "microservice"));
     pvqMethods.put("4332595091774874793", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "dockerImage"));
     pvqMethods.put("4332595091775058289", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "port"));
-    pvqMethods.put("4332595091774885945", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "port"));
     pvqMethods.put("4332595091774901717", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "dockerContainer"));
     pvqMethods.put("4332595091774893343", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "dockerImage"));
   }
@@ -163,8 +159,6 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.propertyMacro_GetValue_5_2(ctx);
         case 10:
           return QueriesGenerated.propertyMacro_GetValue_5_3(ctx);
-        case 11:
-          return QueriesGenerated.propertyMacro_GetValue_5_4(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }

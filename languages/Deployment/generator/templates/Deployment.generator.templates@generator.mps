@@ -800,37 +800,8 @@
         <node concept="356sEF" id="3Kwu4vCQAx3" role="356sEH">
           <property role="TrG5h" value=":" />
         </node>
-        <node concept="356sEF" id="3Kwu4vCPX0M" role="356sEH">
-          <property role="TrG5h" value="port" />
-          <node concept="17Uvod" id="3Kwu4vCPX0T" role="lGtFl">
-            <property role="2qtEX9" value="name" />
-            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
-            <node concept="3zFVjK" id="3Kwu4vCPX0U" role="3zH0cK">
-              <node concept="3clFbS" id="3Kwu4vCPX0V" role="2VODD2">
-                <node concept="3clFbF" id="3Kwu4vCPX5A" role="3cqZAp">
-                  <node concept="2OqwBi" id="3Kwu4vCPY6C" role="3clFbG">
-                    <node concept="2OqwBi" id="3Kwu4vCPXCV" role="2Oq$k0">
-                      <node concept="2OqwBi" id="3Kwu4vCPXhs" role="2Oq$k0">
-                        <node concept="30H73N" id="3Kwu4vCPX5_" role="2Oq$k0" />
-                        <node concept="3TrEf2" id="3Kwu4vCPXwI" role="2OqNvi">
-                          <ref role="3Tt5mk" to="qh72:6tp1YUT7Oxe" resolve="microservice" />
-                        </node>
-                      </node>
-                      <node concept="3TrEf2" id="3Kwu4vCPXXA" role="2OqNvi">
-                        <ref role="3Tt5mk" to="b4dw:6tp1YUT7Oxc" resolve="microservice" />
-                      </node>
-                    </node>
-                    <node concept="3TrcHB" id="3Kwu4vCPYvp" role="2OqNvi">
-                      <ref role="3TsBF5" to="b4dw:7rCJrCcUTIV" resolve="port" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="356sEF" id="3Kwu4vCPX0P" role="356sEH">
-          <property role="TrG5h" value=" --name " />
+          <property role="TrG5h" value="3000 --name " />
         </node>
         <node concept="356sEF" id="3Kwu4vCQ0Pu" role="356sEH">
           <property role="TrG5h" value="dockerContainer" />

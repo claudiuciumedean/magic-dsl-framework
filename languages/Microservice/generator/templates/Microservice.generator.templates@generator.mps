@@ -485,34 +485,6 @@
           <property role="TrG5h" value="const app = express();" />
         </node>
       </node>
-      <node concept="356sEK" id="tHJrtdvpwH" role="383Ya9">
-        <node concept="2EixSi" id="tHJrtdvpwK" role="2EinRH" />
-        <node concept="356sEF" id="tHJrtdvpwL" role="356sEH">
-          <property role="TrG5h" value="const port = " />
-        </node>
-        <node concept="356sEF" id="tHJrtdvq4s" role="356sEH">
-          <property role="TrG5h" value="port" />
-          <node concept="17Uvod" id="1xSoLHEUcOG" role="lGtFl">
-            <property role="2qtEX9" value="name" />
-            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
-            <node concept="3zFVjK" id="1xSoLHEUcOJ" role="3zH0cK">
-              <node concept="3clFbS" id="1xSoLHEUcOK" role="2VODD2">
-                <node concept="3clFbF" id="1xSoLHEUcOQ" role="3cqZAp">
-                  <node concept="2OqwBi" id="1xSoLHEUcOL" role="3clFbG">
-                    <node concept="3TrcHB" id="1xSoLHEUcOO" role="2OqNvi">
-                      <ref role="3TsBF5" to="b4dw:7rCJrCcUTIV" resolve="port" />
-                    </node>
-                    <node concept="30H73N" id="1xSoLHEUcOP" role="2Oq$k0" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="356sEF" id="1xSoLHEUcQ2" role="356sEH">
-          <property role="TrG5h" value=";" />
-        </node>
-      </node>
       <node concept="356sEK" id="tHJrtdvpwN" role="383Ya9">
         <node concept="2EixSi" id="tHJrtdvpwQ" role="2EinRH" />
         <node concept="356sEF" id="tHJrtdvpwR" role="356sEH">
@@ -556,7 +528,7 @@
       <node concept="356sEK" id="tHJrtdvpxp" role="383Ya9">
         <node concept="2EixSi" id="tHJrtdvpxs" role="2EinRH" />
         <node concept="356sEF" id="tHJrtdvpxt" role="356sEH">
-          <property role="TrG5h" value="app.listen(port, () =&gt; {" />
+          <property role="TrG5h" value="app.listen(3000, () =&gt; {" />
         </node>
       </node>
       <node concept="356sEK" id="tHJrtdvpxv" role="383Ya9">
@@ -2303,7 +2275,7 @@
       <node concept="356sEK" id="1THfXvJsJSb" role="383Ya9">
         <node concept="2EixSi" id="1THfXvJsJSe" role="2EinRH" />
         <node concept="356sEF" id="1THfXvJsJSf" role="356sEH">
-          <property role="TrG5h" value="app.run(host='localhost', port=5000)" />
+          <property role="TrG5h" value="app.run(host='localhost', port=3000)" />
         </node>
       </node>
       <node concept="356sEK" id="1THfXvJsJSh" role="383Ya9">

@@ -528,7 +528,7 @@
       <node concept="356sEK" id="tHJrtdvpxp" role="383Ya9">
         <node concept="2EixSi" id="tHJrtdvpxs" role="2EinRH" />
         <node concept="356sEF" id="tHJrtdvpxt" role="356sEH">
-          <property role="TrG5h" value="app.listen(3000, () =&gt; {" />
+          <property role="TrG5h" value="app.listen(5000, () =&gt; {" />
         </node>
       </node>
       <node concept="356sEK" id="tHJrtdvpxv" role="383Ya9">
@@ -2275,7 +2275,7 @@
       <node concept="356sEK" id="1THfXvJsJSb" role="383Ya9">
         <node concept="2EixSi" id="1THfXvJsJSe" role="2EinRH" />
         <node concept="356sEF" id="1THfXvJsJSf" role="356sEH">
-          <property role="TrG5h" value="app.run(host='localhost', port=3000)" />
+          <property role="TrG5h" value="app.run()" />
         </node>
       </node>
       <node concept="356sEK" id="1THfXvJsJSh" role="383Ya9">

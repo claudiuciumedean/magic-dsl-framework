@@ -9,7 +9,6 @@ const express = require("express");
 const uuid = require('uuid');
 
 const app = express();
-const port = 3000;
 app.use(express.json());
 
 app.post("/customer", (req, res) => {
@@ -58,6 +57,6 @@ app.delete("/customer", (req, res) => {
 });
 
 
-app.listen(port, () => {
+app.listen(5000, () => {
 console.log("Service is up and running");
 });

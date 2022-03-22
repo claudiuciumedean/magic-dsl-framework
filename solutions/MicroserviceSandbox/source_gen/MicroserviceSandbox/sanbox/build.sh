@@ -3,4 +3,4 @@
 docker build -t customerservice .
 
 #Build docker container
-docker run -d -p 3001:3000 --name customerservicenodejs customerservice
+docker run -d -p 3000:5000 --name customerservicenodejs customerservice

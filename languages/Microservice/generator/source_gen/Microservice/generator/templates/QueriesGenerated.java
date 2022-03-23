@@ -5,10 +5,10 @@ package Microservice.generator.templates;
 import jetbrains.mps.generator.runtime.Generated;
 import jetbrains.mps.generator.impl.query.QueryProviderBase;
 import jetbrains.mps.generator.template.BaseMappingRuleContext;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.generator.template.PropertyMacroContext;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.Sequence;
@@ -40,10 +40,10 @@ public class QueriesGenerated extends QueryProviderBase {
     super(1);
   }
   public static boolean rule_Condition_0_0(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.language$7eaz).equals("NodeJs");
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.supportedLanguage$Dv4W), CONCEPTS.NodeJs$Ny);
   }
   public static boolean rule_Condition_0_1(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.language$7eaz).equals("Python");
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.supportedLanguage$Dv4W), CONCEPTS.Python$N3);
   }
   public static boolean rule_Condition_2_0(final BaseMappingRuleContext _context) {
     return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.operationType$IuTs), CONCEPTS.CREATE$lU) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.operationMethod$gVWt), CONCEPTS.CreateEntity$OM);
@@ -677,15 +677,8 @@ public class QueriesGenerated extends QueryProviderBase {
     }
   }
 
-  private static final class PROPS {
-    /*package*/ static final SProperty language$7eaz = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L, 0x1e6d3fd7ef702bf2L, "language");
-    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty value$zQr_ = MetaAdapterFactory.getProperty(0xc7fb639fbe784307L, 0x89b0b5959c3fa8c8L, 0x229012ddae35f04L, 0x229012ddae35f05L, "value");
-    /*package*/ static final SProperty route$TLet = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bbcL, 0x76e8bdba0ceb9bbeL, "route");
-    /*package*/ static final SProperty message$cqdI = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae107L, 0x5775eded06efe586L, "message");
-  }
-
   private static final class LINKS {
+    /*package*/ static final SContainmentLink supportedLanguage$Dv4W = MetaAdapterFactory.getContainmentLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f54eL, 0x2242fe026373f54fL, "supportedLanguage");
     /*package*/ static final SContainmentLink operationMethod$gVWt = MetaAdapterFactory.getContainmentLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d117cdL, 0x4151f0e6b1d117cfL, "operationMethod");
     /*package*/ static final SContainmentLink operationType$IuTs = MetaAdapterFactory.getContainmentLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1cb88b6L, 0x4151f0e6b1cb88b7L, "operationType");
     /*package*/ static final SContainmentLink elements$_j45 = MetaAdapterFactory.getContainmentLink(0xc7fb639fbe784307L, 0x89b0b5959c3fa8c8L, 0x2331694e561af166L, 0x2331694e561af167L, "elements");
@@ -702,6 +695,8 @@ public class QueriesGenerated extends QueryProviderBase {
   }
 
   private static final class CONCEPTS {
+    /*package*/ static final SConcept NodeJs$Ny = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f552L, "Microservice.structure.NodeJs");
+    /*package*/ static final SConcept Python$N3 = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f551L, "Microservice.structure.Python");
     /*package*/ static final SConcept CreateEntity$OM = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d0731fL, "Microservice.structure.CreateEntity");
     /*package*/ static final SConcept CREATE$lU = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1c7ddb6L, "Microservice.structure.CREATE");
     /*package*/ static final SConcept GetEntities$PK = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d07321L, "Microservice.structure.GetEntities");
@@ -715,5 +710,12 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SConcept EntityID$4e = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae106L, "Microservice.structure.EntityID");
     /*package*/ static final SConcept Entities$aw = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06ee5bb1L, "Microservice.structure.Entities");
     /*package*/ static final SConcept Entity$3J = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae105L, "Microservice.structure.Entity");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty value$zQr_ = MetaAdapterFactory.getProperty(0xc7fb639fbe784307L, 0x89b0b5959c3fa8c8L, 0x229012ddae35f04L, 0x229012ddae35f05L, "value");
+    /*package*/ static final SProperty route$TLet = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bbcL, 0x76e8bdba0ceb9bbeL, "route");
+    /*package*/ static final SProperty message$cqdI = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae107L, 0x5775eded06efe586L, "message");
   }
 }

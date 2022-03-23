@@ -73,7 +73,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createConstant_4());
     editorCell.addEditorCell(createProperty_3());
     editorCell.addEditorCell(createConstant_5());
-    editorCell.addEditorCell(createProperty_4());
+    editorCell.addEditorCell(createComponent_0());
     editorCell.addEditorCell(createConstant_6());
     editorCell.addEditorCell(createConstant_7());
     editorCell.addEditorCell(createConstant_8());
@@ -234,33 +234,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createProperty_4() {
-    getCellFactory().pushCellContext();
-    try {
-      final SProperty property = PROPS.language$7eaz;
-      getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
-      EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no language>");
-      editorCell.setCellId("property_language");
-      Style style = new StyleImpl();
-      style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
-      editorCell.getStyle().putAll(style);
-      editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
-      setCellContext(editorCell);
-      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
-      Iterable<SNode> currentPropertyAttributes = Sequence.fromIterable(propertyAttributes).where(new IWhereFilter<SNode>() {
-        public boolean accept(SNode it) {
-          return Objects.equals(PropertyAttribute__BehaviorDescriptor.getProperty_id1avfQ4BBzOo.invoke(it), property);
-        }
-      });
-      if (Sequence.fromIterable(currentPropertyAttributes).isNotEmpty()) {
-        EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
-        return manager.createNodeRoleAttributeCell(Sequence.fromIterable(currentPropertyAttributes).first(), AttributeKind.PROPERTY, editorCell);
-      } else
-      return editorCell;
-    } finally {
-      getCellFactory().popCellContext();
-    }
+  private EditorCell createComponent_0() {
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Microservice.editor.SupportedLanguageComponent");
+    return editorCell;
   }
   private EditorCell createConstant_6() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
@@ -485,7 +461,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
     /*package*/ static final SProperty version$irqw = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L, 0x1878631b6ae763abL, "version");
     /*package*/ static final SProperty description$iCkn = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L, 0x1878631b6ae763b8L, "description");
     /*package*/ static final SProperty port$TFqt = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L, 0x76e8bdba0ceb9bbbL, "port");
-    /*package*/ static final SProperty language$7eaz = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L, 0x1e6d3fd7ef702bf2L, "language");
   }
 
   private static final class CONCEPTS {

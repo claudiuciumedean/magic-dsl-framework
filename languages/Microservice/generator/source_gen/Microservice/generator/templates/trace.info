@@ -10,14 +10,14 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
     <file name="QueriesGenerated.java">
-      <unit at="680,0,687,0" name="Microservice.generator.templates.QueriesGenerated$PROPS" />
-      <unit at="688,0,703,0" name="Microservice.generator.templates.QueriesGenerated$LINKS" />
-      <unit at="704,0,719,0" name="Microservice.generator.templates.QueriesGenerated$CONCEPTS" />
+      <unit at="715,0,721,0" name="Microservice.generator.templates.QueriesGenerated$PROPS" />
+      <unit at="680,0,696,0" name="Microservice.generator.templates.QueriesGenerated$LINKS" />
       <unit at="429,0,446,0" name="Microservice.generator.templates.QueriesGenerated$MRRC" />
+      <unit at="697,0,714,0" name="Microservice.generator.templates.QueriesGenerated$CONCEPTS" />
       <unit at="460,0,481,0" name="Microservice.generator.templates.QueriesGenerated$SNsQ" />
       <unit at="384,0,417,0" name="Microservice.generator.templates.QueriesGenerated$RRC" />
       <unit at="549,0,679,0" name="Microservice.generator.templates.QueriesGenerated$PVQ" />
-      <unit at="37,0,720,0" name="Microservice.generator.templates.QueriesGenerated" />
+      <unit at="37,0,722,0" name="Microservice.generator.templates.QueriesGenerated" />
     </file>
   </root>
   <root nodeRef="r:8c1f3b5b-55fc-414b-8f28-2906776713b7(Microservice.generator.templates@generator)/2192478790267090111">
@@ -727,16 +727,16 @@
   </root>
   <root nodeRef="r:8c1f3b5b-55fc-414b-8f28-2906776713b7(Microservice.generator.templates@generator)/8568306897850702719">
     <file name="QueriesGenerated.java">
-      <node id="2192478790266925322" at="42,83,43,99" concept="5" />
-      <node id="2192478790267090547" at="45,83,46,99" concept="5" />
+      <node id="2192478790266925322" at="42,83,43,137" concept="5" />
+      <node id="2192478790267090547" at="45,83,46,137" concept="5" />
       <node id="8568306897850702912" at="419,14,420,58" concept="0" />
       <node id="2192478790267089551" at="420,58,421,58" concept="0" />
       <node id="8568306897850702912" at="437,15,438,58" concept="5" />
       <node id="2192478790267089551" at="439,15,440,58" concept="5" />
       <node id="2192478790266925066" at="42,0,45,0" concept="7" trace="rule_Condition_0_0#(Ljetbrains/mps/generator/template/BaseMappingRuleContext;)Z" />
       <node id="2192478790267090291" at="45,0,48,0" concept="7" trace="rule_Condition_0_1#(Ljetbrains/mps/generator/template/BaseMappingRuleContext;)Z" />
-      <scope id="2192478790266925067" at="42,83,43,99" />
-      <scope id="2192478790267090292" at="45,83,46,99" />
+      <scope id="2192478790266925067" at="42,83,43,137" />
+      <scope id="2192478790267090292" at="45,83,46,137" />
       <scope id="8568306897850702912" at="437,15,438,58" />
       <scope id="2192478790267089551" at="439,15,440,58" />
       <scope id="2192478790266925066" at="42,0,45,0">

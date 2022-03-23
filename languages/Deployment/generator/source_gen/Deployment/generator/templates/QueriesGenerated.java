@@ -5,9 +5,10 @@ package Deployment.generator.templates;
 import jetbrains.mps.generator.runtime.Generated;
 import jetbrains.mps.generator.impl.query.QueryProviderBase;
 import jetbrains.mps.generator.template.BaseMappingRuleContext;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.generator.template.PropertyMacroContext;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import java.util.Map;
 import jetbrains.mps.generator.impl.query.MapRootRuleCondition;
 import java.util.HashMap;
@@ -21,6 +22,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 @Generated
 public class QueriesGenerated extends QueryProviderBase {
@@ -28,16 +30,16 @@ public class QueriesGenerated extends QueryProviderBase {
     super(1);
   }
   public static boolean rule_Condition_0_0(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz).equals("NodeJs");
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), LINKS.supportedLanguage$Dv4W), CONCEPTS.NodeJs$Ny);
   }
   public static boolean rule_Condition_0_1(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz).equals("Python");
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), LINKS.supportedLanguage$Dv4W), CONCEPTS.Python$N3);
   }
   public static boolean rule_Condition_0_2(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz).equals("NodeJs");
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), LINKS.supportedLanguage$Dv4W), CONCEPTS.NodeJs$Ny);
   }
   public static boolean rule_Condition_0_3(final BaseMappingRuleContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz).equals("Python");
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), LINKS.supportedLanguage$Dv4W), CONCEPTS.Python$N3);
   }
   public static Object propertyMacro_GetValue_1_0(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.maintainer$57CV);
@@ -67,7 +69,8 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.port$TFqt);
   }
   public static Object propertyMacro_GetValue_5_2(final PropertyMacroContext _context) {
-    return (SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL) + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.language$7eaz)).toLowerCase();
+    String language = (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), LINKS.supportedLanguage$Dv4W), CONCEPTS.NodeJs$Ny) ? "nodejs" : "python");
+    return (SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL) + language).toLowerCase();
   }
   public static Object propertyMacro_GetValue_5_3(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$Ai5f), LINKS.microservice$ZUJs), PROPS.name$MnvL).toLowerCase();
@@ -168,10 +171,15 @@ public class QueriesGenerated extends QueryProviderBase {
   private static final class LINKS {
     /*package*/ static final SContainmentLink microservice$Ai5f = MetaAdapterFactory.getContainmentLink(0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d850dc4L, 0x675907eeb91f484eL, "microservice");
     /*package*/ static final SReferenceLink microservice$ZUJs = MetaAdapterFactory.getReferenceLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x675907eeb91f484bL, 0x675907eeb91f484cL, "microservice");
+    /*package*/ static final SContainmentLink supportedLanguage$Dv4W = MetaAdapterFactory.getContainmentLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f54eL, 0x2242fe026373f54fL, "supportedLanguage");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept NodeJs$Ny = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f552L, "Microservice.structure.NodeJs");
+    /*package*/ static final SConcept Python$N3 = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f551L, "Microservice.structure.Python");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty language$7eaz = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L, 0x1e6d3fd7ef702bf2L, "language");
     /*package*/ static final SProperty maintainer$57CV = MetaAdapterFactory.getProperty(0xc2a6432be821404bL, 0xaf0e22b30531f868L, 0x76dbdb74d850dc4L, 0x76dbdb74d850dc7L, "maintainer");
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
     /*package*/ static final SProperty version$irqw = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bb9L, 0x1878631b6ae763abL, "version");

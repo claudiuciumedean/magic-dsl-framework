@@ -1,10 +1,10 @@
-FROM node:17
+FROM python:3.8-slim-buster
 MAINTAINER Claudiu
 
 WORKDIR /usr/src
 
-COPY package.json /usr/src
-COPY CustomerService.js /usr/src
+COPY requirements.txt /usr/src
+COPY app.py /usr/src
 
-RUN npm install
-CMD npm start
+RUN pip3 install -r requirements.txt
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]

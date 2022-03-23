@@ -116,11 +116,8 @@
       <node concept="3F0ifn" id="1THfXvJs2MX" role="3EZMnx">
         <property role="3F0ifm" value="language" />
       </node>
-      <node concept="3F0A7n" id="1THfXvJs2QH" role="3EZMnx">
-        <ref role="1NtTu8" to="b4dw:1THfXvJs2JM" resolve="language" />
-        <node concept="ljvvj" id="1THfXvJs2Rp" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
+      <node concept="PMmxH" id="292Zw9zsZp9" role="3EZMnx">
+        <ref role="PMmxG" node="292Zw9zsZn0" resolve="SupportedLanguageComponent" />
       </node>
       <node concept="3F0ifn" id="1xSoLHEUhJn" role="3EZMnx">
         <node concept="ljvvj" id="1xSoLHEUhJo" role="3F10Kt">
@@ -306,6 +303,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="1xSoLHEU$fL">
+    <property role="3GE5qa" value="DataType" />
     <ref role="1XX52x" to="b4dw:1xSoLHETQfb" resolve="DataType" />
     <node concept="3EZMnI" id="1xSoLHEU$fZ" role="2wV5jI">
       <node concept="l2Vlx" id="1xSoLHEU$g0" role="2iSdaV" />
@@ -337,6 +335,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5XT76wXQ1rl">
+    <property role="3GE5qa" value="DataType" />
     <ref role="1XX52x" to="b4dw:5XT76wXQ1rj" resolve="DataTypeReference" />
     <node concept="1iCGBv" id="5XT76wXQ1rm" role="2wV5jI">
       <ref role="1NtTu8" to="b4dw:5XT76wXQ1rk" resolve="dataType" />
@@ -380,6 +379,14 @@
     <ref role="1XX52x" to="b4dw:5tPVuO6X23V" resolve="IQueryParam" />
     <node concept="3F1sOY" id="5tPVuO6X24v" role="2wV5jI">
       <ref role="1NtTu8" to="b4dw:5tPVuO6X23Y" resolve="queryParam" />
+    </node>
+  </node>
+  <node concept="PKFIW" id="292Zw9zsZn0">
+    <property role="3GE5qa" value="SupportedLanguage" />
+    <property role="TrG5h" value="SupportedLanguageComponent" />
+    <ref role="1XX52x" to="b4dw:292Zw9zsZle" resolve="ISupportedLanguage" />
+    <node concept="3F1sOY" id="292Zw9zsZnc" role="2wV5jI">
+      <ref role="1NtTu8" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
     </node>
   </node>
 </model>

@@ -9,8 +9,8 @@
   </languages>
   <imports>
     <import index="b4dw" ref="r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)" />
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="zqge" ref="r:59e90602-6655-4552-86eb-441a42a9a0e4(jetbrains.mps.lang.text.structure)" implicit="true" />
   </imports>
   <registry>
@@ -206,17 +206,16 @@
       <node concept="30G5F_" id="1THfXvJs30a" role="30HLyM">
         <node concept="3clFbS" id="1THfXvJs30b" role="2VODD2">
           <node concept="3clFbF" id="1THfXvJs34a" role="3cqZAp">
-            <node concept="2OqwBi" id="1THfXvJs4Bu" role="3clFbG">
+            <node concept="2OqwBi" id="292Zw9ztWet" role="3clFbG">
               <node concept="2OqwBi" id="1THfXvJs3jB" role="2Oq$k0">
                 <node concept="30H73N" id="1THfXvJs349" role="2Oq$k0" />
-                <node concept="3TrcHB" id="1THfXvJs3D3" role="2OqNvi">
-                  <ref role="3TsBF5" to="b4dw:1THfXvJs2JM" resolve="language" />
+                <node concept="3TrEf2" id="292Zw9ztVUd" role="2OqNvi">
+                  <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
                 </node>
               </node>
-              <node concept="liA8E" id="1THfXvJs4I9" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
-                <node concept="Xl_RD" id="1THfXvJs4Jj" role="37wK5m">
-                  <property role="Xl_RC" value="NodeJs" />
+              <node concept="1mIQ4w" id="292Zw9ztWDb" role="2OqNvi">
+                <node concept="chp4Y" id="292Zw9ztWJ_" role="cj9EA">
+                  <ref role="cht4Q" to="b4dw:292Zw9zsZli" resolve="NodeJs" />
                 </node>
               </node>
             </node>
@@ -230,17 +229,16 @@
       <node concept="30G5F_" id="1THfXvJsFlN" role="30HLyM">
         <node concept="3clFbS" id="1THfXvJsFlO" role="2VODD2">
           <node concept="3clFbF" id="1THfXvJsFpN" role="3cqZAp">
-            <node concept="2OqwBi" id="1THfXvJsGh3" role="3clFbG">
+            <node concept="2OqwBi" id="292Zw9ztXdo" role="3clFbG">
               <node concept="2OqwBi" id="1THfXvJsFBs" role="2Oq$k0">
                 <node concept="30H73N" id="1THfXvJsFpM" role="2Oq$k0" />
-                <node concept="3TrcHB" id="1THfXvJsFTN" role="2OqNvi">
-                  <ref role="3TsBF5" to="b4dw:1THfXvJs2JM" resolve="language" />
+                <node concept="3TrEf2" id="292Zw9ztXan" role="2OqNvi">
+                  <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
                 </node>
               </node>
-              <node concept="liA8E" id="1THfXvJsZGh" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
-                <node concept="Xl_RD" id="1THfXvJsZHB" role="37wK5m">
-                  <property role="Xl_RC" value="Python" />
+              <node concept="1mIQ4w" id="292Zw9ztXM$" role="2OqNvi">
+                <node concept="chp4Y" id="292Zw9ztXSV" role="cj9EA">
+                  <ref role="cht4Q" to="b4dw:292Zw9zsZlh" resolve="Python" />
                 </node>
               </node>
             </node>

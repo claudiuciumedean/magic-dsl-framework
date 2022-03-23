@@ -26,14 +26,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_IOperationMethod;
   private ConceptPresentation props_IOperationType;
   private ConceptPresentation props_IQueryParam;
+  private ConceptPresentation props_ISupportedLanguage;
   private ConceptPresentation props_Message;
   private ConceptPresentation props_Microservice;
   private ConceptPresentation props_MicroserviceReference;
+  private ConceptPresentation props_NodeJs;
   private ConceptPresentation props_Operation;
   private ConceptPresentation props_OperationMethod;
   private ConceptPresentation props_OperationType;
   private ConceptPresentation props_PayloadType;
+  private ConceptPresentation props_Python;
   private ConceptPresentation props_READ;
+  private ConceptPresentation props_SupportedLanguage;
   private ConceptPresentation props_UPDATE;
   private ConceptPresentation props_UpdateEntity;
 
@@ -156,6 +160,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IQueryParam = cpb.create();
         }
         return props_IQueryParam;
+      case LanguageConceptSwitch.ISupportedLanguage:
+        if (props_ISupportedLanguage == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_ISupportedLanguage = cpb.create();
+        }
+        return props_ISupportedLanguage;
       case LanguageConceptSwitch.Message:
         if (props_Message == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -177,6 +187,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_MicroserviceReference = cpb.create();
         }
         return props_MicroserviceReference;
+      case LanguageConceptSwitch.NodeJs:
+        if (props_NodeJs == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("NodeJs");
+          props_NodeJs = cpb.create();
+        }
+        return props_NodeJs;
       case LanguageConceptSwitch.Operation:
         if (props_Operation == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -205,6 +222,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PayloadType = cpb.create();
         }
         return props_PayloadType;
+      case LanguageConceptSwitch.Python:
+        if (props_Python == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Python");
+          props_Python = cpb.create();
+        }
+        return props_Python;
       case LanguageConceptSwitch.READ:
         if (props_READ == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -212,6 +236,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_READ = cpb.create();
         }
         return props_READ;
+      case LanguageConceptSwitch.SupportedLanguage:
+        if (props_SupportedLanguage == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SupportedLanguage");
+          props_SupportedLanguage = cpb.create();
+        }
+        return props_SupportedLanguage;
       case LanguageConceptSwitch.UPDATE:
         if (props_UPDATE == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

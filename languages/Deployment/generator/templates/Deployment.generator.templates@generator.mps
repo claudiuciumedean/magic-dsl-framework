@@ -9,8 +9,8 @@
   <imports>
     <import index="qh72" ref="r:d65c3470-1169-4d9a-a5dd-2196914085f2(Deployment.structure)" />
     <import index="b4dw" ref="r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)" implicit="true" />
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -25,6 +25,15 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
+        <child id="1068431790190" name="initializer" index="33vP2m" />
+      </concept>
+      <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
+        <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
+      </concept>
+      <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
+        <child id="5680397130376446158" name="type" index="1tU5fm" />
+      </concept>
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
@@ -32,16 +41,27 @@
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
       <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
+      <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
+        <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
+      </concept>
+      <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
         <child id="1079359253376" name="expression" index="1eOMHV" />
       </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
-        <child id="1068499141038" name="actualArgument" index="37wK5m" />
+      </concept>
+      <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
+        <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
+      </concept>
+      <concept id="1163668896201" name="jetbrains.mps.baseLanguage.structure.TernaryOperatorExpression" flags="nn" index="3K4zz7">
+        <child id="1163668914799" name="condition" index="3K4Cdx" />
+        <child id="1163668922816" name="ifTrue" index="3K4E3e" />
+        <child id="1163668934364" name="ifFalse" index="3K4GZi" />
       </concept>
     </language>
     <language id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator">
@@ -83,6 +103,12 @@
       </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
+        <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
+      </concept>
+      <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
+        <child id="1177027386292" name="conceptArgument" index="cj9EA" />
+      </concept>
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
@@ -111,8 +137,8 @@
       <node concept="30G5F_" id="3Kwu4vCO5kQ" role="30HLyM">
         <node concept="3clFbS" id="3Kwu4vCO5kR" role="2VODD2">
           <node concept="3clFbF" id="3Kwu4vCO9Tg" role="3cqZAp">
-            <node concept="2OqwBi" id="3Kwu4vCObtV" role="3clFbG">
-              <node concept="2OqwBi" id="3Kwu4vCOTLe" role="2Oq$k0">
+            <node concept="2OqwBi" id="292Zw9zum7X" role="3clFbG">
+              <node concept="2OqwBi" id="292Zw9zuluB" role="2Oq$k0">
                 <node concept="2OqwBi" id="3Kwu4vCOTdm" role="2Oq$k0">
                   <node concept="2OqwBi" id="3Kwu4vCOaLG" role="2Oq$k0">
                     <node concept="30H73N" id="3Kwu4vCO9Tf" role="2Oq$k0" />
@@ -124,14 +150,13 @@
                     <ref role="3Tt5mk" to="b4dw:6tp1YUT7Oxc" resolve="microservice" />
                   </node>
                 </node>
-                <node concept="3TrcHB" id="3Kwu4vCOU7p" role="2OqNvi">
-                  <ref role="3TsBF5" to="b4dw:1THfXvJs2JM" resolve="language" />
+                <node concept="3TrEf2" id="292Zw9zulTZ" role="2OqNvi">
+                  <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
                 </node>
               </node>
-              <node concept="liA8E" id="3Kwu4vCObYu" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
-                <node concept="Xl_RD" id="3Kwu4vCObZC" role="37wK5m">
-                  <property role="Xl_RC" value="NodeJs" />
+              <node concept="1mIQ4w" id="292Zw9zumti" role="2OqNvi">
+                <node concept="chp4Y" id="292Zw9zum_7" role="cj9EA">
+                  <ref role="cht4Q" to="b4dw:292Zw9zsZli" resolve="NodeJs" />
                 </node>
               </node>
             </node>
@@ -145,7 +170,7 @@
       <node concept="30G5F_" id="3Kwu4vCOc9H" role="30HLyM">
         <node concept="3clFbS" id="3Kwu4vCOc9I" role="2VODD2">
           <node concept="3clFbF" id="3Kwu4vCOca5" role="3cqZAp">
-            <node concept="2OqwBi" id="3Kwu4vCOcXu" role="3clFbG">
+            <node concept="2OqwBi" id="292Zw9zunAV" role="3clFbG">
               <node concept="2OqwBi" id="3Kwu4vCOS4q" role="2Oq$k0">
                 <node concept="2OqwBi" id="3Kwu4vCORwK" role="2Oq$k0">
                   <node concept="2OqwBi" id="3Kwu4vCOcmW" role="2Oq$k0">
@@ -158,14 +183,13 @@
                     <ref role="3Tt5mk" to="b4dw:6tp1YUT7Oxc" resolve="microservice" />
                   </node>
                 </node>
-                <node concept="3TrcHB" id="3Kwu4vCOSq_" role="2OqNvi">
-                  <ref role="3TsBF5" to="b4dw:1THfXvJs2JM" resolve="language" />
+                <node concept="3TrEf2" id="292Zw9zuns4" role="2OqNvi">
+                  <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
                 </node>
               </node>
-              <node concept="liA8E" id="3Kwu4vCOdy6" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
-                <node concept="Xl_RD" id="3Kwu4vCOdzr" role="37wK5m">
-                  <property role="Xl_RC" value="Python" />
+              <node concept="1mIQ4w" id="292Zw9zunVo" role="2OqNvi">
+                <node concept="chp4Y" id="292Zw9zuo2l" role="cj9EA">
+                  <ref role="cht4Q" to="b4dw:292Zw9zsZlh" resolve="Python" />
                 </node>
               </node>
             </node>
@@ -178,28 +202,27 @@
       <ref role="3lhOvi" node="3Kwu4vCP3ER" resolve="map_DeploymentConfig" />
       <node concept="30G5F_" id="3Kwu4vCPb44" role="30HLyM">
         <node concept="3clFbS" id="3Kwu4vCPb45" role="2VODD2">
-          <node concept="3clFbF" id="3Kwu4vCPb84" role="3cqZAp">
-            <node concept="2OqwBi" id="3Kwu4vCPd3O" role="3clFbG">
-              <node concept="2OqwBi" id="3Kwu4vCPchf" role="2Oq$k0">
-                <node concept="2OqwBi" id="3Kwu4vCPbLI" role="2Oq$k0">
-                  <node concept="2OqwBi" id="3Kwu4vCPbkV" role="2Oq$k0">
-                    <node concept="30H73N" id="3Kwu4vCPb83" role="2Oq$k0" />
-                    <node concept="3TrEf2" id="3Kwu4vCPbBP" role="2OqNvi">
+          <node concept="3clFbF" id="292Zw9zumHO" role="3cqZAp">
+            <node concept="2OqwBi" id="292Zw9zumHP" role="3clFbG">
+              <node concept="2OqwBi" id="292Zw9zumHQ" role="2Oq$k0">
+                <node concept="2OqwBi" id="292Zw9zumHR" role="2Oq$k0">
+                  <node concept="2OqwBi" id="292Zw9zumHS" role="2Oq$k0">
+                    <node concept="30H73N" id="292Zw9zumHT" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="292Zw9zumHU" role="2OqNvi">
                       <ref role="3Tt5mk" to="qh72:6tp1YUT7Oxe" resolve="microservice" />
                     </node>
                   </node>
-                  <node concept="3TrEf2" id="3Kwu4vCPc6p" role="2OqNvi">
+                  <node concept="3TrEf2" id="292Zw9zumHV" role="2OqNvi">
                     <ref role="3Tt5mk" to="b4dw:6tp1YUT7Oxc" resolve="microservice" />
                   </node>
                 </node>
-                <node concept="3TrcHB" id="3Kwu4vCPcE0" role="2OqNvi">
-                  <ref role="3TsBF5" to="b4dw:1THfXvJs2JM" resolve="language" />
+                <node concept="3TrEf2" id="292Zw9zumHW" role="2OqNvi">
+                  <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
                 </node>
               </node>
-              <node concept="liA8E" id="3Kwu4vCPdzH" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
-                <node concept="Xl_RD" id="3Kwu4vCPdAi" role="37wK5m">
-                  <property role="Xl_RC" value="NodeJs" />
+              <node concept="1mIQ4w" id="292Zw9zumHX" role="2OqNvi">
+                <node concept="chp4Y" id="292Zw9zumHY" role="cj9EA">
+                  <ref role="cht4Q" to="b4dw:292Zw9zsZli" resolve="NodeJs" />
                 </node>
               </node>
             </node>
@@ -213,27 +236,26 @@
       <node concept="30G5F_" id="3Kwu4vCPiCM" role="30HLyM">
         <node concept="3clFbS" id="3Kwu4vCPiCN" role="2VODD2">
           <node concept="3clFbF" id="3Kwu4vCPiCO" role="3cqZAp">
-            <node concept="2OqwBi" id="3Kwu4vCPiCP" role="3clFbG">
-              <node concept="2OqwBi" id="3Kwu4vCPiCQ" role="2Oq$k0">
-                <node concept="2OqwBi" id="3Kwu4vCPiCR" role="2Oq$k0">
-                  <node concept="2OqwBi" id="3Kwu4vCPiCS" role="2Oq$k0">
-                    <node concept="30H73N" id="3Kwu4vCPiCT" role="2Oq$k0" />
-                    <node concept="3TrEf2" id="3Kwu4vCPiCU" role="2OqNvi">
+            <node concept="2OqwBi" id="292Zw9zuoGu" role="3clFbG">
+              <node concept="2OqwBi" id="292Zw9zuoGv" role="2Oq$k0">
+                <node concept="2OqwBi" id="292Zw9zuoGw" role="2Oq$k0">
+                  <node concept="2OqwBi" id="292Zw9zuoGx" role="2Oq$k0">
+                    <node concept="30H73N" id="292Zw9zuoGy" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="292Zw9zuoGz" role="2OqNvi">
                       <ref role="3Tt5mk" to="qh72:6tp1YUT7Oxe" resolve="microservice" />
                     </node>
                   </node>
-                  <node concept="3TrEf2" id="3Kwu4vCPiCV" role="2OqNvi">
+                  <node concept="3TrEf2" id="292Zw9zuoG$" role="2OqNvi">
                     <ref role="3Tt5mk" to="b4dw:6tp1YUT7Oxc" resolve="microservice" />
                   </node>
                 </node>
-                <node concept="3TrcHB" id="3Kwu4vCPiCW" role="2OqNvi">
-                  <ref role="3TsBF5" to="b4dw:1THfXvJs2JM" resolve="language" />
+                <node concept="3TrEf2" id="292Zw9zuoG_" role="2OqNvi">
+                  <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
                 </node>
               </node>
-              <node concept="liA8E" id="3Kwu4vCPiCX" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
-                <node concept="Xl_RD" id="3Kwu4vCPiCY" role="37wK5m">
-                  <property role="Xl_RC" value="Python" />
+              <node concept="1mIQ4w" id="292Zw9zuoGA" role="2OqNvi">
+                <node concept="chp4Y" id="292Zw9zuoGB" role="cj9EA">
+                  <ref role="cht4Q" to="b4dw:292Zw9zsZlh" resolve="Python" />
                 </node>
               </node>
             </node>
@@ -810,25 +832,51 @@
             <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
             <node concept="3zFVjK" id="3Kwu4vCQ0Rm" role="3zH0cK">
               <node concept="3clFbS" id="3Kwu4vCQ0Rn" role="2VODD2">
-                <node concept="3clFbF" id="3Kwu4vCQ0RJ" role="3cqZAp">
-                  <node concept="2OqwBi" id="3Kwu4vCQnc0" role="3clFbG">
-                    <node concept="1eOMI4" id="3Kwu4vCQn4Y" role="2Oq$k0">
-                      <node concept="3cpWs3" id="3Kwu4vCQ2Nv" role="1eOMHV">
-                        <node concept="2OqwBi" id="3Kwu4vCQ3Zy" role="3uHU7w">
-                          <node concept="2OqwBi" id="3Kwu4vCQ3p_" role="2Oq$k0">
-                            <node concept="2OqwBi" id="3Kwu4vCQ31s" role="2Oq$k0">
-                              <node concept="30H73N" id="3Kwu4vCQ2Ph" role="2Oq$k0" />
-                              <node concept="3TrEf2" id="3Kwu4vCQ3h2" role="2OqNvi">
+                <node concept="3cpWs8" id="292Zw9zureL" role="3cqZAp">
+                  <node concept="3cpWsn" id="292Zw9zureM" role="3cpWs9">
+                    <property role="TrG5h" value="language" />
+                    <node concept="3uibUv" id="292Zw9zureN" role="1tU5fm">
+                      <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+                    </node>
+                    <node concept="3K4zz7" id="292Zw9zuuJc" role="33vP2m">
+                      <node concept="Xl_RD" id="292Zw9zuuLy" role="3K4E3e">
+                        <property role="Xl_RC" value="nodejs" />
+                      </node>
+                      <node concept="Xl_RD" id="292Zw9zuvb5" role="3K4GZi">
+                        <property role="Xl_RC" value="python" />
+                      </node>
+                      <node concept="2OqwBi" id="292Zw9zutWq" role="3K4Cdx">
+                        <node concept="2OqwBi" id="292Zw9zusYJ" role="2Oq$k0">
+                          <node concept="2OqwBi" id="292Zw9zuscr" role="2Oq$k0">
+                            <node concept="2OqwBi" id="292Zw9zurzu" role="2Oq$k0">
+                              <node concept="30H73N" id="292Zw9zurlp" role="2Oq$k0" />
+                              <node concept="3TrEf2" id="292Zw9zus1Y" role="2OqNvi">
                                 <ref role="3Tt5mk" to="qh72:6tp1YUT7Oxe" resolve="microservice" />
                               </node>
                             </node>
-                            <node concept="3TrEf2" id="3Kwu4vCQ3Jo" role="2OqNvi">
+                            <node concept="3TrEf2" id="292Zw9zusBU" role="2OqNvi">
                               <ref role="3Tt5mk" to="b4dw:6tp1YUT7Oxc" resolve="microservice" />
                             </node>
                           </node>
-                          <node concept="3TrcHB" id="3Kwu4vCQ4vv" role="2OqNvi">
-                            <ref role="3TsBF5" to="b4dw:1THfXvJs2JM" resolve="language" />
+                          <node concept="3TrEf2" id="292Zw9zutqC" role="2OqNvi">
+                            <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
                           </node>
+                        </node>
+                        <node concept="1mIQ4w" id="292Zw9zuuhe" role="2OqNvi">
+                          <node concept="chp4Y" id="292Zw9zuuos" role="cj9EA">
+                            <ref role="cht4Q" to="b4dw:292Zw9zsZli" resolve="NodeJs" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="3Kwu4vCQ0RJ" role="3cqZAp">
+                  <node concept="2OqwBi" id="3Kwu4vCQnc0" role="3clFbG">
+                    <node concept="1eOMI4" id="3Kwu4vCQn4Y" role="2Oq$k0">
+                      <node concept="3cpWs3" id="292Zw9zuwZK" role="1eOMHV">
+                        <node concept="37vLTw" id="292Zw9zuxhj" role="3uHU7w">
+                          <ref role="3cqZAo" node="292Zw9zureM" resolve="language" />
                         </node>
                         <node concept="2OqwBi" id="3Kwu4vCQ1Oz" role="3uHU7B">
                           <node concept="2OqwBi" id="3Kwu4vCQ1qv" role="2Oq$k0">

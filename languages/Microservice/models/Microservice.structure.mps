@@ -54,6 +54,9 @@
     <node concept="PrWs8" id="7rCJrCcUTIU" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="PrWs8" id="292Zw9zsZm7" role="PzmwI">
+      <ref role="PrY4T" node="292Zw9zsZle" resolve="ISupportedLanguage" />
+    </node>
     <node concept="1TJgyi" id="1xSoLHETQeF" role="1TKVEl">
       <property role="IQ2nx" value="1763268223524365227" />
       <property role="TrG5h" value="version" />
@@ -69,17 +72,12 @@
       <property role="TrG5h" value="port" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-    <node concept="1TJgyi" id="1THfXvJs2JM" role="1TKVEl">
-      <property role="IQ2nx" value="2192478790266924018" />
-      <property role="TrG5h" value="language" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
     <node concept="1TJgyj" id="1xSoLHETQfa" role="1TKVEi">
       <property role="IQ2ns" value="1763268223524365258" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="data" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="1xSoLHETQfb" resolve="DataType" />
+      <ref role="20lvS9" node="5XT76wXQ1rj" resolve="DataTypeReference" />
     </node>
     <node concept="1TJgyj" id="tHJrtduRpn" role="1TKVEi">
       <property role="IQ2ns" value="535292525703558743" />
@@ -135,6 +133,8 @@
   <node concept="1TIwiD" id="1xSoLHETQfb">
     <property role="EcuMT" value="1763268223524365259" />
     <property role="TrG5h" value="DataType" />
+    <property role="3GE5qa" value="DataType" />
+    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="PrWs8" id="1xSoLHEU$fX" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -231,6 +231,7 @@
   <node concept="1TIwiD" id="5XT76wXQ1rj">
     <property role="EcuMT" value="6879561139824891603" />
     <property role="TrG5h" value="DataTypeReference" />
+    <property role="3GE5qa" value="DataType" />
     <node concept="1TJgyj" id="5XT76wXQ1rk" role="1TKVEi">
       <property role="20lbJX" value="fLJekj4/1" />
       <property role="IQ2ns" value="6879561139824891604" />
@@ -327,6 +328,35 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7rCJrCcUTIT" resolve="Microservice" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="292Zw9zsZld">
+    <property role="EcuMT" value="2468814831964386637" />
+    <property role="TrG5h" value="SupportedLanguage" />
+    <property role="3GE5qa" value="SupportedLanguage" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+  </node>
+  <node concept="PlHQZ" id="292Zw9zsZle">
+    <property role="EcuMT" value="2468814831964386638" />
+    <property role="3GE5qa" value="SupportedLanguage" />
+    <property role="TrG5h" value="ISupportedLanguage" />
+    <node concept="1TJgyj" id="292Zw9zsZlf" role="1TKVEi">
+      <property role="IQ2ns" value="2468814831964386639" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="supportedLanguage" />
+      <ref role="20lvS9" node="292Zw9zsZld" resolve="SupportedLanguage" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="292Zw9zsZlh">
+    <property role="EcuMT" value="2468814831964386641" />
+    <property role="3GE5qa" value="SupportedLanguage" />
+    <property role="TrG5h" value="Python" />
+    <ref role="1TJDcQ" node="292Zw9zsZld" resolve="SupportedLanguage" />
+  </node>
+  <node concept="1TIwiD" id="292Zw9zsZli">
+    <property role="EcuMT" value="2468814831964386642" />
+    <property role="3GE5qa" value="SupportedLanguage" />
+    <property role="TrG5h" value="NodeJs" />
+    <ref role="1TJDcQ" node="292Zw9zsZld" resolve="SupportedLanguage" />
   </node>
 </model>
 

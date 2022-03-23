@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-akfr9uwdmw039k040hk05yiy5gihhfi">
-  <files names="APIDoc.html:Dockerfile:app.py:build.sh:customers.json:requirements.txt" />
+<product version="3" modelHash="-bshitxcrs44w5f760nehi751rdhhfvr">
+  <files names="APIDoc.html:CustomerService.js:Dockerfile:api-doc.json:build.sh:customers.json:package.json" />
 </product>
 

@@ -358,6 +358,54 @@
           <property role="TrG5h" value=".js /usr/src" />
         </node>
       </node>
+      <node concept="356sEK" id="292Zw9z_Axa" role="383Ya9">
+        <node concept="356sEF" id="292Zw9z_Axb" role="356sEH">
+          <property role="TrG5h" value="COPY " />
+        </node>
+        <node concept="356sEF" id="292Zw9z_Azg" role="356sEH">
+          <property role="TrG5h" value="data" />
+          <node concept="17Uvod" id="292Zw9z_Azn" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="292Zw9z_Azo" role="3zH0cK">
+              <node concept="3clFbS" id="292Zw9z_Azp" role="2VODD2">
+                <node concept="3clFbF" id="292Zw9z_BGG" role="3cqZAp">
+                  <node concept="2OqwBi" id="292Zw9z_EvF" role="3clFbG">
+                    <node concept="2OqwBi" id="292Zw9z_DZu" role="2Oq$k0">
+                      <node concept="2OqwBi" id="292Zw9z_D0w" role="2Oq$k0">
+                        <node concept="2OqwBi" id="292Zw9z_Clq" role="2Oq$k0">
+                          <node concept="2OqwBi" id="292Zw9z_BSy" role="2Oq$k0">
+                            <node concept="30H73N" id="292Zw9z_BGF" role="2Oq$k0" />
+                            <node concept="3TrEf2" id="292Zw9z_Cdd" role="2OqNvi">
+                              <ref role="3Tt5mk" to="qh72:6tp1YUT7Oxe" resolve="microservice" />
+                            </node>
+                          </node>
+                          <node concept="3TrEf2" id="292Zw9z_CFr" role="2OqNvi">
+                            <ref role="3Tt5mk" to="b4dw:6tp1YUT7Oxc" resolve="microservice" />
+                          </node>
+                        </node>
+                        <node concept="3TrEf2" id="292Zw9z_DoU" role="2OqNvi">
+                          <ref role="3Tt5mk" to="b4dw:1xSoLHETQfa" resolve="data" />
+                        </node>
+                      </node>
+                      <node concept="3TrEf2" id="292Zw9z_Emz" role="2OqNvi">
+                        <ref role="3Tt5mk" to="b4dw:5XT76wXQ1rk" resolve="dataType" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="292Zw9z_ETB" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="356sEF" id="292Zw9z_Azj" role="356sEH">
+          <property role="TrG5h" value=".json /usr/src" />
+        </node>
+        <node concept="2EixSi" id="292Zw9z_Axc" role="2EinRH" />
+      </node>
       <node concept="356sEK" id="tHJrtdxhcm" role="383Ya9">
         <node concept="2EixSi" id="tHJrtdxhcp" role="2EinRH" />
       </node>

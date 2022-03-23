@@ -5,7 +5,8 @@ from flask import Flask, request, jsonify
 import uuid
 import json
 
-customers = json.loads('[{"id": 123,"name": "John","age": 31},{"id": 124,"name": "Max","age": 43}]')
+with open('customers.json') as file:
+  customers = json.load(file)
 
 app = Flask(__name__)
 app.run()

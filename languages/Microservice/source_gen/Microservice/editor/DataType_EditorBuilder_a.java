@@ -64,7 +64,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "data type (JSON format)");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "data type (valid JSON format)");
     editorCell.setCellId("Constant_pq0nb8_a0");
     editorCell.setDefaultText("");
     return editorCell;

@@ -164,7 +164,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForDataType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "DataType", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1878631b6ae763cbL);
-    b.class_(false, false, false);
+    b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/1763268223524365259");
     b.version(2);
@@ -302,7 +302,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("version", 0x1878631b6ae763abL).type(PrimitiveTypeId.STRING).origin("1763268223524365227").done();
     b.property("description", 0x1878631b6ae763b8L).type(PrimitiveTypeId.STRING).origin("1763268223524365240").done();
     b.property("port", 0x76e8bdba0ceb9bbbL).type(PrimitiveTypeId.STRING).origin("8568306897850702779").done();
-    b.aggregate("data", 0x1878631b6ae763caL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1878631b6ae763cbL).optional(true).ordered(true).multiple(true).origin("1763268223524365258").done();
+    b.aggregate("data", 0x1878631b6ae763caL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5f791c683dd816d3L).optional(true).ordered(true).multiple(false).origin("1763268223524365258").done();
     b.aggregate("operations", 0x76dbdb74d7b7657L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bbcL).optional(true).ordered(true).multiple(true).origin("535292525703558743").done();
     return b.create();
   }

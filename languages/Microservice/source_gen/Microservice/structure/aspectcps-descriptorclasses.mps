@@ -4952,7 +4952,9 @@
               <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.class_(boolean,boolean,boolean)" resolve="class_" />
               <node concept="3clFbT" id="se" role="37wK5m" />
               <node concept="3clFbT" id="sf" role="37wK5m" />
-              <node concept="3clFbT" id="sg" role="37wK5m" />
+              <node concept="3clFbT" id="sg" role="37wK5m">
+                <property role="3clFbU" value="true" />
+              </node>
             </node>
           </node>
         </node>
@@ -7309,7 +7311,7 @@
                           <property role="1adDun" value="0xbe22cc66f48262f1L" />
                         </node>
                         <node concept="1adDum" id="E9" role="37wK5m">
-                          <property role="1adDun" value="0x1878631b6ae763cbL" />
+                          <property role="1adDun" value="0x5f791c683dd816d3L" />
                         </node>
                       </node>
                     </node>
@@ -7329,9 +7331,7 @@
                 </node>
                 <node concept="liA8E" id="DW" role="2OqNvi">
                   <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2$AggregationLinkBuilder.multiple(boolean)" resolve="multiple" />
-                  <node concept="3clFbT" id="Ec" role="37wK5m">
-                    <property role="3clFbU" value="true" />
-                  </node>
+                  <node concept="3clFbT" id="Ec" role="37wK5m" />
                 </node>
               </node>
               <node concept="liA8E" id="DU" role="2OqNvi">

@@ -76,7 +76,6 @@
       <property role="IQ2ns" value="1763268223524365258" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="data" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="5XT76wXQ1rj" resolve="DataTypeReference" />
     </node>
     <node concept="1TJgyj" id="tHJrtduRpn" role="1TKVEi">

@@ -406,6 +406,12 @@
         </node>
         <node concept="2EixSi" id="292Zw9z_Axc" role="2EinRH" />
       </node>
+      <node concept="356sEK" id="292Zw9zA8iU" role="383Ya9">
+        <node concept="356sEF" id="292Zw9zA8iV" role="356sEH">
+          <property role="TrG5h" value="COPY APIDoc.html /usr/src" />
+        </node>
+        <node concept="2EixSi" id="292Zw9zA8iW" role="2EinRH" />
+      </node>
       <node concept="356sEK" id="tHJrtdxhcm" role="383Ya9">
         <node concept="2EixSi" id="tHJrtdxhcp" role="2EinRH" />
       </node>
@@ -534,6 +540,12 @@
           <property role="TrG5h" value=".json /usr/src" />
         </node>
         <node concept="2EixSi" id="292Zw9z$Wj4" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="292Zw9zA9sf" role="383Ya9">
+        <node concept="356sEF" id="292Zw9zA9sg" role="356sEH">
+          <property role="TrG5h" value="COPY APIDoc.html /usr/src" />
+        </node>
+        <node concept="2EixSi" id="292Zw9zA9sh" role="2EinRH" />
       </node>
       <node concept="356sEK" id="3Kwu4vCOl77" role="383Ya9">
         <node concept="2EixSi" id="3Kwu4vCOl79" role="2EinRH" />

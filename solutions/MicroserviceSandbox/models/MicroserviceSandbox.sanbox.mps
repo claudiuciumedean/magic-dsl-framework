@@ -17,7 +17,7 @@
       <concept id="2468814831964386638" name="Microservice.structure.ISupportedLanguage" flags="ng" index="11cgHc">
         <child id="2468814831964386639" name="supportedLanguage" index="11cgHd" />
       </concept>
-      <concept id="2468814831964386642" name="Microservice.structure.NodeJs" flags="ng" index="11cgHg" />
+      <concept id="2468814831964386641" name="Microservice.structure.Python" flags="ng" index="11cgHj" />
       <concept id="6302204855854571771" name="Microservice.structure.IQueryParam" flags="ng" index="1hwsOm">
         <child id="6302204855854571774" name="queryParam" index="1hwsOj" />
       </concept>
@@ -171,7 +171,7 @@
     <node concept="1yCgEV" id="292Zw9zwYfG" role="1MBK3h">
       <ref role="1yCgEW" node="292Zw9zwY7Q" resolve="customers" />
     </node>
-    <node concept="11cgHg" id="292Zw9z__6V" role="11cgHd" />
+    <node concept="11cgHj" id="292Zw9zAA0r" role="11cgHd" />
   </node>
   <node concept="1MBK3g" id="292Zw9zwY7Q">
     <property role="TrG5h" value="customers" />

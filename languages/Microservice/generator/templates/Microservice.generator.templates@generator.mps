@@ -246,6 +246,10 @@
         </node>
       </node>
     </node>
+    <node concept="3lhOvk" id="292Zw9z_LkQ" role="3lj3bC">
+      <ref role="30HIoZ" to="b4dw:7rCJrCcUTIT" resolve="Microservice" />
+      <ref role="3lhOvi" node="292Zw9z_Lot" resolve="apiDoc" />
+    </node>
     <node concept="3lhOvk" id="292Zw9zxw0P" role="3lj3bC">
       <ref role="30HIoZ" to="b4dw:1xSoLHETQfb" resolve="DataType" />
       <ref role="3lhOvi" node="292Zw9zx0d4" resolve="name" />
@@ -437,6 +441,32 @@
       </node>
       <node concept="356sEK" id="5tPVuO6Mw6P" role="383Ya9">
         <node concept="2EixSi" id="5tPVuO6Mw6R" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="292Zw9zA9JZ" role="383Ya9">
+        <node concept="356WMU" id="292Zw9zA9PW" role="356sEH">
+          <node concept="356sEK" id="292Zw9zA9PX" role="383Ya9">
+            <node concept="2EixSi" id="292Zw9zA9Q0" role="2EinRH" />
+            <node concept="356sEF" id="292Zw9zA9Q1" role="356sEH">
+              <property role="TrG5h" value="app.get(&quot;/api-documentation&quot;, (req, res) =&gt; {" />
+            </node>
+          </node>
+          <node concept="356sEK" id="292Zw9zA9Q3" role="383Ya9">
+            <node concept="2EixSi" id="292Zw9zA9Q6" role="2EinRH" />
+            <node concept="356sEF" id="292Zw9zA9Q7" role="356sEH">
+              <property role="TrG5h" value="  res.sendFile(__dirname + &quot;/APIDoc.html&quot;);" />
+            </node>
+          </node>
+          <node concept="356sEK" id="292Zw9zA9Q9" role="383Ya9">
+            <node concept="2EixSi" id="292Zw9zA9Qc" role="2EinRH" />
+            <node concept="356sEF" id="292Zw9zA9Qd" role="356sEH">
+              <property role="TrG5h" value="});" />
+            </node>
+          </node>
+          <node concept="356sEK" id="292Zw9zA9Qz" role="383Ya9">
+            <node concept="2EixSi" id="292Zw9zA9Q_" role="2EinRH" />
+          </node>
+        </node>
+        <node concept="2EixSi" id="292Zw9zA9K1" role="2EinRH" />
       </node>
       <node concept="356sEK" id="tHJrtdvpxp" role="383Ya9">
         <node concept="2EixSi" id="tHJrtdvpxs" role="2EinRH" />
@@ -1994,7 +2024,7 @@
       <node concept="356sEK" id="1THfXvJsJR_" role="383Ya9">
         <node concept="2EixSi" id="1THfXvJsJRC" role="2EinRH" />
         <node concept="356sEF" id="1THfXvJsJRD" role="356sEH">
-          <property role="TrG5h" value="from flask import Flask, request, jsonify" />
+          <property role="TrG5h" value="from flask import Flask, request, jsonify, send_file" />
         </node>
       </node>
       <node concept="356sEK" id="1THfXvJsJRF" role="383Ya9">
@@ -2112,6 +2142,32 @@
       </node>
       <node concept="356sEK" id="1THfXvJsJSh" role="383Ya9">
         <node concept="2EixSi" id="1THfXvJsJSk" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="292Zw9zAAv1" role="383Ya9">
+        <node concept="356WMU" id="292Zw9zAAM_" role="356sEH">
+          <node concept="356sEK" id="292Zw9zAAMA" role="383Ya9">
+            <node concept="2EixSi" id="292Zw9zAAMD" role="2EinRH" />
+            <node concept="356sEF" id="292Zw9zAAME" role="356sEH">
+              <property role="TrG5h" value="@app.route('/api-documentation', methods=['GET'])" />
+            </node>
+          </node>
+          <node concept="356sEK" id="292Zw9zAAMG" role="383Ya9">
+            <node concept="2EixSi" id="292Zw9zAAMJ" role="2EinRH" />
+            <node concept="356sEF" id="292Zw9zAAMK" role="356sEH">
+              <property role="TrG5h" value="def sendAPIDocumentation():" />
+            </node>
+          </node>
+          <node concept="356sEK" id="292Zw9zAAMM" role="383Ya9">
+            <node concept="2EixSi" id="292Zw9zAAMP" role="2EinRH" />
+            <node concept="356sEF" id="292Zw9zAAMQ" role="356sEH">
+              <property role="TrG5h" value="    return send_file('APIDoc.html')" />
+            </node>
+          </node>
+          <node concept="356sEK" id="292Zw9zAAN2" role="383Ya9">
+            <node concept="2EixSi" id="292Zw9zAAN4" role="2EinRH" />
+          </node>
+        </node>
+        <node concept="2EixSi" id="292Zw9zAAv3" role="2EinRH" />
       </node>
       <node concept="356WMU" id="1THfXvJu$0F" role="383Ya9">
         <node concept="356sEK" id="1THfXvJsJSr" role="383Ya9">
@@ -3731,6 +3787,163 @@
         </node>
       </node>
     </node>
+  </node>
+  <node concept="356sEV" id="292Zw9z_Lot">
+    <property role="TrG5h" value="APIDoc" />
+    <property role="3Le9LX" value=".html" />
+    <node concept="356WMU" id="292Zw9z_Lox" role="356KY_">
+      <node concept="356sEK" id="292Zw9z_Loy" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lo_" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LoA" role="356sEH">
+          <property role="TrG5h" value="&lt;!DOCTYPE html&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LoC" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LoF" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LoG" role="356sEH">
+          <property role="TrG5h" value="&lt;html lang=&quot;en&quot;&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LoI" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LoL" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LoM" role="356sEH">
+          <property role="TrG5h" value="&lt;head&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LoO" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LoR" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LoS" role="356sEH">
+          <property role="TrG5h" value="  &lt;meta charset=&quot;utf-8&quot; /&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LoU" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LoX" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LoY" role="356sEH">
+          <property role="TrG5h" value="  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lp0" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lp3" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lp4" role="356sEH">
+          <property role="TrG5h" value="  &lt;meta" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lp6" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lp9" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lpa" role="356sEH">
+          <property role="TrG5h" value="    name=&quot;description&quot;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lpc" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lpf" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lpg" role="356sEH">
+          <property role="TrG5h" value="    content=&quot;SwaggerIU&quot;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lpi" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lpl" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lpm" role="356sEH">
+          <property role="TrG5h" value="  /&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lpo" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lpr" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lps" role="356sEH">
+          <property role="TrG5h" value="  &lt;title&gt;SwaggerUI&lt;/title&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lpu" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lpx" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lpy" role="356sEH">
+          <property role="TrG5h" value="  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css&quot; /&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lp$" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LpB" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LpC" role="356sEH">
+          <property role="TrG5h" value="&lt;/head&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LpE" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LpH" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LpI" role="356sEH">
+          <property role="TrG5h" value="&lt;body&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LpK" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LpN" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LpO" role="356sEH">
+          <property role="TrG5h" value="&lt;div id=&quot;swagger-ui&quot;&gt;&lt;/div&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LpQ" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LpT" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LpU" role="356sEH">
+          <property role="TrG5h" value="&lt;script src=&quot;https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js&quot; crossorigin&gt;&lt;/script&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LpW" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LpZ" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lq0" role="356sEH">
+          <property role="TrG5h" value="&lt;script&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lq2" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lq5" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lq6" role="356sEH">
+          <property role="TrG5h" value="  window.onload = () =&gt; {" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lq8" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lqb" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lqc" role="356sEH">
+          <property role="TrG5h" value="    window.ui = SwaggerUIBundle({" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lqe" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lqh" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lqi" role="356sEH">
+          <property role="TrG5h" value="      url: 'https://petstore3.swagger.io/api/v3/openapi.json'," />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lqk" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lqn" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lqo" role="356sEH">
+          <property role="TrG5h" value="      dom_id: '#swagger-ui'," />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lqq" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lqt" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lqu" role="356sEH">
+          <property role="TrG5h" value="    });" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_Lqw" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_Lqz" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_Lq$" role="356sEH">
+          <property role="TrG5h" value="  };" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LqA" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LqD" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LqE" role="356sEH">
+          <property role="TrG5h" value="&lt;/script&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LqG" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LqJ" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LqK" role="356sEH">
+          <property role="TrG5h" value="&lt;/body&gt;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="292Zw9z_LqM" role="383Ya9">
+        <node concept="2EixSi" id="292Zw9z_LqP" role="2EinRH" />
+        <node concept="356sEF" id="292Zw9z_LqQ" role="356sEH">
+          <property role="TrG5h" value="&lt;/html&gt;" />
+        </node>
+      </node>
+    </node>
+    <node concept="n94m4" id="292Zw9z_Lov" role="lGtFl" />
   </node>
 </model>
 

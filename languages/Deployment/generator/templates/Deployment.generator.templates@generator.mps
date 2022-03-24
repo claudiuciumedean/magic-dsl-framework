@@ -841,16 +841,31 @@
     <property role="3Le9LX" value=".sh" />
     <property role="17CCuU" value="UTF-8" />
     <node concept="356WMU" id="3Kwu4vCPUhQ" role="356KY_">
-      <node concept="356sEK" id="3Kwu4vCQHDV" role="383Ya9">
-        <node concept="356sEF" id="3Kwu4vCQHDW" role="356sEH">
-          <property role="TrG5h" value="#!/bin/bash" />
+      <node concept="356sEK" id="1_nQMwMcnlZ" role="383Ya9">
+        <node concept="356sEF" id="1_nQMwMcnm0" role="356sEH">
+          <property role="TrG5h" value="# sed -i -e 's/\r$//' build.sh " />
         </node>
-        <node concept="2EixSi" id="3Kwu4vCQHDX" role="2EinRH" />
+        <node concept="2EixSi" id="1_nQMwMcnm1" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1_nQMwMd1aa" role="383Ya9">
+        <node concept="356sEF" id="1_nQMwMd1ab" role="356sEH">
+          <property role="TrG5h" value="# chmod 755 build.sh" />
+        </node>
+        <node concept="2EixSi" id="1_nQMwMd1ac" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1_nQMwMen4R" role="383Ya9">
+        <node concept="356sEF" id="1_nQMwMen4S" role="356sEH">
+          <property role="TrG5h" value="# ./build.sh" />
+        </node>
+        <node concept="2EixSi" id="1_nQMwMen4T" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1_nQMwMeng_" role="383Ya9">
+        <node concept="2EixSi" id="1_nQMwMengB" role="2EinRH" />
       </node>
       <node concept="356sEK" id="3Kwu4vCPUhR" role="383Ya9">
         <node concept="2EixSi" id="3Kwu4vCPUhU" role="2EinRH" />
         <node concept="356sEF" id="3Kwu4vCPUhV" role="356sEH">
-          <property role="TrG5h" value="#Build docker image" />
+          <property role="TrG5h" value="# Build docker image" />
         </node>
       </node>
       <node concept="356sEK" id="3Kwu4vCPUhX" role="383Ya9">
@@ -902,7 +917,7 @@
       <node concept="356sEK" id="3Kwu4vCPUi7" role="383Ya9">
         <node concept="2EixSi" id="3Kwu4vCPUia" role="2EinRH" />
         <node concept="356sEF" id="3Kwu4vCPUib" role="356sEH">
-          <property role="TrG5h" value="#Build docker container" />
+          <property role="TrG5h" value="# Build docker container" />
         </node>
       </node>
       <node concept="356sEK" id="3Kwu4vCPUid" role="383Ya9">

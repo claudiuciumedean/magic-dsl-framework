@@ -105,6 +105,20 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="3F0ifn" id="292Zw9zDtAZ" role="3EZMnx">
+        <property role="3F0ifm" value="maintainer email" />
+      </node>
+      <node concept="3F0A7n" id="292Zw9zDtDa" role="3EZMnx">
+        <ref role="1NtTu8" to="b4dw:292Zw9zDtww" resolve="maintainerEmail" />
+        <node concept="ljvvj" id="292Zw9zDtDT" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="292Zw9zDO_Q" role="3EZMnx">
+        <node concept="ljvvj" id="292Zw9zDOAB" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="1xSoLHEUhJi" role="3EZMnx">
         <property role="3F0ifm" value="port" />
       </node>
@@ -245,9 +259,6 @@
         <node concept="3F0ifn" id="1xSoLHEUDsB" role="3EZMnx">
           <property role="3F0ifm" value="at endpoint location" />
         </node>
-        <node concept="3F0A7n" id="1xSoLHEUDsY" role="3EZMnx">
-          <ref role="1NtTu8" to="b4dw:7rCJrCcUTIY" resolve="route" />
-        </node>
         <node concept="3F0ifn" id="5tPVuO6X22K" role="3EZMnx">
           <property role="3F0ifm" value="with query param" />
         </node>
@@ -316,13 +327,35 @@
     <node concept="3EZMnI" id="1xSoLHEU$fZ" role="2wV5jI">
       <node concept="l2Vlx" id="1xSoLHEU$g0" role="2iSdaV" />
       <node concept="3F0ifn" id="1xSoLHEU$ge" role="3EZMnx">
-        <property role="3F0ifm" value="data type (valid JSON format)" />
+        <property role="3F0ifm" value="Data (valid JSON format)" />
       </node>
       <node concept="3F0A7n" id="1xSoLHEU$g2" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
+      <node concept="3F0ifn" id="1_nQMwLT22r" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
       <node concept="3F1sOY" id="1xSoLHEU$ga" role="3EZMnx">
         <ref role="1NtTu8" to="b4dw:1xSoLHEU$fY" resolve="value" />
+        <node concept="ljvvj" id="1_nQMwLUdR_" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1_nQMwLUdRI" role="3EZMnx">
+        <node concept="ljvvj" id="1_nQMwLUdRQ" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1_nQMwLUdS1" role="3EZMnx">
+        <node concept="ljvvj" id="1_nQMwLUdSb" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1_nQMwLUdSW" role="3EZMnx">
+        <property role="3F0ifm" value="Entity " />
+      </node>
+      <node concept="3F1sOY" id="1_nQMwLUdS$" role="3EZMnx">
+        <ref role="1NtTu8" to="b4dw:1_nQMwLUdQo" resolve="entityType" />
       </node>
     </node>
   </node>
@@ -395,6 +428,66 @@
     <ref role="1XX52x" to="b4dw:292Zw9zsZle" resolve="ISupportedLanguage" />
     <node concept="3F1sOY" id="292Zw9zsZnc" role="2wV5jI">
       <ref role="1NtTu8" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1_nQMwLUdTz">
+    <property role="3GE5qa" value="DataType" />
+    <ref role="1XX52x" to="b4dw:1_nQMwLUdQ9" resolve="EntityType" />
+    <node concept="3EZMnI" id="1_nQMwLUdT_" role="2wV5jI">
+      <node concept="l2Vlx" id="1_nQMwLUdTA" role="2iSdaV" />
+      <node concept="3F0A7n" id="1_nQMwLUdTC" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="1_nQMwLUdTD" role="3EZMnx">
+        <property role="3F0ifm" value="{" />
+        <node concept="3mYdg7" id="1_nQMwLUdTE" role="3F10Kt">
+          <property role="1413C4" value="body-brace" />
+        </node>
+        <node concept="ljvvj" id="1_nQMwLUdTF" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="1_nQMwLUdTG" role="3EZMnx">
+        <node concept="l2Vlx" id="1_nQMwLUdTH" role="2iSdaV" />
+        <node concept="lj46D" id="1_nQMwLUdTI" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="3F2HdR" id="1_nQMwLUdTN" role="3EZMnx">
+          <ref role="1NtTu8" to="b4dw:1_nQMwLUdQi" resolve="keyValuePairs" />
+          <node concept="l2Vlx" id="1_nQMwLUdTO" role="2czzBx" />
+          <node concept="pj6Ft" id="1_nQMwLUdTP" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="lj46D" id="1_nQMwLUdTQ" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="1_nQMwLUdTR" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1_nQMwLUdTS" role="3EZMnx">
+        <property role="3F0ifm" value="}" />
+        <node concept="3mYdg7" id="1_nQMwLUdTT" role="3F10Kt">
+          <property role="1413C4" value="body-brace" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1_nQMwLUdV8">
+    <property role="3GE5qa" value="DataType" />
+    <ref role="1XX52x" to="b4dw:1_nQMwLUdQc" resolve="KeyValuePair" />
+    <node concept="3EZMnI" id="1_nQMwLUdVT" role="2wV5jI">
+      <node concept="l2Vlx" id="1_nQMwLUdVU" role="2iSdaV" />
+      <node concept="3F0A7n" id="1_nQMwLUdW3" role="3EZMnx">
+        <ref role="1NtTu8" to="b4dw:1_nQMwLUdQd" resolve="key" />
+      </node>
+      <node concept="3F0ifn" id="1_nQMwLUYXU" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1_nQMwLUYY7" role="3EZMnx">
+        <ref role="1NtTu8" to="b4dw:1_nQMwLUYXo" resolve="value" />
+      </node>
     </node>
   </node>
 </model>

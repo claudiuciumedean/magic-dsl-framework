@@ -1,0 +1,150 @@
+{
+  "openapi":"3.0.2",
+  "info":{
+     "title":"CustomerService",
+     "description":"Microservice for customers",
+     "contact":{
+        "email":"claudiuciumedean@gmail.com"
+     },
+     "license":{
+        "name":"Apache 2.0",
+        "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
+     },
+     "version":"1.0"
+  },
+  "tags":[
+     {
+        "name":"customers"
+     }
+  ],
+  "paths":{
+     "/customer?id={id}":{
+        "put":{
+           "tags":[
+              "customers"
+           ],
+           "summary":"Update a customer",
+           "description":"Update an existing customer by id",
+           "operationId":"updateEntity",
+           "parameters":[
+               {
+                  "name":"id",
+                  "in":"path",
+                  "description":"ID of customer",
+                  "required":true,
+                  "schema":{
+                     "type":"integer",
+                     "format":"int64"
+                  }
+               }
+            ],
+           "requestBody":{
+              "description":"Update an existent customer",
+              "content":{
+                 "application/json":{
+                    "schema":{
+                       "$ref":"#/components/schemas/Customer"
+                    }
+                 }
+              },
+              "required":true
+           },
+           "responses":{
+              "200":{
+                 "description":"Successful operation",
+                 "content":{
+                    "application/json":{
+                         "message": "Customer updated succesfully"
+                    }
+                 }
+              },
+              "400":{
+                 "description":"Unsuccessful operation",
+                 "content": {
+                    "application/json": {
+                       "message": "No customer found with the provided id"
+                    }
+                 }
+              }
+           }
+        },
+      "delete":{
+         "tags":[
+            "customers"
+         ],
+         "summary":"Update a customer",
+         "description":"Update an existing customer by id",
+         "operationId":"deleteEntity",
+         "parameters":[
+             {
+                "name":"id",
+                "in":"path",
+                "description":"ID of customer",
+                "required":true,
+                "schema":{
+                   "type":"integer",
+                   "format":"int64"
+                }
+             }
+          ],
+         "requestBody":{
+            "description":"Update an existent customer",
+            "content":{
+               "application/json":{
+                  "schema":{
+                     "$ref":"#/components/schemas/Customer"
+                  }
+               }
+            },
+            "required":true
+         },
+         "responses":{
+            "200":{
+               "description":"Successful operation",
+               "content":{
+                  "application/json":{
+                       "message": "Customer updated succesfully"
+                  }
+               }
+            },
+            "400":{
+               "description":"Unsuccessful operation",
+               "content": {
+                  "application/json": {
+                     "message": "No customer found with the provided id"
+                  }
+               }
+            }
+         }
+      }
+   }
+  },
+  "components":{
+     "schemas":{
+        "Customer":{
+           "required":[
+              "name",
+              "age"
+           ],
+           "type":"object",
+           "properties":{
+              "id":{
+                 "type":"string",
+                 "readOnly": true
+              },
+              "name":{
+                 "type":"string",
+                 "example":"John Doe"
+              },
+              "age":{
+               "type":"integer",
+               "example": 44
+               }
+           },
+           "xml":{
+              "name":"customer"
+           }
+        }
+     }
+  }
+}

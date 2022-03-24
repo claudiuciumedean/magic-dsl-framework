@@ -19,6 +19,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Entities;
   private ConceptPresentation props_Entity;
   private ConceptPresentation props_EntityID;
+  private ConceptPresentation props_EntityType;
   private ConceptPresentation props_GetEntities;
   private ConceptPresentation props_GetEntity;
   private ConceptPresentation props_IDeliveredPayloadType;
@@ -27,6 +28,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_IOperationType;
   private ConceptPresentation props_IQueryParam;
   private ConceptPresentation props_ISupportedLanguage;
+  private ConceptPresentation props_KeyValuePair;
   private ConceptPresentation props_Message;
   private ConceptPresentation props_Microservice;
   private ConceptPresentation props_MicroserviceReference;
@@ -116,6 +118,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EntityID = cpb.create();
         }
         return props_EntityID;
+      case LanguageConceptSwitch.EntityType:
+        if (props_EntityType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_EntityType = cpb.create();
+        }
+        return props_EntityType;
       case LanguageConceptSwitch.GetEntities:
         if (props_GetEntities == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -166,6 +175,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ISupportedLanguage = cpb.create();
         }
         return props_ISupportedLanguage;
+      case LanguageConceptSwitch.KeyValuePair:
+        if (props_KeyValuePair == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("KeyValuePair");
+          props_KeyValuePair = cpb.create();
+        }
+        return props_KeyValuePair;
       case LanguageConceptSwitch.Message:
         if (props_Message == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

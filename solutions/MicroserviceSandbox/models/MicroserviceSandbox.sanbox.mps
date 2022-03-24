@@ -14,6 +14,13 @@
       </concept>
     </language>
     <language id="e995fbb6-0310-461a-be22-cc66f48262f1" name="Microservice">
+      <concept id="1826169139604544905" name="Microservice.structure.EntityType" flags="ng" index="CJKqx">
+        <child id="1826169139604544914" name="keyValuePairs" index="CJKqU" />
+      </concept>
+      <concept id="1826169139604544908" name="Microservice.structure.KeyValuePair" flags="ng" index="CJKq$">
+        <property id="1826169139604746072" name="value" index="CJ3hK" />
+        <property id="1826169139604544909" name="key" index="CJKq_" />
+      </concept>
       <concept id="2468814831964386638" name="Microservice.structure.ISupportedLanguage" flags="ng" index="11cgHc">
         <child id="2468814831964386639" name="supportedLanguage" index="11cgHd" />
       </concept>
@@ -56,9 +63,11 @@
         <child id="4706807959194929335" name="operationType" index="3KABxh" />
       </concept>
       <concept id="1763268223524365259" name="Microservice.structure.DataType" flags="ng" index="1MBK3g">
+        <child id="1826169139604544920" name="entityType" index="CJKqK" />
         <child id="1763268223524553726" name="value" index="1M$y3_" />
       </concept>
       <concept id="8568306897850702777" name="Microservice.structure.Microservice" flags="ng" index="1U0Mo3">
+        <property id="2468814831967655968" name="maintainerEmail" index="11TMoy" />
         <property id="1763268223524365240" name="description" index="1MBK2z" />
         <property id="1763268223524365227" name="version" index="1MBK2K" />
         <property id="8568306897850702779" name="port" index="1U0Mo1" />
@@ -100,6 +109,7 @@
     <property role="1MBK2K" value="1.0" />
     <property role="1MBK2z" value="Microservice for customers" />
     <property role="1U0Mo1" value="3000" />
+    <property role="11TMoy" value="claudiuciumedean@gmail.com" />
     <node concept="1U0Mo6" id="292Zw9zv8Ao" role="1a5GJw">
       <property role="1U0Mo4" value="/customer" />
       <node concept="3KwofT" id="292Zw9zv8Ap" role="3KwesD" />
@@ -112,6 +122,7 @@
       <node concept="1yCgEV" id="292Zw9zwYga" role="je10B">
         <ref role="1yCgEW" node="292Zw9zwY7Q" resolve="customers" />
       </node>
+      <node concept="1hA7b_" id="1_nQMwLXbEs" role="1hwsOj" />
     </node>
     <node concept="1U0Mo6" id="292Zw9zv8Av" role="1a5GJw">
       <property role="1U0Mo4" value="/customers" />
@@ -122,6 +133,7 @@
       <node concept="1yCgEV" id="292Zw9zwYgc" role="je10B">
         <ref role="1yCgEW" node="292Zw9zwY7Q" resolve="customers" />
       </node>
+      <node concept="1hA7b_" id="1_nQMwLXbEq" role="1hwsOj" />
     </node>
     <node concept="1U0Mo6" id="292Zw9zv8A_" role="1a5GJw">
       <property role="1U0Mo4" value="/customer" />
@@ -135,6 +147,7 @@
       <node concept="1yCgEV" id="292Zw9zwYge" role="je10B">
         <ref role="1yCgEW" node="292Zw9zwY7Q" resolve="customers" />
       </node>
+      <node concept="1hA7b_" id="1_nQMwLXbEu" role="1hBKNI" />
     </node>
     <node concept="1U0Mo6" id="292Zw9zv8AG" role="1a5GJw">
       <property role="1U0Mo4" value="/customer" />
@@ -171,7 +184,7 @@
     <node concept="1yCgEV" id="292Zw9zwYfG" role="1MBK3h">
       <ref role="1yCgEW" node="292Zw9zwY7Q" resolve="customers" />
     </node>
-    <node concept="11cgHg" id="292Zw9zCVLC" role="11cgHd" />
+    <node concept="11cgHg" id="1_nQMwMetf$" role="11cgHd" />
   </node>
   <node concept="1MBK3g" id="292Zw9zwY7Q">
     <property role="TrG5h" value="customers" />
@@ -349,6 +362,21 @@
         <node concept="3oM_SD" id="292Zw9zyj9W" role="1PaTwD">
           <property role="3oM_SC" value="]" />
         </node>
+      </node>
+    </node>
+    <node concept="CJKqx" id="1_nQMwLUAGj" role="CJKqK">
+      <property role="TrG5h" value="customer" />
+      <node concept="CJKq$" id="1_nQMwLUYXa" role="CJKqU">
+        <property role="CJKq_" value="id" />
+        <property role="CJ3hK" value="string" />
+      </node>
+      <node concept="CJKq$" id="1_nQMwLVnG0" role="CJKqU">
+        <property role="CJKq_" value="name" />
+        <property role="CJ3hK" value="string" />
+      </node>
+      <node concept="CJKq$" id="1_nQMwLVnG3" role="CJKqU">
+        <property role="CJKq_" value="age" />
+        <property role="CJ3hK" value="number" />
       </node>
     </node>
   </node>

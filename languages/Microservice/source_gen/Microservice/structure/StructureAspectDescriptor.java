@@ -23,6 +23,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEntities = createDescriptorForEntities();
   /*package*/ final ConceptDescriptor myConceptEntity = createDescriptorForEntity();
   /*package*/ final ConceptDescriptor myConceptEntityID = createDescriptorForEntityID();
+  /*package*/ final ConceptDescriptor myConceptEntityType = createDescriptorForEntityType();
   /*package*/ final ConceptDescriptor myConceptGetEntities = createDescriptorForGetEntities();
   /*package*/ final ConceptDescriptor myConceptGetEntity = createDescriptorForGetEntity();
   /*package*/ final ConceptDescriptor myConceptIDeliveredPayloadType = createDescriptorForIDeliveredPayloadType();
@@ -31,6 +32,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptIOperationType = createDescriptorForIOperationType();
   /*package*/ final ConceptDescriptor myConceptIQueryParam = createDescriptorForIQueryParam();
   /*package*/ final ConceptDescriptor myConceptISupportedLanguage = createDescriptorForISupportedLanguage();
+  /*package*/ final ConceptDescriptor myConceptKeyValuePair = createDescriptorForKeyValuePair();
   /*package*/ final ConceptDescriptor myConceptMessage = createDescriptorForMessage();
   /*package*/ final ConceptDescriptor myConceptMicroservice = createDescriptorForMicroservice();
   /*package*/ final ConceptDescriptor myConceptMicroserviceReference = createDescriptorForMicroserviceReference();
@@ -59,7 +61,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptCREATE, myConceptCreateEntity, myConceptDELETE, myConceptDataType, myConceptDataTypeReference, myConceptDeleteEntity, myConceptEmpty, myConceptEntities, myConceptEntity, myConceptEntityID, myConceptGetEntities, myConceptGetEntity, myConceptIDeliveredPayloadType, myConceptIExpectedPayloadType, myConceptIOperationMethod, myConceptIOperationType, myConceptIQueryParam, myConceptISupportedLanguage, myConceptMessage, myConceptMicroservice, myConceptMicroserviceReference, myConceptNodeJs, myConceptOperation, myConceptOperationMethod, myConceptOperationType, myConceptPayloadType, myConceptPython, myConceptREAD, myConceptSupportedLanguage, myConceptUPDATE, myConceptUpdateEntity);
+    return Arrays.asList(myConceptCREATE, myConceptCreateEntity, myConceptDELETE, myConceptDataType, myConceptDataTypeReference, myConceptDeleteEntity, myConceptEmpty, myConceptEntities, myConceptEntity, myConceptEntityID, myConceptEntityType, myConceptGetEntities, myConceptGetEntity, myConceptIDeliveredPayloadType, myConceptIExpectedPayloadType, myConceptIOperationMethod, myConceptIOperationType, myConceptIQueryParam, myConceptISupportedLanguage, myConceptKeyValuePair, myConceptMessage, myConceptMicroservice, myConceptMicroserviceReference, myConceptNodeJs, myConceptOperation, myConceptOperationMethod, myConceptOperationType, myConceptPayloadType, myConceptPython, myConceptREAD, myConceptSupportedLanguage, myConceptUPDATE, myConceptUpdateEntity);
   }
 
   @Override
@@ -86,6 +88,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptEntity;
       case LanguageConceptSwitch.EntityID:
         return myConceptEntityID;
+      case LanguageConceptSwitch.EntityType:
+        return myConceptEntityType;
       case LanguageConceptSwitch.GetEntities:
         return myConceptGetEntities;
       case LanguageConceptSwitch.GetEntity:
@@ -102,6 +106,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptIQueryParam;
       case LanguageConceptSwitch.ISupportedLanguage:
         return myConceptISupportedLanguage;
+      case LanguageConceptSwitch.KeyValuePair:
+        return myConceptKeyValuePair;
       case LanguageConceptSwitch.Message:
         return myConceptMessage;
       case LanguageConceptSwitch.Microservice:
@@ -169,6 +175,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/1763268223524365259");
     b.version(2);
     b.aggregate("value", 0x1878631b6aea43feL).target(0xc7fb639fbe784307L, 0x89b0b5959c3fa8c8L, 0x2331694e5619f411L).optional(true).ordered(true).multiple(false).origin("1763268223524553726").done();
+    b.aggregate("entityType", 0x1957db2831e8dd98L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd89L).optional(true).ordered(true).multiple(false).origin("1826169139604544920").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDataTypeReference() {
@@ -217,6 +224,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("Microservice.structure.PayloadType", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae101L);
     b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/6302204855853965574");
     b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEntityType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "EntityType", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd89L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/1826169139604544905");
+    b.version(2);
+    b.aggregate("keyValuePairs", 0x1957db2831e8dd92L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd8cL).optional(true).ordered(true).multiple(true).origin("1826169139604544914").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForGetEntities() {
@@ -283,6 +299,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("supportedLanguage", 0x2242fe026373f54fL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f54dL).optional(true).ordered(true).multiple(false).origin("2468814831964386639").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForKeyValuePair() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "KeyValuePair", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd8cL);
+    b.class_(false, false, false);
+    b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/1826169139604544908");
+    b.version(2);
+    b.property("key", 0x1957db2831e8dd8dL).type(PrimitiveTypeId.STRING).origin("1826169139604544909").done();
+    b.property("value", 0x1957db2831ebef58L).type(PrimitiveTypeId.STRING).origin("1826169139604746072").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForMessage() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "Message", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae107L);
     b.class_(false, false, false);
@@ -302,6 +327,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("version", 0x1878631b6ae763abL).type(PrimitiveTypeId.STRING).origin("1763268223524365227").done();
     b.property("description", 0x1878631b6ae763b8L).type(PrimitiveTypeId.STRING).origin("1763268223524365240").done();
     b.property("port", 0x76e8bdba0ceb9bbbL).type(PrimitiveTypeId.STRING).origin("8568306897850702779").done();
+    b.property("maintainerEmail", 0x2242fe0263a5d820L).type(PrimitiveTypeId.STRING).origin("2468814831967655968").done();
     b.aggregate("data", 0x1878631b6ae763caL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5f791c683dd816d3L).optional(true).ordered(true).multiple(false).origin("1763268223524365258").done();
     b.aggregate("operations", 0x76dbdb74d7b7657L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x76e8bdba0ceb9bbcL).optional(true).ordered(true).multiple(true).origin("535292525703558743").done();
     return b.create();

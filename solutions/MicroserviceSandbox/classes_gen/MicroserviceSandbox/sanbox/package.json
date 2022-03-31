@@ -1,0 +1,16 @@
+{
+  "name": "CustomerService",
+  "version": "1.0",
+  "description": "",
+  "main": "CustomerService.js",
+  "scripts": {
+    "start": "node CustomerService.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "uuid": "^8.3.2"
+  }
+}

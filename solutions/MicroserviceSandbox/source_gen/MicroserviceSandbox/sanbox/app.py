@@ -19,18 +19,18 @@ def sendAPIDocumentation():
 def sendAPIFile():
     return send_file('api-doc.json')
 
-@app.route('/customer', methods=['POST'])
+@app.route('/create-customer', methods=['POST'])
 def createEntity():
     id = str(uuid.uuid4())
     entity = { 'id': id, **request.get_json()}
     customers.append(entity)
     return jsonify({ 'id': id, 'message': 'Customer created successfully' })
 
-@app.route('/customers', methods=['GET'])
+@app.route('/getall-customers', methods=['GET'])
 def getEntities():
     return jsonify(customers)
 
-@app.route('/customer', methods=['GET'])
+@app.route('/get-customer', methods=['GET'])
 def getEntity():
     entity = next((x for x in customers if str(x['id'])  == str(request.args.get('id'))), None)
     if entity is None:
@@ -38,7 +38,21 @@ def getEntity():
 
     return jsonify(entity)
 
-@app.route('/customer', methods=['PUT'])
+@app.route('/get-customer-by', methods=['GET'])
+def getEntityBy():
+    entity = None
+
+    for item in customers:
+      if all(str(item[param]).lower() == str(request.args.get(param)).lower() for param in request.args):
+        entity = item
+        break 
+
+    if entity is None:
+      return jsonify({'message': 'No customer found with the provided id' })
+
+    return jsonify(entity)
+
+@app.route('/update-customer', methods=['PUT'])
 def updateEntity():
     entity = next((x for x in customers if str(x['id']) == str(request.args.get('id'))), None)
     if entity is None:
@@ -48,7 +62,7 @@ def updateEntity():
     customers[index] = { **entity, **request.get_json()}
     return jsonify({'message': 'Customer updated succesfully'})
 
-@app.route('/customer', methods=['DELETE'])
+@app.route('/delete-customer', methods=['DELETE'])
 def deleteEntity():
     entity = next((x for x in customers if str(x['id'])  == str(request.args.get('id'))), None)
     if entity is None:

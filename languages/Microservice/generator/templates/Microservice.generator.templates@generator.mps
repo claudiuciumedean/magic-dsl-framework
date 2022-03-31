@@ -1176,7 +1176,7 @@
             <node concept="356sEK" id="5tPVuO6WNlK" role="383Ya9">
               <node concept="2EixSi" id="5tPVuO6WNlN" role="2EinRH" />
               <node concept="356sEF" id="5tPVuO6WNlO" role="356sEH">
-                <property role="TrG5h" value="  if(!entity) { return res.json({ message: &quot;" />
+                <property role="TrG5h" value="  if(!entity) { return res.status(400).json({ message: &quot;" />
               </node>
               <node concept="356sEF" id="5tPVuO6XWJX" role="356sEH">
                 <property role="TrG5h" value="errorMessage" />
@@ -1553,7 +1553,7 @@
           <node concept="356sEK" id="5tPVuO6OiMc" role="383Ya9">
             <node concept="2EixSi" id="5tPVuO6OiMf" role="2EinRH" />
             <node concept="356sEF" id="5tPVuO6OiMg" role="356sEH">
-              <property role="TrG5h" value="  if(!entity) { return res.json({ message: &quot;" />
+              <property role="TrG5h" value="  if(!entity) { return res.status(400).json({ message: &quot;" />
             </node>
             <node concept="356sEF" id="5tPVuO6XZow" role="356sEH">
               <property role="TrG5h" value="errorMessage" />
@@ -1924,7 +1924,7 @@
           <node concept="356sEK" id="5tPVuO6UfBQ" role="383Ya9">
             <node concept="2EixSi" id="5tPVuO6UfBT" role="2EinRH" />
             <node concept="356sEF" id="5tPVuO6UfBU" role="356sEH">
-              <property role="TrG5h" value="  if(idx == -1) { return res.json({ message: &quot;" />
+              <property role="TrG5h" value="  if(idx == -1) { return res.status(400).json({ message: &quot;" />
             </node>
             <node concept="356sEF" id="5tPVuO6Yget" role="356sEH">
               <property role="TrG5h" value="errorMessage" />

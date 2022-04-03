@@ -55,6 +55,8 @@
   <uses module="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
   <uses module="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
   <dependency className="Microservice.Language">
+    <classNode dependClassName="Microservice.behavior.BehaviorAspectDescriptor" />
+    <classNode dependClassName="Microservice.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="Microservice.editor.EditorAspectDescriptorImpl" />
     <classNode dependClassName="Microservice.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="Microservice.structure.StructureAspectDescriptor" />
@@ -66,7 +68,9 @@
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.language.LanguageExtensions" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspect" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ILanguageAspect" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />

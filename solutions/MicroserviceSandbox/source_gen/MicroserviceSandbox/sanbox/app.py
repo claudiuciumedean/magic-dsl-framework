@@ -24,22 +24,27 @@ def createEntity():
     id = str(uuid.uuid4())
     entity = { 'id': id, **request.get_json()}
     customers.append(entity)
-    return jsonify({ 'id': id, 'message': 'Customer created successfully' })
-
-@app.route('/getall-customers', methods=['GET'])
-def getEntities():
-    return jsonify(customers)
+    return jsonify({'entity': entity,'message': '' })
 
 @app.route('/get-customer', methods=['GET'])
 def getEntity():
     entity = next((x for x in customers if str(x['id'])  == str(request.args.get('id'))), None)
     if entity is None:
-      return jsonify({'message': 'No customer found with the provided id' })
+      return jsonify({'message': 'No customer was found with the provided id' })
 
     return jsonify(entity)
 
+@app.route('/getall-customers', methods=['GET'])
+def getEntities():
+    return jsonify(customers)
+
 @app.route('/get-customer-by', methods=['GET'])
 def getEntityBy():
+    expectedKeys = ['name','age',]
+
+    if not  all(map(lambda x, y: x == y, sorted(request.args.keys()), sorted(expectedKeys))):
+      return jsonify({'message': 'Invalid query params' })
+
     entity = None
 
     for item in customers:
@@ -48,7 +53,7 @@ def getEntityBy():
         break 
 
     if entity is None:
-      return jsonify({'message': 'No customer found with the provided id' })
+      return jsonify({'message': 'No entity found with the corresponding params' })
 
     return jsonify(entity)
 
@@ -56,17 +61,18 @@ def getEntityBy():
 def updateEntity():
     entity = next((x for x in customers if str(x['id']) == str(request.args.get('id'))), None)
     if entity is None:
-      return jsonify({'message': 'No customer found with the provided id' })
+      return jsonify({'message': 'Customer not found' })
 
     index = customers.index(entity)
-    customers[index] = { **entity, **request.get_json()}
-    return jsonify({'message': 'Customer updated succesfully'})
+    entity = { **entity, **request.get_json()}
+    customers[index] = entity
+    return jsonify({ 'entity': entity,'message': 'Successfully updated a customer'})
 
 @app.route('/delete-customer', methods=['DELETE'])
 def deleteEntity():
     entity = next((x for x in customers if str(x['id'])  == str(request.args.get('id'))), None)
     if entity is None:
-      return jsonify({'message': 'No customer found with the provided id' })
+      return jsonify({'message': 'No customer found' })
 
     customers.remove(entity)
-    return jsonify({ 'message': 'Successfully deleted the customer' })
+    return jsonify({'entity': entity,'message': 'Succesfully deleted the customer' })

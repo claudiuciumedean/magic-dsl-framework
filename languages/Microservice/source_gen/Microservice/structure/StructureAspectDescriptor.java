@@ -24,15 +24,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEntity = createDescriptorForEntity();
   /*package*/ final ConceptDescriptor myConceptEntityID = createDescriptorForEntityID();
   /*package*/ final ConceptDescriptor myConceptEntityType = createDescriptorForEntityType();
+  /*package*/ final ConceptDescriptor myConceptEntityTypeReference = createDescriptorForEntityTypeReference();
   /*package*/ final ConceptDescriptor myConceptGetEntities = createDescriptorForGetEntities();
   /*package*/ final ConceptDescriptor myConceptGetEntity = createDescriptorForGetEntity();
+  /*package*/ final ConceptDescriptor myConceptGetEntityBy = createDescriptorForGetEntityBy();
   /*package*/ final ConceptDescriptor myConceptIDeliveredPayloadType = createDescriptorForIDeliveredPayloadType();
   /*package*/ final ConceptDescriptor myConceptIExpectedPayloadType = createDescriptorForIExpectedPayloadType();
   /*package*/ final ConceptDescriptor myConceptIOperationMethod = createDescriptorForIOperationMethod();
   /*package*/ final ConceptDescriptor myConceptIOperationType = createDescriptorForIOperationType();
-  /*package*/ final ConceptDescriptor myConceptIQueryParam = createDescriptorForIQueryParam();
   /*package*/ final ConceptDescriptor myConceptISupportedLanguage = createDescriptorForISupportedLanguage();
   /*package*/ final ConceptDescriptor myConceptKeyValuePair = createDescriptorForKeyValuePair();
+  /*package*/ final ConceptDescriptor myConceptKeyValuePairReference = createDescriptorForKeyValuePairReference();
   /*package*/ final ConceptDescriptor myConceptMessage = createDescriptorForMessage();
   /*package*/ final ConceptDescriptor myConceptMicroservice = createDescriptorForMicroservice();
   /*package*/ final ConceptDescriptor myConceptMicroserviceReference = createDescriptorForMicroserviceReference();
@@ -61,7 +63,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptCREATE, myConceptCreateEntity, myConceptDELETE, myConceptDataType, myConceptDataTypeReference, myConceptDeleteEntity, myConceptEmpty, myConceptEntities, myConceptEntity, myConceptEntityID, myConceptEntityType, myConceptGetEntities, myConceptGetEntity, myConceptIDeliveredPayloadType, myConceptIExpectedPayloadType, myConceptIOperationMethod, myConceptIOperationType, myConceptIQueryParam, myConceptISupportedLanguage, myConceptKeyValuePair, myConceptMessage, myConceptMicroservice, myConceptMicroserviceReference, myConceptNodeJs, myConceptOperation, myConceptOperationMethod, myConceptOperationType, myConceptPayloadType, myConceptPython, myConceptREAD, myConceptSupportedLanguage, myConceptUPDATE, myConceptUpdateEntity);
+    return Arrays.asList(myConceptCREATE, myConceptCreateEntity, myConceptDELETE, myConceptDataType, myConceptDataTypeReference, myConceptDeleteEntity, myConceptEmpty, myConceptEntities, myConceptEntity, myConceptEntityID, myConceptEntityType, myConceptEntityTypeReference, myConceptGetEntities, myConceptGetEntity, myConceptGetEntityBy, myConceptIDeliveredPayloadType, myConceptIExpectedPayloadType, myConceptIOperationMethod, myConceptIOperationType, myConceptISupportedLanguage, myConceptKeyValuePair, myConceptKeyValuePairReference, myConceptMessage, myConceptMicroservice, myConceptMicroserviceReference, myConceptNodeJs, myConceptOperation, myConceptOperationMethod, myConceptOperationType, myConceptPayloadType, myConceptPython, myConceptREAD, myConceptSupportedLanguage, myConceptUPDATE, myConceptUpdateEntity);
   }
 
   @Override
@@ -90,10 +92,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptEntityID;
       case LanguageConceptSwitch.EntityType:
         return myConceptEntityType;
+      case LanguageConceptSwitch.EntityTypeReference:
+        return myConceptEntityTypeReference;
       case LanguageConceptSwitch.GetEntities:
         return myConceptGetEntities;
       case LanguageConceptSwitch.GetEntity:
         return myConceptGetEntity;
+      case LanguageConceptSwitch.GetEntityBy:
+        return myConceptGetEntityBy;
       case LanguageConceptSwitch.IDeliveredPayloadType:
         return myConceptIDeliveredPayloadType;
       case LanguageConceptSwitch.IExpectedPayloadType:
@@ -102,12 +108,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptIOperationMethod;
       case LanguageConceptSwitch.IOperationType:
         return myConceptIOperationType;
-      case LanguageConceptSwitch.IQueryParam:
-        return myConceptIQueryParam;
       case LanguageConceptSwitch.ISupportedLanguage:
         return myConceptISupportedLanguage;
       case LanguageConceptSwitch.KeyValuePair:
         return myConceptKeyValuePair;
+      case LanguageConceptSwitch.KeyValuePairReference:
+        return myConceptKeyValuePairReference;
       case LanguageConceptSwitch.Message:
         return myConceptMessage;
       case LanguageConceptSwitch.Microservice:
@@ -235,6 +241,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("keyValuePairs", 0x1957db2831e8dd92L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd8cL).optional(true).ordered(true).multiple(true).origin("1826169139604544914").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForEntityTypeReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "EntityTypeReference", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L);
+    b.class_(false, false, false);
+    b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/7083910861678503254");
+    b.version(2);
+    b.associate("entityType", 0x624f1b6582e0e55aL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd89L).optional(false).origin("7083910861678503258").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForGetEntities() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "GetEntities", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d07321L);
     b.class_(false, false, false);
@@ -248,6 +262,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.super_("Microservice.structure.OperationMethod", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d0731eL);
     b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/6302204855853915993");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForGetEntityBy() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "GetEntityBy", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6583126083L);
+    b.class_(false, false, false);
+    b.super_("Microservice.structure.OperationMethod", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d0731eL);
+    b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/7083910861681746051");
     b.version(2);
     return b.create();
   }
@@ -283,14 +305,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("operationType", 0x4151f0e6b1cb88b7L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1c68c22L).optional(true).ordered(true).multiple(false).origin("4706807959194929335").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForIQueryParam() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "IQueryParam", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06f420fbL);
-    b.interface_();
-    b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/6302204855854571771");
-    b.version(2);
-    b.aggregate("queryParam", 0x5775eded06f420feL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae101L).optional(true).ordered(true).multiple(false).origin("6302204855854571774").done();
-    return b.create();
-  }
   private static ConceptDescriptor createDescriptorForISupportedLanguage() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "ISupportedLanguage", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f54eL);
     b.interface_();
@@ -306,6 +320,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("key", 0x1957db2831e8dd8dL).type(PrimitiveTypeId.STRING).origin("1826169139604544909").done();
     b.property("value", 0x1957db2831ebef58L).type(PrimitiveTypeId.STRING).origin("1826169139604746072").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForKeyValuePairReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "KeyValuePairReference", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L);
+    b.class_(false, false, false);
+    b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/7083910861679076352");
+    b.version(2);
+    b.associate("keyValuePair", 0x624f1b6582e9a401L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd8cL).optional(false).origin("7083910861679076353").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForMessage() {
@@ -355,11 +377,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1cb88b6L);
     b.parent(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae102L);
     b.parent(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06ecae08L);
-    b.parent(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06f420fbL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/8568306897850702780");
     b.version(2);
     b.property("route", 0x76e8bdba0ceb9bbeL).type(PrimitiveTypeId.STRING).origin("8568306897850702782").done();
     b.aggregate("data", 0x74c7366367ff2644L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5f791c683dd816d3L).optional(true).ordered(true).multiple(false).origin("8414754229339498052").done();
+    b.aggregate("entityType", 0x624f1b6582e0e55cL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L).optional(true).ordered(true).multiple(false).origin("7083910861678503260").done();
+    b.aggregate("queryParams", 0x624f1b6582e9a406L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L).optional(true).ordered(true).multiple(true).origin("7083910861679076358").done();
     b.aggregate("successMessage", 0x5775eded06fadf04L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae107L).optional(true).ordered(true).multiple(false).origin("6302204855855013636").done();
     b.aggregate("errorMessage", 0x5775eded06f6e723L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06eae107L).optional(true).ordered(true).multiple(false).origin("6302204855854753571").done();
     return b.create();

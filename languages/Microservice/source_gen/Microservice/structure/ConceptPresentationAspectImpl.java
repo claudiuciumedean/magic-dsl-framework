@@ -20,15 +20,17 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Entity;
   private ConceptPresentation props_EntityID;
   private ConceptPresentation props_EntityType;
+  private ConceptPresentation props_EntityTypeReference;
   private ConceptPresentation props_GetEntities;
   private ConceptPresentation props_GetEntity;
+  private ConceptPresentation props_GetEntityBy;
   private ConceptPresentation props_IDeliveredPayloadType;
   private ConceptPresentation props_IExpectedPayloadType;
   private ConceptPresentation props_IOperationMethod;
   private ConceptPresentation props_IOperationType;
-  private ConceptPresentation props_IQueryParam;
   private ConceptPresentation props_ISupportedLanguage;
   private ConceptPresentation props_KeyValuePair;
+  private ConceptPresentation props_KeyValuePairReference;
   private ConceptPresentation props_Message;
   private ConceptPresentation props_Microservice;
   private ConceptPresentation props_MicroserviceReference;
@@ -125,6 +127,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EntityType = cpb.create();
         }
         return props_EntityType;
+      case LanguageConceptSwitch.EntityTypeReference:
+        if (props_EntityTypeReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L, 0x624f1b6582e0e55aL, "entityType", "", "");
+          props_EntityTypeReference = cpb.create();
+        }
+        return props_EntityTypeReference;
       case LanguageConceptSwitch.GetEntities:
         if (props_GetEntities == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -139,6 +148,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GetEntity = cpb.create();
         }
         return props_GetEntity;
+      case LanguageConceptSwitch.GetEntityBy:
+        if (props_GetEntityBy == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("GetEntityBy");
+          props_GetEntityBy = cpb.create();
+        }
+        return props_GetEntityBy;
       case LanguageConceptSwitch.IDeliveredPayloadType:
         if (props_IDeliveredPayloadType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -163,12 +179,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IOperationType = cpb.create();
         }
         return props_IOperationType;
-      case LanguageConceptSwitch.IQueryParam:
-        if (props_IQueryParam == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_IQueryParam = cpb.create();
-        }
-        return props_IQueryParam;
       case LanguageConceptSwitch.ISupportedLanguage:
         if (props_ISupportedLanguage == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -182,6 +192,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_KeyValuePair = cpb.create();
         }
         return props_KeyValuePair;
+      case LanguageConceptSwitch.KeyValuePairReference:
+        if (props_KeyValuePairReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L, 0x624f1b6582e9a401L, "keyValuePair", "", "");
+          props_KeyValuePairReference = cpb.create();
+        }
+        return props_KeyValuePairReference;
       case LanguageConceptSwitch.Message:
         if (props_Message == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

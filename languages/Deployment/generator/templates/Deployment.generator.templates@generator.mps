@@ -792,8 +792,14 @@
       <node concept="356sEK" id="3Kwu4vCP3Iu" role="383Ya9">
         <node concept="2EixSi" id="3Kwu4vCP3Ix" role="2EinRH" />
         <node concept="356sEF" id="3Kwu4vCP3Iy" role="356sEH">
-          <property role="TrG5h" value="    &quot;uuid&quot;: &quot;^8.3.2&quot;" />
+          <property role="TrG5h" value="    &quot;uuid&quot;: &quot;^8.3.2&quot;," />
         </node>
+      </node>
+      <node concept="356sEK" id="1GcCT5objn1" role="383Ya9">
+        <node concept="356sEF" id="1GcCT5objn2" role="356sEH">
+          <property role="TrG5h" value="    &quot;cors&quot;: &quot;^2.8.5&quot;" />
+        </node>
+        <node concept="2EixSi" id="1GcCT5objn3" role="2EinRH" />
       </node>
       <node concept="356sEK" id="3Kwu4vCP3I$" role="383Ya9">
         <node concept="2EixSi" id="3Kwu4vCP3IB" role="2EinRH" />
@@ -827,6 +833,12 @@
         <node concept="356sEF" id="3Kwu4vCPjf5" role="356sEH">
           <property role="TrG5h" value="uuid" />
         </node>
+      </node>
+      <node concept="356sEK" id="1GcCT5objsj" role="383Ya9">
+        <node concept="356sEF" id="1GcCT5objsk" role="356sEH">
+          <property role="TrG5h" value="flask_cors" />
+        </node>
+        <node concept="2EixSi" id="1GcCT5objsl" role="2EinRH" />
       </node>
       <node concept="356sEK" id="3Kwu4vCPjf7" role="383Ya9">
         <node concept="2EixSi" id="3Kwu4vCPjfa" role="2EinRH" />

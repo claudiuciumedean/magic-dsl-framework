@@ -22,6 +22,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_EntityType;
   private ConceptPresentation props_EntityTypeReference;
   private ConceptPresentation props_GetEntities;
+  private ConceptPresentation props_GetEntitiesBy;
   private ConceptPresentation props_GetEntity;
   private ConceptPresentation props_GetEntityBy;
   private ConceptPresentation props_IDeliveredPayloadType;
@@ -141,6 +142,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GetEntities = cpb.create();
         }
         return props_GetEntities;
+      case LanguageConceptSwitch.GetEntitiesBy:
+        if (props_GetEntitiesBy == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("GetEntitiesBy");
+          props_GetEntitiesBy = cpb.create();
+        }
+        return props_GetEntitiesBy;
       case LanguageConceptSwitch.GetEntity:
         if (props_GetEntity == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

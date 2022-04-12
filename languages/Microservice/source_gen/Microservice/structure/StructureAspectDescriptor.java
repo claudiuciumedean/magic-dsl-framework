@@ -26,6 +26,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEntityType = createDescriptorForEntityType();
   /*package*/ final ConceptDescriptor myConceptEntityTypeReference = createDescriptorForEntityTypeReference();
   /*package*/ final ConceptDescriptor myConceptGetEntities = createDescriptorForGetEntities();
+  /*package*/ final ConceptDescriptor myConceptGetEntitiesBy = createDescriptorForGetEntitiesBy();
   /*package*/ final ConceptDescriptor myConceptGetEntity = createDescriptorForGetEntity();
   /*package*/ final ConceptDescriptor myConceptGetEntityBy = createDescriptorForGetEntityBy();
   /*package*/ final ConceptDescriptor myConceptIDeliveredPayloadType = createDescriptorForIDeliveredPayloadType();
@@ -63,7 +64,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptCREATE, myConceptCreateEntity, myConceptDELETE, myConceptDataType, myConceptDataTypeReference, myConceptDeleteEntity, myConceptEmpty, myConceptEntities, myConceptEntity, myConceptEntityID, myConceptEntityType, myConceptEntityTypeReference, myConceptGetEntities, myConceptGetEntity, myConceptGetEntityBy, myConceptIDeliveredPayloadType, myConceptIExpectedPayloadType, myConceptIOperationMethod, myConceptIOperationType, myConceptISupportedLanguage, myConceptKeyValuePair, myConceptKeyValuePairReference, myConceptMessage, myConceptMicroservice, myConceptMicroserviceReference, myConceptNodeJs, myConceptOperation, myConceptOperationMethod, myConceptOperationType, myConceptPayloadType, myConceptPython, myConceptREAD, myConceptSupportedLanguage, myConceptUPDATE, myConceptUpdateEntity);
+    return Arrays.asList(myConceptCREATE, myConceptCreateEntity, myConceptDELETE, myConceptDataType, myConceptDataTypeReference, myConceptDeleteEntity, myConceptEmpty, myConceptEntities, myConceptEntity, myConceptEntityID, myConceptEntityType, myConceptEntityTypeReference, myConceptGetEntities, myConceptGetEntitiesBy, myConceptGetEntity, myConceptGetEntityBy, myConceptIDeliveredPayloadType, myConceptIExpectedPayloadType, myConceptIOperationMethod, myConceptIOperationType, myConceptISupportedLanguage, myConceptKeyValuePair, myConceptKeyValuePairReference, myConceptMessage, myConceptMicroservice, myConceptMicroserviceReference, myConceptNodeJs, myConceptOperation, myConceptOperationMethod, myConceptOperationType, myConceptPayloadType, myConceptPython, myConceptREAD, myConceptSupportedLanguage, myConceptUPDATE, myConceptUpdateEntity);
   }
 
   @Override
@@ -96,6 +97,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptEntityTypeReference;
       case LanguageConceptSwitch.GetEntities:
         return myConceptGetEntities;
+      case LanguageConceptSwitch.GetEntitiesBy:
+        return myConceptGetEntitiesBy;
       case LanguageConceptSwitch.GetEntity:
         return myConceptGetEntity;
       case LanguageConceptSwitch.GetEntityBy:
@@ -254,6 +257,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.super_("Microservice.structure.OperationMethod", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d0731eL);
     b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/4706807959195251489");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForGetEntitiesBy() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Microservice", "GetEntitiesBy", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1b0ca391583c337eL);
+    b.class_(false, false, false);
+    b.super_("Microservice.structure.OperationMethod", 0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d0731eL);
+    b.origin("r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)/1949112583390507902");
     b.version(2);
     return b.create();
   }

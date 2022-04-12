@@ -431,5 +431,11 @@
     <property role="TrG5h" value="GetEntityBy" />
     <ref role="1TJDcQ" node="45hWeqLO7cu" resolve="OperationMethod" />
   </node>
+  <node concept="1TIwiD" id="1GcCT5of3dY">
+    <property role="EcuMT" value="1949112583390507902" />
+    <property role="3GE5qa" value="OperationMethod" />
+    <property role="TrG5h" value="GetEntitiesBy" />
+    <ref role="1TJDcQ" node="45hWeqLO7cu" resolve="OperationMethod" />
+  </node>
 </model>
 

@@ -47,6 +47,12 @@ public class QueriesGenerated extends QueryProviderBase {
   public static boolean rule_Condition_0_2(final BaseMappingRuleContext _context) {
     return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.supportedLanguage$Dv4W), CONCEPTS.NodeJs$Ny);
   }
+  public static boolean rule_Condition_0_3(final BaseMappingRuleContext _context) {
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.supportedLanguage$Dv4W), CONCEPTS.Python$N3);
+  }
+  public static boolean rule_Condition_0_4(final BaseMappingRuleContext _context) {
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.supportedLanguage$Dv4W), CONCEPTS.Python$N3);
+  }
   public static boolean rule_Condition_3_0(final BaseMappingRuleContext _context) {
     return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.operationType$IuTs), CONCEPTS.CREATE$lU) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.operationMethod$gVWt), CONCEPTS.CreateEntity$OM);
   }
@@ -167,6 +173,18 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Object propertyMacro_GetValue_3_21(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.microserviceRoute$itQr);
   }
+  public static Object propertyMacro_GetValue_5_0(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_5_1(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_5_2(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_5_3(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+  }
   public static Iterable<SNode> sourceNodesQuery_1_0(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.operations$QcUK);
   }
@@ -217,6 +235,8 @@ public class QueriesGenerated extends QueryProviderBase {
     mrrcMethods.put("5020122306378277354", new MRRC(i++));
     mrrcMethods.put("4554699728742293243", new MRRC(i++));
     mrrcMethods.put("4554699728742826912", new MRRC(i++));
+    mrrcMethods.put("4554699728743450618", new MRRC(i++));
+    mrrcMethods.put("4554699728743476345", new MRRC(i++));
   }
   @Override
   @NotNull
@@ -238,6 +258,10 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.rule_Condition_0_1(ctx);
         case 2:
           return QueriesGenerated.rule_Condition_0_2(ctx);
+        case 3:
+          return QueriesGenerated.rule_Condition_0_3(ctx);
+        case 4:
+          return QueriesGenerated.rule_Condition_0_4(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no condition method for rule %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -298,6 +322,10 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("4554699728742811085", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "route"));
     pvqMethods.put("4554699728742811105", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "port"));
     pvqMethods.put("4554699728742811118", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "route"));
+    pvqMethods.put("4554699728743436559", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "BFF"));
+    pvqMethods.put("4554699728743440309", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "BFF"));
+    pvqMethods.put("4554699728743444297", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "BFF"));
+    pvqMethods.put("4554699728743447727", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "BFF"));
   }
   @NotNull
   @Override
@@ -366,6 +394,14 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.propertyMacro_GetValue_3_20(ctx);
         case 25:
           return QueriesGenerated.propertyMacro_GetValue_3_21(ctx);
+        case 26:
+          return QueriesGenerated.propertyMacro_GetValue_5_0(ctx);
+        case 27:
+          return QueriesGenerated.propertyMacro_GetValue_5_1(ctx);
+        case 28:
+          return QueriesGenerated.propertyMacro_GetValue_5_2(ctx);
+        case 29:
+          return QueriesGenerated.propertyMacro_GetValue_5_3(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -385,6 +421,7 @@ public class QueriesGenerated extends QueryProviderBase {
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept NodeJs$Ny = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f552L, "Microservice.structure.NodeJs");
+    /*package*/ static final SConcept Python$N3 = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f551L, "Microservice.structure.Python");
     /*package*/ static final SConcept CreateEntity$OM = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d0731fL, "Microservice.structure.CreateEntity");
     /*package*/ static final SConcept CREATE$lU = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1c7ddb6L, "Microservice.structure.CREATE");
     /*package*/ static final SConcept GetEntities$PK = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d07321L, "Microservice.structure.GetEntities");

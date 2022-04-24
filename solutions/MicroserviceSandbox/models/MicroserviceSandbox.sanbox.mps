@@ -47,6 +47,7 @@
         <child id="2468814831964386639" name="supportedLanguage" index="11cgHd" />
       </concept>
       <concept id="2468814831964386642" name="Microservice.structure.NodeJs" flags="ng" index="11cgHg" />
+      <concept id="2468814831964386641" name="Microservice.structure.Python" flags="ng" index="11cgHj" />
       <concept id="1949112583390507902" name="Microservice.structure.GetEntitiesBy" flags="ng" index="13c93J" />
       <concept id="6302204855854145288" name="Microservice.structure.Empty" flags="ng" index="1hA7b_" />
       <concept id="6302204855854083592" name="Microservice.structure.IDeliveredPayloadType" flags="ng" index="1hAkf_">
@@ -250,7 +251,7 @@
     <node concept="1yCgEV" id="292Zw9zwYfG" role="1MBK3h">
       <ref role="1yCgEW" node="292Zw9zwY7Q" resolve="customers" />
     </node>
-    <node concept="11cgHg" id="1GcCT5ob2P4" role="11cgHd" />
+    <node concept="11cgHj" id="3WPyOlYkugr" role="11cgHd" />
   </node>
   <node concept="1MBK3g" id="292Zw9zwY7Q">
     <property role="TrG5h" value="customers" />

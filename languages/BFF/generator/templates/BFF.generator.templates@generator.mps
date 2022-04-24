@@ -242,6 +242,52 @@
         </node>
       </node>
     </node>
+    <node concept="3lhOvk" id="3WPyOlYk$vU" role="3lj3bC">
+      <ref role="30HIoZ" to="ehhy:4mF3EfgFlTi" resolve="BFF" />
+      <ref role="3lhOvi" node="3WPyOlYkx2I" resolve="app" />
+      <node concept="30G5F_" id="3WPyOlYk$Ed" role="30HLyM">
+        <node concept="3clFbS" id="3WPyOlYk$Ee" role="2VODD2">
+          <node concept="3clFbF" id="3WPyOlYk$QB" role="3cqZAp">
+            <node concept="2OqwBi" id="3WPyOlYk_$4" role="3clFbG">
+              <node concept="2OqwBi" id="3WPyOlYk_52" role="2Oq$k0">
+                <node concept="30H73N" id="3WPyOlYk$QA" role="2Oq$k0" />
+                <node concept="3TrEf2" id="3WPyOlYk_pV" role="2OqNvi">
+                  <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
+                </node>
+              </node>
+              <node concept="1mIQ4w" id="3WPyOlYkADl" role="2OqNvi">
+                <node concept="chp4Y" id="3WPyOlYkAJG" role="cj9EA">
+                  <ref role="cht4Q" to="b4dw:292Zw9zsZlh" resolve="Python" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3lhOvk" id="3WPyOlYkELT" role="3lj3bC">
+      <ref role="30HIoZ" to="ehhy:4mF3EfgFlTi" resolve="BFF" />
+      <ref role="3lhOvi" node="3WPyOlYkF4z" resolve="requirements" />
+      <node concept="30G5F_" id="3WPyOlYkFjO" role="30HLyM">
+        <node concept="3clFbS" id="3WPyOlYkFjP" role="2VODD2">
+          <node concept="3clFbF" id="3WPyOlYkFkc" role="3cqZAp">
+            <node concept="2OqwBi" id="3WPyOlYkG8t" role="3clFbG">
+              <node concept="2OqwBi" id="3WPyOlYkFyB" role="2Oq$k0">
+                <node concept="30H73N" id="3WPyOlYkFkb" role="2Oq$k0" />
+                <node concept="3TrEf2" id="3WPyOlYkFY$" role="2OqNvi">
+                  <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
+                </node>
+              </node>
+              <node concept="1mIQ4w" id="3WPyOlYkH1A" role="2OqNvi">
+                <node concept="chp4Y" id="3WPyOlYkH7X" role="cj9EA">
+                  <ref role="cht4Q" to="b4dw:292Zw9zsZlh" resolve="Python" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="356sEV" id="4mF3EfgGikW">
     <property role="TrG5h" value="BFF" />
@@ -489,7 +535,7 @@
     </node>
   </node>
   <node concept="jVnub" id="3WPyOlYgfz4">
-    <property role="TrG5h" value="BFFOperationSwitch" />
+    <property role="TrG5h" value="BFFNodeJSOperationSwitch" />
     <node concept="3aamgX" id="3WPyOlYhT4O" role="3aUrZf">
       <property role="36QftV" value="true" />
       <ref role="30HIoZ" to="ehhy:4mF3EfgFlTF" resolve="BFFOperation" />
@@ -2125,6 +2171,184 @@
       </node>
     </node>
     <node concept="n94m4" id="3WPyOlYia5i" role="lGtFl" />
+  </node>
+  <node concept="356sEV" id="3WPyOlYkx2I">
+    <property role="TrG5h" value="app" />
+    <property role="3Le9LX" value=".py" />
+    <node concept="356WMU" id="3WPyOlYkx2M" role="356KY_">
+      <node concept="356sEK" id="3WPyOlYkx2N" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkx2Q" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkx2R" role="356sEH">
+          <property role="TrG5h" value="#BFF generated from BFF DSL model by MPS" />
+        </node>
+      </node>
+      <node concept="356sEK" id="3WPyOlYkx2T" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkx2W" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkx2X" role="356sEH">
+          <property role="TrG5h" value="from flask import Flask" />
+        </node>
+      </node>
+      <node concept="356sEK" id="3WPyOlYkx2Z" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkx32" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkx33" role="356sEH">
+          <property role="TrG5h" value="from flask_cors import CORS" />
+        </node>
+      </node>
+      <node concept="356sEK" id="3WPyOlYkx35" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkx38" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="3WPyOlYkx39" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkx3c" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkx3d" role="356sEH">
+          <property role="TrG5h" value="from " />
+        </node>
+        <node concept="356sEF" id="3WPyOlYkx48" role="356sEH">
+          <property role="TrG5h" value="BFF" />
+          <node concept="17Uvod" id="3WPyOlYkx4f" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="3WPyOlYkx4g" role="3zH0cK">
+              <node concept="3clFbS" id="3WPyOlYkx4h" role="2VODD2">
+                <node concept="3clFbF" id="3WPyOlYkx8W" role="3cqZAp">
+                  <node concept="2OqwBi" id="3WPyOlYkxm6" role="3clFbG">
+                    <node concept="30H73N" id="3WPyOlYkx8V" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="3WPyOlYkxFy" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="356sEF" id="3WPyOlYkx4b" role="356sEH">
+          <property role="TrG5h" value=" import " />
+        </node>
+        <node concept="356sEF" id="3WPyOlYkxY6" role="356sEH">
+          <property role="TrG5h" value="BFF" />
+          <node concept="17Uvod" id="3WPyOlYkxYP" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="3WPyOlYkxYQ" role="3zH0cK">
+              <node concept="3clFbS" id="3WPyOlYkxYR" role="2VODD2">
+                <node concept="3clFbF" id="3WPyOlYkxZf" role="3cqZAp">
+                  <node concept="2OqwBi" id="3WPyOlYkycp" role="3clFbG">
+                    <node concept="30H73N" id="3WPyOlYkxZe" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="3WPyOlYkyKc" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="356sEK" id="3WPyOlYkx3f" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkx3i" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="3WPyOlYkx3j" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkx3m" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkx3n" role="356sEH">
+          <property role="TrG5h" value="app = Flask(__name__)" />
+        </node>
+      </node>
+      <node concept="356sEK" id="3WPyOlYkx3p" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkx3s" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkx3t" role="356sEH">
+          <property role="TrG5h" value="app.register_blueprint(" />
+        </node>
+        <node concept="356sEF" id="3WPyOlYkyX2" role="356sEH">
+          <property role="TrG5h" value="BFF" />
+          <node concept="17Uvod" id="3WPyOlYkyX9" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="3WPyOlYkyXa" role="3zH0cK">
+              <node concept="3clFbS" id="3WPyOlYkyXb" role="2VODD2">
+                <node concept="3clFbF" id="3WPyOlYkyXz" role="3cqZAp">
+                  <node concept="2OqwBi" id="3WPyOlYkzaH" role="3clFbG">
+                    <node concept="30H73N" id="3WPyOlYkyXy" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="3WPyOlYkz$s" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="356sEF" id="3WPyOlYkyX5" role="356sEH">
+          <property role="TrG5h" value=", url_prefix='/" />
+        </node>
+        <node concept="356sEF" id="3WPyOlYkzLg" role="356sEH">
+          <property role="TrG5h" value="BFF" />
+          <node concept="17Uvod" id="3WPyOlYkzMJ" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="3WPyOlYkzMK" role="3zH0cK">
+              <node concept="3clFbS" id="3WPyOlYkzML" role="2VODD2">
+                <node concept="3clFbF" id="3WPyOlYkzN9" role="3cqZAp">
+                  <node concept="2OqwBi" id="3WPyOlYkzN$" role="3clFbG">
+                    <node concept="30H73N" id="3WPyOlYkzN8" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="3WPyOlYk$iC" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="356sEF" id="3WPyOlYkzLZ" role="356sEH">
+          <property role="TrG5h" value="-api')" />
+        </node>
+      </node>
+      <node concept="356sEK" id="3WPyOlYkx3v" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkx3y" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkx3z" role="356sEH">
+          <property role="TrG5h" value="CORS(app)" />
+        </node>
+      </node>
+      <node concept="356sEK" id="3WPyOlYkx3_" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkx3C" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkx3D" role="356sEH">
+          <property role="TrG5h" value="app.run()" />
+        </node>
+      </node>
+    </node>
+    <node concept="n94m4" id="3WPyOlYkx2K" role="lGtFl">
+      <ref role="n9lRv" to="ehhy:4mF3EfgFlTi" resolve="BFF" />
+    </node>
+  </node>
+  <node concept="jVnub" id="3WPyOlYkEI7">
+    <property role="TrG5h" value="BFFPythonOperationSwitch" />
+  </node>
+  <node concept="356sEV" id="3WPyOlYkF4z">
+    <property role="TrG5h" value="requirements" />
+    <property role="3Le9LX" value=".txt" />
+    <node concept="356WMU" id="3WPyOlYkF4B" role="356KY_">
+      <node concept="356sEK" id="3WPyOlYkF4C" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkF4F" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkF4G" role="356sEH">
+          <property role="TrG5h" value="Flask" />
+        </node>
+      </node>
+      <node concept="356sEK" id="3WPyOlYkF4I" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkF4L" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkF4M" role="356sEH">
+          <property role="TrG5h" value="uuid" />
+        </node>
+      </node>
+      <node concept="356sEK" id="3WPyOlYkF4O" role="383Ya9">
+        <node concept="2EixSi" id="3WPyOlYkF4R" role="2EinRH" />
+        <node concept="356sEF" id="3WPyOlYkF4S" role="356sEH">
+          <property role="TrG5h" value="flask_cors" />
+        </node>
+      </node>
+    </node>
+    <node concept="n94m4" id="3WPyOlYkF4_" role="lGtFl">
+      <ref role="n9lRv" to="ehhy:4mF3EfgFlTi" resolve="BFF" />
+    </node>
   </node>
 </model>
 

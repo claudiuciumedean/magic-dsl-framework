@@ -67,7 +67,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BFF", "BFF", 0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e52L);
     b.class_(false, false, true);
     b.parent(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x2242fe026373f54eL);
-    b.parent(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5ecaL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/5020122306378030674");
     b.version(2);
     b.property("version", 0x45ab0ea3d0ad5e53L).type(PrimitiveTypeId.STRING).origin("5020122306378030675").done();
@@ -82,6 +82,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.parent(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1cb88b6L);
     b.parent(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1d117cdL);
+    b.parent(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06ecae08L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/5020122306378030699");
     b.version(2);

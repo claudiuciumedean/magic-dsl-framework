@@ -84,10 +84,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createConstant_3());
     editorCell.addEditorCell(createRefNode_0());
     editorCell.addEditorCell(createCollection_1());
-    editorCell.addEditorCell(createConstant_8());
     editorCell.addEditorCell(createConstant_9());
+    editorCell.addEditorCell(createConstant_10());
     editorCell.addEditorCell(createCollection_2());
-    editorCell.addEditorCell(createConstant_14());
+    editorCell.addEditorCell(createConstant_15());
     return editorCell;
   }
   private EditorCell createConstant_0() {
@@ -218,10 +218,12 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createConstant_6());
     editorCell.addEditorCell(createRefNodeList_1());
     editorCell.addEditorCell(createConstant_7());
+    editorCell.addEditorCell(createComponent_2());
+    editorCell.addEditorCell(createConstant_8());
     return editorCell;
   }
   private EditorCell createConstant_4() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "expecting params");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "expecting properties");
     editorCell.setCellId("Constant_ohgidf_a8a");
     editorCell.setDefaultText("");
     return editorCell;
@@ -310,7 +312,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_6() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "delivering params");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "delivering query params");
     editorCell.setCellId("Constant_ohgidf_d8a");
     editorCell.setDefaultText("");
     return editorCell;
@@ -390,21 +392,31 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createConstant_7() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "or payload type");
     editorCell.setCellId("Constant_ohgidf_f8a");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createComponent_2() {
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Microservice.editor.DeliveredPayloadTypeComponent");
+    return editorCell;
+  }
+  private EditorCell createConstant_8() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_ohgidf_h8a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_8() {
+  private EditorCell createConstant_9() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "which communicates with");
     editorCell.setCellId("Constant_ohgidf_j0");
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_9() {
+  private EditorCell createConstant_10() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
     editorCell.setCellId("Constant_ohgidf_k0");
     Style style = new StyleImpl();
@@ -421,15 +433,15 @@ import org.jetbrains.mps.openapi.language.SConcept;
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_10());
-    editorCell.addEditorCell(createRefCell_0());
     editorCell.addEditorCell(createConstant_11());
+    editorCell.addEditorCell(createRefCell_0());
     editorCell.addEditorCell(createConstant_12());
-    editorCell.addEditorCell(createProperty_2());
     editorCell.addEditorCell(createConstant_13());
+    editorCell.addEditorCell(createProperty_2());
+    editorCell.addEditorCell(createConstant_14());
     return editorCell;
   }
-  private EditorCell createConstant_10() {
+  private EditorCell createConstant_11() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "microservice");
     editorCell.setCellId("Constant_ohgidf_a11a");
     editorCell.setDefaultText("");
@@ -581,7 +593,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     }
   }
-  private EditorCell createConstant_11() {
+  private EditorCell createConstant_12() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
     editorCell.setCellId("Constant_ohgidf_c11a");
     Style style = new StyleImpl();
@@ -590,7 +602,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_12() {
+  private EditorCell createConstant_13() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "at endpoint location");
     editorCell.setCellId("Constant_ohgidf_d11a");
     editorCell.setDefaultText("");
@@ -621,7 +633,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       getCellFactory().popCellContext();
     }
   }
-  private EditorCell createConstant_13() {
+  private EditorCell createConstant_14() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
     editorCell.setCellId("Constant_ohgidf_f11a");
     Style style = new StyleImpl();
@@ -630,7 +642,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_14() {
+  private EditorCell createConstant_15() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
     editorCell.setCellId("Constant_ohgidf_m0");
     editorCell.setDefaultText("");

@@ -24,7 +24,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.BFF:
         if (props_BFF == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("BFF");
+          cpb.presentationByName();
           props_BFF = cpb.create();
         }
         return props_BFF;

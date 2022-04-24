@@ -8,9 +8,9 @@
   </languages>
   <imports>
     <import index="ehhy" ref="r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="gx2p" ref="r:4b2a205d-ef78-4f2b-81c3-ead6ffdc77d1(Microservice.editor)" implicit="true" />
     <import index="b4dw" ref="r:9586c8a0-07cc-4207-ac59-ee7e5560df2d(Microservice.structure)" implicit="true" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -77,8 +77,8 @@
       <node concept="3F0ifn" id="1xSoLHEUhJ0" role="3EZMnx">
         <property role="3F0ifm" value="BFF" />
       </node>
-      <node concept="PMmxH" id="4mF3EfgFlXf" role="3EZMnx">
-        <ref role="PMmxG" node="4mF3EfgFlVB" resolve="SupportedTypeComponent" />
+      <node concept="3F0A7n" id="3WPyOlYiy1y" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
       <node concept="3F0ifn" id="1xSoLHEUhJ2" role="3EZMnx">
         <node concept="3mYdg7" id="1xSoLHEUhJ3" role="3F10Kt">
@@ -221,7 +221,7 @@
           <property role="VOm3f" value="true" />
         </node>
         <node concept="3F0ifn" id="1xSoLHEUDsB" role="3EZMnx">
-          <property role="3F0ifm" value="expecting params" />
+          <property role="3F0ifm" value="expecting properties" />
         </node>
         <node concept="3F2HdR" id="69f6Qm339c4" role="3EZMnx">
           <ref role="1NtTu8" to="ehhy:69f6Qm2Uqg6" resolve="expectedQueryParams" />
@@ -233,11 +233,17 @@
           </node>
         </node>
         <node concept="3F0ifn" id="5tPVuO6YHYD" role="3EZMnx">
-          <property role="3F0ifm" value="delivering params" />
+          <property role="3F0ifm" value="delivering query params" />
         </node>
         <node concept="3F2HdR" id="4mF3EfgFqmr" role="3EZMnx">
           <ref role="1NtTu8" to="ehhy:4mF3EfgFmcy" resolve="deliveredQueryParams" />
           <node concept="l2Vlx" id="4mF3EfgFqmt" role="2czzBx" />
+        </node>
+        <node concept="3F0ifn" id="3WPyOlYjfV6" role="3EZMnx">
+          <property role="3F0ifm" value="or payload type" />
+        </node>
+        <node concept="PMmxH" id="3WPyOlYjfVI" role="3EZMnx">
+          <ref role="PMmxG" to="gx2p:5tPVuO6VaS_" resolve="DeliveredPayloadTypeComponent" />
         </node>
         <node concept="3F0ifn" id="69f6Qm2Tbsu" role="3EZMnx">
           <node concept="ljvvj" id="69f6Qm2Tbtv" role="3F10Kt">

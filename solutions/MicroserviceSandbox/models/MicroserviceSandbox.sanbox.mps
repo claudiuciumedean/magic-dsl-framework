@@ -15,7 +15,7 @@
       </concept>
     </language>
     <language id="41009928-b490-4ac3-b848-8158d6c0d5db" name="BFF">
-      <concept id="5020122306378030791" name="BFF.structure.Mobile" flags="ng" index="2l1_1$" />
+      <concept id="5020122306378030790" name="BFF.structure.Desktop" flags="ng" index="2l1_1_" />
       <concept id="5020122306378030794" name="BFF.structure.ISupportedType" flags="ng" index="2l1_1D">
         <child id="5020122306378030795" name="supportedType" index="2l1_1C" />
       </concept>
@@ -1219,6 +1219,19 @@
     <property role="2l1_3U" value=" A BFF for the desktop web app" />
     <property role="2l1_3Z" value="claudiuciumedean@gmail.com" />
     <property role="2l1_33" value="5000" />
+    <property role="TrG5h" value="desktop" />
+    <node concept="2l1_38" id="3WPyOlYjbfA" role="2l1_3h">
+      <property role="2l1ASO" value="/create-customer" />
+      <property role="2l1ASZ" value="create-customer" />
+      <node concept="3KwofT" id="3WPyOlYjbfQ" role="3KwesD" />
+      <node concept="3K_yPg" id="3WPyOlYjbfS" role="3KABxh" />
+      <node concept="3wFZSN" id="3WPyOlYjbfU" role="2l1EQz">
+        <ref role="3wFZSZ" node="69f6Qm32AtE" resolve="customer" />
+      </node>
+      <node concept="3uh$Y_" id="3WPyOlYjbfW" role="2l1AS3">
+        <ref role="3uh$Yy" node="292Zw9zv8A4" resolve="CustomersService" />
+      </node>
+    </node>
     <node concept="2l1_38" id="4mF3EfgFMLW" role="2l1_3h">
       <property role="2l1ASO" value="/items" />
       <property role="2l1ASZ" value="some-location" />
@@ -1237,8 +1250,116 @@
       </node>
       <node concept="3Kwof7" id="3WPyOlYh5UH" role="3KwesD" />
     </node>
-    <node concept="2l1_1$" id="4mF3EfgFMLS" role="2l1_1C" />
+    <node concept="2l1_38" id="3WPyOlYiPAn" role="2l1_3h">
+      <property role="2l1ASO" value="/items" />
+      <property role="2l1ASZ" value="customers" />
+      <node concept="13c93J" id="3WPyOlYiPAw" role="3KwesD" />
+      <node concept="3K_FnI" id="3WPyOlYiPAy" role="3KABxh" />
+      <node concept="3wFZSN" id="3WPyOlYiPA$" role="2l1EQz">
+        <ref role="3wFZSZ" node="69f6Qm32AtE" resolve="customer" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYiPAC" role="3wDFXz">
+        <ref role="3wDFX$" node="69f6Qm337i$" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYiPAE" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3dQ" />
+      </node>
+      <node concept="3uh$Y_" id="3WPyOlYiPAH" role="2l1AS3">
+        <ref role="3uh$Yy" node="292Zw9zv8A4" resolve="CustomersService" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="3WPyOlYjc9q" role="2l1_3h">
+      <property role="2l1ASO" value="/item" />
+      <property role="2l1ASZ" value="/item" />
+      <node concept="1hBZaO" id="3WPyOlYjc9J" role="3KwesD" />
+      <node concept="3K_FnI" id="3WPyOlYjc9L" role="3KABxh" />
+      <node concept="3wFZSN" id="3WPyOlYjc9N" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYjc9P" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3GZ" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYjc9R" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3H2" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYjc9U" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3Hl" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYjc9Y" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3GT" />
+      </node>
+      <node concept="3uh$Y_" id="3WPyOlYjca0" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="3WPyOlYjd4h" role="2l1_3h">
+      <property role="2l1ASO" value="/item" />
+      <property role="2l1ASZ" value="/item" />
+      <node concept="3xnnJA" id="3WPyOlYjwXM" role="3KwesD" />
+      <node concept="3K_FnI" id="3WPyOlYjwXO" role="3KABxh" />
+      <node concept="3wFZSN" id="3WPyOlYjwXQ" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYjwXS" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3GZ" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYjwXU" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3H2" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYjwXX" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3Hl" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYjwY1" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3GT" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYjwY3" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3GZ" />
+      </node>
+      <node concept="1hA7b_" id="3WPyOlYjwY6" role="1hAkf$" />
+      <node concept="3uh$Y_" id="3WPyOlYjwY8" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="3WPyOlYjxTc" role="2l1_3h">
+      <property role="2l1ASO" value="/update-item" />
+      <property role="2l1ASZ" value="/item" />
+      <node concept="3Kwof6" id="3WPyOlYjxTP" role="3KwesD" />
+      <node concept="3K_yPh" id="3WPyOlYjxTR" role="3KABxh" />
+      <node concept="3wFZSN" id="3WPyOlYjxTT" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYj$WS" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3GZ" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYj$WU" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3H2" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYj$WX" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3Hl" />
+      </node>
+      <node concept="3wDFX_" id="3WPyOlYj$X1" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3GT" />
+      </node>
+      <node concept="1hA7b_" id="3WPyOlYj$X3" role="1hAkf$" />
+      <node concept="3uh$Y_" id="3WPyOlYj$X5" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="3WPyOlYjSdV" role="2l1_3h">
+      <property role="2l1ASO" value="/delete" />
+      <property role="2l1ASZ" value="/item" />
+      <node concept="3KwesE" id="3WPyOlYjSeI" role="3KwesD" />
+      <node concept="3K_yPu" id="3WPyOlYjSeK" role="3KABxh" />
+      <node concept="3wFZSN" id="3WPyOlYjSeM" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="1hA7b_" id="3WPyOlYjSeO" role="1hAkf$" />
+      <node concept="3uh$Y_" id="3WPyOlYjSeQ" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
+      </node>
+    </node>
     <node concept="11cgHg" id="4mF3EfgFMLU" role="11cgHd" />
+    <node concept="2l1_1_" id="3WPyOlYiv8K" role="2l1_1C" />
   </node>
 </model>
 

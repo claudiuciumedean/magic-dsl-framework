@@ -74,8 +74,8 @@
     <node concept="PrWs8" id="4mF3EfgFlTA" role="PzmwI">
       <ref role="PrY4T" to="b4dw:292Zw9zsZle" resolve="ISupportedLanguage" />
     </node>
-    <node concept="PrWs8" id="4mF3EfgFlV2" role="PzmwI">
-      <ref role="PrY4T" node="4mF3EfgFlVa" resolve="ISupportedType" />
+    <node concept="PrWs8" id="3WPyOlYixZf" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
     <node concept="1TJgyj" id="4mF3EfgFlTM" role="1TKVEi">
       <property role="IQ2ns" value="5020122306378030706" />
@@ -94,6 +94,9 @@
     </node>
     <node concept="PrWs8" id="3WPyOlYgXiV" role="PzmwI">
       <ref role="PrY4T" to="b4dw:45hWeqLOhvd" resolve="IOperationMethod" />
+    </node>
+    <node concept="PrWs8" id="3WPyOlYjd4P" role="PzmwI">
+      <ref role="PrY4T" to="b4dw:5tPVuO6VaS8" resolve="IDeliveredPayloadType" />
     </node>
     <node concept="PrWs8" id="4mF3EfgFm2k" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/BFF/BFF.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/Deployment/Deployment.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/Microservice/Microservice.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/MicroserviceDSL.build/MicroserviceDSL.build.msd" folder="" />

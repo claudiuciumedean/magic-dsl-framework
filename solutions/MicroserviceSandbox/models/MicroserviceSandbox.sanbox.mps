@@ -4,6 +4,7 @@
   <languages>
     <use id="e995fbb6-0310-461a-be22-cc66f48262f1" name="Microservice" version="-1" />
     <use id="c2a6432b-e821-404b-af0e-22b30531f868" name="Deployment" version="0" />
+    <use id="41009928-b490-4ac3-b848-8158d6c0d5db" name="BFF" version="0" />
   </languages>
   <imports />
   <registry>
@@ -11,6 +12,27 @@
       <concept id="535292525704187332" name="Deployment.structure.DeploymentConfig" flags="ng" index="1aUb1N">
         <property id="535292525704187335" name="maintainer" index="1aUb1K" />
         <child id="7446992180723271758" name="microservice" index="3uh$Yw" />
+      </concept>
+    </language>
+    <language id="41009928-b490-4ac3-b848-8158d6c0d5db" name="BFF">
+      <concept id="5020122306378030791" name="BFF.structure.Mobile" flags="ng" index="2l1_1$" />
+      <concept id="5020122306378030794" name="BFF.structure.ISupportedType" flags="ng" index="2l1_1D">
+        <child id="5020122306378030795" name="supportedType" index="2l1_1C" />
+      </concept>
+      <concept id="5020122306378030699" name="BFF.structure.BFFOperation" flags="ng" index="2l1_38">
+        <property id="5020122306378031255" name="route" index="2l1ASO" />
+        <property id="5020122306378031260" name="microserviceRoute" index="2l1ASZ" />
+        <child id="5020122306378031906" name="deliveredQueryParams" index="2l1AQ1" />
+        <child id="5020122306378031264" name="microservice" index="2l1AS3" />
+        <child id="5020122306378048256" name="entityType" index="2l1EQz" />
+        <child id="7083910861679076358" name="expectedQueryParams" index="3wDFXz" />
+      </concept>
+      <concept id="5020122306378030674" name="BFF.structure.BFF" flags="ng" index="2l1_3L">
+        <property id="5020122306378030688" name="port" index="2l1_33" />
+        <property id="5020122306378030675" name="version" index="2l1_3K" />
+        <property id="5020122306378030681" name="description" index="2l1_3U" />
+        <property id="5020122306378030684" name="maintainerEmail" index="2l1_3Z" />
+        <child id="5020122306378030706" name="operations" index="2l1_3h" />
       </concept>
     </language>
     <language id="e995fbb6-0310-461a-be22-cc66f48262f1" name="Microservice">
@@ -82,7 +104,7 @@
         <child id="8414754229339498052" name="data" index="je10B" />
         <child id="6302204855854753571" name="errorMessage" index="1hwKFe" />
         <child id="6302204855855013636" name="successMessage" index="1hzNbD" />
-        <child id="7083910861679076358" name="queryParams" index="3wDFXz" />
+        <child id="7083910861679076358" name="queryParams" index="3wDFX$" />
         <child id="7083910861678503260" name="entityType" index="3wFZST" />
       </concept>
     </language>
@@ -141,7 +163,7 @@
       <node concept="3wFZSN" id="69f6Qm36I2O" role="3wFZST">
         <ref role="3wFZSZ" node="69f6Qm32AtE" resolve="customer" />
       </node>
-      <node concept="3wDFX_" id="69f6Qm36I2Q" role="3wDFXz">
+      <node concept="3wDFX_" id="69f6Qm36I2Q" role="3wDFX$">
         <ref role="3wDFX$" node="69f6Qm337i$" />
       </node>
       <node concept="1hBKNC" id="69f6Qm36Kdh" role="1hAkf$" />
@@ -160,7 +182,7 @@
         <ref role="3wFZSZ" node="69f6Qm32AtE" resolve="customer" />
       </node>
       <node concept="1hA7b_" id="69f6Qm36KSM" role="1hBKNI" />
-      <node concept="1hA7b_" id="69f6Qm36KSO" role="1hAkf$" />
+      <node concept="1hAVps" id="6$3haXzTUi1" role="1hAkf$" />
     </node>
     <node concept="1U0Mo6" id="69f6Qm36KSh" role="1a5GJw">
       <node concept="3xnnJA" id="69f6Qm36KSx" role="3KwesD" />
@@ -176,10 +198,10 @@
       <node concept="1hBKNE" id="69f6Qm36KV3" role="1hwKFe">
         <property role="1hAwxF" value="No entity found with the corresponding params" />
       </node>
-      <node concept="3wDFX_" id="1GcCT5ob3k8" role="3wDFXz">
+      <node concept="3wDFX_" id="1GcCT5ob3k8" role="3wDFX$">
         <ref role="3wDFX$" node="1GcCT5ob3dQ" />
       </node>
-      <node concept="3wDFX_" id="1GcCT5odXEu" role="3wDFXz">
+      <node concept="3wDFX_" id="1GcCT5odXEu" role="3wDFX$">
         <ref role="3wDFX$" node="1GcCT5ob3dV" />
       </node>
     </node>
@@ -192,7 +214,7 @@
       <node concept="3wFZSN" id="69f6Qm3dn$M" role="3wFZST">
         <ref role="3wFZSZ" node="69f6Qm32AtE" resolve="customer" />
       </node>
-      <node concept="3wDFX_" id="69f6Qm3dn$O" role="3wDFXz">
+      <node concept="3wDFX_" id="69f6Qm3dn$O" role="3wDFX$">
         <ref role="3wDFX$" node="69f6Qm337i$" />
       </node>
       <node concept="1hBKNC" id="69f6Qm3dn$Q" role="1hBKNI" />
@@ -213,7 +235,7 @@
       <node concept="3wFZSN" id="69f6Qm3fsPX" role="3wFZST">
         <ref role="3wFZSZ" node="69f6Qm32AtE" resolve="customer" />
       </node>
-      <node concept="3wDFX_" id="69f6Qm3fsPZ" role="3wDFXz">
+      <node concept="3wDFX_" id="69f6Qm3fsPZ" role="3wDFX$">
         <ref role="3wDFX$" node="69f6Qm337i$" />
       </node>
       <node concept="1hBKNE" id="69f6Qm3gzfb" role="1hzNbD">
@@ -497,7 +519,7 @@
       <node concept="3wFZSN" id="1GcCT5obknU" role="3wFZST">
         <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
       </node>
-      <node concept="3wDFX_" id="1GcCT5obknW" role="3wDFXz">
+      <node concept="3wDFX_" id="1GcCT5obknW" role="3wDFX$">
         <ref role="3wDFX$" node="1GcCT5ob3GT" />
       </node>
       <node concept="1hA7b_" id="1GcCT5obmUB" role="1hBKNI" />
@@ -937,7 +959,7 @@
       <node concept="3wFZSN" id="1GcCT5ogAvj" role="3wFZST">
         <ref role="3wFZSZ" node="1GcCT5ob3Nn" resolve="order" />
       </node>
-      <node concept="3wDFX_" id="1GcCT5ogAvl" role="3wDFXz">
+      <node concept="3wDFX_" id="1GcCT5ogAvl" role="3wDFX$">
         <ref role="3wDFX$" node="1GcCT5ob3Nv" />
       </node>
       <node concept="1hA7b_" id="1GcCT5ogAvr" role="1hBKNI" />
@@ -1191,6 +1213,32 @@
         </node>
       </node>
     </node>
+  </node>
+  <node concept="2l1_3L" id="4mF3EfgFMLR">
+    <property role="2l1_3K" value="1.0" />
+    <property role="2l1_3U" value=" A BFF for the desktop web app" />
+    <property role="2l1_3Z" value="claudiuciumedean@gmail.com" />
+    <property role="2l1_33" value="5000" />
+    <node concept="2l1_38" id="4mF3EfgFMLW" role="2l1_3h">
+      <property role="2l1ASO" value="/items" />
+      <property role="2l1ASZ" value="some-location" />
+      <node concept="3wDFX_" id="4mF3EfgFV2Q" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3NF" />
+      </node>
+      <node concept="3uh$Y_" id="4mF3EfgFMLY" role="2l1AS3">
+        <ref role="3uh$Yy" node="292Zw9zv8A4" resolve="CustomersService" />
+      </node>
+      <node concept="3K_FnI" id="4mF3EfgFMM0" role="3KABxh" />
+      <node concept="3wFZSN" id="4mF3EfgFMM2" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3Nn" resolve="order" />
+      </node>
+      <node concept="3wDFX_" id="4mF3EfgG3VN" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3Nr" />
+      </node>
+      <node concept="3Kwof7" id="3WPyOlYh5UH" role="3KwesD" />
+    </node>
+    <node concept="2l1_1$" id="4mF3EfgFMLS" role="2l1_1C" />
+    <node concept="11cgHg" id="4mF3EfgFMLU" role="11cgHd" />
   </node>
 </model>
 

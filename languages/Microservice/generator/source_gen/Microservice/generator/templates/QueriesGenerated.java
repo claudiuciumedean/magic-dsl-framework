@@ -301,7 +301,7 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static Object propertyMacro_GetValue_4_2(final PropertyMacroContext _context) {
     if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.payloadType$ZfDs), CONCEPTS.EntityID$4e)) {
-      return "'id': id,";
+      return "'entity': id,";
     } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.payloadType$acws), CONCEPTS.Entity$3J)) {
       return "'entity': entity,";
     }
@@ -411,7 +411,7 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static Object propertyMacro_GetValue_4_27(final PropertyMacroContext _context) {
     if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.payloadType$ZfDs), CONCEPTS.EntityID$4e)) {
-      return "'id': entity[id],";
+      return "'entity': entity[id],";
     } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.payloadType$acws), CONCEPTS.Entity$3J)) {
       return "'entity': entity,";
     }
@@ -443,7 +443,7 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static Object propertyMacro_GetValue_4_35(final PropertyMacroContext _context) {
     if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.payloadType$ZfDs), CONCEPTS.EntityID$4e)) {
-      return "'id': entity[id],";
+      return "'entity': entity[id],";
     } else if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.payloadType$ZfDs), CONCEPTS.Entity$3J)) {
       return "'entity': entity,";
     }

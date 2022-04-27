@@ -559,6 +559,10 @@
         <property role="CJKq_" value="price" />
         <property role="CJ3hK" value="number" />
       </node>
+      <node concept="CJKq$" id="5cGqGoaCF3M" role="CJKqU">
+        <property role="CJKq_" value="description" />
+        <property role="CJ3hK" value="string" />
+      </node>
     </node>
     <node concept="1Pa9Pv" id="1GcCT5ob3Hr" role="1M$y3_">
       <node concept="1PaTwC" id="1GcCT5ob3Hs" role="1PaQFQ">
@@ -1217,150 +1221,216 @@
   </node>
   <node concept="2l1_3L" id="4mF3EfgFMLR">
     <property role="2l1_3K" value="1.0" />
-    <property role="2l1_3U" value=" A BFF for the desktop web app" />
+    <property role="2l1_3U" value=" A BFF for the mobile web app" />
     <property role="2l1_3Z" value="claudiuciumedean@gmail.com" />
     <property role="2l1_33" value="5000" />
-    <property role="TrG5h" value="desktop" />
-    <node concept="2l1_38" id="3WPyOlYjbfA" role="2l1_3h">
-      <property role="2l1ASO" value="/create-customer" />
-      <property role="2l1ASZ" value="create-customer" />
-      <node concept="3KwofT" id="3WPyOlYjbfQ" role="3KwesD" />
-      <node concept="3K_yPg" id="3WPyOlYjbfS" role="3KABxh" />
-      <node concept="3wFZSN" id="3WPyOlYjbfU" role="2l1EQz">
+    <property role="TrG5h" value="mobile" />
+    <property role="3GE5qa" value="MobileBFF" />
+    <node concept="2l1_38" id="5cGqGoaB1Fo" role="2l1_3h">
+      <property role="2l1ASO" value="/user" />
+      <property role="2l1ASZ" value="/get-customer-by" />
+      <node concept="3xnnJA" id="5cGqGoaB1Fs" role="3KwesD" />
+      <node concept="3K_FnI" id="5cGqGoaB1Fu" role="3KABxh" />
+      <node concept="3wFZSN" id="5cGqGoaB1Fw" role="2l1EQz">
         <ref role="3wFZSZ" node="69f6Qm32AtE" resolve="customer" />
       </node>
-      <node concept="3uh$Y_" id="3WPyOlYjbfW" role="2l1AS3">
-        <ref role="3uh$Yy" node="292Zw9zv8A4" resolve="CustomersService" />
-      </node>
-    </node>
-    <node concept="2l1_38" id="4mF3EfgFMLW" role="2l1_3h">
-      <property role="2l1ASO" value="/items" />
-      <property role="2l1ASZ" value="some-location" />
-      <node concept="3wDFX_" id="4mF3EfgFV2Q" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3NF" />
-      </node>
-      <node concept="3uh$Y_" id="4mF3EfgFMLY" role="2l1AS3">
-        <ref role="3uh$Yy" node="292Zw9zv8A4" resolve="CustomersService" />
-      </node>
-      <node concept="3K_FnI" id="4mF3EfgFMM0" role="3KABxh" />
-      <node concept="3wFZSN" id="4mF3EfgFMM2" role="2l1EQz">
-        <ref role="3wFZSZ" node="1GcCT5ob3Nn" resolve="order" />
-      </node>
-      <node concept="3wDFX_" id="4mF3EfgG3VN" role="2l1AQ1">
-        <ref role="3wDFX$" node="1GcCT5ob3Nr" />
-      </node>
-      <node concept="3Kwof7" id="3WPyOlYh5UH" role="3KwesD" />
-    </node>
-    <node concept="2l1_38" id="3WPyOlYiPAn" role="2l1_3h">
-      <property role="2l1ASO" value="/items" />
-      <property role="2l1ASZ" value="customers" />
-      <node concept="13c93J" id="3WPyOlYiPAw" role="3KwesD" />
-      <node concept="3K_FnI" id="3WPyOlYiPAy" role="3KABxh" />
-      <node concept="3wFZSN" id="3WPyOlYiPA$" role="2l1EQz">
-        <ref role="3wFZSZ" node="69f6Qm32AtE" resolve="customer" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYiPAC" role="3wDFXz">
-        <ref role="3wDFX$" node="69f6Qm337i$" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYiPAE" role="3wDFXz">
+      <node concept="3wDFX_" id="5cGqGoaB1Fy" role="2l1AQ1">
         <ref role="3wDFX$" node="1GcCT5ob3dQ" />
       </node>
-      <node concept="3uh$Y_" id="3WPyOlYiPAH" role="2l1AS3">
+      <node concept="3wDFX_" id="5cGqGoaB1F$" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3dV" />
+      </node>
+      <node concept="3uh$Y_" id="5cGqGoaB1FD" role="2l1AS3">
         <ref role="3uh$Yy" node="292Zw9zv8A4" resolve="CustomersService" />
       </node>
+      <node concept="1hBKNC" id="5cGqGoaBxi$" role="1hAkf$" />
+      <node concept="3wDFX_" id="5cGqGoaCEaf" role="3wDFXz">
+        <ref role="3wDFX$" node="69f6Qm337km" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCEah" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3dQ" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCEak" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3dV" />
+      </node>
     </node>
-    <node concept="2l1_38" id="3WPyOlYjc9q" role="2l1_3h">
+    <node concept="2l1_38" id="5cGqGoaB3nB" role="2l1_3h">
+      <property role="2l1ASO" value="/items" />
+      <property role="2l1ASZ" value="/getall-items" />
+      <node concept="3Kwof7" id="5cGqGoaB3nL" role="3KwesD" />
+      <node concept="3K_FnI" id="5cGqGoaB3nN" role="3KABxh" />
+      <node concept="3wFZSN" id="5cGqGoaB3nP" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="3uh$Y_" id="5cGqGoaB3nT" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
+      </node>
+      <node concept="1hAVps" id="5cGqGoaBxiy" role="1hAkf$" />
+      <node concept="3wDFX_" id="5cGqGoaCF3D" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3H2" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCF3F" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3GZ" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCF3I" role="3wDFXz">
+        <ref role="3wDFX$" node="5cGqGoaCF3M" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="5cGqGoaBxi4" role="2l1_3h">
       <property role="2l1ASO" value="/item" />
-      <property role="2l1ASZ" value="/item" />
-      <node concept="1hBZaO" id="3WPyOlYjc9J" role="3KwesD" />
-      <node concept="3K_FnI" id="3WPyOlYjc9L" role="3KABxh" />
-      <node concept="3wFZSN" id="3WPyOlYjc9N" role="2l1EQz">
+      <property role="2l1ASZ" value="/get-item" />
+      <node concept="1hBZaO" id="5cGqGoaBxim" role="3KwesD" />
+      <node concept="3K_FnI" id="5cGqGoaBxio" role="3KABxh" />
+      <node concept="3wFZSN" id="5cGqGoaBxiq" role="2l1EQz">
         <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
       </node>
-      <node concept="3wDFX_" id="3WPyOlYjc9P" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3GZ" />
+      <node concept="1hBKNC" id="5cGqGoaBxiw" role="1hAkf$" />
+      <node concept="3uh$Y_" id="5cGqGoaBxiA" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
       </node>
-      <node concept="3wDFX_" id="3WPyOlYjc9R" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3H2" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYjc9U" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3Hl" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYjc9Y" role="2l1AQ1">
+      <node concept="3wDFX_" id="5cGqGoaBydJ" role="2l1AQ1">
         <ref role="3wDFX$" node="1GcCT5ob3GT" />
       </node>
-      <node concept="3uh$Y_" id="3WPyOlYjca0" role="2l1AS3">
-        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
+    </node>
+    <node concept="2l1_38" id="5cGqGoaBycz" role="2l1_3h">
+      <property role="2l1ASO" value="/create-order" />
+      <property role="2l1ASZ" value="/create-order" />
+      <node concept="3KwofT" id="5cGqGoaBycU" role="3KwesD" />
+      <node concept="3K_yPg" id="5cGqGoaBycW" role="3KABxh" />
+      <node concept="3wFZSN" id="5cGqGoaBycY" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3Nn" resolve="order" />
+      </node>
+      <node concept="1hBKNC" id="5cGqGoaByd0" role="1hAkf$" />
+      <node concept="3uh$Y_" id="5cGqGoaByd2" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3Nf" resolve="OrdersService" />
       </node>
     </node>
-    <node concept="2l1_38" id="3WPyOlYjd4h" role="2l1_3h">
-      <property role="2l1ASO" value="/item" />
-      <property role="2l1ASZ" value="/item" />
-      <node concept="3xnnJA" id="3WPyOlYjwXM" role="3KwesD" />
-      <node concept="3K_FnI" id="3WPyOlYjwXO" role="3KABxh" />
-      <node concept="3wFZSN" id="3WPyOlYjwXQ" role="2l1EQz">
-        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
+    <node concept="2l1_38" id="5cGqGoaByd4" role="2l1_3h">
+      <property role="2l1ASO" value="/order" />
+      <property role="2l1ASZ" value="/get-orders-by" />
+      <node concept="3K_FnI" id="5cGqGoaBydz" role="3KABxh" />
+      <node concept="3wFZSN" id="5cGqGoaByd_" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3Nn" resolve="order" />
       </node>
-      <node concept="3wDFX_" id="3WPyOlYjwXS" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3GZ" />
+      <node concept="3uh$Y_" id="5cGqGoaBydB" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3Nf" resolve="OrdersService" />
       </node>
-      <node concept="3wDFX_" id="3WPyOlYjwXU" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3H2" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYjwXX" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3Hl" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYjwY1" role="2l1AQ1">
-        <ref role="3wDFX$" node="1GcCT5ob3GT" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYjwY3" role="2l1AQ1">
-        <ref role="3wDFX$" node="1GcCT5ob3GZ" />
-      </node>
-      <node concept="1hA7b_" id="3WPyOlYjwY6" role="1hAkf$" />
-      <node concept="3uh$Y_" id="3WPyOlYjwY8" role="2l1AS3">
-        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
-      </node>
-    </node>
-    <node concept="2l1_38" id="3WPyOlYjxTc" role="2l1_3h">
-      <property role="2l1ASO" value="/update-item" />
-      <property role="2l1ASZ" value="/item" />
-      <node concept="3Kwof6" id="3WPyOlYjxTP" role="3KwesD" />
-      <node concept="3K_yPh" id="3WPyOlYjxTR" role="3KABxh" />
-      <node concept="3wFZSN" id="3WPyOlYjxTT" role="2l1EQz">
-        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYj$WS" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3GZ" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYj$WU" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3H2" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYj$WX" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3Hl" />
-      </node>
-      <node concept="3wDFX_" id="3WPyOlYj$X1" role="2l1AQ1">
-        <ref role="3wDFX$" node="1GcCT5ob3GT" />
-      </node>
-      <node concept="1hA7b_" id="3WPyOlYj$X3" role="1hAkf$" />
-      <node concept="3uh$Y_" id="3WPyOlYj$X5" role="2l1AS3">
-        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
-      </node>
-    </node>
-    <node concept="2l1_38" id="3WPyOlYjSdV" role="2l1_3h">
-      <property role="2l1ASO" value="/delete" />
-      <property role="2l1ASZ" value="/item" />
-      <node concept="3KwesE" id="3WPyOlYjSeI" role="3KwesD" />
-      <node concept="3K_yPu" id="3WPyOlYjSeK" role="3KABxh" />
-      <node concept="3wFZSN" id="3WPyOlYjSeM" role="2l1EQz">
-        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
-      </node>
-      <node concept="1hA7b_" id="3WPyOlYjSeO" role="1hAkf$" />
-      <node concept="3uh$Y_" id="3WPyOlYjSeQ" role="2l1AS3">
-        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
+      <node concept="13c93J" id="5cGqGoaBydD" role="3KwesD" />
+      <node concept="3wDFX_" id="5cGqGoaBydH" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3Nv" />
       </node>
     </node>
     <node concept="2l1_1_" id="3WPyOlYiv8K" role="2l1_1C" />
-    <node concept="11cgHj" id="dtI1sbA7L8" role="11cgHd" />
+    <node concept="11cgHg" id="5cGqGoaB2xf" role="11cgHd" />
+  </node>
+  <node concept="2l1_3L" id="5cGqGoaCF3T">
+    <property role="TrG5h" value="desktop" />
+    <property role="3GE5qa" value="DesktopBFF" />
+    <property role="2l1_3K" value="1.0" />
+    <property role="2l1_3U" value="A BFF for the desktop web app" />
+    <property role="2l1_3Z" value="claudiuciumedean@gmail.com" />
+    <property role="2l1_33" value="5001" />
+    <node concept="2l1_38" id="5cGqGoaCF3W" role="2l1_3h">
+      <property role="2l1ASO" value="/user" />
+      <property role="2l1ASZ" value="/get-customer-by" />
+      <node concept="3wDFX_" id="5cGqGoaFGfW" role="3wDFXz">
+        <ref role="3wDFX$" node="69f6Qm337i$" />
+      </node>
+      <node concept="3xnnJA" id="5cGqGoaCF3X" role="3KwesD" />
+      <node concept="3K_FnI" id="5cGqGoaCF3Y" role="3KABxh" />
+      <node concept="3wFZSN" id="5cGqGoaCF3Z" role="2l1EQz">
+        <ref role="3wFZSZ" node="69f6Qm32AtE" resolve="customer" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCF40" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3dQ" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCF41" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3dV" />
+      </node>
+      <node concept="3uh$Y_" id="5cGqGoaCF42" role="2l1AS3">
+        <ref role="3uh$Yy" node="292Zw9zv8A4" resolve="CustomersService" />
+      </node>
+      <node concept="1hBKNC" id="5cGqGoaCF43" role="1hAkf$" />
+      <node concept="3wDFX_" id="5cGqGoaCF44" role="3wDFXz">
+        <ref role="3wDFX$" node="69f6Qm337km" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCF45" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3dQ" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCF46" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3dV" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="5cGqGoaCF4i" role="2l1_3h">
+      <property role="2l1ASO" value="/items" />
+      <property role="2l1ASZ" value="/getall-items" />
+      <node concept="3wDFX_" id="5cGqGoaFFgs" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3GT" />
+      </node>
+      <node concept="3Kwof7" id="5cGqGoaCF4j" role="3KwesD" />
+      <node concept="3K_FnI" id="5cGqGoaCF4k" role="3KABxh" />
+      <node concept="3wFZSN" id="5cGqGoaCF4l" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="3uh$Y_" id="5cGqGoaCF4m" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
+      </node>
+      <node concept="1hAVps" id="5cGqGoaCF4n" role="1hAkf$" />
+      <node concept="3wDFX_" id="5cGqGoaCF4o" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3H2" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCF4p" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3GZ" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCF4q" role="3wDFXz">
+        <ref role="3wDFX$" node="5cGqGoaCF3M" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="5cGqGoaCF5p" role="2l1_3h">
+      <property role="2l1ASO" value="/item" />
+      <property role="2l1ASZ" value="/get-item" />
+      <node concept="1hBZaO" id="5cGqGoaCF5q" role="3KwesD" />
+      <node concept="3K_FnI" id="5cGqGoaCF5r" role="3KABxh" />
+      <node concept="3wFZSN" id="5cGqGoaCF5s" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="1hBKNC" id="5cGqGoaCF5t" role="1hAkf$" />
+      <node concept="3uh$Y_" id="5cGqGoaCF5u" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3GN" resolve="ItemsService" />
+      </node>
+      <node concept="3wDFX_" id="5cGqGoaCF5v" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3GT" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="5cGqGoaCF6N" role="2l1_3h">
+      <property role="2l1ASO" value="/create-order" />
+      <property role="2l1ASZ" value="/create-order" />
+      <node concept="3KwofT" id="5cGqGoaCF6O" role="3KwesD" />
+      <node concept="3K_yPg" id="5cGqGoaCF6P" role="3KABxh" />
+      <node concept="3wFZSN" id="5cGqGoaCF6Q" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3Nn" resolve="order" />
+      </node>
+      <node concept="1hBKNC" id="5cGqGoaCF6R" role="1hAkf$" />
+      <node concept="3uh$Y_" id="5cGqGoaCF6S" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3Nf" resolve="OrdersService" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="5cGqGoaCF8u" role="2l1_3h">
+      <property role="2l1ASO" value="/order" />
+      <property role="2l1ASZ" value="/get-orders-by" />
+      <node concept="3K_FnI" id="5cGqGoaCF8v" role="3KABxh" />
+      <node concept="3wFZSN" id="5cGqGoaCF8w" role="2l1EQz">
+        <ref role="3wFZSZ" node="1GcCT5ob3Nn" resolve="order" />
+      </node>
+      <node concept="3uh$Y_" id="5cGqGoaCF8x" role="2l1AS3">
+        <ref role="3uh$Yy" node="1GcCT5ob3Nf" resolve="OrdersService" />
+      </node>
+      <node concept="13c93J" id="5cGqGoaCF8y" role="3KwesD" />
+      <node concept="3wDFX_" id="5cGqGoaCF8z" role="2l1AQ1">
+        <ref role="3wDFX$" node="1GcCT5ob3Nv" />
+      </node>
+    </node>
+    <node concept="11cgHj" id="5cGqGoaCF3U" role="11cgHd" />
   </node>
 </model>
 

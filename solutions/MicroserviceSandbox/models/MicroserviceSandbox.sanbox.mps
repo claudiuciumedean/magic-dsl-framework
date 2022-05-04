@@ -15,10 +15,6 @@
       </concept>
     </language>
     <language id="41009928-b490-4ac3-b848-8158d6c0d5db" name="BFF">
-      <concept id="5020122306378030790" name="BFF.structure.Desktop" flags="ng" index="2l1_1_" />
-      <concept id="5020122306378030794" name="BFF.structure.ISupportedType" flags="ng" index="2l1_1D">
-        <child id="5020122306378030795" name="supportedType" index="2l1_1C" />
-      </concept>
       <concept id="5020122306378030699" name="BFF.structure.BFFOperation" flags="ng" index="2l1_38">
         <property id="5020122306378031255" name="route" index="2l1ASO" />
         <property id="5020122306378031260" name="microserviceRoute" index="2l1ASZ" />
@@ -1275,6 +1271,9 @@
       <node concept="3wDFX_" id="5cGqGoaCF3I" role="3wDFXz">
         <ref role="3wDFX$" node="5cGqGoaCF3M" />
       </node>
+      <node concept="3wDFX_" id="5cGqGoaJM_I" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3Hl" />
+      </node>
     </node>
     <node concept="2l1_38" id="5cGqGoaBxi4" role="2l1_3h">
       <property role="2l1ASO" value="/item" />
@@ -1320,7 +1319,6 @@
         <ref role="3wDFX$" node="1GcCT5ob3Nv" />
       </node>
     </node>
-    <node concept="2l1_1_" id="3WPyOlYiv8K" role="2l1_1C" />
     <node concept="11cgHg" id="5cGqGoaB2xf" role="11cgHd" />
   </node>
   <node concept="2l1_3L" id="5cGqGoaCF3T">

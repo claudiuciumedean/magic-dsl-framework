@@ -11,10 +11,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_BFF;
   private ConceptPresentation props_BFFOperation;
-  private ConceptPresentation props_Desktop;
-  private ConceptPresentation props_ISupportedType;
-  private ConceptPresentation props_Mobile;
-  private ConceptPresentation props_SupportedType;
+  private ConceptPresentation props_BFFReference;
 
   @Override
   @Nullable
@@ -35,33 +32,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BFFOperation = cpb.create();
         }
         return props_BFFOperation;
-      case LanguageConceptSwitch.Desktop:
-        if (props_Desktop == null) {
+      case LanguageConceptSwitch.BFFReference:
+        if (props_BFFReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Desktop");
-          props_Desktop = cpb.create();
+          cpb.presentationByReference(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x56a8c307f66e5c02L, 0x6f7d3aaeb0e425bfL, "bffRef", "", "");
+          props_BFFReference = cpb.create();
         }
-        return props_Desktop;
-      case LanguageConceptSwitch.ISupportedType:
-        if (props_ISupportedType == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_ISupportedType = cpb.create();
-        }
-        return props_ISupportedType;
-      case LanguageConceptSwitch.Mobile:
-        if (props_Mobile == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Mobile");
-          props_Mobile = cpb.create();
-        }
-        return props_Mobile;
-      case LanguageConceptSwitch.SupportedType:
-        if (props_SupportedType == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("SupportedType");
-          props_SupportedType = cpb.create();
-        }
-        return props_SupportedType;
+        return props_BFFReference;
     }
     return null;
   }

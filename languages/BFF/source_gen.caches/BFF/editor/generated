@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="8y1t0odbke81mbhkf2n24tpatvc58fz">
-  <files names="BFFOperation_Editor.java:BFFOperation_EditorBuilder_a.java:BFF_Editor.java:BFF_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:SupportedTypeComponent.java:SupportedTypeComponent_ComponentBuilder_a.java" />
+<product version="3" modelHash="-9mcpm3kvxjcsblcpc9g7qytyg66w1ub">
+  <files names="BFFOperation_Editor.java:BFFOperation_EditorBuilder_a.java:BFFReference_SubstituteMenu.java:BFF_Editor.java:BFF_EditorBuilder_a.java:EditorAspectDescriptorImpl.java" />
 </product>
 

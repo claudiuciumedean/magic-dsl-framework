@@ -16,7 +16,6 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
-      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -38,9 +37,6 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
-      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -138,33 +134,14 @@
       <ref role="20lvS9" to="b4dw:69f6Qm2Uqg0" resolve="KeyValuePairReference" />
     </node>
   </node>
-  <node concept="1TIwiD" id="4mF3EfgFlV6">
-    <property role="EcuMT" value="5020122306378030790" />
-    <property role="TrG5h" value="Desktop" />
-    <property role="3GE5qa" value="SupportedType" />
-    <ref role="1TJDcQ" node="4mF3EfgFlV8" resolve="SupportedType" />
-  </node>
-  <node concept="1TIwiD" id="4mF3EfgFlV7">
-    <property role="EcuMT" value="5020122306378030791" />
-    <property role="3GE5qa" value="SupportedType" />
-    <property role="TrG5h" value="Mobile" />
-    <ref role="1TJDcQ" node="4mF3EfgFlV8" resolve="SupportedType" />
-  </node>
-  <node concept="1TIwiD" id="4mF3EfgFlV8">
-    <property role="EcuMT" value="5020122306378030792" />
-    <property role="3GE5qa" value="SupportedType" />
-    <property role="TrG5h" value="SupportedType" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
-  </node>
-  <node concept="PlHQZ" id="4mF3EfgFlVa">
-    <property role="EcuMT" value="5020122306378030794" />
-    <property role="3GE5qa" value="SupportedType" />
-    <property role="TrG5h" value="ISupportedType" />
-    <node concept="1TJgyj" id="4mF3EfgFlVb" role="1TKVEi">
-      <property role="IQ2ns" value="5020122306378030795" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="supportedType" />
-      <ref role="20lvS9" node="4mF3EfgFlV8" resolve="SupportedType" />
+  <node concept="1TIwiD" id="5qCKKvQr_K2">
+    <property role="EcuMT" value="6244455322315807746" />
+    <property role="TrG5h" value="BFFReference" />
+    <node concept="1TJgyj" id="6XXeEUKT2mZ" role="1TKVEi">
+      <property role="IQ2ns" value="8033641832265295295" />
+      <property role="20kJfa" value="bffRef" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4mF3EfgFlTi" resolve="BFF" />
     </node>
   </node>
 </model>

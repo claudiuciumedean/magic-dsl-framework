@@ -1,0 +1,6 @@
+Flask
+uuid
+flask_cors
+requests
+funcy
+urllib

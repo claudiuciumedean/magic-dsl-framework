@@ -19,6 +19,7 @@
   </dependencies>
   <languageVersions>
     <language slang="l:41009928-b490-4ac3-b848-8158d6c0d5db:BFF" version="0" />
+    <language slang="l:48e57d50-7e0f-4c8f-93fc-859018228309:Client" version="0" />
     <language slang="l:c2a6432b-e821-404b-af0e-22b30531f868:Deployment" version="0" />
     <language slang="l:e995fbb6-0310-461a-be22-cc66f48262f1:Microservice" version="0" />
     <language slang="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" version="0" />

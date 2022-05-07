@@ -12,8 +12,15 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
   <root>
+    <file name="BFFReference_SubstituteMenu.java">
+      <unit at="90,0,93,0" name="BFF.editor.BFFReference_SubstituteMenu$CONCEPTS" />
+      <unit at="94,0,97,0" name="BFF.editor.BFFReference_SubstituteMenu$LINKS" />
+      <unit at="49,0,68,0" name="BFF.editor.BFFReference_SubstituteMenu$SMP_ReferenceScope_vpy2ef_a" />
+      <unit at="68,0,89,0" name="BFF.editor.BFFReference_SubstituteMenu$SMP_Subconcepts_vpy2ef_b" />
+      <unit at="26,0,98,0" name="BFF.editor.BFFReference_SubstituteMenu" />
+    </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="16,0,51,0" name="BFF.editor.EditorAspectDescriptorImpl" />
+      <unit at="16,0,46,0" name="BFF.editor.EditorAspectDescriptorImpl" />
     </file>
   </root>
   <root nodeRef="r:b9d8eaab-4012-4b93-b660-17b703bde436(BFF.editor)/5020122306378030734">
@@ -529,120 +536,6 @@
       <unit id="5020122306378030734" at="407,0,414,0" name="BFF.editor.BFF_EditorBuilder_a$PROPS" />
       <unit id="5020122306378030734" at="330,0,397,0" name="BFF.editor.BFF_EditorBuilder_a$operationsListHandler_1efenp_s0" />
       <unit id="5020122306378030734" at="42,0,424,0" name="BFF.editor.BFF_EditorBuilder_a" />
-    </file>
-  </root>
-  <root nodeRef="r:b9d8eaab-4012-4b93-b660-17b703bde436(BFF.editor)/5020122306378030823">
-    <file name="SupportedTypeComponent.java">
-      <node id="5020122306378030823" at="15,47,16,35" concept="6" />
-      <node id="5020122306378030823" at="18,79,19,91" concept="6" />
-      <node id="5020122306378030823" at="18,0,21,0" concept="4" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="5020122306378030823" at="14,0,18,0" concept="4" trace="getContextHints#()Ljava/util/Collection;" />
-      <scope id="5020122306378030823" at="15,47,16,35" />
-      <scope id="5020122306378030823" at="18,79,19,91" />
-      <scope id="5020122306378030823" at="18,0,21,0">
-        <var name="editorContext" id="5020122306378030823" />
-        <var name="node" id="5020122306378030823" />
-      </scope>
-      <scope id="5020122306378030823" at="14,0,18,0" />
-      <unit id="5020122306378030823" at="13,0,22,0" name="BFF.editor.SupportedTypeComponent" />
-    </file>
-    <file name="SupportedTypeComponent_ComponentBuilder_a.java">
-      <node id="5020122306378030823" at="26,105,27,19" concept="9" />
-      <node id="5020122306378030823" at="27,19,28,18" concept="1" />
-      <node id="5020122306378030823" at="33,26,34,18" concept="6" />
-      <node id="5020122306378030823" at="37,39,38,32" concept="6" />
-      <node id="5020122306378030823" at="41,43,42,118" concept="5" />
-      <node id="5020122306378030823" at="42,118,43,48" concept="1" />
-      <node id="5020122306378030828" at="43,48,44,48" concept="1" />
-      <node id="5020122306378030823" at="44,48,45,22" concept="6" />
-      <node id="5020122306378030823" at="47,40,48,137" concept="5" />
-      <node id="5020122306378030823" at="48,137,49,33" concept="6" />
-      <node id="5020122306378030823" at="55,127,56,38" concept="9" />
-      <node id="5020122306378030823" at="56,38,57,25" concept="1" />
-      <node id="5020122306378030823" at="62,28,63,20" concept="6" />
-      <node id="5020122306378030823" at="66,55,67,76" concept="5" />
-      <node id="5020122306378030823" at="67,76,68,122" concept="1" />
-      <node id="5020122306378030823" at="68,122,69,125" concept="1" />
-      <node id="5020122306378030823" at="69,125,70,48" concept="1" />
-      <node id="5020122306378030823" at="70,48,71,24" concept="6" />
-      <node id="5020122306378030823" at="77,118,78,137" concept="1" />
-      <node id="5020122306378030823" at="80,42,81,54" concept="1" />
-      <node id="5020122306378030823" at="85,44,86,41" concept="1" />
-      <node id="5020122306378030823" at="86,41,87,113" concept="1" />
-      <node id="5020122306378030823" at="88,11,89,56" concept="5" />
-      <node id="5020122306378030823" at="89,56,90,52" concept="1" />
-      <node id="5020122306378030823" at="90,52,91,48" concept="1" />
-      <node id="5020122306378030823" at="91,48,92,35" concept="1" />
-      <node id="5020122306378030823" at="92,35,93,26" concept="6" />
-      <node id="5020122306378030823" at="94,17,95,42" concept="1" />
-      <node id="5020122306378030823" at="98,40,99,34" concept="6" />
-      <node id="5020122306378030823" at="104,0,105,0" concept="8" trace="supportedType$RlSB" />
-      <node id="5020122306378030823" at="23,0,25,0" concept="2" trace="myNode" />
-      <node id="5020122306378030823" at="52,0,54,0" concept="2" trace="myNode" />
-      <node id="5020122306378030823" at="37,0,40,0" concept="4" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="5020122306378030823" at="76,87,79,7" concept="3" />
-      <node id="5020122306378030823" at="79,7,82,7" concept="3" />
-      <node id="5020122306378030823" at="98,0,101,0" concept="4" trace="getNoTargetText#()Ljava/lang/String;" />
-      <node id="5020122306378030823" at="26,0,30,0" concept="0" trace="SupportedTypeComponent_ComponentBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="5020122306378030823" at="47,0,51,0" concept="4" trace="createRefNode_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="5020122306378030823" at="55,0,59,0" concept="0" trace="supportedTypeSingleRoleHandler_adks56_a0#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SContainmentLink;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
-      <node id="5020122306378030823" at="31,0,36,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="5020122306378030823" at="60,0,65,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="5020122306378030823" at="41,0,47,0" concept="4" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="5020122306378030823" at="66,0,73,0" concept="4" trace="createChildCell#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="5020122306378030823" at="76,0,84,0" concept="4" trace="installCellInfo#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/cells/EditorCell;Z)V" />
-      <node id="5020122306378030823" at="87,113,96,7" concept="10" />
-      <node id="5020122306378030823" at="84,0,98,0" concept="4" trace="createEmptyCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <scope id="5020122306378030823" at="33,26,34,18" />
-      <scope id="5020122306378030823" at="37,39,38,32" />
-      <scope id="5020122306378030823" at="62,28,63,20" />
-      <scope id="5020122306378030823" at="77,118,78,137" />
-      <scope id="5020122306378030823" at="80,42,81,54" />
-      <scope id="5020122306378030823" at="94,17,95,42" />
-      <scope id="5020122306378030823" at="98,40,99,34" />
-      <scope id="5020122306378030823" at="26,105,28,18" />
-      <scope id="5020122306378030823" at="47,40,49,33">
-        <var name="provider" id="5020122306378030823" />
-      </scope>
-      <scope id="5020122306378030823" at="55,127,57,25" />
-      <scope id="5020122306378030823" at="37,0,40,0" />
-      <scope id="5020122306378030823" at="98,0,101,0" />
-      <scope id="5020122306378030823" at="26,0,30,0">
-        <var name="context" id="5020122306378030823" />
-        <var name="node" id="5020122306378030823" />
-      </scope>
-      <scope id="5020122306378030823" at="41,43,45,22">
-        <var name="editorCell" id="5020122306378030823" />
-      </scope>
-      <scope id="5020122306378030823" at="47,0,51,0" />
-      <scope id="5020122306378030823" at="55,0,59,0">
-        <var name="containmentLink" id="5020122306378030823" />
-        <var name="context" id="5020122306378030823" />
-        <var name="ownerNode" id="5020122306378030823" />
-      </scope>
-      <scope id="5020122306378030823" at="31,0,36,0" />
-      <scope id="5020122306378030823" at="60,0,65,0" />
-      <scope id="5020122306378030823" at="66,55,71,24">
-        <var name="editorCell" id="5020122306378030823" />
-      </scope>
-      <scope id="5020122306378030823" at="88,11,93,26">
-        <var name="editorCell" id="5020122306378030823" />
-      </scope>
-      <scope id="5020122306378030823" at="41,0,47,0" />
-      <scope id="5020122306378030823" at="76,87,82,7" />
-      <scope id="5020122306378030823" at="66,0,73,0">
-        <var name="child" id="5020122306378030823" />
-      </scope>
-      <scope id="5020122306378030823" at="76,0,84,0">
-        <var name="child" id="5020122306378030823" />
-        <var name="editorCell" id="5020122306378030823" />
-        <var name="isEmpty" id="5020122306378030823" />
-      </scope>
-      <scope id="5020122306378030823" at="85,44,96,7" />
-      <scope id="5020122306378030823" at="84,0,98,0" />
-      <unit id="5020122306378030823" at="103,0,106,0" name="BFF.editor.SupportedTypeComponent_ComponentBuilder_a$LINKS" />
-      <unit id="5020122306378030823" at="51,0,102,0" name="BFF.editor.SupportedTypeComponent_ComponentBuilder_a$supportedTypeSingleRoleHandler_adks56_a0" />
-      <unit id="5020122306378030823" at="22,0,107,0" name="BFF.editor.SupportedTypeComponent_ComponentBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:b9d8eaab-4012-4b93-b660-17b703bde436(BFF.editor)/5020122306378031294">

@@ -40,7 +40,7 @@ public class Language extends LanguageRuntime {
 
   @Override
   protected void fillExtendedLanguages(Collection<SLanguage> extendedLanguages) {
-    extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("990507d3-3527-4c54-bfe9-0ca3c9c6247a"), "com.dslfoundry.plaintextgen"));
+    extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("e995fbb6-0310-461a-be22-cc66f48262f1"), "Microservice"));
   }
 
   @Override

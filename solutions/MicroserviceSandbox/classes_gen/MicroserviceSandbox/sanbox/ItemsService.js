@@ -19,7 +19,7 @@ app.get("/getall-items", (req, res) => {
 });
 
 app.get("/get-item", (req, res) => {
-  const entity = customers.find(entity => entity.id == req.query.id);
+  const entity = items.find(entity => entity.id == req.query.id);
 
   if(!entity) { return res.status(400).json({ message: "Item not found" })}; 
   res.json(entity);

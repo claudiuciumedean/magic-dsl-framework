@@ -44,6 +44,82 @@
          }
       }
    }
+},
+"/create-order":{
+   "post":{
+      "tags":[
+         "order"
+      ],
+      "summary":"Create an entity",
+      "operationId":"createEntity",
+      "requestBody":{
+         "description":"Required request body",
+         "content":{
+            "application/json":{
+               "schema":{
+                  "$ref":"#/components/schemas/order"
+               }
+            }
+         },
+         "required":true
+      },
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "message": "Order created successfully"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": ""
+               }
+            }
+         }
+      }
+   }
+},
+"/get-orders-by?customer_id={customer_id}":{
+   "get":{
+      "tags":[
+         "order"
+      ],
+      "summary":"Get all entities that match the given params",
+      "operationId":"getEntitiesBy",
+      "parameters":[
+          {
+             "name":"customer_id",
+             "in":"path",
+             "description":"customer_id of entity",
+             "required":true,
+             "schema":{
+                "type":"string"
+             }
+          }
+       ],
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "entities": "orders"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": "No orders found"
+               }
+            }
+         }
+      }
+   }
 }
   },
   "components":{

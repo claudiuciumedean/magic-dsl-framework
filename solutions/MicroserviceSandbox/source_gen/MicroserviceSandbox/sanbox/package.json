@@ -1,10 +1,10 @@
 {
-  "name": "OrdersService",
+  "name": "ItemsService",
   "version": "1.0",
   "description": "",
-  "main": "OrdersService.js",
+  "main": "ItemsService.js",
   "scripts": {
-    "start": "node OrdersService.js"
+    "start": "node ItemsService.js"
   },
   "keywords": [],
   "author": "",

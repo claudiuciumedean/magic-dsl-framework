@@ -25,7 +25,6 @@
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
-      <concept id="1078938745671" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclaration" flags="ig" index="PKFIW" />
       <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
         <reference id="1078939183255" name="editorComponent" index="PMmxG" />
       </concept>
@@ -59,14 +58,6 @@
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
-      </concept>
-    </language>
-    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
-      </concept>
-      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
-        <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
   </registry>
@@ -174,14 +165,6 @@
           <property role="1413C4" value="body-brace" />
         </node>
       </node>
-    </node>
-  </node>
-  <node concept="PKFIW" id="4mF3EfgFlVB">
-    <property role="3GE5qa" value="SupportedType" />
-    <property role="TrG5h" value="SupportedTypeComponent" />
-    <ref role="1XX52x" to="ehhy:4mF3EfgFlVa" resolve="ISupportedType" />
-    <node concept="3F1sOY" id="4mF3EfgFlVG" role="2wV5jI">
-      <ref role="1NtTu8" to="ehhy:4mF3EfgFlVb" resolve="supportedType" />
     </node>
   </node>
   <node concept="24kQdi" id="4mF3EfgFm2Y">

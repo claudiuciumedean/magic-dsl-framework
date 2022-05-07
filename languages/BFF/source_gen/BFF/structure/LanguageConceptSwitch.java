@@ -11,19 +11,13 @@ public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
   public static final int BFF = 0;
   public static final int BFFOperation = 1;
-  public static final int Desktop = 2;
-  public static final int ISupportedType = 3;
-  public static final int Mobile = 4;
-  public static final int SupportedType = 5;
+  public static final int BFFReference = 2;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL);
     builder.put(0x45ab0ea3d0ad5e52L, BFF);
     builder.put(0x45ab0ea3d0ad5e6bL, BFFOperation);
-    builder.put(0x45ab0ea3d0ad5ec6L, Desktop);
-    builder.put(0x45ab0ea3d0ad5ecaL, ISupportedType);
-    builder.put(0x45ab0ea3d0ad5ec7L, Mobile);
-    builder.put(0x45ab0ea3d0ad5ec8L, SupportedType);
+    builder.put(0x56a8c307f66e5c02L, BFFReference);
     myIndex = builder.seal();
   }
 

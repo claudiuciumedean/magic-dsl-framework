@@ -15,10 +15,7 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptBFF = createDescriptorForBFF();
   /*package*/ final ConceptDescriptor myConceptBFFOperation = createDescriptorForBFFOperation();
-  /*package*/ final ConceptDescriptor myConceptDesktop = createDescriptorForDesktop();
-  /*package*/ final ConceptDescriptor myConceptISupportedType = createDescriptorForISupportedType();
-  /*package*/ final ConceptDescriptor myConceptMobile = createDescriptorForMobile();
-  /*package*/ final ConceptDescriptor myConceptSupportedType = createDescriptorForSupportedType();
+  /*package*/ final ConceptDescriptor myConceptBFFReference = createDescriptorForBFFReference();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -34,7 +31,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBFF, myConceptBFFOperation, myConceptDesktop, myConceptISupportedType, myConceptMobile, myConceptSupportedType);
+    return Arrays.asList(myConceptBFF, myConceptBFFOperation, myConceptBFFReference);
   }
 
   @Override
@@ -45,14 +42,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptBFF;
       case LanguageConceptSwitch.BFFOperation:
         return myConceptBFFOperation;
-      case LanguageConceptSwitch.Desktop:
-        return myConceptDesktop;
-      case LanguageConceptSwitch.ISupportedType:
-        return myConceptISupportedType;
-      case LanguageConceptSwitch.Mobile:
-        return myConceptMobile;
-      case LanguageConceptSwitch.SupportedType:
-        return myConceptSupportedType;
+      case LanguageConceptSwitch.BFFReference:
+        return myConceptBFFReference;
       default:
         return null;
     }
@@ -94,35 +85,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("deliveredQueryParams", 0x45ab0ea3d0ad6322L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L).optional(true).ordered(true).multiple(true).origin("5020122306378031906").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForDesktop() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BFF", "Desktop", 0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5ec6L);
+  private static ConceptDescriptor createDescriptorForBFFReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BFF", "BFFReference", 0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x56a8c307f66e5c02L);
     b.class_(false, false, false);
-    b.super_("BFF.structure.SupportedType", 0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5ec8L);
-    b.origin("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/5020122306378030790");
+    b.origin("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/6244455322315807746");
     b.version(2);
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForISupportedType() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BFF", "ISupportedType", 0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5ecaL);
-    b.interface_();
-    b.origin("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/5020122306378030794");
-    b.version(2);
-    b.aggregate("supportedType", 0x45ab0ea3d0ad5ecbL).target(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5ec8L).optional(true).ordered(true).multiple(false).origin("5020122306378030795").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForMobile() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BFF", "Mobile", 0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5ec7L);
-    b.class_(false, false, false);
-    b.super_("BFF.structure.SupportedType", 0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5ec8L);
-    b.origin("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/5020122306378030791");
-    b.version(2);
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForSupportedType() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BFF", "SupportedType", 0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5ec8L);
-    b.class_(false, false, false);
-    b.origin("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/5020122306378030792");
-    b.version(2);
+    b.associate("bffRef", 0x6f7d3aaeb0e425bfL).target(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e52L).optional(false).origin("8033641832265295295").done();
     return b.create();
   }
 }

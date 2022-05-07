@@ -6,4 +6,4 @@
 docker build -t ordersservice .
 
 # Build docker container
-docker run -d -p 3002:5000 --name ordersservicenodejs ordersservice
+docker run -d -p 3002:5000 --name ordersservicepython ordersservice

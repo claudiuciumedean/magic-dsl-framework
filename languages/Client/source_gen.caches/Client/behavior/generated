@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="4lodcrde83jcu74q5yg249blkr006va">
-  <files names="BehaviorAspectDescriptor.java:KeyValuePair__BehaviorDescriptor.java" />
+<product version="3" modelHash="-9tj3awsggluz9uq9j9d77n1k7t48gtw">
+  <files names="ActionOperation__BehaviorDescriptor.java:Action__BehaviorDescriptor.java:BehaviorAspectDescriptor.java:KeyValuePair__BehaviorDescriptor.java:Page__BehaviorDescriptor.java:UIComponent__BehaviorDescriptor.java" />
 </product>
 

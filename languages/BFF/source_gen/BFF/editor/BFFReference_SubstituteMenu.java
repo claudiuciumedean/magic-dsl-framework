@@ -28,7 +28,7 @@ public class BFFReference_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_vpy2ef_a(), CONCEPTS.BFFReference$$i));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_vpy2ef_a(), CONCEPTS.BFFReference$$V));
     result.add(new SMP_Subconcepts_vpy2ef_b());
     return result;
   }
@@ -37,7 +37,7 @@ public class BFFReference_SubstituteMenu extends SubstituteMenuBase {
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for BFFReference. Generated from implicit smart reference attribute.", new SNodePointer("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)", "6244455322315807746")));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for BFFReference. Generated from implicit smart reference attribute.", new SNodePointer("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)", "756716148938414810")));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -50,7 +50,7 @@ public class BFFReference_SubstituteMenu extends SubstituteMenuBase {
 
     public SMP_ReferenceScope_vpy2ef_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051
-      super((SAbstractConcept) CONCEPTS.BFFReference$$i, LINKS.bffRef$OFG5);
+      super((SAbstractConcept) CONCEPTS.BFFReference$$V, LINKS.bff$Qfu7);
     }
     @NotNull
     @Override
@@ -67,7 +67,7 @@ public class BFFReference_SubstituteMenu extends SubstituteMenuBase {
   }
   public class SMP_Subconcepts_vpy2ef_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.BFFReference$$i);
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.BFFReference$$V);
     }
     @NotNull
     @Override
@@ -88,10 +88,10 @@ public class BFFReference_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept BFFReference$$i = MetaAdapterFactory.getConcept(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x56a8c307f66e5c02L, "BFF.structure.BFFReference");
+    /*package*/ static final SConcept BFFReference$$V = MetaAdapterFactory.getConcept(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0xa80655405469adaL, "BFF.structure.BFFReference");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink bffRef$OFG5 = MetaAdapterFactory.getReferenceLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x56a8c307f66e5c02L, 0x6f7d3aaeb0e425bfL, "bffRef");
+    /*package*/ static final SReferenceLink bff$Qfu7 = MetaAdapterFactory.getReferenceLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0xa80655405469adaL, 0xa80655405469adbL, "bff");
   }
 }

@@ -101,38 +101,38 @@
       <scope id="5020122306378030699" at="71,0,88,0" />
     </file>
   </root>
-  <root nodeRef="r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/6244455322315807746">
+  <root nodeRef="r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/756716148938414810">
     <file name="ConceptPresentationAspectImpl.java">
-      <node id="6244455322315807746" at="14,0,15,0" concept="1" trace="props_BFFReference" />
-      <node id="6244455322315807746" at="36,41,37,76" concept="3" />
-      <node id="6244455322315807746" at="37,76,38,140" concept="0" />
-      <node id="6244455322315807746" at="38,140,39,44" concept="0" />
-      <node id="6244455322315807746" at="40,9,41,34" concept="4" />
-      <node id="6244455322315807746" at="35,46,40,9" concept="2" />
-      <scope id="6244455322315807746" at="36,41,39,44">
-        <var name="cpb" id="6244455322315807746" />
+      <node id="756716148938414810" at="14,0,15,0" concept="1" trace="props_BFFReference" />
+      <node id="756716148938414810" at="36,41,37,76" concept="3" />
+      <node id="756716148938414810" at="37,76,38,135" concept="0" />
+      <node id="756716148938414810" at="38,135,39,44" concept="0" />
+      <node id="756716148938414810" at="40,9,41,34" concept="4" />
+      <node id="756716148938414810" at="35,46,40,9" concept="2" />
+      <scope id="756716148938414810" at="36,41,39,44">
+        <var name="cpb" id="756716148938414810" />
       </scope>
-      <scope id="6244455322315807746" at="35,46,41,34" />
+      <scope id="756716148938414810" at="35,46,41,34" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <node id="6244455322315807746" at="14,0,15,0" concept="5" trace="BFFReference" />
-      <node id="6244455322315807746" at="19,51,20,51" concept="0" />
+      <node id="756716148938414810" at="14,0,15,0" concept="5" trace="BFFReference" />
+      <node id="756716148938414810" at="19,51,20,50" concept="0" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <node id="6244455322315807746" at="18,0,19,0" concept="1" trace="myConceptBFFReference" />
-      <node id="6244455322315807746" at="45,46,46,37" concept="4" />
-      <node id="6244455322315807746" at="88,70,89,150" concept="3" />
-      <node id="6244455322315807746" at="89,150,90,34" concept="0" />
-      <node id="6244455322315807746" at="90,34,91,90" concept="0" />
-      <node id="6244455322315807746" at="91,90,92,17" concept="0" />
-      <node id="8033641832265295295" at="92,17,93,170" concept="0" />
-      <node id="6244455322315807746" at="93,170,94,22" concept="4" />
-      <node id="6244455322315807746" at="88,0,96,0" concept="6" trace="createDescriptorForBFFReference#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
-      <scope id="6244455322315807746" at="45,46,46,37" />
-      <scope id="6244455322315807746" at="88,70,94,22">
-        <var name="b" id="6244455322315807746" />
+      <node id="756716148938414810" at="18,0,19,0" concept="1" trace="myConceptBFFReference" />
+      <node id="756716148938414810" at="45,46,46,37" concept="4" />
+      <node id="756716148938414810" at="88,70,89,149" concept="3" />
+      <node id="756716148938414810" at="89,149,90,34" concept="0" />
+      <node id="756716148938414810" at="90,34,91,89" concept="0" />
+      <node id="756716148938414810" at="91,89,92,17" concept="0" />
+      <node id="756716148938414811" at="92,17,93,165" concept="0" />
+      <node id="756716148938414810" at="93,165,94,22" concept="4" />
+      <node id="756716148938414810" at="88,0,96,0" concept="6" trace="createDescriptorForBFFReference#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <scope id="756716148938414810" at="45,46,46,37" />
+      <scope id="756716148938414810" at="88,70,94,22">
+        <var name="b" id="756716148938414810" />
       </scope>
-      <scope id="6244455322315807746" at="88,0,96,0" />
+      <scope id="756716148938414810" at="88,0,96,0" />
     </file>
   </root>
 </debug-info>

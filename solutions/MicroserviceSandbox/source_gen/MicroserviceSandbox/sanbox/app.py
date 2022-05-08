@@ -1,4 +1,4 @@
-#OrdersService
+#CustomersService
 #Generated from MicroserviceDSL model by MPS.
 
 from flask import Flask, request, jsonify, send_file
@@ -6,8 +6,8 @@ from flask_cors import CORS
 import uuid
 import json
 
-with open('orders.json') as file:
-  orders = json.load(file)
+with open('customers.json') as file:
+  customers = json.load(file)
 
 app = Flask(__name__)
 CORS(app)
@@ -21,31 +21,60 @@ def sendAPIDocumentation():
 def sendAPIFile():
     return send_file('api-doc.json')
 
-@app.route('/getall-orders', methods=['GET'])
-def getEntities():
-    return jsonify(orders)
-
-@app.route('/create-order', methods=['POST'])
+@app.route('/create-customer', methods=['POST'])
 def createEntity():
     id = str(uuid.uuid4())
     entity = { 'id': id, **request.get_json()}
-    orders.append(entity)
-    return jsonify({'entity': entity,'message': 'Order created successfully' })
+    customers.append(entity)
+    return jsonify({'entity': entity,'message': '' })
 
-@app.route('/get-orders-by', methods=['GET'])
-def getEntitiesBy():
-    expectedKeys = ['customer_id',]
+@app.route('/get-customer', methods=['GET'])
+def getEntity():
+    entity = next((x for x in customers if str(x['id'])  == str(request.args.get('id'))), None)
+    if entity is None:
+      return jsonify({'message': 'No customer was found with the provided id' })
+
+    return jsonify(entity)
+
+@app.route('/getall-customers', methods=['GET'])
+def getEntities():
+    return jsonify(customers)
+
+@app.route('/get-customer-by', methods=['GET'])
+def getEntityBy():
+    expectedKeys = ['email','password',]
 
     if not  all(map(lambda x, y: x == y, sorted(request.args.keys()), sorted(expectedKeys))):
       return jsonify({'message': 'Invalid query params' })
 
-    entities = []
+    entity = None
 
-    for item in orders:
+    for item in customers:
       if all(str(item[param]).lower() == str(request.args.get(param)).lower() for param in request.args):
-        entities.append(item)
+        entity = item
+        break 
 
-    if len(entities) == 0:
-      return jsonify({'message': 'No orders found' })
+    if entity is None:
+      return jsonify({'message': 'No entity found with the corresponding params' })
 
-    return jsonify(entities)
+    return jsonify(entity)
+
+@app.route('/update-customer', methods=['PUT'])
+def updateEntity():
+    entity = next((x for x in customers if str(x['id']) == str(request.args.get('id'))), None)
+    if entity is None:
+      return jsonify({'message': 'Customer not found' })
+
+    index = customers.index(entity)
+    entity = { **entity, **request.get_json()}
+    customers[index] = entity
+    return jsonify({ 'entity': entity,'message': 'Successfully updated a customer'})
+
+@app.route('/delete-customer', methods=['DELETE'])
+def deleteEntity():
+    entity = next((x for x in customers if str(x['id'])  == str(request.args.get('id'))), None)
+    if entity is None:
+      return jsonify({'message': 'No customer found' })
+
+    customers.remove(entity)
+    return jsonify({'entity': entity,'message': 'Succesfully deleted the customer' })

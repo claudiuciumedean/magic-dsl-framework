@@ -9,27 +9,43 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int Client = 0;
-  public static final int ClientConfig = 1;
-  public static final int ClientReference = 2;
-  public static final int ClientType = 3;
-  public static final int Desktop = 4;
-  public static final int IClientType = 5;
-  public static final int Mobile = 6;
-  public static final int Page = 7;
-  public static final int PageReference = 8;
+  public static final int Action = 0;
+  public static final int ActionOperation = 1;
+  public static final int Card = 2;
+  public static final int Client = 3;
+  public static final int ClientConfig = 4;
+  public static final int ClientReference = 5;
+  public static final int ClientType = 6;
+  public static final int Desktop = 7;
+  public static final int IClientType = 8;
+  public static final int Image = 9;
+  public static final int Link = 10;
+  public static final int Mobile = 11;
+  public static final int Page = 12;
+  public static final int PageReference = 13;
+  public static final int Text = 14;
+  public static final int Title = 15;
+  public static final int UIComponent = 16;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x48e57d507e0f4c8fL, 0x93fc859018228309L);
+    builder.put(0xa806554058d4e49L, Action);
+    builder.put(0xcc684dcdf8dce3bL, ActionOperation);
+    builder.put(0xa80655405656aa0L, Card);
     builder.put(0xa806554051c0e0eL, Client);
     builder.put(0x56a8c307f66dc0c2L, ClientConfig);
     builder.put(0xa8065540525534dL, ClientReference);
     builder.put(0x6f7d3aaeb0cad68bL, ClientType);
     builder.put(0x6f7d3aaeb0cb464aL, Desktop);
     builder.put(0x6f7d3aaeb0cb4634L, IClientType);
+    builder.put(0xa806554059973baL, Image);
+    builder.put(0xa806554058d4e4aL, Link);
     builder.put(0x6f7d3aaeb0cb4640L, Mobile);
     builder.put(0x6f7d3aaeb103b898L, Page);
     builder.put(0xa806554051c0e24L, PageReference);
+    builder.put(0xa806554059ff916L, Text);
+    builder.put(0xa8065540571b850L, Title);
+    builder.put(0xa806554053e9bc3L, UIComponent);
     myIndex = builder.seal();
   }
 

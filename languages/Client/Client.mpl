@@ -66,7 +66,7 @@
   <dependencies>
     <dependency reexport="false">2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)</dependency>
     <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
-    <dependency reexport="false">41009928-b490-4ac3-b848-8158d6c0d5db(BFF)</dependency>
+    <dependency reexport="false" scope="generate-into">41009928-b490-4ac3-b848-8158d6c0d5db(BFF)</dependency>
     <dependency reexport="false">990507d3-3527-4c54-bfe9-0ca3c9c6247a(com.dslfoundry.plaintextgen)</dependency>
   </dependencies>
   <languageVersions>

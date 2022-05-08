@@ -3,7 +3,7 @@
 # ./build.sh
 
 # Build docker image
-docker build -t ordersservice .
+docker build -t customersservice .
 
 # Build docker container
-docker run -d -p 3002:5000 --name ordersservicepython ordersservice
+docker run -d -p 3000:5000 --name customersservicepython customersservice

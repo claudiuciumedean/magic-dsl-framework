@@ -106,28 +106,6 @@
         <child id="7083910861678503260" name="entityType" index="3wFZST" />
       </concept>
     </language>
-    <language id="48e57d50-7e0f-4c8f-93fc-859018228309" name="Client">
-      <concept id="756716148935626254" name="Client.structure.Client" flags="ng" index="fB6Hq">
-        <property id="756716148935626262" name="version" index="fB6H2" />
-        <property id="756716148935626257" name="mainteinerEmail" index="fB6H5" />
-        <property id="756716148935626259" name="description" index="fB6H7" />
-        <child id="756716148936165036" name="pages" index="fD2fS" />
-      </concept>
-      <concept id="756716148936233805" name="Client.structure.ClientReference" flags="ng" index="fDjop">
-        <reference id="756716148936233806" name="client" index="fDjoq" />
-      </concept>
-      <concept id="6244455322315768002" name="Client.structure.ClientConfig" flags="ng" index="2wLgf5">
-        <child id="756716148936346067" name="mobileClientRef" index="fDQM7" />
-      </concept>
-      <concept id="8033641832267364504" name="Client.structure.Page" flags="ng" index="3uvC8Q">
-        <property id="756716148936815169" name="isHomePage" index="fF_sl" />
-        <property id="756716148937107762" name="route" index="fGGLA" />
-      </concept>
-      <concept id="8033641832263665204" name="Client.structure.IClientType" flags="ng" index="3vHBMq">
-        <child id="8033641832263665214" name="clientType" index="3vHBMg" />
-      </concept>
-      <concept id="8033641832263665216" name="Client.structure.Mobile" flags="ng" index="3vHBNI" />
-    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
@@ -1452,26 +1430,6 @@
       </node>
     </node>
     <node concept="11cgHj" id="5cGqGoaCF3U" role="11cgHd" />
-  </node>
-  <node concept="fB6Hq" id="E0plg57N7w">
-    <property role="fB6H2" value="1.0" />
-    <property role="TrG5h" value="MyMobileClient" />
-    <property role="fB6H5" value="claudiuciumedean@gmail.com" />
-    <property role="fB6H7" value="This is the client for mobile" />
-    <property role="3GE5qa" value="Client" />
-    <node concept="3uvC8Q" id="E0plg5ftd2" role="fD2fS">
-      <property role="TrG5h" value="Items" />
-      <property role="fF_sl" value="true" />
-      <property role="fGGLA" value="/items" />
-    </node>
-    <node concept="3vHBNI" id="E0plg581F2" role="3vHBMg" />
-  </node>
-  <node concept="2wLgf5" id="E0plg5f5Mo">
-    <property role="3GE5qa" value="Client" />
-    <property role="TrG5h" value="MyApp" />
-    <node concept="fDjop" id="E0plg5f5Mp" role="fDQM7">
-      <ref role="fDjoq" node="E0plg57N7w" resolve="MyMobileClient" />
-    </node>
   </node>
 </model>
 

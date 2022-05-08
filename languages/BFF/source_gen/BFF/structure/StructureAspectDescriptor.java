@@ -86,11 +86,11 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForBFFReference() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BFF", "BFFReference", 0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x56a8c307f66e5c02L);
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BFF", "BFFReference", 0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0xa80655405469adaL);
     b.class_(false, false, false);
-    b.origin("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/6244455322315807746");
+    b.origin("r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)/756716148938414810");
     b.version(2);
-    b.associate("bffRef", 0x6f7d3aaeb0e425bfL).target(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e52L).optional(false).origin("8033641832265295295").done();
+    b.associate("bff", 0xa80655405469adbL).target(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e52L).optional(false).origin("756716148938414811").done();
     return b.create();
   }
 }

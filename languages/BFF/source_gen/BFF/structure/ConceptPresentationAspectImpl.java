@@ -35,7 +35,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.BFFReference:
         if (props_BFFReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x56a8c307f66e5c02L, 0x6f7d3aaeb0e425bfL, "bffRef", "", "");
+          cpb.presentationByReference(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0xa80655405469adaL, 0xa80655405469adbL, "bff", "", "");
           props_BFFReference = cpb.create();
         }
         return props_BFFReference;

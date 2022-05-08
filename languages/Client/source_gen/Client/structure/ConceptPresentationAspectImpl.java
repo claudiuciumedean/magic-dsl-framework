@@ -9,21 +9,50 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_Action;
+  private ConceptPresentation props_ActionOperation;
+  private ConceptPresentation props_Card;
   private ConceptPresentation props_Client;
   private ConceptPresentation props_ClientConfig;
   private ConceptPresentation props_ClientReference;
   private ConceptPresentation props_ClientType;
   private ConceptPresentation props_Desktop;
   private ConceptPresentation props_IClientType;
+  private ConceptPresentation props_Image;
+  private ConceptPresentation props_Link;
   private ConceptPresentation props_Mobile;
   private ConceptPresentation props_Page;
   private ConceptPresentation props_PageReference;
+  private ConceptPresentation props_Text;
+  private ConceptPresentation props_Title;
+  private ConceptPresentation props_UIComponent;
 
   @Override
   @Nullable
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.Action:
+        if (props_Action == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Action");
+          props_Action = cpb.create();
+        }
+        return props_Action;
+      case LanguageConceptSwitch.ActionOperation:
+        if (props_ActionOperation == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_ActionOperation = cpb.create();
+        }
+        return props_ActionOperation;
+      case LanguageConceptSwitch.Card:
+        if (props_Card == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Card");
+          props_Card = cpb.create();
+        }
+        return props_Card;
       case LanguageConceptSwitch.Client:
         if (props_Client == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -65,6 +94,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IClientType = cpb.create();
         }
         return props_IClientType;
+      case LanguageConceptSwitch.Image:
+        if (props_Image == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Image");
+          props_Image = cpb.create();
+        }
+        return props_Image;
+      case LanguageConceptSwitch.Link:
+        if (props_Link == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Link");
+          props_Link = cpb.create();
+        }
+        return props_Link;
       case LanguageConceptSwitch.Mobile:
         if (props_Mobile == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -86,6 +129,27 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PageReference = cpb.create();
         }
         return props_PageReference;
+      case LanguageConceptSwitch.Text:
+        if (props_Text == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Text");
+          props_Text = cpb.create();
+        }
+        return props_Text;
+      case LanguageConceptSwitch.Title:
+        if (props_Title == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Title");
+          props_Title = cpb.create();
+        }
+        return props_Title;
+      case LanguageConceptSwitch.UIComponent:
+        if (props_UIComponent == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("UIComponent");
+          props_UIComponent = cpb.create();
+        }
+        return props_UIComponent;
     }
     return null;
   }

@@ -5,7 +5,7 @@ WORKDIR /usr/src
 
 COPY requirements.txt /usr/src
 COPY app.py /usr/src
-COPY orders.json /usr/src
+COPY customers.json /usr/src
 COPY APIDoc.html /usr/src
 COPY api-doc.json /usr/src
 

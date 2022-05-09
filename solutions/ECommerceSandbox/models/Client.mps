@@ -68,7 +68,7 @@
         <child id="756716148941240401" name="text" index="fWtO5" />
       </concept>
       <concept id="6244455322315768002" name="Client.structure.ClientConfig" flags="ng" index="2wLgf5">
-        <child id="756716148936346067" name="mobileClientRef" index="fDQM7" />
+        <child id="756716148936346094" name="desktopClientRef" index="fDQMU" />
       </concept>
       <concept id="8980703707718628070" name="Client.structure.ActionOperationReference" flags="ng" index="37eYMm">
         <reference id="8980703707718628071" name="actionOperation" index="37eYMn" />
@@ -109,8 +109,8 @@
   <node concept="2wLgf5" id="E0plg5f5Mo">
     <property role="3GE5qa" value="Client" />
     <property role="TrG5h" value="MyApp" />
-    <node concept="fDjop" id="E0plg5kGST" role="fDQM7">
-      <ref role="fDjoq" node="E0plg57N7w" resolve="MyMobileClient" />
+    <node concept="fDjop" id="7MxRB2VLSjF" role="fDQMU">
+      <ref role="fDjoq" node="E0plg57N7w" resolve="MyDesktop" />
     </node>
   </node>
   <node concept="fB6Hq" id="E0plg57N7w">

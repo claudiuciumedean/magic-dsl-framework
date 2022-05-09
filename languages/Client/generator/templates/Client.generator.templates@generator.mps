@@ -197,6 +197,10 @@
       <ref role="30HIoZ" to="mo5v:5qCKKvQrs32" resolve="ClientConfig" />
       <ref role="3lhOvi" node="5qCKKvQrwTU" resolve="package" />
     </node>
+    <node concept="3lhOvk" id="7MxRB2VLSTF" role="3lj3bC">
+      <ref role="30HIoZ" to="mo5v:5qCKKvQrs32" resolve="ClientConfig" />
+      <ref role="3lhOvi" node="5qCKKvQrwTU" resolve="package" />
+    </node>
     <node concept="3lhOvk" id="E0plg5atZC" role="3lj3bC">
       <ref role="30HIoZ" to="mo5v:E0plg570Se" resolve="Client" />
       <ref role="3lhOvi" node="E0plg5atZH" resolve="name" />
@@ -3451,6 +3455,61 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="356sEV" id="7MxRB2VLSTL">
+    <property role="3GE5qa" value="ClientRoot" />
+    <property role="TrG5h" value="build" />
+    <property role="3Le9LX" value=".sh" />
+    <node concept="356WMU" id="7MxRB2VLTVO" role="356KY_">
+      <node concept="356sEK" id="7MxRB2VLTVP" role="383Ya9">
+        <node concept="2EixSi" id="7MxRB2VLTVS" role="2EinRH" />
+        <node concept="356sEF" id="7MxRB2VLTVT" role="356sEH">
+          <property role="TrG5h" value="# sed -i -e 's/\r$//' build.sh" />
+        </node>
+      </node>
+      <node concept="356sEK" id="7MxRB2VLTVV" role="383Ya9">
+        <node concept="2EixSi" id="7MxRB2VLTVY" role="2EinRH" />
+        <node concept="356sEF" id="7MxRB2VLTVZ" role="356sEH">
+          <property role="TrG5h" value="# chmod 755 build.sh " />
+        </node>
+      </node>
+      <node concept="356sEK" id="7MxRB2VLTW1" role="383Ya9">
+        <node concept="2EixSi" id="7MxRB2VLTW4" role="2EinRH" />
+        <node concept="356sEF" id="7MxRB2VLTW5" role="356sEH">
+          <property role="TrG5h" value="# ./build.sh" />
+        </node>
+      </node>
+      <node concept="356sEK" id="7MxRB2VLTW7" role="383Ya9">
+        <node concept="2EixSi" id="7MxRB2VLTWa" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="7MxRB2VLTWb" role="383Ya9">
+        <node concept="2EixSi" id="7MxRB2VLTWe" role="2EinRH" />
+        <node concept="356sEF" id="7MxRB2VLTWf" role="356sEH">
+          <property role="TrG5h" value="mkdir -p -- &quot;public&quot;" />
+        </node>
+      </node>
+      <node concept="356sEK" id="7MxRB2VLTWh" role="383Ya9">
+        <node concept="2EixSi" id="7MxRB2VLTWk" role="2EinRH" />
+        <node concept="356sEF" id="7MxRB2VLTWl" role="356sEH">
+          <property role="TrG5h" value="mv ./index.html public" />
+        </node>
+      </node>
+      <node concept="356sEK" id="7MxRB2VLTWn" role="383Ya9">
+        <node concept="2EixSi" id="7MxRB2VLTWq" role="2EinRH" />
+        <node concept="356sEF" id="7MxRB2VLTWr" role="356sEH">
+          <property role="TrG5h" value="npm install" />
+        </node>
+      </node>
+      <node concept="356sEK" id="7MxRB2VLTWt" role="383Ya9">
+        <node concept="2EixSi" id="7MxRB2VLTWw" role="2EinRH" />
+        <node concept="356sEF" id="7MxRB2VLTWx" role="356sEH">
+          <property role="TrG5h" value="npm start" />
+        </node>
+      </node>
+    </node>
+    <node concept="n94m4" id="7MxRB2VLSTN" role="lGtFl">
+      <ref role="n9lRv" to="mo5v:5qCKKvQrs32" resolve="ClientConfig" />
     </node>
   </node>
 </model>

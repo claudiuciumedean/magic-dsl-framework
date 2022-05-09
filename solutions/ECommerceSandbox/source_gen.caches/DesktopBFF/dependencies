@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <uses language="l:41009928-b490-4ac3-b848-8158d6c0d5db:BFF" />
-  <uses language="l:48e57d50-7e0f-4c8f-93fc-859018228309:Client" />
   <uses language="l:e995fbb6-0310-461a-be22-cc66f48262f1:Microservice" />
   <uses language="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" />
   <uses module="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" kind="dp" />

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <uses language="l:41009928-b490-4ac3-b848-8158d6c0d5db:BFF" />
-  <uses language="l:c2a6432b-e821-404b-af0e-22b30531f868:Deployment" />
   <uses language="l:e995fbb6-0310-461a-be22-cc66f48262f1:Microservice" />
   <uses language="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" />
-  <uses language="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
 </dependenciesRoot>
 

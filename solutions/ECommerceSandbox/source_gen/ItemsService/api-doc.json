@@ -1,0 +1,121 @@
+{
+  "openapi":"3.0.2",
+  "info":{
+     "title":"ItemsService",
+     "description":"Microservice for customers",
+     "contact":{
+        "email":"claudiuciumedean@gmail.com"
+     },
+     "license":{
+        "name":"Apache 2.0",
+        "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
+     },
+     "version":"1.0"
+  },
+  "tags":[
+     {
+        "name":"item"
+     }
+  ],
+  "paths":{
+"/getall-items":{
+   "get":{
+      "tags":[
+         "item"
+      ],
+      "summary":"Get all entities",
+      "operationId":"getEntities",
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "entities": "items"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": ""
+               }
+            }
+         }
+      }
+   }
+},
+"/get-item?id={id}":{
+   "get":{
+      "tags":[
+         "item"
+      ],
+      "summary":"Get a single entity by id",
+      "operationId":"getEntity",
+      "parameters":[
+          {
+             "name":"id",
+             "in":"path",
+             "description":"id of entity",
+             "required":true,
+             "schema":{
+                "type":"string"
+             }
+          }
+       ],
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "entity": "item"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": "Item not found"
+               }
+            }
+         }
+      }
+   }
+}
+  },
+  "components":{
+     "schemas":{
+        "item":{
+           "type":"object",
+           "properties":{
+
+"id":{
+   "type":"string",
+   "readOnly": true
+},
+
+"name":{
+   "type":"description"
+},
+
+"thumbnail":{
+   "type":"string"
+},
+
+"image":{
+   "type":"string"
+},
+
+"price":{
+   "type":"number"
+},
+
+"description":{
+   "type":"string"
+}
+           }
+        }
+     }
+  }
+}

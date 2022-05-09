@@ -18,7 +18,7 @@ export default class MobileApp extends Component {
         </Router>
 
         <Navbar bg="dark" variant="dark" className="nav-bar">
-          <Navbar.Brand href="/">MyMobileClient</Navbar.Brand>
+          <Navbar.Brand href="/">MyDesktop</Navbar.Brand>
           <Nav className="me-auto">
 
             <Nav.Link href="/">Items</Nav.Link>
@@ -42,7 +42,7 @@ async myOperation(entity) {
     const queryParams = _.pick(entity, ['id',]);
     let arr = [];
     try {
-      const response = await axios.get(`http://localhost:5000/mobile-api/items?${queryString.stringify(queryParams)}`);
+      const response = await axios.get(`http://localhost:5001/desktop-api/items?${queryString.stringify(queryParams)}`);
       const data = response.data;
       if(!data.length) { arr.push(data)} else { arr = [...data]; }
     } catch (error) {
@@ -89,7 +89,7 @@ See more
   variant="primary"
   onClick={() => this.myOperation(entity)}
 >
-    Click here
+    See more here
 </Button>
       </Col>
       );
@@ -120,11 +120,21 @@ async addToCart(entity) {
     let entity = null;
 
     try {
-      const response = await axios.post(`http://localhost:5000/mobile-api/create-order`, entity);
+      const response = await axios.post(`http://localhost:5001/desktop-api/create-order`, entity);
       entity = response.data;
     } catch (error) {}
 
     return entity;
+  }
+async deleteItem(entity) {
+    const queryParams = _.pick(entity, ['id',]);
+    let data = null;
+    try {
+      const response = await axios.delete(`http://localhost:5001/desktop-api/delete-item?${queryString.stringify(queryParams)}`);
+      data = response.data;
+    } catch (error) {
+    }
+    return data;
   }
 
   componentDidMount() {
@@ -161,6 +171,12 @@ async addToCart(entity) {
   onClick={() => this.addToCart(entity)}
 >
     Add to cart
+</Button>
+<Button 
+  variant="danger"
+  onClick={() => this.deleteItem(entity)}
+>
+    Delete
 </Button>
       </Col>
       );

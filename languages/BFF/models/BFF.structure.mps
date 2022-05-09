@@ -46,7 +46,7 @@
     <property role="EcuMT" value="5020122306378030674" />
     <property role="19KtqR" value="true" />
     <property role="TrG5h" value="BFF" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="4mF3EfgFlTj" role="1TKVEl">
       <property role="IQ2nx" value="5020122306378030675" />
       <property role="TrG5h" value="version" />
@@ -84,7 +84,7 @@
   <node concept="1TIwiD" id="4mF3EfgFlTF">
     <property role="EcuMT" value="5020122306378030699" />
     <property role="TrG5h" value="BFFOperation" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="4mF3EfgFm2i" role="PzmwI">
       <ref role="PrY4T" to="b4dw:45hWeqLMSyQ" resolve="IOperationType" />
     </node>

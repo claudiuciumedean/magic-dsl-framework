@@ -15,11 +15,13 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptActionOperation = createDescriptorForActionOperation();
+  /*package*/ final ConceptDescriptor myConceptActionOperationReference = createDescriptorForActionOperationReference();
   /*package*/ final ConceptDescriptor myConceptCard = createDescriptorForCard();
   /*package*/ final ConceptDescriptor myConceptClient = createDescriptorForClient();
   /*package*/ final ConceptDescriptor myConceptClientConfig = createDescriptorForClientConfig();
   /*package*/ final ConceptDescriptor myConceptClientReference = createDescriptorForClientReference();
   /*package*/ final ConceptDescriptor myConceptClientType = createDescriptorForClientType();
+  /*package*/ final ConceptDescriptor myConceptCrudAction = createDescriptorForCrudAction();
   /*package*/ final ConceptDescriptor myConceptDesktop = createDescriptorForDesktop();
   /*package*/ final ConceptDescriptor myConceptIClientType = createDescriptorForIClientType();
   /*package*/ final ConceptDescriptor myConceptImage = createDescriptorForImage();
@@ -40,13 +42,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
-    deps.aggregatedLanguage(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, "Microservice");
     deps.aggregatedLanguage(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, "BFF");
+    deps.aggregatedLanguage(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, "Microservice");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionOperation, myConceptCard, myConceptClient, myConceptClientConfig, myConceptClientReference, myConceptClientType, myConceptDesktop, myConceptIClientType, myConceptImage, myConceptLink, myConceptMobile, myConceptPage, myConceptPageReference, myConceptText, myConceptTitle, myConceptUIComponent);
+    return Arrays.asList(myConceptAction, myConceptActionOperation, myConceptActionOperationReference, myConceptCard, myConceptClient, myConceptClientConfig, myConceptClientReference, myConceptClientType, myConceptCrudAction, myConceptDesktop, myConceptIClientType, myConceptImage, myConceptLink, myConceptMobile, myConceptPage, myConceptPageReference, myConceptText, myConceptTitle, myConceptUIComponent);
   }
 
   @Override
@@ -57,6 +59,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAction;
       case LanguageConceptSwitch.ActionOperation:
         return myConceptActionOperation;
+      case LanguageConceptSwitch.ActionOperationReference:
+        return myConceptActionOperationReference;
       case LanguageConceptSwitch.Card:
         return myConceptCard;
       case LanguageConceptSwitch.Client:
@@ -67,6 +71,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptClientReference;
       case LanguageConceptSwitch.ClientType:
         return myConceptClientType;
+      case LanguageConceptSwitch.CrudAction:
+        return myConceptCrudAction;
       case LanguageConceptSwitch.Desktop:
         return myConceptDesktop;
       case LanguageConceptSwitch.IClientType:
@@ -109,12 +115,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Client", "ActionOperation", 0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xcc684dcdf8dce3bL);
     b.class_(false, false, false);
     b.parent(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1cb88b6L);
+    b.parent(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x5775eded06ecae08L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:98ed726a-3e0c-430f-bdae-c3e04664f756(Client.structure)/920569258022129211");
     b.version(2);
     b.property("route", 0xcc684dcdf8dce40L).type(PrimitiveTypeId.STRING).origin("920569258022129216").done();
+    b.aggregate("BFFRef", 0x7ca1de70bb92f8d8L).target(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0xa80655405469adaL).optional(false).ordered(true).multiple(false).origin("8980703707718154456").done();
     b.aggregate("queryParams", 0xcc684dcdf8dce3eL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L).optional(true).ordered(true).multiple(true).origin("920569258022129214").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForActionOperationReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Client", "ActionOperationReference", 0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x7ca1de70bb9a32e6L);
+    b.class_(false, false, false);
+    b.origin("r:98ed726a-3e0c-430f-bdae-c3e04664f756(Client.structure)/8980703707718628070");
+    b.version(2);
+    b.associate("actionOperation", 0x7ca1de70bb9a32e7L).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xcc684dcdf8dce3bL).optional(false).origin("8980703707718628071").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCard() {
@@ -165,6 +181,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:98ed726a-3e0c-430f-bdae-c3e04664f756(Client.structure)/8033641832263636619");
     b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForCrudAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Client", "CrudAction", 0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x7ca1de70bb9a32c7L);
+    b.class_(false, false, false);
+    b.super_("Client.structure.Action", 0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa806554058d4e49L);
+    b.origin("r:98ed726a-3e0c-430f-bdae-c3e04664f756(Client.structure)/8980703707718628039");
+    b.version(2);
+    b.property("variant", 0x7ca1de70bb9a32c8L).type(PrimitiveTypeId.STRING).origin("8980703707718628040").done();
+    b.property("text", 0x7ca1de70bb9a333eL).type(PrimitiveTypeId.STRING).origin("8980703707718628158").done();
+    b.aggregate("actionOperationRef", 0x7ca1de70bb9a3308L).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x7ca1de70bb9a32e6L).optional(true).ordered(true).multiple(false).origin("8980703707718628104").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDesktop() {

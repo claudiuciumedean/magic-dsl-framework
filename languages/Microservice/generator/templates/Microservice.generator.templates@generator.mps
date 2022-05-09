@@ -262,7 +262,7 @@
     </node>
     <node concept="3lhOvk" id="1THfXvJsFaf" role="3lj3bC">
       <ref role="30HIoZ" to="b4dw:7rCJrCcUTIT" resolve="Microservice" />
-      <ref role="3lhOvi" node="1THfXvJsFiZ" resolve="map_Microservice" />
+      <ref role="3lhOvi" node="1THfXvJsFiZ" resolve="app" />
       <node concept="30G5F_" id="1THfXvJsFlN" role="30HLyM">
         <node concept="3clFbS" id="1THfXvJsFlO" role="2VODD2">
           <node concept="3clFbF" id="1THfXvJsFpN" role="3cqZAp">
@@ -285,11 +285,11 @@
     </node>
     <node concept="3lhOvk" id="292Zw9z_LkQ" role="3lj3bC">
       <ref role="30HIoZ" to="b4dw:7rCJrCcUTIT" resolve="Microservice" />
-      <ref role="3lhOvi" node="292Zw9z_Lot" resolve="apiDoc" />
+      <ref role="3lhOvi" node="292Zw9z_Lot" resolve="APIDoc" />
     </node>
     <node concept="3lhOvk" id="292Zw9zBkMC" role="3lj3bC">
       <ref role="30HIoZ" to="b4dw:7rCJrCcUTIT" resolve="Microservice" />
-      <ref role="3lhOvi" node="292Zw9zBkQg" resolve="map_Microservice" />
+      <ref role="3lhOvi" node="292Zw9zBkQg" resolve="api-doc" />
     </node>
     <node concept="3lhOvk" id="292Zw9zxw0P" role="3lj3bC">
       <ref role="30HIoZ" to="b4dw:1xSoLHETQfb" resolve="DataType" />
@@ -469,7 +469,7 @@
           <node concept="356sEF" id="5XT76wXOO3n" role="356sEH">
             <property role="TrG5h" value="switch" />
             <node concept="1sPUBX" id="5XT76wXOWzw" role="lGtFl">
-              <ref role="v9R2y" node="5XT76wXOfNl" resolve="SwitchOperation" />
+              <ref role="v9R2y" node="5XT76wXOfNl" resolve="SwitchOperationNodeJs" />
             </node>
           </node>
           <node concept="2EixSi" id="5XT76wXOO3o" role="2EinRH" />

@@ -11,11 +11,13 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Action;
   private ConceptPresentation props_ActionOperation;
+  private ConceptPresentation props_ActionOperationReference;
   private ConceptPresentation props_Card;
   private ConceptPresentation props_Client;
   private ConceptPresentation props_ClientConfig;
   private ConceptPresentation props_ClientReference;
   private ConceptPresentation props_ClientType;
+  private ConceptPresentation props_CrudAction;
   private ConceptPresentation props_Desktop;
   private ConceptPresentation props_IClientType;
   private ConceptPresentation props_Image;
@@ -46,6 +48,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActionOperation = cpb.create();
         }
         return props_ActionOperation;
+      case LanguageConceptSwitch.ActionOperationReference:
+        if (props_ActionOperationReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x7ca1de70bb9a32e6L, 0x7ca1de70bb9a32e7L, "actionOperation", "", "");
+          props_ActionOperationReference = cpb.create();
+        }
+        return props_ActionOperationReference;
       case LanguageConceptSwitch.Card:
         if (props_Card == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -81,6 +90,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ClientType = cpb.create();
         }
         return props_ClientType;
+      case LanguageConceptSwitch.CrudAction:
+        if (props_CrudAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("CrudAction");
+          props_CrudAction = cpb.create();
+        }
+        return props_CrudAction;
       case LanguageConceptSwitch.Desktop:
         if (props_Desktop == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

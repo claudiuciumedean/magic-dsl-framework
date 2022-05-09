@@ -52,7 +52,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setCellId("Collection_8qm9by_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
-    editorCell.setFoldable(true);
     editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createRefNode_0());

@@ -76,7 +76,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createProperty_3());
     editorCell.addEditorCell(createConstant_5());
     editorCell.addEditorCell(createComponent_0());
-    editorCell.addEditorCell(createConstant_6());
     editorCell.addEditorCell(createRefNodeList_0());
     return editorCell;
   }
@@ -249,27 +248,18 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.getStyle().putAll(style);
     return editorCell;
   }
-  private EditorCell createConstant_6() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_bmxio_m0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new pagesListHandler_bmxio_n0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new pagesListHandler_bmxio_m0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
     editorCell.setCellId("refNodeList_pages");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class pagesListHandler_bmxio_n0 extends RefNodeListHandler {
+  private static class pagesListHandler_bmxio_m0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public pagesListHandler_bmxio_n0(SNode ownerNode, EditorContext context) {
+    public pagesListHandler_bmxio_m0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -292,10 +282,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(pagesListHandler_bmxio_n0.this.getNode(), LINKS.pages$VDa9));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(pagesListHandler_bmxio_m0.this.getNode(), LINKS.pages$VDa9));
       try {
         EditorCell emptyCell = null;
-        emptyCell = createConstant_7();
+        emptyCell = createConstant_6();
         installElementCellActions(null, emptyCell, true);
         setCellContext(emptyCell);
         return emptyCell;
@@ -331,9 +321,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
         }
       }
     }
-    private EditorCell createConstant_7() {
+    private EditorCell createConstant_6() {
       EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-      editorCell.setCellId("Constant_bmxio_a31a");
+      editorCell.setCellId("Constant_bmxio_a21a");
       editorCell.setDefaultText("");
       return editorCell;
     }

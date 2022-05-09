@@ -132,7 +132,7 @@
   <node concept="bUwia" id="tHJrtdxguD">
     <property role="TrG5h" value="main" />
     <node concept="3lhOvk" id="tHJrtdxhbH" role="3lj3bC">
-      <ref role="30HIoZ" to="qh72:tHJrtdxgR4" resolve="Dockerfile" />
+      <ref role="30HIoZ" to="qh72:tHJrtdxgR4" resolve="DeploymentConfig" />
       <ref role="3lhOvi" node="tHJrtdxhbL" resolve="Dockerfile" />
       <node concept="30G5F_" id="3Kwu4vCO5kQ" role="30HLyM">
         <node concept="3clFbS" id="3Kwu4vCO5kR" role="2VODD2">
@@ -165,8 +165,8 @@
       </node>
     </node>
     <node concept="3lhOvk" id="6tp1YUT8KZW" role="3lj3bC">
-      <ref role="30HIoZ" to="qh72:tHJrtdxgR4" resolve="Dockerfile" />
-      <ref role="3lhOvi" node="6tp1YUT8KZZ" resolve="map_Dockerfile" />
+      <ref role="30HIoZ" to="qh72:tHJrtdxgR4" resolve="DeploymentConfig" />
+      <ref role="3lhOvi" node="6tp1YUT8KZZ" resolve="Dockerfile" />
       <node concept="30G5F_" id="3Kwu4vCOc9H" role="30HLyM">
         <node concept="3clFbS" id="3Kwu4vCOc9I" role="2VODD2">
           <node concept="3clFbF" id="3Kwu4vCOca5" role="3cqZAp">
@@ -199,7 +199,7 @@
     </node>
     <node concept="3lhOvk" id="3Kwu4vCP3qq" role="3lj3bC">
       <ref role="30HIoZ" to="qh72:tHJrtdxgR4" resolve="DeploymentConfig" />
-      <ref role="3lhOvi" node="3Kwu4vCP3ER" resolve="map_DeploymentConfig" />
+      <ref role="3lhOvi" node="3Kwu4vCP3ER" resolve="package" />
       <node concept="30G5F_" id="3Kwu4vCPb44" role="30HLyM">
         <node concept="3clFbS" id="3Kwu4vCPb45" role="2VODD2">
           <node concept="3clFbF" id="292Zw9zumHO" role="3cqZAp">
@@ -435,7 +435,7 @@
       </node>
     </node>
     <node concept="n94m4" id="tHJrtdxhbN" role="lGtFl">
-      <ref role="n9lRv" to="qh72:tHJrtdxgR4" resolve="Dockerfile" />
+      <ref role="n9lRv" to="qh72:tHJrtdxgR4" resolve="DeploymentConfig" />
     </node>
   </node>
   <node concept="356sEV" id="6tp1YUT8KZZ">
@@ -576,7 +576,7 @@
       </node>
     </node>
     <node concept="n94m4" id="6tp1YUT8L01" role="lGtFl">
-      <ref role="n9lRv" to="qh72:tHJrtdxgR4" resolve="Dockerfile" />
+      <ref role="n9lRv" to="qh72:tHJrtdxgR4" resolve="DeploymentConfig" />
     </node>
   </node>
   <node concept="356sEV" id="3Kwu4vCP3ER">

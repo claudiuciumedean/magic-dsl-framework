@@ -129,7 +129,7 @@ public class QueriesGenerated extends QueryProviderBase {
         sb.append("'" + SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'" + ",");
       }
     });
-    return "entity=_.pick([" + sb.toString() + "]);";
+    return "entity=_.pick(entity, [" + sb.toString() + "]);";
   }
   public static Object propertyMacro_GetValue_3_4(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);
@@ -150,7 +150,7 @@ public class QueriesGenerated extends QueryProviderBase {
         sb.append("'" + SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'" + ",");
       }
     });
-    return "entities=entities.map(e=>_.pick([" + sb.toString() + "]));";
+    return "entities=entities.map(e=>_.pick(e, [" + sb.toString() + "]));";
   }
   public static Object propertyMacro_GetValue_3_8(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);
@@ -171,7 +171,7 @@ public class QueriesGenerated extends QueryProviderBase {
         sb.append("'" + SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'" + ",");
       }
     });
-    return "entities=entities.map(e=>_.pick([" + sb.toString() + "]));";
+    return "entities=entities.map(e=>_.pick(e, [" + sb.toString() + "]));";
   }
   public static Object propertyMacro_GetValue_3_12(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);
@@ -192,7 +192,7 @@ public class QueriesGenerated extends QueryProviderBase {
         sb.append("'" + SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'" + ",");
       }
     });
-    return "entity=_.pick([" + sb.toString() + "]);";
+    return "entity=_.pick(entity, [" + sb.toString() + "]);";
   }
   public static Object propertyMacro_GetValue_3_16(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);
@@ -213,7 +213,7 @@ public class QueriesGenerated extends QueryProviderBase {
         sb.append("'" + SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'" + ",");
       }
     });
-    return "entity=_.pick([" + sb.toString() + "]);";
+    return "entity=_.pick(entity, [" + sb.toString() + "]);";
   }
   public static Object propertyMacro_GetValue_3_20(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);

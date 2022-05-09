@@ -393,7 +393,7 @@
       <node concept="1sVBvm" id="5XT76wXQ1rn" role="1sWHZn">
         <node concept="3F0A7n" id="5XT76wXQ1ro" role="2wV5jI">
           <property role="1Intyy" value="true" />
-          <ref role="1NtTu8" to="tpck:h0TrG11" />
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
       </node>
     </node>

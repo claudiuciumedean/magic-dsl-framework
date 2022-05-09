@@ -175,7 +175,7 @@
       </node>
     </node>
     <node concept="2sgV4H" id="4qZeZ7u53_o" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" />
+      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="4qZeZ7u53_p" role="2JcizS">
         <ref role="398BVh" node="4qZeZ7u53_n" resolve="mps_home" />
       </node>
@@ -211,7 +211,7 @@
         <ref role="m$f5T" node="4qZeZ7u53_G" resolve="MicroserviceDSL" />
       </node>
       <node concept="m$_yC" id="4qZeZ7u53_N" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" />
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
       <node concept="m$_yC" id="5XT76wXPt51" role="m$_yJ">
         <ref role="m$_y1" to="90a9:2NTGYE$JTH6" resolve="com.dslfoundry.plaintextgen" />

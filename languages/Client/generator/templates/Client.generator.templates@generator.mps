@@ -197,9 +197,9 @@
       <ref role="30HIoZ" to="mo5v:5qCKKvQrs32" resolve="ClientConfig" />
       <ref role="3lhOvi" node="5qCKKvQrwTU" resolve="package" />
     </node>
-    <node concept="3lhOvk" id="7MxRB2VLSTF" role="3lj3bC">
+    <node concept="3lhOvk" id="7MxRB2VMnCI" role="3lj3bC">
       <ref role="30HIoZ" to="mo5v:5qCKKvQrs32" resolve="ClientConfig" />
-      <ref role="3lhOvi" node="5qCKKvQrwTU" resolve="package" />
+      <ref role="3lhOvi" node="7MxRB2VLSTL" resolve="build" />
     </node>
     <node concept="3lhOvk" id="E0plg5atZC" role="3lj3bC">
       <ref role="30HIoZ" to="mo5v:E0plg570Se" resolve="Client" />

@@ -36,17 +36,18 @@
       <concept id="756716148936233805" name="Client.structure.ClientReference" flags="ng" index="fDjop">
         <reference id="756716148936233806" name="client" index="fDjoq" />
       </concept>
+      <concept id="756716148940434080" name="Client.structure.Card" flags="ng" index="fTgZO">
+        <child id="756716148943052288" name="action" index="f3jHk" />
+      </concept>
       <concept id="6244455322315768002" name="Client.structure.ClientConfig" flags="ng" index="2wLgf5">
         <child id="756716148936346067" name="mobileClientRef" index="fDQM7" />
       </concept>
-      <concept id="920569258022129211" name="Client.structure.ActionOperation" flags="ng" index="3jiOFB" />
       <concept id="8033641832267364504" name="Client.structure.Page" flags="ng" index="3uvC8Q">
         <property id="756716148937107762" name="route" index="fGGLA" />
         <property id="756716148940097810" name="bffRoute" index="fS2L6" />
         <child id="756716148938535141" name="bff" index="fM1mL" />
         <child id="756716148940097701" name="entityType" index="fS2RL" />
         <child id="756716148940970772" name="components" index="fVvT0" />
-        <child id="920569258022133389" name="actions" index="3jiPDh" />
       </concept>
       <concept id="8033641832263665204" name="Client.structure.IClientType" flags="ng" index="3vHBMq">
         <child id="8033641832263665214" name="clientType" index="3vHBMg" />
@@ -79,17 +80,24 @@
       <property role="TrG5h" value="Items" />
       <property role="fGGLA" value="/" />
       <property role="fS2L6" value="/items" />
-      <node concept="3jiOFB" id="N6xdNv$AwS" role="3jiPDh" />
       <node concept="3wFZSN" id="E0plg5xN03" role="fS2RL">
         <ref role="3wFZSZ" to="wqkn:1GcCT5ob3GR" resolve="item" />
       </node>
       <node concept="fLJYe" id="E0plg5y_Hz" role="fM1mL">
         <ref role="fLJYf" to="wqkn:4mF3EfgFMLR" resolve="mobile" />
       </node>
-      <node concept="f3iGu" id="E0plg5Fnsq" role="fVvT0">
-        <node concept="fB6HK" id="E0plg5Fnsr" role="f3iGp" />
-        <node concept="3wDFX_" id="E0plg5Fnss" role="f3iGr">
-          <ref role="3wDFX$" to="wqkn:1GcCT5ob3GT" />
+      <node concept="f3iGu" id="13NqhMPl51a" role="fVvT0">
+        <node concept="fB6HK" id="13NqhMPl51b" role="f3iGp" />
+        <node concept="3wDFX_" id="7MxRB2VyfBb" role="f3iGr">
+          <ref role="3wDFX$" to="wqkn:1GcCT5ob3GZ" />
+        </node>
+      </node>
+      <node concept="fTgZO" id="13NqhMPl51l" role="fVvT0">
+        <node concept="f3iGu" id="13NqhMPl51r" role="f3jHk">
+          <node concept="fB6HK" id="13NqhMPl51s" role="f3iGp" />
+          <node concept="3wDFX_" id="7MxRB2VyfBd" role="f3iGr">
+            <ref role="3wDFX$" to="wqkn:5cGqGoaCF3M" />
+          </node>
         </node>
       </node>
     </node>

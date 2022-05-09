@@ -80,7 +80,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("route", 0x45ab0ea3d0ad6097L).type(PrimitiveTypeId.STRING).origin("5020122306378031255").done();
     b.property("microserviceRoute", 0x45ab0ea3d0ad609cL).type(PrimitiveTypeId.STRING).origin("5020122306378031260").done();
     b.aggregate("microservice", 0x45ab0ea3d0ad60a0L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x675907eeb91f484bL).optional(true).ordered(true).multiple(false).origin("5020122306378031264").done();
-    b.aggregate("entityType", 0x45ab0ea3d0ada300L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L).optional(true).ordered(true).multiple(false).origin("5020122306378048256").done();
+    b.aggregate("entityTypeRef", 0x45ab0ea3d0ada300L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L).optional(true).ordered(true).multiple(false).origin("5020122306378048256").done();
     b.aggregate("expectedQueryParams", 0x624f1b6582e9a406L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L).optional(true).ordered(true).multiple(true).origin("7083910861679076358").done();
     b.aggregate("deliveredQueryParams", 0x45ab0ea3d0ad6322L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L).optional(true).ordered(true).multiple(true).origin("5020122306378031906").done();
     return b.create();

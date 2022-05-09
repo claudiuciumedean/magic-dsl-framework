@@ -89,8 +89,8 @@
       <node id="5020122306378031255" at="79,17,80,111" concept="0" />
       <node id="5020122306378031260" at="80,111,81,123" concept="0" />
       <node id="5020122306378031264" at="81,123,82,205" concept="0" />
-      <node id="5020122306378048256" at="82,205,83,203" concept="0" />
-      <node id="7083910861679076358" at="83,203,84,211" concept="0" />
+      <node id="5020122306378048256" at="82,205,83,206" concept="0" />
+      <node id="7083910861679076358" at="83,206,84,211" concept="0" />
       <node id="5020122306378031906" at="84,211,85,212" concept="0" />
       <node id="5020122306378030699" at="85,212,86,22" concept="4" />
       <node id="5020122306378030699" at="71,0,88,0" concept="6" trace="createDescriptorForBFFOperation#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />

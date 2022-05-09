@@ -193,7 +193,7 @@
         <property role="3F0ifm" value="on entity type" />
       </node>
       <node concept="3F1sOY" id="4mF3EfgFqf4" role="3EZMnx">
-        <ref role="1NtTu8" to="ehhy:4mF3EfgFqc0" resolve="entityType" />
+        <ref role="1NtTu8" to="ehhy:4mF3EfgFqc0" resolve="entityTypeRef" />
         <node concept="ljvvj" id="4mF3EfgFqpX" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>

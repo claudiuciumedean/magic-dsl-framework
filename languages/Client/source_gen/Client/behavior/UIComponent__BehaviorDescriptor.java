@@ -14,9 +14,10 @@ import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import jetbrains.mps.scope.ListScope;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.Sequence;
+import jetbrains.mps.scope.ListScope;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
@@ -37,8 +38,19 @@ public final class UIComponent__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, SNode child) {
-    return new ListScope(SLinkOperations.collectMany(SLinkOperations.collect(SNodeOperations.ofConcept(SNodeOperations.getChildren(SNodeOperations.getParent(__thisNode__)), CONCEPTS.EntityTypeReference$ws), LINKS.entityType$EWiv), LINKS.keyValuePairs$i5YT)) {
+    SNode elem = SNodeOperations.getParent(__thisNode__);
+    Iterable<SNode> keyValuePairs = null;
+    while (elem != null) {
+      keyValuePairs = SLinkOperations.collectMany(SLinkOperations.collect(SNodeOperations.ofConcept(SNodeOperations.getChildren(elem), CONCEPTS.EntityTypeReference$ws), LINKS.entityType$EWiv), LINKS.keyValuePairs$i5YT);
 
+      if (keyValuePairs != null && Sequence.fromIterable(keyValuePairs).count() != 0) {
+        break;
+      }
+
+      elem = SNodeOperations.getParent(elem);
+    }
+
+    return new ListScope(keyValuePairs) {
       @Override
       public String getName(SNode child) {
         return SPropertyOperations.getString(SNodeOperations.cast(child, CONCEPTS.KeyValuePair$D5), PROPS.key$hZTW);

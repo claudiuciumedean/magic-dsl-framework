@@ -37,7 +37,7 @@ public final class BFFOperation__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, SNode child) {
-    return new ListScope(SLinkOperations.getChildren(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.entityType$8qts), LINKS.entityType$EWiv), LINKS.keyValuePairs$i5YT)) {
+    return new ListScope(SLinkOperations.getChildren(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.entityTypeRef$8qts), LINKS.entityType$EWiv), LINKS.keyValuePairs$i5YT)) {
 
       @Override
       public String getName(SNode child) {
@@ -93,7 +93,7 @@ public final class BFFOperation__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink entityType$8qts = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ada300L, "entityType");
+    /*package*/ static final SContainmentLink entityTypeRef$8qts = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ada300L, "entityTypeRef");
     /*package*/ static final SReferenceLink entityType$EWiv = MetaAdapterFactory.getReferenceLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L, 0x624f1b6582e0e55aL, "entityType");
     /*package*/ static final SContainmentLink keyValuePairs$i5YT = MetaAdapterFactory.getContainmentLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd89L, 0x1957db2831e8dd92L, "keyValuePairs");
   }

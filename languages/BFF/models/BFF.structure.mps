@@ -116,7 +116,7 @@
     <node concept="1TJgyj" id="4mF3EfgFqc0" role="1TKVEi">
       <property role="IQ2ns" value="5020122306378048256" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="entityType" />
+      <property role="20kJfa" value="entityTypeRef" />
       <ref role="20lvS9" to="b4dw:69f6Qm2Selm" resolve="EntityTypeReference" />
     </node>
     <node concept="1TJgyj" id="69f6Qm2Uqg6" role="1TKVEi">

@@ -234,7 +234,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);
   }
   public static Object propertyMacro_GetValue_6_1(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityType$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityTypeRef$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
   }
   public static Object propertyMacro_GetValue_6_2(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$iuMv), LINKS.microservice$ZUJs), PROPS.port$TFqt);
@@ -258,7 +258,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);
   }
   public static Object propertyMacro_GetValue_6_6(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityType$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityTypeRef$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
   }
   public static Object propertyMacro_GetValue_6_7(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$iuMv), LINKS.microservice$ZUJs), PROPS.port$TFqt);
@@ -282,7 +282,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);
   }
   public static Object propertyMacro_GetValue_6_11(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityType$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityTypeRef$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
   }
   public static Object propertyMacro_GetValue_6_12(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$iuMv), LINKS.microservice$ZUJs), PROPS.port$TFqt);
@@ -306,7 +306,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);
   }
   public static Object propertyMacro_GetValue_6_16(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityType$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityTypeRef$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
   }
   public static Object propertyMacro_GetValue_6_17(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$iuMv), LINKS.microservice$ZUJs), PROPS.port$TFqt);
@@ -330,7 +330,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);
   }
   public static Object propertyMacro_GetValue_6_21(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityType$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityTypeRef$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
   }
   public static Object propertyMacro_GetValue_6_22(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$iuMv), LINKS.microservice$ZUJs), PROPS.port$TFqt);
@@ -354,7 +354,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$inK1);
   }
   public static Object propertyMacro_GetValue_6_26(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityType$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.entityTypeRef$8qts), LINKS.entityType$EWiv), PROPS.name$MnvL) + "_" + SNodeOperations.getIndexInParent(_context.getNode());
   }
   public static Object propertyMacro_GetValue_6_27(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.microservice$iuMv), LINKS.microservice$ZUJs), PROPS.port$TFqt);
@@ -722,7 +722,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SReferenceLink microservice$ZUJs = MetaAdapterFactory.getReferenceLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x675907eeb91f484bL, 0x675907eeb91f484cL, "microservice");
     /*package*/ static final SContainmentLink expectedQueryParams$h$fU = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x624f1b6582e9a406L, "expectedQueryParams");
     /*package*/ static final SReferenceLink keyValuePair$wiKW = MetaAdapterFactory.getReferenceLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L, 0x624f1b6582e9a401L, "keyValuePair");
-    /*package*/ static final SContainmentLink entityType$8qts = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ada300L, "entityType");
+    /*package*/ static final SContainmentLink entityTypeRef$8qts = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ada300L, "entityTypeRef");
     /*package*/ static final SReferenceLink entityType$EWiv = MetaAdapterFactory.getReferenceLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L, 0x624f1b6582e0e55aL, "entityType");
     /*package*/ static final SContainmentLink operations$QcUK = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e52L, 0x45ab0ea3d0ad5e72L, "operations");
   }

@@ -146,7 +146,7 @@
                     <node concept="2OqwBi" id="69f6Qm2ZQpN" role="2Oq$k0">
                       <node concept="13iPFW" id="69f6Qm2ZQ4s" role="2Oq$k0" />
                       <node concept="3TrEf2" id="69f6Qm30txC" role="2OqNvi">
-                        <ref role="3Tt5mk" to="ehhy:4mF3EfgFqc0" resolve="entityType" />
+                        <ref role="3Tt5mk" to="ehhy:4mF3EfgFqc0" resolve="entityTypeRef" />
                       </node>
                     </node>
                     <node concept="3TrEf2" id="69f6Qm30uPV" role="2OqNvi">

@@ -148,14 +148,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new entityTypeSingleRoleHandler_ohgidf_h0(myNode, LINKS.entityType$8qts, getEditorContext());
+    SingleRoleCellProvider provider = new entityTypeRefSingleRoleHandler_ohgidf_h0(myNode, LINKS.entityTypeRef$8qts, getEditorContext());
     return provider.createCell();
   }
-  private static class entityTypeSingleRoleHandler_ohgidf_h0 extends SingleRoleCellProvider {
+  private static class entityTypeRefSingleRoleHandler_ohgidf_h0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public entityTypeSingleRoleHandler_ohgidf_h0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public entityTypeRefSingleRoleHandler_ohgidf_h0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -168,8 +168,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.entityType$8qts, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.entityType$8qts, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.entityTypeRef$8qts, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.entityTypeRef$8qts, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -181,7 +181,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.entityType$8qts);
+        editorCell.setSRole(LINKS.entityTypeRef$8qts);
       }
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
@@ -190,10 +190,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.entityType$8qts));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.entityTypeRef$8qts));
       try {
         EditorCell editorCell = super.createEmptyCell();
-        editorCell.setCellId("empty_entityType");
+        editorCell.setCellId("empty_entityTypeRef");
         installCellInfo(null, editorCell, true);
         setCellContext(editorCell);
         return editorCell;
@@ -202,7 +202,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     }
     protected String getNoTargetText() {
-      return "<no entityType>";
+      return "<no entityTypeRef>";
     }
   }
   private EditorCell createCollection_1() {
@@ -663,7 +663,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink entityType$8qts = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ada300L, "entityType");
+    /*package*/ static final SContainmentLink entityTypeRef$8qts = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ada300L, "entityTypeRef");
     /*package*/ static final SContainmentLink expectedQueryParams$h$fU = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x624f1b6582e9a406L, "expectedQueryParams");
     /*package*/ static final SContainmentLink deliveredQueryParams$EtTI = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ad6322L, "deliveredQueryParams");
     /*package*/ static final SContainmentLink microservice$iuMv = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ad60a0L, "microservice");

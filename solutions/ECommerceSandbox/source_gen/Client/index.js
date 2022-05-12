@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ReactDOMClient from 'react-dom/client';
 import DesktopApp from './DesktopApp';
-import MobileApp from './MobileApp';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

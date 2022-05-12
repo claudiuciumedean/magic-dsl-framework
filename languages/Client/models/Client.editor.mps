@@ -171,6 +171,20 @@
             <property role="VOm3f" value="true" />
           </node>
         </node>
+        <node concept="3F0ifn" id="32kN1iDexSX" role="3EZMnx">
+          <property role="3F0ifm" value="Show in navigation:" />
+        </node>
+        <node concept="3F0A7n" id="32kN1iDexUr" role="3EZMnx">
+          <ref role="1NtTu8" to="mo5v:32kN1iDdZTI" resolve="showInNavigation" />
+          <node concept="ljvvj" id="32kN1iDexVb" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="32kN1iDexVY" role="3EZMnx">
+          <node concept="ljvvj" id="32kN1iDexWK" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
         <node concept="3F0ifn" id="N6xdNvztHK" role="3EZMnx">
           <property role="3F0ifm" value="Operations {" />
           <node concept="ljvvj" id="N6xdNvztIe" role="3F10Kt">

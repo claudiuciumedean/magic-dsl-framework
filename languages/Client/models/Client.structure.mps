@@ -119,6 +119,11 @@
       <property role="TrG5h" value="bffRoute" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="32kN1iDdZTI" role="1TKVEl">
+      <property role="IQ2nx" value="3500647199484149358" />
+      <property role="TrG5h" value="showInNavigation" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="1TJgyj" id="E0plg5i73_" role="1TKVEi">
       <property role="IQ2ns" value="756716148938535141" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />

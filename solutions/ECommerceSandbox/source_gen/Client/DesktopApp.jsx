@@ -35,19 +35,8 @@ class Items extends Component {
 constructor(props) {
     super(props);
     this.state = {
-     elements: null
+     entities: null
     };
-  }
-async myOperation(entity) {
-    const queryParams = _.pick(entity, ['id',]);
-    let arr = [];
-    try {
-      const response = await axios.get(`http://localhost:5001/desktop-api/items?${queryString.stringify(queryParams)}`);
-      const data = response.data;
-      if(!data.length) { arr.push(data)} else { arr = [...data]; }
-    } catch (error) {
-    }
-    return arr;
   }
 
   componentDidMount() {
@@ -57,16 +46,16 @@ async myOperation(entity) {
   fetchState = async () => {
     let elements = null;
     try {
-      const response = await axios.get(`http://localhost:5000/mobile-api/items${location.search}`);
-      elements = response.data;
+      const response = await axios.get(`http://localhost:5000/desktop-api/items${location.search}`);
+      entities = response.data;
     } catch (error) {}
-    this.setState({ elements });
+    this.setState({ entities });
   }
 
   buildStateElems = () => {
     let elems = [];
-    if(!this.state.items.length) {
-      elems.push(this.state.items);
+    if(!this.state.entities.length) {
+      elems.push(this.state.entities);
     }
 
     elems = elems.map((entity, idx) => {
@@ -85,12 +74,6 @@ See more
 </Button>
     </Card.Body>
   </Card>
-<Button 
-  variant="primary"
-  onClick={() => this.myOperation(entity)}
->
-    See more here
-</Button>
       </Col>
       );
     });
@@ -113,28 +96,8 @@ class Item extends Component {
 constructor(props) {
     super(props);
     this.state = {
-     elements: null
+     entities: null
     };
-  }
-async addToCart(entity) {
-    let entity = null;
-
-    try {
-      const response = await axios.post(`http://localhost:5001/desktop-api/create-order`, entity);
-      entity = response.data;
-    } catch (error) {}
-
-    return entity;
-  }
-async deleteItem(entity) {
-    const queryParams = _.pick(entity, ['id',]);
-    let data = null;
-    try {
-      const response = await axios.delete(`http://localhost:5001/desktop-api/delete-item?${queryString.stringify(queryParams)}`);
-      data = response.data;
-    } catch (error) {
-    }
-    return data;
   }
 
   componentDidMount() {
@@ -144,16 +107,16 @@ async deleteItem(entity) {
   fetchState = async () => {
     let elements = null;
     try {
-      const response = await axios.get(`http://localhost:5000/mobile-api/item${location.search}`);
-      elements = response.data;
+      const response = await axios.get(`http://localhost:5000/desktop-api/item${location.search}`);
+      entities = response.data;
     } catch (error) {}
-    this.setState({ elements });
+    this.setState({ entities });
   }
 
   buildStateElems = () => {
     let elems = [];
-    if(!this.state.items.length) {
-      elems.push(this.state.items);
+    if(!this.state.entities.length) {
+      elems.push(this.state.entities);
     }
 
     elems = elems.map((entity, idx) => {
@@ -166,18 +129,6 @@ async deleteItem(entity) {
   />
 <h3>entity.name</h3>
 <p>entity.description</p>
-<Button 
-  variant="primary"
-  onClick={() => this.addToCart(entity)}
->
-    Add to cart
-</Button>
-<Button 
-  variant="danger"
-  onClick={() => this.deleteItem(entity)}
->
-    Delete
-</Button>
       </Col>
       );
     });

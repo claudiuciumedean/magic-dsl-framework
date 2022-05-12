@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-djijrqtqbnze2x7vykn8g5q0isdb53u">
+<product version="3" modelHash="1lqd390ynop040a9ymticp5ce28xjn9">
   <files names="APIDoc.html:Dockerfile:api-doc.json:app.py:build.sh:orders.json:requirements.txt" />
 </product>
 

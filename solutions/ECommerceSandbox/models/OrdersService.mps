@@ -125,10 +125,6 @@
         <property role="CJKq_" value="item_id" />
         <property role="CJ3hK" value="string" />
       </node>
-      <node concept="CJKq$" id="1GcCT5ob3NF" role="CJKqU">
-        <property role="CJKq_" value="quantity" />
-        <property role="CJ3hK" value="number" />
-      </node>
     </node>
     <node concept="1Pa9Pv" id="1GcCT5obdmc" role="1M$y3_">
       <node concept="1PaTwC" id="1GcCT5obdmd" role="1PaQFQ">
@@ -191,25 +187,8 @@
         <node concept="3oM_SD" id="1GcCT5obdm_" role="1PaTwD">
           <property role="3oM_SC" value="&quot;item_id&quot;:" />
         </node>
-        <node concept="3oM_SD" id="1GcCT5obdmA" role="1PaTwD">
-          <property role="3oM_SC" value="&quot;12341&quot;," />
-        </node>
-      </node>
-      <node concept="1PaTwC" id="1GcCT5obdmB" role="1PaQFQ">
-        <node concept="3oM_SD" id="1GcCT5obdmC" role="1PaTwD">
-          <property role="3oM_SC" value="" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5obdmD" role="1PaTwD">
-          <property role="3oM_SC" value="" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5obdmE" role="1PaTwD">
-          <property role="3oM_SC" value="&quot;quantity:&quot;" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5obdmF" role="1PaTwD">
-          <property role="3oM_SC" value=":" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5obdmG" role="1PaTwD">
-          <property role="3oM_SC" value="4" />
+        <node concept="3oM_SD" id="32kN1iD9s4z" role="1PaTwD">
+          <property role="3oM_SC" value="&quot;12341&quot;" />
         </node>
       </node>
       <node concept="1PaTwC" id="1GcCT5obdmH" role="1PaQFQ">
@@ -296,31 +275,8 @@
         <node concept="3oM_SD" id="1GcCT5obdna" role="1PaTwD">
           <property role="3oM_SC" value="&quot;item_id&quot;:" />
         </node>
-        <node concept="3oM_SD" id="1GcCT5obdnb" role="1PaTwD">
-          <property role="3oM_SC" value="&quot;12345&quot;," />
-        </node>
-      </node>
-      <node concept="1PaTwC" id="1GcCT5obdnc" role="1PaQFQ">
-        <node concept="3oM_SD" id="1GcCT5obdnd" role="1PaTwD">
-          <property role="3oM_SC" value="" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5obdne" role="1PaTwD">
-          <property role="3oM_SC" value="" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5obdnf" role="1PaTwD">
-          <property role="3oM_SC" value="" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5obdng" role="1PaTwD">
-          <property role="3oM_SC" value="" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5obdnh" role="1PaTwD">
-          <property role="3oM_SC" value="&quot;quantity:&quot;" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5obdni" role="1PaTwD">
-          <property role="3oM_SC" value=":" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5obdnj" role="1PaTwD">
-          <property role="3oM_SC" value="9" />
+        <node concept="3oM_SD" id="32kN1iD9s3c" role="1PaTwD">
+          <property role="3oM_SC" value="&quot;12345&quot;" />
         </node>
       </node>
       <node concept="1PaTwC" id="1GcCT5obdnk" role="1PaQFQ">

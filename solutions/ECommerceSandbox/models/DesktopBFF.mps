@@ -16,8 +16,10 @@
       <concept id="5020122306378030699" name="BFF.structure.BFFOperation" flags="ng" index="2l1_38">
         <property id="5020122306378031255" name="route" index="2l1ASO" />
         <property id="5020122306378031260" name="microserviceRoute" index="2l1ASZ" />
+        <child id="5020122306378031906" name="deliveredQueryParams" index="2l1AQ1" />
         <child id="5020122306378031264" name="microservice" index="2l1AS3" />
         <child id="5020122306378048256" name="entityTypeRef" index="2l1EQz" />
+        <child id="7083910861679076358" name="expectedQueryParams" index="3wDFXz" />
       </concept>
       <concept id="5020122306378030674" name="BFF.structure.BFF" flags="ng" index="2l1_3L">
         <property id="5020122306378030688" name="port" index="2l1_33" />
@@ -32,15 +34,15 @@
         <child id="2468814831964386639" name="supportedLanguage" index="11cgHd" />
       </concept>
       <concept id="2468814831964386641" name="Microservice.structure.Python" flags="ng" index="11cgHj" />
-      <concept id="1949112583390507902" name="Microservice.structure.GetEntitiesBy" flags="ng" index="13c93J" />
+      <concept id="6302204855854145288" name="Microservice.structure.Empty" flags="ng" index="1hA7b_" />
       <concept id="6302204855854083592" name="Microservice.structure.IDeliveredPayloadType" flags="ng" index="1hAkf_">
         <child id="6302204855854083593" name="payloadType" index="1hAkf$" />
       </concept>
-      <concept id="6302204855854193585" name="Microservice.structure.Entities" flags="ng" index="1hAVps" />
-      <concept id="6302204855853965573" name="Microservice.structure.Entity" flags="ng" index="1hBKNC" />
-      <concept id="6302204855853915993" name="Microservice.structure.GetEntity" flags="ng" index="1hBZaO" />
       <concept id="7446992180723271755" name="Microservice.structure.MicroserviceReference" flags="ng" index="3uh$Y_">
         <reference id="7446992180723271756" name="microservice" index="3uh$Yy" />
+      </concept>
+      <concept id="7083910861679076352" name="Microservice.structure.KeyValuePairReference" flags="ng" index="3wDFX_">
+        <reference id="7083910861679076353" name="keyValuePair" index="3wDFX$" />
       </concept>
       <concept id="7083910861678503254" name="Microservice.structure.EntityTypeReference" flags="ng" index="3wFZSN">
         <reference id="7083910861678503258" name="entityType" index="3wFZSZ" />
@@ -50,8 +52,6 @@
         <child id="4706807959195293647" name="operationMethod" index="3KwesD" />
       </concept>
       <concept id="4706807959195251489" name="Microservice.structure.GetEntities" flags="ng" index="3Kwof7" />
-      <concept id="4706807959195251487" name="Microservice.structure.CreateEntity" flags="ng" index="3KwofT" />
-      <concept id="4706807959194688950" name="Microservice.structure.CREATE" flags="ng" index="3K_yPg" />
       <concept id="4706807959194649864" name="Microservice.structure.READ" flags="ng" index="3K_FnI" />
       <concept id="4706807959194929334" name="Microservice.structure.IOperationType" flags="ng" index="3KABxg">
         <child id="4706807959194929335" name="operationType" index="3KABxh" />
@@ -72,67 +72,87 @@
     <property role="2l1_3K" value="1.0" />
     <property role="2l1_3U" value="A BFF for the desktop web app" />
     <property role="2l1_3Z" value="claudiuciumedean@gmail.com" />
-    <property role="2l1_33" value="5001" />
+    <property role="2l1_33" value="5000" />
     <node concept="2l1_38" id="5cGqGoaCF3W" role="2l1_3h">
       <property role="2l1ASO" value="/user" />
       <property role="2l1ASZ" value="/get-customer-by" />
       <node concept="3xnnJA" id="5cGqGoaCF3X" role="3KwesD" />
       <node concept="3K_FnI" id="5cGqGoaCF3Y" role="3KABxh" />
-      <node concept="1hBKNC" id="5cGqGoaCF43" role="1hAkf$" />
       <node concept="3wFZSN" id="7MxRB2VLRxU" role="2l1EQz">
         <ref role="3wFZSZ" to="epub:69f6Qm32AtE" resolve="customer" />
       </node>
       <node concept="3uh$Y_" id="7MxRB2VLRxX" role="2l1AS3">
         <ref role="3uh$Yy" to="epub:292Zw9zv8A4" resolve="CustomersService" />
       </node>
+      <node concept="1hA7b_" id="32kN1iD9sRv" role="1hAkf$" />
+      <node concept="3wDFX_" id="32kN1iD9XbG" role="2l1AQ1">
+        <ref role="3wDFX$" to="epub:1GcCT5ob3dV" />
+      </node>
+      <node concept="3wDFX_" id="32kN1iD9XbI" role="2l1AQ1">
+        <ref role="3wDFX$" to="epub:1GcCT5ob3dQ" />
+      </node>
+      <node concept="3wDFX_" id="32kN1iD9XbM" role="3wDFXz">
+        <ref role="3wDFX$" to="epub:69f6Qm337i$" />
+      </node>
+      <node concept="3wDFX_" id="32kN1iD9XcD" role="3wDFXz">
+        <ref role="3wDFX$" to="epub:69f6Qm337km" />
+      </node>
     </node>
-    <node concept="2l1_38" id="5cGqGoaCF4i" role="2l1_3h">
+    <node concept="2l1_38" id="32kN1iD9XcG" role="2l1_3h">
       <property role="2l1ASO" value="/items" />
       <property role="2l1ASZ" value="/getall-items" />
-      <node concept="3Kwof7" id="5cGqGoaCF4j" role="3KwesD" />
-      <node concept="3K_FnI" id="5cGqGoaCF4k" role="3KABxh" />
-      <node concept="1hAVps" id="5cGqGoaCF4n" role="1hAkf$" />
-      <node concept="3wFZSN" id="7MxRB2VLRxV" role="2l1EQz">
+      <node concept="3wDFX_" id="32kN1iD9XcK" role="3wDFXz">
+        <ref role="3wDFX$" to="88nh:1GcCT5ob3GT" />
+      </node>
+      <node concept="3wDFX_" id="32kN1iD9XcL" role="3wDFXz">
+        <ref role="3wDFX$" to="88nh:1GcCT5ob3GZ" />
+      </node>
+      <node concept="3wDFX_" id="32kN1iD9XcM" role="3wDFXz">
+        <ref role="3wDFX$" to="88nh:1GcCT5ob3H2" />
+      </node>
+      <node concept="3wDFX_" id="32kN1iD9XcN" role="3wDFXz">
+        <ref role="3wDFX$" to="88nh:1GcCT5ob3Hl" />
+      </node>
+      <node concept="3Kwof7" id="32kN1iD9XcH" role="3KwesD" />
+      <node concept="3K_FnI" id="32kN1iD9XcI" role="3KABxh" />
+      <node concept="3wFZSN" id="32kN1iD9XcJ" role="2l1EQz">
         <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
       </node>
-      <node concept="3uh$Y_" id="7MxRB2VLRxW" role="2l1AS3">
+      <node concept="1hA7b_" id="32kN1iD9XcO" role="1hAkf$" />
+      <node concept="3uh$Y_" id="32kN1iD9XcP" role="2l1AS3">
         <ref role="3uh$Yy" to="88nh:1GcCT5ob3GN" resolve="ItemsService" />
       </node>
     </node>
-    <node concept="2l1_38" id="5cGqGoaCF5p" role="2l1_3h">
+    <node concept="2l1_38" id="32kN1iD9Xe4" role="2l1_3h">
       <property role="2l1ASO" value="/item" />
       <property role="2l1ASZ" value="/get-item" />
-      <node concept="1hBZaO" id="5cGqGoaCF5q" role="3KwesD" />
-      <node concept="3K_FnI" id="5cGqGoaCF5r" role="3KABxh" />
-      <node concept="1hBKNC" id="5cGqGoaCF5t" role="1hAkf$" />
-      <node concept="3wFZSN" id="7MxRB2VLRxY" role="2l1EQz">
+      <node concept="3wDFX_" id="32kN1iD9Xe9" role="3wDFXz">
+        <ref role="3wDFX$" to="88nh:1GcCT5ob3GT" />
+      </node>
+      <node concept="3wDFX_" id="32kN1iD9Xea" role="3wDFXz">
+        <ref role="3wDFX$" to="88nh:1GcCT5ob3GZ" />
+      </node>
+      <node concept="3wDFX_" id="32kN1iD9Xeb" role="3wDFXz">
+        <ref role="3wDFX$" to="88nh:1GcCT5ob3H6" />
+      </node>
+      <node concept="3wDFX_" id="32kN1iD9Xec" role="3wDFXz">
+        <ref role="3wDFX$" to="88nh:1GcCT5ob3Hl" />
+      </node>
+      <node concept="3wDFX_" id="32kN1iD9Xed" role="3wDFXz">
+        <ref role="3wDFX$" to="88nh:5cGqGoaCF3M" />
+      </node>
+      <node concept="3xnnJA" id="32kN1iD9Xe5" role="3KwesD" />
+      <node concept="3K_FnI" id="32kN1iD9Xe6" role="3KABxh" />
+      <node concept="3wFZSN" id="32kN1iD9Xe7" role="2l1EQz">
         <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
       </node>
-      <node concept="3uh$Y_" id="7MxRB2VLRxZ" role="2l1AS3">
+      <node concept="1hA7b_" id="32kN1iD9Xee" role="1hAkf$" />
+      <node concept="3uh$Y_" id="32kN1iD9Xef" role="2l1AS3">
         <ref role="3uh$Yy" to="88nh:1GcCT5ob3GN" resolve="ItemsService" />
       </node>
-    </node>
-    <node concept="2l1_38" id="5cGqGoaCF6N" role="2l1_3h">
-      <property role="2l1ASO" value="/create-order" />
-      <property role="2l1ASZ" value="/create-order" />
-      <node concept="3KwofT" id="5cGqGoaCF6O" role="3KwesD" />
-      <node concept="3K_yPg" id="5cGqGoaCF6P" role="3KABxh" />
-      <node concept="3wFZSN" id="5cGqGoaCF6Q" role="2l1EQz">
-        <ref role="3wFZSZ" to="bqge:1GcCT5ob3Nn" resolve="order" />
+      <node concept="3wDFX_" id="32kN1iD9XeW" role="2l1AQ1">
+        <ref role="3wDFX$" to="88nh:1GcCT5ob3GT" />
       </node>
-      <node concept="1hBKNC" id="5cGqGoaCF6R" role="1hAkf$" />
-      <node concept="3uh$Y_" id="7MxRB2VLRy1" role="2l1AS3">
-        <ref role="3uh$Yy" to="bqge:1GcCT5ob3Nf" resolve="OrdersService" />
-      </node>
-    </node>
-    <node concept="2l1_38" id="5cGqGoaCF8u" role="2l1_3h">
-      <property role="2l1ASO" value="/order" />
-      <property role="2l1ASZ" value="/get-orders-by" />
-      <node concept="3K_FnI" id="5cGqGoaCF8v" role="3KABxh" />
-      <node concept="3wFZSN" id="5cGqGoaCF8w" role="2l1EQz">
-        <ref role="3wFZSZ" to="bqge:1GcCT5ob3Nn" resolve="order" />
-      </node>
-      <node concept="13c93J" id="5cGqGoaCF8y" role="3KwesD" />
     </node>
     <node concept="11cgHj" id="5cGqGoaCF3U" role="11cgHd" />
   </node>

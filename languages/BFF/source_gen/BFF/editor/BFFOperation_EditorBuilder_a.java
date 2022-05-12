@@ -215,31 +215,31 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createConstant_4());
     editorCell.addEditorCell(createRefNodeList_0());
     editorCell.addEditorCell(createConstant_5());
-    editorCell.addEditorCell(createConstant_6());
-    editorCell.addEditorCell(createRefNodeList_1());
-    editorCell.addEditorCell(createConstant_7());
     editorCell.addEditorCell(createComponent_2());
+    editorCell.addEditorCell(createConstant_6());
+    editorCell.addEditorCell(createConstant_7());
+    editorCell.addEditorCell(createRefNodeList_1());
     editorCell.addEditorCell(createConstant_8());
     return editorCell;
   }
   private EditorCell createConstant_4() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "expecting properties");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "delivering query params");
     editorCell.setCellId("Constant_ohgidf_a8a");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new expectedQueryParamsListHandler_ohgidf_b8a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new deliveredQueryParamsListHandler_ohgidf_b8a(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
-    editorCell.setCellId("refNodeList_expectedQueryParams");
+    editorCell.setCellId("refNodeList_deliveredQueryParams");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class expectedQueryParamsListHandler_ohgidf_b8a extends RefNodeListHandler {
+  private static class deliveredQueryParamsListHandler_ohgidf_b8a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public expectedQueryParamsListHandler_ohgidf_b8a(SNode ownerNode, EditorContext context) {
+    public deliveredQueryParamsListHandler_ohgidf_b8a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -249,7 +249,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.expectedQueryParams$h$fU;
+      return LINKS.deliveredQueryParams$EtTI;
     }
     public SAbstractConcept getChildSConcept() {
       return CONCEPTS.KeyValuePairReference$eN;
@@ -262,7 +262,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(expectedQueryParamsListHandler_ohgidf_b8a.this.getNode(), LINKS.expectedQueryParams$h$fU));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(deliveredQueryParamsListHandler_ohgidf_b8a.this.getNode(), LINKS.deliveredQueryParams$EtTI));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -303,32 +303,42 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createConstant_5() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "or payload type");
     editorCell.setCellId("Constant_ohgidf_c8a");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createComponent_2() {
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Microservice.editor.DeliveredPayloadTypeComponent");
+    return editorCell;
+  }
+  private EditorCell createConstant_6() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_ohgidf_e8a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_6() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "delivering query params");
-    editorCell.setCellId("Constant_ohgidf_d8a");
+  private EditorCell createConstant_7() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "expecting properties");
+    editorCell.setCellId("Constant_ohgidf_f8a");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefNodeList_1() {
-    AbstractCellListHandler handler = new deliveredQueryParamsListHandler_ohgidf_e8a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new expectedQueryParamsListHandler_ohgidf_g8a(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
-    editorCell.setCellId("refNodeList_deliveredQueryParams");
+    editorCell.setCellId("refNodeList_expectedQueryParams");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class deliveredQueryParamsListHandler_ohgidf_e8a extends RefNodeListHandler {
+  private static class expectedQueryParamsListHandler_ohgidf_g8a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public deliveredQueryParamsListHandler_ohgidf_e8a(SNode ownerNode, EditorContext context) {
+    public expectedQueryParamsListHandler_ohgidf_g8a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -338,7 +348,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.deliveredQueryParams$EtTI;
+      return LINKS.expectedQueryParams$h$fU;
     }
     public SAbstractConcept getChildSConcept() {
       return CONCEPTS.KeyValuePairReference$eN;
@@ -351,7 +361,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(deliveredQueryParamsListHandler_ohgidf_e8a.this.getNode(), LINKS.deliveredQueryParams$EtTI));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(expectedQueryParamsListHandler_ohgidf_g8a.this.getNode(), LINKS.expectedQueryParams$h$fU));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -390,16 +400,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
         }
       }
     }
-  }
-  private EditorCell createConstant_7() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "or payload type");
-    editorCell.setCellId("Constant_ohgidf_f8a");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createComponent_2() {
-    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "Microservice.editor.DeliveredPayloadTypeComponent");
-    return editorCell;
   }
   private EditorCell createConstant_8() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
@@ -664,8 +664,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink entityTypeRef$8qts = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ada300L, "entityTypeRef");
-    /*package*/ static final SContainmentLink expectedQueryParams$h$fU = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x624f1b6582e9a406L, "expectedQueryParams");
     /*package*/ static final SContainmentLink deliveredQueryParams$EtTI = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ad6322L, "deliveredQueryParams");
+    /*package*/ static final SContainmentLink expectedQueryParams$h$fU = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x624f1b6582e9a406L, "expectedQueryParams");
     /*package*/ static final SContainmentLink microservice$iuMv = MetaAdapterFactory.getContainmentLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e6bL, 0x45ab0ea3d0ad60a0L, "microservice");
     /*package*/ static final SReferenceLink microservice$ZUJs = MetaAdapterFactory.getReferenceLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x675907eeb91f484bL, 0x675907eeb91f484cL, "microservice");
   }

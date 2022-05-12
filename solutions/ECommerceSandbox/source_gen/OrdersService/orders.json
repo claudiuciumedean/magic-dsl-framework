@@ -1,1 +1,1 @@
-[  {  "id" : "1234231",  "customer_id" : "123",  "item_id": "12341",  "quantity:" : 4  },  {    "id" : "124",    "customer_id" : "123",    "item_id": "12345",    "quantity:" : 9  }]
+[  {  "id" : "1234231",  "customer_id" : "123",  "item_id": "12341"  },  {    "id" : "124",    "customer_id" : "123",    "item_id": "12345"  }]

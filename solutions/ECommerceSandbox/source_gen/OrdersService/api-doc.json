@@ -139,10 +139,6 @@
 
 "item_id":{
    "type":"string"
-},
-
-"quantity":{
-   "type":"number"
 }
            }
         }

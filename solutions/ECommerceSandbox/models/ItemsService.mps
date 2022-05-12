@@ -228,14 +228,11 @@
         <node concept="3oM_SD" id="1GcCT5ob3HZ" role="1PaTwD">
           <property role="3oM_SC" value="&quot;thumbnail:&quot;" />
         </node>
-        <node concept="3oM_SD" id="1GcCT5ob3I0" role="1PaTwD">
+        <node concept="3oM_SD" id="32kN1iD9rPA" role="1PaTwD">
           <property role="3oM_SC" value=":" />
         </node>
-        <node concept="3oM_SD" id="1GcCT5ob3I1" role="1PaTwD">
-          <property role="3oM_SC" value="&quot;thumbnail.jpeg&quot;," />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5ob3I2" role="1PaTwD">
-          <property role="3oM_SC" value="&#13;" />
+        <node concept="3oM_SD" id="32kN1iD9rPF" role="1PaTwD">
+          <property role="3oM_SC" value="&quot;https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/cb6ae55a-6756-4e0c-b0e7-1986101cca46/waffle-one-crater-mens-shoes-4cW37x.png&quot;," />
         </node>
       </node>
       <node concept="1PaTwC" id="1GcCT5ob3I3" role="1PaQFQ">
@@ -251,11 +248,8 @@
         <node concept="3oM_SD" id="1GcCT5ob3I7" role="1PaTwD">
           <property role="3oM_SC" value=":" />
         </node>
-        <node concept="3oM_SD" id="1GcCT5ob3I8" role="1PaTwD">
-          <property role="3oM_SC" value="&quot;image.jpeg&quot;," />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5ob3I9" role="1PaTwD">
-          <property role="3oM_SC" value="&#13;" />
+        <node concept="3oM_SD" id="32kN1iD9twk" role="1PaTwD">
+          <property role="3oM_SC" value="&quot;https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/cb6ae55a-6756-4e0c-b0e7-1986101cca46/waffle-one-crater-mens-shoes-4cW37x.png&quot;," />
         </node>
       </node>
       <node concept="1PaTwC" id="1GcCT5ob3Ia" role="1PaQFQ">
@@ -406,18 +400,15 @@
         <node concept="3oM_SD" id="1GcCT5ob3IX" role="1PaTwD">
           <property role="3oM_SC" value="&quot;thumbnail:&quot;" />
         </node>
-        <node concept="3oM_SD" id="1GcCT5ob3IY" role="1PaTwD">
+        <node concept="3oM_SD" id="32kN1iD9rzs" role="1PaTwD">
           <property role="3oM_SC" value=":" />
         </node>
-        <node concept="3oM_SD" id="1GcCT5ob3IZ" role="1PaTwD">
-          <property role="3oM_SC" value="&quot;thumbnail_1.jpeg&quot;," />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5ob3J0" role="1PaTwD">
-          <property role="3oM_SC" value="&#13;" />
+        <node concept="3oM_SD" id="32kN1iD9rzF" role="1PaTwD">
+          <property role="3oM_SC" value="&quot;https://5.imimg.com/data5/SELLER/Default/2021/7/IO/BR/QZ/133556702/adidas-shoes-500x500.jpeg&quot;," />
         </node>
       </node>
-      <node concept="1PaTwC" id="1GcCT5ob3J1" role="1PaQFQ">
-        <node concept="3oM_SD" id="1GcCT5ob3J2" role="1PaTwD">
+      <node concept="1PaTwC" id="32kN1iD9r_M" role="1PaQFQ">
+        <node concept="3oM_SD" id="32kN1iD9r_L" role="1PaTwD">
           <property role="3oM_SC" value="" />
         </node>
         <node concept="3oM_SD" id="1GcCT5ob3J3" role="1PaTwD">
@@ -435,11 +426,8 @@
         <node concept="3oM_SD" id="1GcCT5ob3J7" role="1PaTwD">
           <property role="3oM_SC" value=":" />
         </node>
-        <node concept="3oM_SD" id="1GcCT5ob3J8" role="1PaTwD">
-          <property role="3oM_SC" value="&quot;image_1.jpeg&quot;," />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5ob3J9" role="1PaTwD">
-          <property role="3oM_SC" value="&#13;" />
+        <node concept="3oM_SD" id="32kN1iD9t5T" role="1PaTwD">
+          <property role="3oM_SC" value="&quot;https://5.imimg.com/data5/SELLER/Default/2021/7/IO/BR/QZ/133556702/adidas-shoes-500x500.jpeg&quot;," />
         </node>
       </node>
       <node concept="1PaTwC" id="1GcCT5ob3Ja" role="1PaQFQ">

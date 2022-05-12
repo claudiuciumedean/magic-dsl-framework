@@ -248,6 +248,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("route", 0xa8065540532a932L).type(PrimitiveTypeId.STRING).origin("756716148937107762").done();
     b.property("bffRoute", 0xa80655405604912L).type(PrimitiveTypeId.STRING).origin("756716148940097810").done();
+    b.property("showInNavigation", 0x3094cc14a937fe6eL).type(PrimitiveTypeId.BOOLEAN).origin("3500647199484149358").done();
     b.aggregate("bff", 0xa806554054870e5L).target(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0xa80655405469adaL).optional(false).ordered(true).multiple(false).origin("756716148938535141").done();
     b.aggregate("entityType", 0xa806554056048a5L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L).optional(false).ordered(true).multiple(false).origin("756716148940097701").done();
     b.aggregate("queryParams", 0xa806554056048a6L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L).optional(true).ordered(true).multiple(true).origin("756716148940097702").done();

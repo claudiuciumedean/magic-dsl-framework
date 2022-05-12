@@ -11,4 +11,4 @@ app.use(cors());
 
 app.use('/mobile-api', routes);
 
-app.listen(5000, () => console.log("BFF is up and running"));
+app.listen(5001, () => console.log("BFF is up and running"));

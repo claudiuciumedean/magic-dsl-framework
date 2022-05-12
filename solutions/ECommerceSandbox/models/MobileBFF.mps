@@ -10,6 +10,7 @@
   <imports>
     <import index="epub" ref="r:ea350c5c-70de-4138-8598-7c422368e375(CustomerService)" />
     <import index="88nh" ref="r:7b483502-51d8-43fc-8aff-a1caa13cddf9(ItemsService)" />
+    <import index="bqge" ref="r:71843783-81ec-4864-9b7d-bce013d113a9(OrdersService)" />
   </imports>
   <registry>
     <language id="41009928-b490-4ac3-b848-8158d6c0d5db" name="BFF">
@@ -38,6 +39,7 @@
       <concept id="6302204855854083592" name="Microservice.structure.IDeliveredPayloadType" flags="ng" index="1hAkf_">
         <child id="6302204855854083593" name="payloadType" index="1hAkf$" />
       </concept>
+      <concept id="6302204855853965573" name="Microservice.structure.Entity" flags="ng" index="1hBKNC" />
       <concept id="7446992180723271755" name="Microservice.structure.MicroserviceReference" flags="ng" index="3uh$Y_">
         <reference id="7446992180723271756" name="microservice" index="3uh$Yy" />
       </concept>
@@ -52,6 +54,8 @@
         <child id="4706807959195293647" name="operationMethod" index="3KwesD" />
       </concept>
       <concept id="4706807959195251489" name="Microservice.structure.GetEntities" flags="ng" index="3Kwof7" />
+      <concept id="4706807959195251487" name="Microservice.structure.CreateEntity" flags="ng" index="3KwofT" />
+      <concept id="4706807959194688950" name="Microservice.structure.CREATE" flags="ng" index="3K_yPg" />
       <concept id="4706807959194649864" name="Microservice.structure.READ" flags="ng" index="3K_FnI" />
       <concept id="4706807959194929334" name="Microservice.structure.IOperationType" flags="ng" index="3KABxg">
         <child id="4706807959194929335" name="operationType" index="3KABxh" />
@@ -121,6 +125,19 @@
       <node concept="1hA7b_" id="32kN1iD9XcO" role="1hAkf$" />
       <node concept="3uh$Y_" id="32kN1iD9XcP" role="2l1AS3">
         <ref role="3uh$Yy" to="88nh:1GcCT5ob3GN" resolve="ItemsService" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="6Y6IXsoWTkK" role="2l1_3h">
+      <property role="2l1ASO" value="/buy-item" />
+      <property role="2l1ASZ" value="/create-order" />
+      <node concept="3KwofT" id="6Y6IXsoWTli" role="3KwesD" />
+      <node concept="3K_yPg" id="6Y6IXsoWTlk" role="3KABxh" />
+      <node concept="3wFZSN" id="6Y6IXsoWTlm" role="2l1EQz">
+        <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="1hBKNC" id="6Y6IXsoWTlo" role="1hAkf$" />
+      <node concept="3uh$Y_" id="6Y6IXsoWTlq" role="2l1AS3">
+        <ref role="3uh$Yy" to="bqge:1GcCT5ob3Nf" resolve="OrdersService" />
       </node>
     </node>
     <node concept="11cgHg" id="5cGqGoaB2xf" role="11cgHd" />

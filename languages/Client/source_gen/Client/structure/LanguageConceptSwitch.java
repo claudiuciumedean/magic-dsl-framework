@@ -19,15 +19,17 @@ public final class LanguageConceptSwitch {
   public static final int ClientType = 7;
   public static final int CrudAction = 8;
   public static final int Desktop = 9;
-  public static final int IClientType = 10;
-  public static final int Image = 11;
-  public static final int Link = 12;
-  public static final int Mobile = 13;
-  public static final int Page = 14;
-  public static final int PageReference = 15;
-  public static final int Text = 16;
-  public static final int Title = 17;
-  public static final int UIComponent = 18;
+  public static final int Form = 10;
+  public static final int IClientType = 11;
+  public static final int Image = 12;
+  public static final int Input = 13;
+  public static final int Link = 14;
+  public static final int Mobile = 15;
+  public static final int Page = 16;
+  public static final int PageReference = 17;
+  public static final int Text = 18;
+  public static final int Title = 19;
+  public static final int UIComponent = 20;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x48e57d507e0f4c8fL, 0x93fc859018228309L);
@@ -41,8 +43,10 @@ public final class LanguageConceptSwitch {
     builder.put(0x6f7d3aaeb0cad68bL, ClientType);
     builder.put(0x7ca1de70bb9a32c7L, CrudAction);
     builder.put(0x6f7d3aaeb0cb464aL, Desktop);
+    builder.put(0x3094cc14a950da52L, Form);
     builder.put(0x6f7d3aaeb0cb4634L, IClientType);
     builder.put(0xa806554059973baL, Image);
+    builder.put(0x3094cc14a950da53L, Input);
     builder.put(0xa806554058d4e4aL, Link);
     builder.put(0x6f7d3aaeb0cb4640L, Mobile);
     builder.put(0x6f7d3aaeb103b898L, Page);

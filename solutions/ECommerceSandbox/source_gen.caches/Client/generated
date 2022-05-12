@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-cvy5qe59fqgmmk0xbhurfjuxvkllkx">
-  <files names="DesktopApp.jsx:build.sh:index.html:index.js:package.json" />
+<product version="3" modelHash="-7o2okl3suzi88is7rqieyneefcvksqt">
+  <files names="DesktopApp.jsx:MobileApp.jsx:build.sh:index.html:index.js:package.json" />
 </product>
 

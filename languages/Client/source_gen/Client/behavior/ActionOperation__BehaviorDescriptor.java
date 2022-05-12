@@ -16,14 +16,14 @@ import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.scope.ListScope;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import org.jetbrains.mps.openapi.language.SConcept;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public final class ActionOperation__BehaviorDescriptor extends BaseBHDescriptor {
@@ -37,7 +37,7 @@ public final class ActionOperation__BehaviorDescriptor extends BaseBHDescriptor 
   }
 
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, SNode child) {
-    return new ListScope(SLinkOperations.collectMany(SLinkOperations.collect(SNodeOperations.ofConcept(SNodeOperations.getChildren(SNodeOperations.getParent(__thisNode__)), CONCEPTS.EntityTypeReference$ws), LINKS.entityType$EWiv), LINKS.keyValuePairs$i5YT)) {
+    return new ListScope(SLinkOperations.getChildren(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.entityType$3bW9), LINKS.entityType$EWiv), LINKS.keyValuePairs$i5YT)) {
 
       @Override
       public String getName(SNode child) {
@@ -92,14 +92,14 @@ public final class ActionOperation__BehaviorDescriptor extends BaseBHDescriptor 
     return CONCEPT;
   }
 
-  private static final class CONCEPTS {
-    /*package*/ static final SConcept EntityTypeReference$ws = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L, "Microservice.structure.EntityTypeReference");
-    /*package*/ static final SConcept KeyValuePair$D5 = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd8cL, "Microservice.structure.KeyValuePair");
-  }
-
   private static final class LINKS {
+    /*package*/ static final SContainmentLink entityType$3bW9 = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xcc684dcdf8dce3bL, 0x6f86bbd718f08247L, "entityType");
     /*package*/ static final SReferenceLink entityType$EWiv = MetaAdapterFactory.getReferenceLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L, 0x624f1b6582e0e55aL, "entityType");
     /*package*/ static final SContainmentLink keyValuePairs$i5YT = MetaAdapterFactory.getContainmentLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd89L, 0x1957db2831e8dd92L, "keyValuePairs");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept KeyValuePair$D5 = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd8cL, "Microservice.structure.KeyValuePair");
   }
 
   private static final class PROPS {

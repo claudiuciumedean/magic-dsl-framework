@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Navbar, Button, Container, Row, Nav, Col, Card } from 'react-bootstrap';
+import { Navbar, Button, Container, Row, Nav, Col, Card, Form } from 'react-bootstrap';
 import axios from "axios";
 const queryString= require("query-string");
 const _ = require("lodash");
@@ -8,25 +8,24 @@ const _ = require("lodash");
 export default class MobileApp extends Component {
 
   render() {
-    return (
-      <>
-        <Router>
-          <Switch>
-     <Route exact path='/' render={props =><Items {...props}/>}/>
-     <Route exact path='/item' render={props =><Item {...props}/>}/>
-          </Switch>
-        </Router>
-
+return (<>
         <Navbar bg="dark" variant="dark" className="nav-bar">
           <Navbar.Brand href="/">MyDesktop</Navbar.Brand>
           <Nav className="me-auto">
 
-            <Nav.Link href="/">Items</Nav.Link>
+<Nav.Link href='/items'>Items</Nav.Link>
 
-            <Nav.Link href="/item">Item</Nav.Link>
 
           </Nav>
-        </Navbar>       
+        </Navbar>
+        <Router>
+          <Switch>
+     <Route exact path='/items' render={props =><Items {...props}/>}/>
+     <Route exact path='/item' render={props =><Item {...props}/>}/>
+     <Route exact path='/' render={props =><Login {...props}/>}/>
+          </Switch>
+        </Router>
+
       </>
     );
   }
@@ -40,13 +39,13 @@ constructor(props) {
   }
 
   componentDidMount() {
-    if(this.state.elements === null) this.fetchState();
+    if(this.state.entities === null) this.fetchState();
   }
 
   fetchState = async () => {
-    let elements = null;
+    let entities = null;
     try {
-      const response = await axios.get(`http://localhost:5000/desktop-api/items${location.search}`);
+      const response = await axios.get(`http://localhost:5000/desktop-api/items${window.location.search}`);
       entities = response.data;
     } catch (error) {}
     this.setState({ entities });
@@ -56,26 +55,30 @@ constructor(props) {
     let elems = [];
     if(!this.state.entities.length) {
       elems.push(this.state.entities);
-    }
+    } else { elems = [...this.state.entities]; }
 
     elems = elems.map((entity, idx) => {
-      return (
-      <Col lg="4" key={idx} style={{  marginBottom: '36px' }}>
-<Card style={{ width: '100%', height:'25rem', }}>
-    <Card.Img variant="top" src={`/${entity.thumbnail}`} />
+      return (<>
+
+<Col lg="4" key={idx} style={{  marginBottom: '180px' }}>
+  <Card style={{ width: '100%', height:'25rem', }}>
+    <Card.Img style={{ width: '100%', height:'100%' }} variant="top" src={`${entity.thumbnail}`} />
     <Card.Body>
       <Card.Title>{entity.name}</Card.Title>
       <Card.Text>{entity.description}</Card.Text>
+
 <Button
 variant="primary"
 onClick={(e) => this.props.history.push(`/item?id=${entity.id}`)}
 >
 See more
 </Button>
+
     </Card.Body>
   </Card>
-      </Col>
-      );
+</Col>
+
+      </>);
     });
 
     return elems;
@@ -85,7 +88,7 @@ See more
         <Container style={{ marginTop: 100 + 'px' }}>
           <Row>
             <h2>Items</h2>
-            {this.state.elements != null && this.buildStateElems().map(elem => elem)}
+            {this.state.entities != null && this.buildStateElems().map(elem => elem)}
           </Row>
         </Container>
       );
@@ -99,15 +102,26 @@ constructor(props) {
      entities: null
     };
   }
+async buyItem(entityPayload) {
+    let entity = null;
+
+    try {
+      const response = await axios.post(`http://localhost:5000/desktop-api/buy-item`, entityPayload);
+      entity = response.data;
+this.props.history.push('/items');
+    } catch (error) {}
+
+    return entity;
+  }
 
   componentDidMount() {
-    if(this.state.elements === null) this.fetchState();
+    if(this.state.entities === null) this.fetchState();
   }
 
   fetchState = async () => {
-    let elements = null;
+    let entities = null;
     try {
-      const response = await axios.get(`http://localhost:5000/desktop-api/item${location.search}`);
+      const response = await axios.get(`http://localhost:5000/desktop-api/item${window.location.search}`);
       entities = response.data;
     } catch (error) {}
     this.setState({ entities });
@@ -117,20 +131,33 @@ constructor(props) {
     let elems = [];
     if(!this.state.entities.length) {
       elems.push(this.state.entities);
-    }
+    } else { elems = [...this.state.entities]; }
 
     elems = elems.map((entity, idx) => {
-      return (
-      <Col lg="4" key={idx} style={{  marginBottom: '36px' }}>
+      return (<>
+
 <img
-    src='entity.image'
-    className='img-fluid shadow-4'
-    alt='Item image'
-  />
-<h3>entity.name</h3>
-<p>entity.description</p>
-      </Col>
-      );
+src={entity.image}
+className='img-fluid shadow-4'
+alt="Item image"
+style={{maxWidth:'750px'}}
+/>
+
+<h3>{entity.name}</h3>
+
+
+<p>{entity.description}</p>
+
+
+<Button 
+variant="primary"
+onClick={() => this.buyItem(entity)}
+style={{maxWidth: '200px'}}
+>
+Buy Item
+</Button>
+
+      </>);
     });
 
     return elems;
@@ -140,9 +167,54 @@ constructor(props) {
         <Container style={{ marginTop: 100 + 'px' }}>
           <Row>
             <h2>Item</h2>
-            {this.state.elements != null && this.buildStateElems().map(elem => elem)}
+            {this.state.entities != null && this.buildStateElems().map(elem => elem)}
           </Row>
         </Container>
       );
+  }
+}
+
+
+class Login extends Component {
+
+async login(entity) {
+    const queryParams = _.pick(entity, ['email','password',]);
+    let arr = [];
+    try {
+      const response = await axios.get(`http://localhost:5000/desktop-api/user?${queryString.stringify(queryParams)}`);
+      const data = response.data;
+      if(!data.length) { arr.push(data)} else { arr = [...data]; }
+this.props.history.push('/items');
+    } catch (error) {
+    }
+    return arr;
+  }
+  render() {
+    return (
+      <Container style={{ marginTop: 100 + 'px' }}>
+        <Row>
+          <h2>Login</h2>
+          <>
+
+<Form onSubmit={(e) =>{ e.preventDefault(); this.login(new FormData(e.currentTarget));}}>
+
+<Form.Group>
+ <Form.Label>Email</Form.Label>
+ <Form.Control type="email" name="email" required/>
+</Form.Group>
+
+
+<Form.Group>
+ <Form.Label>Password</Form.Label>
+ <Form.Control type="password" name="password" required/>
+</Form.Group>
+
+<br/><Button type="submit">Submit</Button>
+</Form>
+
+          </>
+        </Row>
+      </Container>
+    );
   }
 }

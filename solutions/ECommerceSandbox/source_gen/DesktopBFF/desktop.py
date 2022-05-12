@@ -48,3 +48,18 @@ def get_item_2_By():
 
     entity=project(entity, ['id','name','image','price','description',])
     return jsonify(entity)
+
+@bff.route('/buy-item', methods=['POST'])
+def create_item_3():
+    entity = None
+    data = request.get_json()
+    headers = {'content-type': 'application/json'}
+
+    try:
+        response = requests.post('http://localhost:3002/create-order', data = json.dumps(data), headers=headers)
+        entity = response.json()
+    except:
+        return "Error", 400
+
+
+    return jsonify(entity)

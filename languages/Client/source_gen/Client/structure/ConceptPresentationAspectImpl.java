@@ -19,8 +19,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ClientType;
   private ConceptPresentation props_CrudAction;
   private ConceptPresentation props_Desktop;
+  private ConceptPresentation props_Form;
   private ConceptPresentation props_IClientType;
   private ConceptPresentation props_Image;
+  private ConceptPresentation props_Input;
   private ConceptPresentation props_Link;
   private ConceptPresentation props_Mobile;
   private ConceptPresentation props_Page;
@@ -37,7 +39,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Action:
         if (props_Action == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Action");
+          cpb.presentationByName();
           props_Action = cpb.create();
         }
         return props_Action;
@@ -58,7 +60,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Card:
         if (props_Card == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Card");
+          cpb.presentationByName();
           props_Card = cpb.create();
         }
         return props_Card;
@@ -93,7 +95,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.CrudAction:
         if (props_CrudAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("CrudAction");
+          cpb.presentationByName();
           props_CrudAction = cpb.create();
         }
         return props_CrudAction;
@@ -104,6 +106,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Desktop = cpb.create();
         }
         return props_Desktop;
+      case LanguageConceptSwitch.Form:
+        if (props_Form == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Form = cpb.create();
+        }
+        return props_Form;
       case LanguageConceptSwitch.IClientType:
         if (props_IClientType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -113,14 +122,21 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Image:
         if (props_Image == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Image");
+          cpb.presentationByName();
           props_Image = cpb.create();
         }
         return props_Image;
+      case LanguageConceptSwitch.Input:
+        if (props_Input == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Input = cpb.create();
+        }
+        return props_Input;
       case LanguageConceptSwitch.Link:
         if (props_Link == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Link");
+          cpb.presentationByName();
           props_Link = cpb.create();
         }
         return props_Link;
@@ -148,21 +164,21 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Text:
         if (props_Text == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Text");
+          cpb.presentationByName();
           props_Text = cpb.create();
         }
         return props_Text;
       case LanguageConceptSwitch.Title:
         if (props_Title == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Title");
+          cpb.presentationByName();
           props_Title = cpb.create();
         }
         return props_Title;
       case LanguageConceptSwitch.UIComponent:
         if (props_UIComponent == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("UIComponent");
+          cpb.presentationByName();
           props_UIComponent = cpb.create();
         }
         return props_UIComponent;

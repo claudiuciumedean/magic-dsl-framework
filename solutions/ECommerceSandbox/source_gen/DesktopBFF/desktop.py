@@ -63,3 +63,20 @@ def create_item_3():
 
 
     return jsonify(entity)
+
+@bff.route('/cart', methods=['GET'])
+def get_order_4_by():
+    entities = []
+    params = urllib.parse.urlencode(request.args.to_dict())
+
+    try:
+        response = requests.get('http://localhost:3002/get-orders-by', params = params)
+        response = response.json()
+    except:
+        return "Error", 400
+
+    for item in response:
+        entity=project(item, ['thumbnail','name','price',])
+        entities.append(entity)
+
+    return jsonify(entities)

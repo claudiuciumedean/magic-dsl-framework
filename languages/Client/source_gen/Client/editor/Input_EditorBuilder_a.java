@@ -86,7 +86,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createProperty_0() {
     getCellFactory().pushCellContext();
     try {
-      final SProperty property = PROPS.name$MnvL;
+      final SProperty property = PROPS.name$PwZW;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
       editorCell.setDefaultText("<no name>");
@@ -234,7 +234,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty name$PwZW = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da53L, 0xf40a1315d27ff1fL, "name");
     /*package*/ static final SProperty label$gEnR = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da53L, 0x3094cc14a950f534L, "label");
     /*package*/ static final SProperty type$xA52 = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da53L, 0x3094cc14a950f6ecL, "type");
     /*package*/ static final SProperty required$Mh$U = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da53L, 0x3094cc14a950f794L, "required");

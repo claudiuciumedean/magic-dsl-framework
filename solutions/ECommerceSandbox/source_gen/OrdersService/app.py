@@ -34,7 +34,7 @@ def createEntity():
 
 @app.route('/get-orders-by', methods=['GET'])
 def getEntitiesBy():
-    expectedKeys = ['item_id',]
+    expectedKeys = ['customer_id',]
 
     if not  all(map(lambda x, y: x == y, sorted(request.args.keys()), sorted(expectedKeys))):
       return jsonify({'message': 'Invalid query params' })

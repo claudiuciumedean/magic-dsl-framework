@@ -31,6 +31,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptMobile = createDescriptorForMobile();
   /*package*/ final ConceptDescriptor myConceptPage = createDescriptorForPage();
   /*package*/ final ConceptDescriptor myConceptPageReference = createDescriptorForPageReference();
+  /*package*/ final ConceptDescriptor myConceptState = createDescriptorForState();
+  /*package*/ final ConceptDescriptor myConceptStateUpdate = createDescriptorForStateUpdate();
   /*package*/ final ConceptDescriptor myConceptText = createDescriptorForText();
   /*package*/ final ConceptDescriptor myConceptTitle = createDescriptorForTitle();
   /*package*/ final ConceptDescriptor myConceptUIComponent = createDescriptorForUIComponent();
@@ -50,7 +52,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionOperation, myConceptActionOperationReference, myConceptCard, myConceptClient, myConceptClientConfig, myConceptClientReference, myConceptClientType, myConceptCrudAction, myConceptDesktop, myConceptForm, myConceptIClientType, myConceptImage, myConceptInput, myConceptLink, myConceptMobile, myConceptPage, myConceptPageReference, myConceptText, myConceptTitle, myConceptUIComponent);
+    return Arrays.asList(myConceptAction, myConceptActionOperation, myConceptActionOperationReference, myConceptCard, myConceptClient, myConceptClientConfig, myConceptClientReference, myConceptClientType, myConceptCrudAction, myConceptDesktop, myConceptForm, myConceptIClientType, myConceptImage, myConceptInput, myConceptLink, myConceptMobile, myConceptPage, myConceptPageReference, myConceptState, myConceptStateUpdate, myConceptText, myConceptTitle, myConceptUIComponent);
   }
 
   @Override
@@ -93,6 +95,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptPage;
       case LanguageConceptSwitch.PageReference:
         return myConceptPageReference;
+      case LanguageConceptSwitch.State:
+        return myConceptState;
+      case LanguageConceptSwitch.StateUpdate:
+        return myConceptStateUpdate;
       case LanguageConceptSwitch.Text:
         return myConceptText;
       case LanguageConceptSwitch.Title:
@@ -131,6 +137,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("pageRef", 0x6f86bbd718e8ecd6L).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa806554051c0e24L).optional(true).ordered(true).multiple(false).origin("8036317117599509718").done();
     b.aggregate("entityType", 0x6f86bbd718f08247L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e0e556L).optional(true).ordered(true).multiple(false).origin("8036317117600006727").done();
     b.aggregate("queryParams", 0xcc684dcdf8dce3eL).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L).optional(true).ordered(true).multiple(true).origin("920569258022129214").done();
+    b.aggregate("stateUpdate", 0xf40a1315cbb9cbeL).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xf40a1315ccee6edL).optional(true).ordered(true).multiple(true).origin("1099055542459669694").done();
+    b.aggregate("globalStateProps", 0xf40a1315d092150L).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xf40a1315ccee6edL).optional(true).ordered(true).multiple(true).origin("1099055542464749904").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForActionOperationReference() {
@@ -158,12 +166,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.parent(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb0cb4634L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:98ed726a-3e0c-430f-bdae-c3e04664f756(Client.structure)/756716148935626254");
     b.version(2);
     b.property("mainteinerEmail", 0xa806554051c0e11L).type(PrimitiveTypeId.STRING).origin("756716148935626257").done();
     b.property("description", 0xa806554051c0e13L).type(PrimitiveTypeId.STRING).origin("756716148935626259").done();
     b.property("version", 0xa806554051c0e16L).type(PrimitiveTypeId.STRING).origin("756716148935626262").done();
     b.aggregate("pages", 0xa806554052446acL).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb103b898L).optional(true).ordered(true).multiple(true).origin("756716148936165036").done();
+    b.aggregate("globalState", 0x5c3d7fbf4e28b2dL).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xf40a1315ca69ab9L).optional(true).ordered(true).multiple(true).origin("415413067793468205").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForClientConfig() {
@@ -248,6 +258,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("label", 0x3094cc14a950f534L).type(PrimitiveTypeId.STRING).origin("3500647199485785396").done();
     b.property("type", 0x3094cc14a950f6ecL).type(PrimitiveTypeId.STRING).origin("3500647199485785836").done();
     b.property("required", 0x3094cc14a950f794L).type(PrimitiveTypeId.BOOLEAN).origin("3500647199485786004").done();
+    b.property("name", 0xf40a1315d27ff1fL).type(PrimitiveTypeId.STRING).origin("1099055542466772767").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForLink() {
@@ -285,6 +296,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("queryParams", 0xa806554056048a6L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L).optional(true).ordered(true).multiple(true).origin("756716148940097702").done();
     b.aggregate("components", 0xa806554056d9b14L).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa806554053e9bc3L).optional(true).ordered(true).multiple(true).origin("756716148940970772").done();
     b.aggregate("actions", 0xcc684dcdf8dde8dL).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xcc684dcdf8dce3bL).optional(true).ordered(true).multiple(true).origin("920569258022133389").done();
+    b.aggregate("globalState", 0xf40a1315d300c61L).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xf40a1315ccee6edL).optional(true).ordered(true).multiple(true).origin("1099055542467300449").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPageReference() {
@@ -293,6 +305,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:98ed726a-3e0c-430f-bdae-c3e04664f756(Client.structure)/756716148935626276");
     b.version(2);
     b.associate("page", 0xa806554051c7f2eL).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb103b898L).optional(false).origin("756716148935655214").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForState() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Client", "State", 0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xf40a1315ca69ab9L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:98ed726a-3e0c-430f-bdae-c3e04664f756(Client.structure)/1099055542458292921");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForStateUpdate() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Client", "StateUpdate", 0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xf40a1315ccee6edL);
+    b.class_(false, false, false);
+    b.origin("r:98ed726a-3e0c-430f-bdae-c3e04664f756(Client.structure)/1099055542460933869");
+    b.version(2);
+    b.property("state", 0xf40a1315cd79adeL).type(PrimitiveTypeId.STRING).origin("1099055542461504222").done();
+    b.aggregate("key", 0xf40a1315ccee6f0L).target(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L).optional(false).ordered(true).multiple(false).origin("1099055542460933872").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForText() {
@@ -317,7 +346,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Client", "UIComponent", 0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa806554053e9bc3L);
     b.class_(false, false, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:98ed726a-3e0c-430f-bdae-c3e04664f756(Client.structure)/756716148937890755");
     b.version(2);
     return b.create();

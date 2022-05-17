@@ -38,7 +38,6 @@ public final class ActionOperation__BehaviorDescriptor extends BaseBHDescriptor 
 
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, SNode child) {
     return new ListScope(SLinkOperations.getChildren(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.entityType$3bW9), LINKS.entityType$EWiv), LINKS.keyValuePairs$i5YT)) {
-
       @Override
       public String getName(SNode child) {
         return SPropertyOperations.getString(SNodeOperations.cast(child, CONCEPTS.KeyValuePair$D5), PROPS.key$hZTW);

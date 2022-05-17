@@ -85,42 +85,72 @@ public class QueriesGenerated extends QueryProviderBase {
     }
   }
   public static Object propertyMacro_GetValue_4_0(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+    return (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.clientType$3QV), CONCEPTS.Desktop$qa) ? "Desktop" : "Mobile");
   }
   public static Object propertyMacro_GetValue_4_1(final PropertyMacroContext _context) {
+    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.globalState$GNTq)).count() == 0) {
+      return "";
+    }
+
+    final StringBuilder sb = new StringBuilder();
+    ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.globalState$GNTq)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        sb.append(SPropertyOperations.getString(it, PROPS.name$MnvL) + ": null,");
+      }
+    });
+    return sb.toString();
+
+  }
+  public static Object propertyMacro_GetValue_4_2(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_4_3(final PropertyMacroContext _context) {
     if (SPropertyOperations.getBoolean(_context.getNode(), PROPS.showInNavigation$$7VN)) {
       return "<Nav.Link href='" + SPropertyOperations.getString(_context.getNode(), PROPS.route$ZzY4) + "'>" + SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL) + "</Nav.Link>";
     }
     return "";
   }
-  public static Object propertyMacro_GetValue_4_2(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetValue_4_4(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$ZzY4);
   }
-  public static Object propertyMacro_GetValue_4_3(final PropertyMacroContext _context) {
-    return "<" + SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL) + " {...props}/>";
-  }
-  public static Object propertyMacro_GetValue_4_4(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
-  }
   public static Object propertyMacro_GetValue_4_5(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.bff$II$1), LINKS.bff$Qfu7), PROPS.port$NA6D);
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_4_6(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.bff$II$1), LINKS.bff$Qfu7), PROPS.name$MnvL);
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_4_7(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.bffRoute$EPCE);
+    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.globalState$lvPQ)).count() == 0) {
+      return "";
+    }
+    final StringBuilder sb = new StringBuilder();
+    ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.globalState$lvPQ)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        sb.append(SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.key$tP0O), LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + ": this.props." + SPropertyOperations.getString(it, PROPS.state$S_YO) + ",");
+      }
+    });
+    return sb.toString();
+
   }
   public static Object propertyMacro_GetValue_4_8(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.bff$II$1), LINKS.bff$Qfu7), PROPS.port$NA6D);
   }
   public static Object propertyMacro_GetValue_4_9(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.bff$II$1), LINKS.bff$Qfu7), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_4_10(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+    return SPropertyOperations.getString(_context.getNode(), PROPS.bffRoute$EPCE);
   }
   public static Object propertyMacro_GetValue_4_11(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_4_12(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_4_13(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_4_14(final PropertyMacroContext _context) {
     if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.clientType$3QV), CONCEPTS.Mobile$b9)) {
       return "MobileApp";
     }
@@ -190,7 +220,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.type$xA52);
   }
   public static Object propertyMacro_GetValue_5_17(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$PwZW);
   }
   public static Object propertyMacro_GetValue_5_18(final PropertyMacroContext _context) {
     return (SPropertyOperations.getBoolean(_context.getNode(), PROPS.required$Mh$U) ? "required" : "");
@@ -199,84 +229,93 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_6_1(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.port$NA6D);
+    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.globalStateProps$EeER)).count() == 0) {
+      return "";
+    }
+    final StringBuilder sb = new StringBuilder();
+    ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.globalStateProps$EeER)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        sb.append("entityPayload['" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.key$tP0O), LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'] = this.props." + SPropertyOperations.getString(it, PROPS.state$S_YO) + ";\n");
+      }
+    });
+    return sb.toString();
+
   }
   public static Object propertyMacro_GetValue_6_2(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.name$MnvL);
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.port$NA6D);
   }
   public static Object propertyMacro_GetValue_6_3(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.route$Xyfx);
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_6_4(final PropertyMacroContext _context) {
-    if (SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2) != null) {
-      return "this.props.history.push('" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2), LINKS.page$hgW$), PROPS.route$ZzY4) + "');";
-    }
-    return "";
+    return SPropertyOperations.getString(_context.getNode(), PROPS.route$Xyfx);
   }
   public static Object propertyMacro_GetValue_6_5(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.stateUpdate$uFWk)).count() != 0) {
+      final StringBuilder sb = new StringBuilder();
+      ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.stateUpdate$uFWk)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          sb.append("this.props.updateGlobalState({'" + SPropertyOperations.getString(it, PROPS.state$S_YO) + "': data." + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.key$tP0O), LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "});\n");
+        }
+      });
+      return sb.toString();
+    }
+
+    return "";
   }
   public static Object propertyMacro_GetValue_6_6(final PropertyMacroContext _context) {
-    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.queryParams$XxLv)).count() == 0) {
-      return "{}";
+    if (SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2) != null) {
+      return "this.props.history.push('" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2), LINKS.page$hgW$), PROPS.route$ZzY4) + "');";
     }
-    final StringBuilder sb = new StringBuilder();
-    ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.queryParams$XxLv)).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        sb.append("'" + SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'" + ",");
-      }
-    });
-    return "_.pick(entity, [" + sb.toString() + "]);";
+    return "";
   }
   public static Object propertyMacro_GetValue_6_7(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.port$NA6D);
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_6_8(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.name$MnvL);
+    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.queryParams$XxLv)).count() == 0) {
+      return "{}";
+    }
+    final StringBuilder sb = new StringBuilder();
+    ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.queryParams$XxLv)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        sb.append("'" + SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'" + ",");
+      }
+    });
+    return "_.pick(entity, [" + sb.toString() + "]);";
   }
   public static Object propertyMacro_GetValue_6_9(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.route$Xyfx);
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.port$NA6D);
   }
   public static Object propertyMacro_GetValue_6_10(final PropertyMacroContext _context) {
-    if (SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2) != null) {
-      return "this.props.history.push('" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2), LINKS.page$hgW$), PROPS.route$ZzY4) + "');";
-    }
-    return "";
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_6_11(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
-  }
-  public static Object propertyMacro_GetValue_6_12(final PropertyMacroContext _context) {
-    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.queryParams$XxLv)).count() == 0) {
-      return "{}";
-    }
-    final StringBuilder sb = new StringBuilder();
-    ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.queryParams$XxLv)).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        sb.append("'" + SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'" + ",");
-      }
-    });
-    return "_.pick(entity, [" + sb.toString() + "]);";
-  }
-  public static Object propertyMacro_GetValue_6_13(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.port$NA6D);
-  }
-  public static Object propertyMacro_GetValue_6_14(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.name$MnvL);
-  }
-  public static Object propertyMacro_GetValue_6_15(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$Xyfx);
   }
-  public static Object propertyMacro_GetValue_6_16(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetValue_6_12(final PropertyMacroContext _context) {
+    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.stateUpdate$uFWk)).count() != 0) {
+      final StringBuilder sb = new StringBuilder();
+      ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.stateUpdate$uFWk)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          sb.append("this.props.updateGlobalState({'" + SPropertyOperations.getString(it, PROPS.state$S_YO) + "': data." + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.key$tP0O), LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "});\n");
+        }
+      });
+      return sb.toString();
+    }
+
+    return "";
+  }
+  public static Object propertyMacro_GetValue_6_13(final PropertyMacroContext _context) {
     if (SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2) != null) {
       return "this.props.history.push('" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2), LINKS.page$hgW$), PROPS.route$ZzY4) + "');";
     }
     return "";
   }
-  public static Object propertyMacro_GetValue_6_17(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetValue_6_14(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
-  public static Object propertyMacro_GetValue_6_18(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetValue_6_15(final PropertyMacroContext _context) {
     if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.queryParams$XxLv)).count() == 0) {
       return "{}";
     }
@@ -288,16 +327,84 @@ public class QueriesGenerated extends QueryProviderBase {
     });
     return "_.pick(entity, [" + sb.toString() + "]);";
   }
-  public static Object propertyMacro_GetValue_6_19(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetValue_6_16(final PropertyMacroContext _context) {
+    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.globalStateProps$EeER)).count() == 0) {
+      return "";
+    }
+    final StringBuilder sb = new StringBuilder();
+    ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.globalStateProps$EeER)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        sb.append("entityPayload['" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.key$tP0O), LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'] = this.props." + SPropertyOperations.getString(it, PROPS.state$S_YO) + ";\n");
+      }
+    });
+    return sb.toString();
+  }
+  public static Object propertyMacro_GetValue_6_17(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.port$NA6D);
   }
-  public static Object propertyMacro_GetValue_6_20(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetValue_6_18(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.name$MnvL);
   }
-  public static Object propertyMacro_GetValue_6_21(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetValue_6_19(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.route$Xyfx);
   }
+  public static Object propertyMacro_GetValue_6_20(final PropertyMacroContext _context) {
+    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.stateUpdate$uFWk)).count() != 0) {
+      final StringBuilder sb = new StringBuilder();
+      ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.stateUpdate$uFWk)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          sb.append("this.props.updateGlobalState({'" + SPropertyOperations.getString(it, PROPS.state$S_YO) + "': data." + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.key$tP0O), LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "});\n");
+        }
+      });
+      return sb.toString();
+    }
+
+    return "";
+  }
+  public static Object propertyMacro_GetValue_6_21(final PropertyMacroContext _context) {
+    if (SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2) != null) {
+      return "this.props.history.push('" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2), LINKS.page$hgW$), PROPS.route$ZzY4) + "');";
+    }
+    return "";
+  }
   public static Object propertyMacro_GetValue_6_22(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_6_23(final PropertyMacroContext _context) {
+    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.queryParams$XxLv)).count() == 0) {
+      return "{}";
+    }
+    final StringBuilder sb = new StringBuilder();
+    ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.queryParams$XxLv)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        sb.append("'" + SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "'" + ",");
+      }
+    });
+    return "_.pick(entity, [" + sb.toString() + "]);";
+  }
+  public static Object propertyMacro_GetValue_6_24(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.port$NA6D);
+  }
+  public static Object propertyMacro_GetValue_6_25(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.BFFRef$7dHG), LINKS.bff$Qfu7), PROPS.name$MnvL);
+  }
+  public static Object propertyMacro_GetValue_6_26(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), PROPS.route$Xyfx);
+  }
+  public static Object propertyMacro_GetValue_6_27(final PropertyMacroContext _context) {
+    if (ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.stateUpdate$uFWk)).count() != 0) {
+      final StringBuilder sb = new StringBuilder();
+      ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.stateUpdate$uFWk)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          sb.append("this.props.updateGlobalState({'" + SPropertyOperations.getString(it, PROPS.state$S_YO) + "': data." + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(it, LINKS.key$tP0O), LINKS.keyValuePair$wiKW), PROPS.key$hZTW) + "});\n");
+        }
+      });
+      return sb.toString();
+    }
+
+    return "";
+  }
+  public static Object propertyMacro_GetValue_6_28(final PropertyMacroContext _context) {
     if (SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2) != null) {
       return "this.props.history.push('" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.pageRef$Ees2), LINKS.page$hgW$), PROPS.route$ZzY4) + "');";
     }
@@ -452,11 +559,14 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("3500647199483099369", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "mobileImport"));
     pvqMethods.put("756716148936440451", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "mobileApp"));
     pvqMethods.put("756716148936450560", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "desktopApp"));
+    pvqMethods.put("415413067792244270", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "name"));
+    pvqMethods.put("415413067794488458", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "properties"));
     pvqMethods.put("756716148936558295", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "name"));
     pvqMethods.put("3500647199484432353", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "page"));
     pvqMethods.put("756716148937171386", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "route"));
     pvqMethods.put("756716148937177813", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "page"));
     pvqMethods.put("756716148937760200", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "PageName"));
+    pvqMethods.put("1099055542467914608", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "globalStateParams"));
     pvqMethods.put("756716148940646228", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "port"));
     pvqMethods.put("756716148940663298", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "bff"));
     pvqMethods.put("756716148940756691", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "route"));
@@ -484,28 +594,34 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("3500647199486127460", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "name"));
     pvqMethods.put("3500647199486130612", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "required"));
     pvqMethods.put("8980703707720159571", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "operationName"));
+    pvqMethods.put("1099055542465155614", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "globalStateFetch"));
     pvqMethods.put("8980703707720163989", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "port"));
     pvqMethods.put("8980703707720174359", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "bff"));
     pvqMethods.put("8980703707720184077", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "route"));
-    pvqMethods.put("8036317117600721903", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "onSuccess"));
+    pvqMethods.put("1099055542460053078", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "globalStateUpdate"));
+    pvqMethods.put("8036317117600721903", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "redirect"));
     pvqMethods.put("8980703707719807117", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "operationName"));
     pvqMethods.put("8980703707719042712", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "params"));
     pvqMethods.put("8980703707719083595", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "port"));
     pvqMethods.put("8980703707719091734", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "bff"));
     pvqMethods.put("8980703707719101027", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "route"));
-    pvqMethods.put("8036317117599670619", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "onSuccess"));
+    pvqMethods.put("1099055542460199639", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "globalStateUpdate"));
+    pvqMethods.put("8036317117599670619", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "redirect"));
     pvqMethods.put("8980703707721372137", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "operationName"));
     pvqMethods.put("8980703707721372149", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "params"));
+    pvqMethods.put("1099055542465326826", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "globalStateFetch"));
     pvqMethods.put("8980703707721372211", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "port"));
     pvqMethods.put("8980703707721372224", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "bff"));
     pvqMethods.put("8980703707721372237", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "route"));
-    pvqMethods.put("8036317117600717377", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "onSuccess"));
+    pvqMethods.put("1099055542460208691", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "globalStateUpdate"));
+    pvqMethods.put("8036317117600717377", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "redirect"));
     pvqMethods.put("8980703707721391213", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "operationName"));
     pvqMethods.put("8980703707721391225", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "params"));
     pvqMethods.put("8980703707721391287", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "port"));
     pvqMethods.put("8980703707721391300", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "bff"));
     pvqMethods.put("8980703707721391313", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "route"));
-    pvqMethods.put("8036317117600718636", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "onSuccess"));
+    pvqMethods.put("1099055542460218665", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "globalStateUpdate"));
+    pvqMethods.put("8036317117600718636", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "redirect"));
     pvqMethods.put("3500647199483104276", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "moveMobile"));
     pvqMethods.put("3500647199483105972", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "moveDesktop"));
   }
@@ -561,92 +677,110 @@ public class QueriesGenerated extends QueryProviderBase {
         case 17:
           return QueriesGenerated.propertyMacro_GetValue_4_11(ctx);
         case 18:
-          return QueriesGenerated.propertyMacro_GetValue_5_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_4_12(ctx);
         case 19:
-          return QueriesGenerated.propertyMacro_GetValue_5_1(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_4_13(ctx);
         case 20:
-          return QueriesGenerated.propertyMacro_GetValue_5_2(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_4_14(ctx);
         case 21:
-          return QueriesGenerated.propertyMacro_GetValue_5_3(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_0(ctx);
         case 22:
-          return QueriesGenerated.propertyMacro_GetValue_5_4(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_1(ctx);
         case 23:
-          return QueriesGenerated.propertyMacro_GetValue_5_5(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_2(ctx);
         case 24:
-          return QueriesGenerated.propertyMacro_GetValue_5_6(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_3(ctx);
         case 25:
-          return QueriesGenerated.propertyMacro_GetValue_5_7(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_4(ctx);
         case 26:
-          return QueriesGenerated.propertyMacro_GetValue_5_8(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_5(ctx);
         case 27:
-          return QueriesGenerated.propertyMacro_GetValue_5_9(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_6(ctx);
         case 28:
-          return QueriesGenerated.propertyMacro_GetValue_5_10(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_7(ctx);
         case 29:
-          return QueriesGenerated.propertyMacro_GetValue_5_11(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_8(ctx);
         case 30:
-          return QueriesGenerated.propertyMacro_GetValue_5_12(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_9(ctx);
         case 31:
-          return QueriesGenerated.propertyMacro_GetValue_5_13(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_10(ctx);
         case 32:
-          return QueriesGenerated.propertyMacro_GetValue_5_14(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_11(ctx);
         case 33:
-          return QueriesGenerated.propertyMacro_GetValue_5_15(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_12(ctx);
         case 34:
-          return QueriesGenerated.propertyMacro_GetValue_5_16(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_13(ctx);
         case 35:
-          return QueriesGenerated.propertyMacro_GetValue_5_17(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_14(ctx);
         case 36:
-          return QueriesGenerated.propertyMacro_GetValue_5_18(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_15(ctx);
         case 37:
-          return QueriesGenerated.propertyMacro_GetValue_6_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_16(ctx);
         case 38:
-          return QueriesGenerated.propertyMacro_GetValue_6_1(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_17(ctx);
         case 39:
-          return QueriesGenerated.propertyMacro_GetValue_6_2(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_5_18(ctx);
         case 40:
-          return QueriesGenerated.propertyMacro_GetValue_6_3(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_0(ctx);
         case 41:
-          return QueriesGenerated.propertyMacro_GetValue_6_4(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_1(ctx);
         case 42:
-          return QueriesGenerated.propertyMacro_GetValue_6_5(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_2(ctx);
         case 43:
-          return QueriesGenerated.propertyMacro_GetValue_6_6(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_3(ctx);
         case 44:
-          return QueriesGenerated.propertyMacro_GetValue_6_7(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_4(ctx);
         case 45:
-          return QueriesGenerated.propertyMacro_GetValue_6_8(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_5(ctx);
         case 46:
-          return QueriesGenerated.propertyMacro_GetValue_6_9(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_6(ctx);
         case 47:
-          return QueriesGenerated.propertyMacro_GetValue_6_10(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_7(ctx);
         case 48:
-          return QueriesGenerated.propertyMacro_GetValue_6_11(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_8(ctx);
         case 49:
-          return QueriesGenerated.propertyMacro_GetValue_6_12(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_9(ctx);
         case 50:
-          return QueriesGenerated.propertyMacro_GetValue_6_13(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_10(ctx);
         case 51:
-          return QueriesGenerated.propertyMacro_GetValue_6_14(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_11(ctx);
         case 52:
-          return QueriesGenerated.propertyMacro_GetValue_6_15(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_12(ctx);
         case 53:
-          return QueriesGenerated.propertyMacro_GetValue_6_16(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_13(ctx);
         case 54:
-          return QueriesGenerated.propertyMacro_GetValue_6_17(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_14(ctx);
         case 55:
-          return QueriesGenerated.propertyMacro_GetValue_6_18(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_15(ctx);
         case 56:
-          return QueriesGenerated.propertyMacro_GetValue_6_19(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_16(ctx);
         case 57:
-          return QueriesGenerated.propertyMacro_GetValue_6_20(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_17(ctx);
         case 58:
-          return QueriesGenerated.propertyMacro_GetValue_6_21(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_18(ctx);
         case 59:
-          return QueriesGenerated.propertyMacro_GetValue_6_22(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_19(ctx);
         case 60:
-          return QueriesGenerated.propertyMacro_GetValue_7_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_20(ctx);
         case 61:
+          return QueriesGenerated.propertyMacro_GetValue_6_21(ctx);
+        case 62:
+          return QueriesGenerated.propertyMacro_GetValue_6_22(ctx);
+        case 63:
+          return QueriesGenerated.propertyMacro_GetValue_6_23(ctx);
+        case 64:
+          return QueriesGenerated.propertyMacro_GetValue_6_24(ctx);
+        case 65:
+          return QueriesGenerated.propertyMacro_GetValue_6_25(ctx);
+        case 66:
+          return QueriesGenerated.propertyMacro_GetValue_6_26(ctx);
+        case 67:
+          return QueriesGenerated.propertyMacro_GetValue_6_27(ctx);
+        case 68:
+          return QueriesGenerated.propertyMacro_GetValue_6_28(ctx);
+        case 69:
+          return QueriesGenerated.propertyMacro_GetValue_7_0(ctx);
+        case 70:
           return QueriesGenerated.propertyMacro_GetValue_7_1(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -658,11 +792,14 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink operationType$IuTs = MetaAdapterFactory.getContainmentLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1cb88b6L, 0x4151f0e6b1cb88b7L, "operationType");
     /*package*/ static final SContainmentLink desktopClientRef$eto8 = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x56a8c307f66dc0c2L, 0xa806554052709eeL, "desktopClientRef");
     /*package*/ static final SContainmentLink mobileClientRef$e8gI = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x56a8c307f66dc0c2L, 0xa806554052709d3L, "mobileClientRef");
+    /*package*/ static final SContainmentLink clientType$3QV = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb0cb4634L, 0x6f7d3aaeb0cb463eL, "clientType");
+    /*package*/ static final SContainmentLink globalState$GNTq = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa806554051c0e0eL, 0x5c3d7fbf4e28b2dL, "globalState");
+    /*package*/ static final SContainmentLink globalState$lvPQ = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb103b898L, 0xf40a1315d300c61L, "globalState");
+    /*package*/ static final SContainmentLink key$tP0O = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xf40a1315ccee6edL, 0xf40a1315ccee6f0L, "key");
+    /*package*/ static final SReferenceLink keyValuePair$wiKW = MetaAdapterFactory.getReferenceLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L, 0x624f1b6582e9a401L, "keyValuePair");
     /*package*/ static final SContainmentLink bff$II$1 = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb103b898L, 0xa806554054870e5L, "bff");
     /*package*/ static final SReferenceLink bff$Qfu7 = MetaAdapterFactory.getReferenceLink(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0xa80655405469adaL, 0xa80655405469adbL, "bff");
-    /*package*/ static final SContainmentLink clientType$3QV = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb0cb4634L, 0x6f7d3aaeb0cb463eL, "clientType");
     /*package*/ static final SContainmentLink text$SwCX = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa8065540571b850L, 0xa8065540571b851L, "text");
-    /*package*/ static final SReferenceLink keyValuePair$wiKW = MetaAdapterFactory.getReferenceLink(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x624f1b6582e9a400L, 0x624f1b6582e9a401L, "keyValuePair");
     /*package*/ static final SContainmentLink imageSrc$Z23B = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa80655405656aa0L, 0xa80655405873006L, "imageSrc");
     /*package*/ static final SContainmentLink title$Z2xD = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa80655405656aa0L, 0xa80655405873008L, "title");
     /*package*/ static final SContainmentLink description$Z3eG = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa80655405656aa0L, 0xa8065540587300bL, "description");
@@ -674,7 +811,9 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink actionOperationRef$Jawr = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x7ca1de70bb9a32c7L, 0x7ca1de70bb9a3308L, "actionOperationRef");
     /*package*/ static final SReferenceLink actionOperation$Gs7t = MetaAdapterFactory.getReferenceLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x7ca1de70bb9a32e6L, 0x7ca1de70bb9a32e7L, "actionOperation");
     /*package*/ static final SContainmentLink actionOperationRef$QQAn = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da52L, 0x3094cc14a9534c50L, "actionOperationRef");
+    /*package*/ static final SContainmentLink globalStateProps$EeER = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xcc684dcdf8dce3bL, 0xf40a1315d092150L, "globalStateProps");
     /*package*/ static final SContainmentLink BFFRef$7dHG = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xcc684dcdf8dce3bL, 0x7ca1de70bb92f8d8L, "BFFRef");
+    /*package*/ static final SContainmentLink stateUpdate$uFWk = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xcc684dcdf8dce3bL, 0xf40a1315cbb9cbeL, "stateUpdate");
     /*package*/ static final SContainmentLink pageRef$Ees2 = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xcc684dcdf8dce3bL, 0x6f86bbd718e8ecd6L, "pageRef");
     /*package*/ static final SContainmentLink queryParams$XxLv = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xcc684dcdf8dce3bL, 0xcc684dcdf8dce3eL, "queryParams");
     /*package*/ static final SContainmentLink pages$VDa9 = MetaAdapterFactory.getContainmentLink(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa806554051c0e0eL, 0xa806554052446acL, "pages");
@@ -689,6 +828,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SConcept READ$Dt = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1c74508L, "Microservice.structure.READ");
     /*package*/ static final SConcept UPDATE$mp = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1c7ddb7L, "Microservice.structure.UPDATE");
     /*package*/ static final SConcept DELETE$mS = MetaAdapterFactory.getConcept(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x4151f0e6b1c7ddb8L, "Microservice.structure.DELETE");
+    /*package*/ static final SConcept Desktop$qa = MetaAdapterFactory.getConcept(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb0cb464aL, "Client.structure.Desktop");
     /*package*/ static final SConcept Mobile$b9 = MetaAdapterFactory.getConcept(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb0cb4640L, "Client.structure.Mobile");
     /*package*/ static final SConcept Page$ov = MetaAdapterFactory.getConcept(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb103b898L, "Client.structure.Page");
   }
@@ -697,9 +837,10 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
     /*package*/ static final SProperty showInNavigation$$7VN = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb103b898L, 0x3094cc14a937fe6eL, "showInNavigation");
     /*package*/ static final SProperty route$ZzY4 = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb103b898L, 0xa8065540532a932L, "route");
+    /*package*/ static final SProperty key$hZTW = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd8cL, 0x1957db2831e8dd8dL, "key");
+    /*package*/ static final SProperty state$S_YO = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xf40a1315ccee6edL, 0xf40a1315cd79adeL, "state");
     /*package*/ static final SProperty port$NA6D = MetaAdapterFactory.getProperty(0x41009928b4904ac3L, 0xb8488158d6c0d5dbL, 0x45ab0ea3d0ad5e52L, 0x45ab0ea3d0ad5e60L, "port");
     /*package*/ static final SProperty bffRoute$EPCE = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb103b898L, 0xa80655405604912L, "bffRoute");
-    /*package*/ static final SProperty key$hZTW = MetaAdapterFactory.getProperty(0xe995fbb60310461aL, 0xbe22cc66f48262f1L, 0x1957db2831e8dd8cL, 0x1957db2831e8dd8dL, "key");
     /*package*/ static final SProperty altText$N9jr = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa806554059973baL, 0xa806554059973c4L, "altText");
     /*package*/ static final SProperty text$cLQ3 = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xa806554058d4e4aL, 0xa806554058e8461L, "text");
     /*package*/ static final SProperty variant$G5ci = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x7ca1de70bb9a32c7L, 0x7ca1de70bb9a32c8L, "variant");
@@ -707,6 +848,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty actionText$hWrW = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da52L, 0x3094cc14a9564eceL, "actionText");
     /*package*/ static final SProperty label$gEnR = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da53L, 0x3094cc14a950f534L, "label");
     /*package*/ static final SProperty type$xA52 = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da53L, 0x3094cc14a950f6ecL, "type");
+    /*package*/ static final SProperty name$PwZW = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da53L, 0xf40a1315d27ff1fL, "name");
     /*package*/ static final SProperty required$Mh$U = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da53L, 0x3094cc14a950f794L, "required");
     /*package*/ static final SProperty route$Xyfx = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0xcc684dcdf8dce3bL, 0xcc684dcdf8dce40L, "route");
     /*package*/ static final SProperty hasState$3vni = MetaAdapterFactory.getProperty(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x6f7d3aaeb103b898L, 0x3094cc14a95ae677L, "hasState");

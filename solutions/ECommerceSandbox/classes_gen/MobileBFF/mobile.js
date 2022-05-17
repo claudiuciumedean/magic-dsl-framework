@@ -32,5 +32,19 @@ entities=entities.map(e=>_.pick(e, ['id','name','thumbnail','price',]));
   return res.json(entities);
 });
 
+router.post("/buy-item", async  (req, res) => {
+  let entity = null;
+
+  try {
+    const response = await axios.post(`http://localhost:3002/create-order`, req.body);
+    entity = response.data.entity;
+  } catch (error) {
+    return res.status(400).json({});
+  }
+
+
+  return res.json(entity);
+});
+
 
 module.exports = router;

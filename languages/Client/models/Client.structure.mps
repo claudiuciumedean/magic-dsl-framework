@@ -162,6 +162,13 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="N6xdNvzsSV" resolve="ActionOperation" />
     </node>
+    <node concept="1TJgyj" id="X0Cj5tc0Lx" role="1TKVEi">
+      <property role="IQ2ns" value="1099055542467300449" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="globalState" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="X0Cj5sNIrH" resolve="StateUpdate" />
+    </node>
   </node>
   <node concept="1TIwiD" id="E0plg570Se">
     <property role="EcuMT" value="756716148935626254" />
@@ -174,6 +181,9 @@
     </node>
     <node concept="PrWs8" id="E0plg570Sq" role="PzmwI">
       <ref role="PrY4T" node="6XXeEUKMOoO" resolve="IClientType" />
+    </node>
+    <node concept="PrWs8" id="n3PZJOVDOT" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
     <node concept="1TJgyi" id="E0plg570Sh" role="1TKVEl">
       <property role="IQ2nx" value="756716148935626257" />
@@ -196,6 +206,13 @@
       <property role="20kJfa" value="pages" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="6XXeEUL0Vyo" resolve="Page" />
+    </node>
+    <node concept="1TJgyj" id="n3PZJOSCGH" role="1TKVEi">
+      <property role="IQ2ns" value="415413067793468205" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="globalState" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="X0Cj5sDDET" resolve="State" />
     </node>
   </node>
   <node concept="1TIwiD" id="E0plg570S$">
@@ -228,9 +245,6 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="E0plg5ss3i" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
-    </node>
-    <node concept="PrWs8" id="32kN1iDkfz7" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="E0plg5pmEw">
@@ -378,6 +392,20 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" to="b4dw:69f6Qm2Uqg0" resolve="KeyValuePairReference" />
     </node>
+    <node concept="1TJgyj" id="X0Cj5sITMY" role="1TKVEi">
+      <property role="IQ2ns" value="1099055542459669694" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="stateUpdate" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="X0Cj5sNIrH" resolve="StateUpdate" />
+    </node>
+    <node concept="1TJgyj" id="X0Cj5t2i5g" role="1TKVEi">
+      <property role="IQ2ns" value="1099055542464749904" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="globalStateProps" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="X0Cj5sNIrH" resolve="StateUpdate" />
+    </node>
     <node concept="1TJgyi" id="N6xdNvzsT0" role="1TKVEl">
       <property role="IQ2nx" value="920569258022129216" />
       <property role="TrG5h" value="route" />
@@ -460,6 +488,38 @@
       <property role="IQ2nx" value="3500647199485786004" />
       <property role="TrG5h" value="required" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="X0Cj5t9ZWv" role="1TKVEl">
+      <property role="IQ2nx" value="1099055542466772767" />
+      <property role="TrG5h" value="name" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="X0Cj5sDDET">
+    <property role="EcuMT" value="1099055542458292921" />
+    <property role="3GE5qa" value="ClientRoot" />
+    <property role="TrG5h" value="State" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="X0Cj5sDDFm" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="X0Cj5sNIrH">
+    <property role="EcuMT" value="1099055542460933869" />
+    <property role="3GE5qa" value="ActionOperation" />
+    <property role="TrG5h" value="StateUpdate" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="X0Cj5sNIrK" role="1TKVEi">
+      <property role="IQ2ns" value="1099055542460933872" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="key" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="b4dw:69f6Qm2Uqg0" resolve="KeyValuePairReference" />
+    </node>
+    <node concept="1TJgyi" id="X0Cj5sPTFu" role="1TKVEl">
+      <property role="IQ2nx" value="1099055542461504222" />
+      <property role="TrG5h" value="state" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
 </model>

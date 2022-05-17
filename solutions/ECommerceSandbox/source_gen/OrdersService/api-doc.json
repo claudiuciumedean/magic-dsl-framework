@@ -83,7 +83,7 @@
       }
    }
 },
-"/get-orders-by?item_id={item_id}":{
+"/get-orders-by?customer_id={customer_id}":{
    "get":{
       "tags":[
          "order"
@@ -92,9 +92,9 @@
       "operationId":"getEntitiesBy",
       "parameters":[
           {
-             "name":"item_id",
+             "name":"customer_id",
              "in":"path",
-             "description":"item_id of entity",
+             "description":"customer_id of entity",
              "required":true,
              "schema":{
                 "type":"string"
@@ -133,7 +133,23 @@
    "readOnly": true
 },
 
-"item_id":{
+"thumbnail":{
+   "type":"string,"
+},
+
+"name":{
+   "type":"string"
+},
+
+"price":{
+   "type":"number"
+},
+
+"customer_id":{
+   "type":"string"
+},
+
+"image":{
    "type":"string"
 }
            }

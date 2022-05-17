@@ -6,7 +6,15 @@ const queryString= require("query-string");
 const _ = require("lodash");
 
 export default class MobileApp extends Component {
+constructor(props) {
+  super(props);
+  this.globalState = {
 
+  };
+}
+updateGlobalState = (obj) => {
+  this.globalState = {...this.globalState, ...obj};
+}
   render() {
 return (<>
         <Navbar bg="dark" variant="dark" className="nav-bar">
@@ -19,8 +27,8 @@ return (<>
         </Navbar>
         <Router>
           <Switch>
-     <Route exact path='/items' render={props =><Items {...props}/>}/>
-     <Route exact path='/' render={props =><Login {...props}/>}/>
+     <Route exact path='/items' render={props => { let cProps = {...props, ...this.globalState}; return <Items{...cProps} updateGlobalState={this.updateGlobalState}/>;}}/>
+     <Route exact path='/' render={props => { let cProps = {...props, ...this.globalState}; return <Login{...cProps} updateGlobalState={this.updateGlobalState}/>;}}/>
           </Switch>
         </Router>
 
@@ -36,15 +44,16 @@ constructor(props) {
     };
   }
 async buyItem(entityPayload) {
-    let entity = null;
+    let data = null;
 
     try {
       const response = await axios.post(`http://localhost:5001/mobile-api/buy-item`, entityPayload);
-      entity = response.data;
+      data = response.data;
+
 this.props.history.push('/items');
     } catch (error) {}
 
-    return entity;
+    return data;
   }
 
   componentDidMount() {
@@ -53,8 +62,9 @@ this.props.history.push('/items');
 
   fetchState = async () => {
     let entities = null;
+    const params = { : this.props.customer_id };
     try {
-      const response = await axios.get(`http://localhost:5000/desktop-api/items${window.location.search}`);
+      const response = await axios.get(`http://localhost:5000/desktop-api/items${window.location.search}&${queryString.stringify(params)}`);
       entities = response.data;
     } catch (error) {}
     this.setState({ entities });
@@ -114,6 +124,7 @@ async login(entity) {
     try {
       const response = await axios.get(`http://localhost:5001/mobile-api/user?${queryString.stringify(queryParams)}`);
       const data = response.data;
+
       if(!data.length) { arr.push(data)} else { arr = [...data]; }
 this.props.history.push('/items');
     } catch (error) {
@@ -131,13 +142,13 @@ this.props.history.push('/items');
 
 <Form.Group>
  <Form.Label>Email</Form.Label>
- <Form.Control type="email" name="email" required/>
+ <Form.Control type="email" name="email" />
 </Form.Group>
 
 
 <Form.Group>
- <Form.Label>Password</Form.Label>
- <Form.Control type="password" name="password" required/>
+ <Form.Label>Email</Form.Label>
+ <Form.Control type="email" name="email" />
 </Form.Group>
 
 <br/><Button type="submit">Submit</Button>

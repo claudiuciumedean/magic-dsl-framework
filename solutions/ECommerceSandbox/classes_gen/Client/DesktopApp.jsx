@@ -5,8 +5,16 @@ import axios from "axios";
 const queryString= require("query-string");
 const _ = require("lodash");
 
-export default class MobileApp extends Component {
-
+export default class DesktopApp extends Component {
+constructor(props) {
+  super(props);
+  this.globalState = {
+customer_id: null,
+  };
+}
+updateGlobalState = (obj) => {
+  this.globalState = {...this.globalState, ...obj};
+}
   render() {
 return (<>
         <Navbar bg="dark" variant="dark" className="nav-bar">
@@ -16,14 +24,15 @@ return (<>
 <Nav.Link href='/items'>Items</Nav.Link>
 
 
+<Nav.Link href='/cart'>Cart</Nav.Link>
           </Nav>
-        </Navbar>       
-
+        </Navbar>
         <Router>
           <Switch>
-     <Route exact path='/items' render={props =><Items {...props}/>}/>
-     <Route exact path='/item' render={props =><Item {...props}/>}/>
-     <Route exact path='/' render={props =><Login {...props}/>}/>
+     <Route exact path='/items' render={props => { let cProps = {...props, ...this.globalState}; return <Items{...cProps} updateGlobalState={this.updateGlobalState}/>;}}/>
+     <Route exact path='/item' render={props => { let cProps = {...props, ...this.globalState}; return <Item{...cProps} updateGlobalState={this.updateGlobalState}/>;}}/>
+     <Route exact path='/' render={props => { let cProps = {...props, ...this.globalState}; return <Login{...cProps} updateGlobalState={this.updateGlobalState}/>;}}/>
+     <Route exact path='/cart' render={props => { let cProps = {...props, ...this.globalState}; return <Cart{...cProps} updateGlobalState={this.updateGlobalState}/>;}}/>
           </Switch>
         </Router>
 
@@ -103,6 +112,19 @@ constructor(props) {
      entities: null
     };
   }
+async buyItem(entityPayload) {
+    let data = null;
+entityPayload['customer_id'] = this.props.customer_id;
+
+    try {
+      const response = await axios.post(`http://localhost:5000/desktop-api/buy-item`, entityPayload);
+      data = response.data;
+
+this.props.history.push('/items');
+    } catch (error) {}
+
+    return data;
+  }
 
   componentDidMount() {
     if(this.state.entities === null) this.fetchState();
@@ -141,10 +163,10 @@ style={{maxWidth:'750px'}}
 
 <Button 
 variant="primary"
-onClick={() => console.log('Not calling any method')}
+onClick={() => this.buyItem(entity)}
 style={{maxWidth: '200px'}}
 >
-Add to cart
+Buy Item
 </Button>
 
       </>);
@@ -164,16 +186,103 @@ Add to cart
   }
 }
 
+class Cart extends Component {
+constructor(props) {
+    super(props);
+    this.state = {
+     entities: null
+    };
+  }
+
+  componentDidMount() {
+    if(this.state.entities === null) this.fetchState();
+  }
+
+  fetchState = async () => {
+    let entities = null;
+    try {
+      const response = await axios.get(`http://localhost:5000/desktop-api/cart${window.location.search}`);
+      entities = response.data;
+    } catch (error) {}
+    this.setState({ entities });
+  }
+
+  buildStateElems = () => {
+    let elems = [];
+    if(!this.state.entities.length) {
+      elems.push(this.state.entities);
+    } else { elems = [...this.state.entities]; }
+
+    elems = elems.map((entity, idx) => {
+      return (<>
+
+<Col lg="4" key={idx} style={{  marginBottom: '180px' }}>
+  <Card style={{ width: '100%', height:'25rem', }}>
+    <Card.Img style={{ width: '100%', height:'100%' }} variant="top" src={`${entity.image}`} />
+    <Card.Body>
+      <Card.Title>{entity.name}</Card.Title>
+      <Card.Text>{entity.price}</Card.Text>
+
+    </Card.Body>
+  </Card>
+</Col>
+
+      </>);
+    });
+
+    return elems;
+  }
+  render() {
+      return (
+        <Container style={{ marginTop: 100 + 'px' }}>
+          <Row>
+            <h2>Cart</h2>
+            {this.state.entities != null && this.buildStateElems().map(elem => elem)}
+          </Row>
+        </Container>
+      );
+  }
+}
+
 
 class Login extends Component {
 
-operations
+async login(entity) {
+    const queryParams = _.pick(entity, ['email','password',]);
+    let arr = [];
+    try {
+      const response = await axios.get(`http://localhost:5000/desktop-api/user?${queryString.stringify(queryParams)}`);
+      const data = response.data;
+this.props.updateGlobalState({'customer_id': data.id});
+
+      if(!data.length) { arr.push(data)} else { arr = [...data]; }
+this.props.history.push('/items');
+    } catch (error) {
+    }
+    return arr;
+  }
   render() {
     return (
       <Container style={{ marginTop: 100 + 'px' }}>
         <Row>
           <h2>Login</h2>
           <>
+
+<Form onSubmit={(e) =>{ e.preventDefault(); this.login(new FormData(e.currentTarget));}}>
+
+<Form.Group>
+ <Form.Label>Email</Form.Label>
+ <Form.Control type="email" name="email" required/>
+</Form.Group>
+
+
+<Form.Group>
+ <Form.Label>Password</Form.Label>
+ <Form.Control type="password" name="password" required/>
+</Form.Group>
+
+<br/><Button type="submit">Submit</Button>
+</Form>
 
           </>
         </Row>

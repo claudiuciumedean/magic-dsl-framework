@@ -118,7 +118,23 @@
         <property role="CJ3hK" value="string" />
       </node>
       <node concept="CJKq$" id="1GcCT5ob3Ny" role="CJKqU">
-        <property role="CJKq_" value="item_id" />
+        <property role="CJKq_" value="thumbnail" />
+        <property role="CJ3hK" value="string," />
+      </node>
+      <node concept="CJKq$" id="1GcCT5ob3GZ" role="CJKqU">
+        <property role="CJKq_" value="name" />
+        <property role="CJ3hK" value="string" />
+      </node>
+      <node concept="CJKq$" id="X0Cj5sVC1B" role="CJKqU">
+        <property role="CJKq_" value="price" />
+        <property role="CJ3hK" value="number" />
+      </node>
+      <node concept="CJKq$" id="3I8kJiZre3f" role="CJKqU">
+        <property role="CJKq_" value="customer_id" />
+        <property role="CJ3hK" value="string" />
+      </node>
+      <node concept="CJKq$" id="X0Cj5t8USE" role="CJKqU">
+        <property role="CJKq_" value="image" />
         <property role="CJ3hK" value="string" />
       </node>
     </node>
@@ -184,7 +200,7 @@
       </node>
       <node concept="3K_FnI" id="1GcCT5oiTe1" role="3KABxh" />
       <node concept="3wDFX_" id="6Y6IXsoWSTk" role="3wDFXz">
-        <ref role="3wDFX$" node="1GcCT5ob3Ny" />
+        <ref role="3wDFX$" node="3I8kJiZre3f" />
       </node>
     </node>
     <node concept="1yCgEV" id="1GcCT5ob3NP" role="1MBK3h">

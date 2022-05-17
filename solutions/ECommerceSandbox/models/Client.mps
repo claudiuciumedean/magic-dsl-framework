@@ -9,6 +9,7 @@
     <import index="88nh" ref="r:7b483502-51d8-43fc-8aff-a1caa13cddf9(ItemsService)" />
     <import index="8yoi" ref="r:98e0c885-b521-46cb-9954-4ddf92d15c03(DesktopBFF)" />
     <import index="epub" ref="r:ea350c5c-70de-4138-8598-7c422368e375(CustomerService)" />
+    <import index="bqge" ref="r:71843783-81ec-4864-9b7d-bce013d113a9(OrdersService)" />
   </imports>
   <registry>
     <language id="41009928-b490-4ac3-b848-8158d6c0d5db" name="BFF">
@@ -17,6 +18,7 @@
       </concept>
     </language>
     <language id="e995fbb6-0310-461a-be22-cc66f48262f1" name="Microservice">
+      <concept id="6302204855854145288" name="Microservice.structure.Empty" flags="ng" index="1hA7b_" />
       <concept id="6302204855854083592" name="Microservice.structure.IDeliveredPayloadType" flags="ng" index="1hAkf_">
         <child id="6302204855854083593" name="payloadType" index="1hAkf$" />
       </concept>
@@ -51,6 +53,7 @@
         <property id="756716148935626257" name="mainteinerEmail" index="fB6H5" />
         <property id="756716148935626259" name="description" index="fB6H7" />
         <child id="756716148936165036" name="pages" index="fD2fS" />
+        <child id="415413067793468205" name="globalState" index="3L8lNm" />
       </concept>
       <concept id="756716148935626276" name="Client.structure.PageReference" flags="ng" index="fB6HK">
         <reference id="756716148935655214" name="page" index="fB1DU" />
@@ -75,7 +78,7 @@
       <concept id="3500647199485778515" name="Client.structure.Input" flags="ng" index="2pL1p7">
         <property id="3500647199485785396" name="label" index="2pL3$w" />
         <property id="3500647199485785836" name="type" index="2pL3FS" />
-        <property id="3500647199485786004" name="required" index="2pL3I0" />
+        <property id="1099055542466772767" name="name" index="1ipPSI" />
       </concept>
       <concept id="6244455322315768002" name="Client.structure.ClientConfig" flags="ng" index="2wLgf5">
         <child id="756716148936346067" name="mobileClientRef" index="fDQM7" />
@@ -92,10 +95,17 @@
       <concept id="920569258022129211" name="Client.structure.ActionOperation" flags="ng" index="3jiOFB">
         <property id="920569258022129216" name="route" index="3jiOEs" />
         <child id="8980703707718154456" name="BFFRef" index="37cMqC" />
+        <child id="1099055542464749904" name="globalStateProps" index="1iio1x" />
         <child id="920569258022129214" name="queryParams" index="3jiOFy" />
+        <child id="1099055542459669694" name="stateUpdate" index="1jYNQf" />
         <child id="8036317117599509718" name="pageRef" index="1Rr_s1" />
         <child id="8036317117600006727" name="entityType" index="1RtzAg" />
       </concept>
+      <concept id="1099055542460933869" name="Client.structure.StateUpdate" flags="ng" index="1jz$vs">
+        <property id="1099055542461504222" name="state" index="1j_NJJ" />
+        <child id="1099055542460933872" name="key" index="1jz$v1" />
+      </concept>
+      <concept id="1099055542458292921" name="Client.structure.State" flags="ng" index="1jTzI8" />
       <concept id="8033641832267364504" name="Client.structure.Page" flags="ng" index="3uvC8Q">
         <property id="756716148937107762" name="route" index="fGGLA" />
         <property id="756716148940097810" name="bffRoute" index="fS2L6" />
@@ -105,6 +115,7 @@
         <child id="756716148940097701" name="entityType" index="fS2RL" />
         <child id="756716148940097702" name="queryParams" index="fS2RM" />
         <child id="756716148940970772" name="components" index="fVvT0" />
+        <child id="1099055542467300449" name="globalState" index="1isaPg" />
         <child id="920569258022133389" name="actions" index="3jiPDh" />
       </concept>
       <concept id="8033641832263665204" name="Client.structure.IClientType" flags="ng" index="3vHBMq">
@@ -138,6 +149,9 @@
     <property role="fB6H5" value="claudiuciumedean@gmail.com" />
     <property role="fB6H7" value="This is the client for desktop" />
     <property role="3GE5qa" value="Client" />
+    <node concept="1jTzI8" id="X0Cj5sITMS" role="3L8lNm">
+      <property role="TrG5h" value="customer_id" />
+    </node>
     <node concept="3uvC8Q" id="E0plg5xyeQ" role="fD2fS">
       <property role="TrG5h" value="Items" />
       <property role="fGGLA" value="/items" />
@@ -176,18 +190,23 @@
       <property role="fGGLA" value="/item" />
       <property role="fS2L6" value="/item" />
       <property role="2pNyDz" value="true" />
-      <node concept="3jiOFB" id="6Y6IXsoWSTe" role="3jiPDh">
+      <node concept="3jiOFB" id="X0Cj5t5mFL" role="3jiPDh">
         <property role="TrG5h" value="buyItem" />
         <property role="3jiOEs" value="/buy-item" />
-        <node concept="fLJYe" id="6Y6IXsoWSTi" role="37cMqC">
+        <node concept="1jz$vs" id="X0Cj5t5mG3" role="1iio1x">
+          <property role="1j_NJJ" value="customer_id" />
+          <node concept="3wDFX_" id="X0Cj5t5mG7" role="1jz$v1">
+            <ref role="3wDFX$" to="bqge:3I8kJiZre3f" />
+          </node>
+        </node>
+        <node concept="fLJYe" id="X0Cj5t5mFX" role="37cMqC">
           <ref role="fLJYf" to="8yoi:5cGqGoaCF3T" resolve="desktop" />
         </node>
-        <node concept="3K_yPg" id="6Y6IXsoWTvy" role="3KABxh" />
-        <node concept="3wFZSN" id="6Y6IXsoWTv$" role="1RtzAg">
-          <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
+        <node concept="3K_yPg" id="X0Cj5t5mFZ" role="3KABxh" />
+        <node concept="3wFZSN" id="X0Cj5t5mG1" role="1RtzAg">
+          <ref role="3wFZSZ" to="bqge:1GcCT5ob3Nn" resolve="order" />
         </node>
-        <node concept="1hBKNC" id="6Y6IXsoWTvE" role="1hAkf$" />
-        <node concept="fB6HK" id="6Y6IXsoXyIW" role="1Rr_s1">
+        <node concept="fB6HK" id="X0Cj5t8URN" role="1Rr_s1">
           <ref role="fB1DU" node="E0plg5xyeQ" resolve="Items" />
         </node>
       </node>
@@ -216,8 +235,8 @@
       <node concept="37eYMR" id="32kN1iDhtvm" role="fVvT0">
         <property role="37eYPe" value="Buy Item" />
         <property role="37eYMS" value="primary" />
-        <node concept="37eYMm" id="6Y6IXsoWTvG" role="37eYPS">
-          <ref role="37eYMn" node="6Y6IXsoWSTe" resolve="buyItem" />
+        <node concept="37eYMm" id="X0Cj5t812o" role="37eYPS">
+          <ref role="37eYMn" node="X0Cj5t5mFL" resolve="buyItem" />
         </node>
       </node>
       <node concept="fLJYe" id="32kN1iD9Z57" role="fM1mL">
@@ -230,17 +249,15 @@
       <property role="fS2L6" value="/" />
       <node concept="2pL1p6" id="32kN1iDqvCo" role="fVvT0">
         <property role="2pKCbq" value="Submit" />
-        <node concept="2pL1p7" id="32kN1iDqvCq" role="2pL1p2">
-          <property role="TrG5h" value="email" />
+        <node concept="2pL1p7" id="X0Cj5tbKRz" role="2pL1p2">
+          <property role="1ipPSI" value="email" />
           <property role="2pL3$w" value="Email" />
           <property role="2pL3FS" value="email" />
-          <property role="2pL3I0" value="true" />
         </node>
-        <node concept="2pL1p7" id="32kN1iDqvCs" role="2pL1p2">
-          <property role="TrG5h" value="password" />
+        <node concept="2pL1p7" id="X0Cj5tbKRB" role="2pL1p2">
+          <property role="1ipPSI" value="password" />
           <property role="2pL3$w" value="Password" />
           <property role="2pL3FS" value="password" />
-          <property role="2pL3I0" value="true" />
         </node>
         <node concept="37eYMm" id="6Y6IXsoVzfO" role="2pLS14">
           <ref role="37eYMn" node="32kN1iDC7Z7" resolve="login" />
@@ -249,6 +266,12 @@
       <node concept="3jiOFB" id="32kN1iDC7Z7" role="3jiPDh">
         <property role="TrG5h" value="login" />
         <property role="3jiOEs" value="/user" />
+        <node concept="1jz$vs" id="X0Cj5sQP8i" role="1jYNQf">
+          <property role="1j_NJJ" value="customer_id" />
+          <node concept="3wDFX_" id="X0Cj5sQP8m" role="1jz$v1">
+            <ref role="3wDFX$" to="epub:69f6Qm337i$" />
+          </node>
+        </node>
         <node concept="fLJYe" id="32kN1iDC7Zb" role="37cMqC">
           <ref role="fLJYf" to="8yoi:5cGqGoaCF3T" resolve="desktop" />
         </node>
@@ -256,7 +279,6 @@
         <node concept="fB6HK" id="6Y6IXsoUMVl" role="1Rr_s1">
           <ref role="fB1DU" node="E0plg5xyeQ" resolve="Items" />
         </node>
-        <node concept="1hBKNC" id="6Y6IXsoVzfQ" role="1hAkf$" />
         <node concept="3wFZSN" id="6Y6IXsoWQ_7" role="1RtzAg">
           <ref role="3wFZSZ" to="epub:69f6Qm32AtE" resolve="customer" />
         </node>
@@ -266,12 +288,43 @@
         <node concept="3wDFX_" id="6Y6IXsoWQ_b" role="3jiOFy">
           <ref role="3wDFX$" to="epub:1GcCT5ob3dV" />
         </node>
+        <node concept="1hA7b_" id="X0Cj5sTjpN" role="1hAkf$" />
       </node>
       <node concept="fLJYe" id="32kN1iDmey5" role="fM1mL">
         <ref role="fLJYf" to="8yoi:5cGqGoaCF3T" resolve="desktop" />
       </node>
     </node>
-    <node concept="3vHBN$" id="7MxRB2VLRBI" role="3vHBMg" />
+    <node concept="3uvC8Q" id="X0Cj5tbUMH" role="fD2fS">
+      <property role="TrG5h" value="Cart" />
+      <property role="fGGLA" value="/cart" />
+      <property role="fS2L6" value="/cart" />
+      <property role="2pCN9U" value="true" />
+      <property role="2pNyDz" value="true" />
+      <node concept="1jz$vs" id="X0Cj5tlnNq" role="1isaPg">
+        <property role="1j_NJJ" value="customer_id" />
+        <node concept="3wDFX_" id="X0Cj5tlnNu" role="1jz$v1">
+          <ref role="3wDFX$" to="bqge:3I8kJiZre3f" />
+        </node>
+      </node>
+      <node concept="fLJYe" id="X0Cj5tbUNs" role="fM1mL">
+        <ref role="fLJYf" to="8yoi:5cGqGoaCF3T" resolve="desktop" />
+      </node>
+      <node concept="fTgZO" id="X0Cj5tbUNw" role="fVvT0">
+        <node concept="3wDFX_" id="X0Cj5tbUN$" role="f1Pli">
+          <ref role="3wDFX$" to="bqge:X0Cj5t8USE" />
+        </node>
+        <node concept="3wDFX_" id="X0Cj5tbUNA" role="f1Pls">
+          <ref role="3wDFX$" to="bqge:1GcCT5ob3GZ" />
+        </node>
+        <node concept="3wDFX_" id="X0Cj5tbUNC" role="f1Plv">
+          <ref role="3wDFX$" to="bqge:X0Cj5sVC1B" />
+        </node>
+      </node>
+      <node concept="3wFZSN" id="X0Cj5tlnNo" role="fS2RL">
+        <ref role="3wFZSZ" to="bqge:1GcCT5ob3Nn" resolve="order" />
+      </node>
+    </node>
+    <node concept="3vHBN$" id="X0Cj5tbMcr" role="3vHBMg" />
   </node>
   <node concept="fB6Hq" id="6Y6IXsoZuNd">
     <property role="3GE5qa" value="Client" />
@@ -316,8 +369,8 @@
         <node concept="37eYMR" id="6Y6IXsoZuNQ" role="f3jHk">
           <property role="37eYPe" value="Buy item" />
           <property role="37eYMS" value="primary" />
-          <node concept="37eYMm" id="6Y6IXsoZuNS" role="37eYPS">
-            <ref role="37eYMn" node="6Y6IXsoWSTe" resolve="buyItem" />
+          <node concept="37eYMm" id="X0Cj5t9N5E" role="37eYPS">
+            <ref role="37eYMn" node="6Y6IXsoZuNE" resolve="buyItem" />
           </node>
         </node>
       </node>
@@ -331,17 +384,15 @@
       <property role="fS2L6" value="/" />
       <node concept="2pL1p6" id="6Y6IXsoZuO1" role="fVvT0">
         <property role="2pKCbq" value="Submit" />
-        <node concept="2pL1p7" id="6Y6IXsoZuO2" role="2pL1p2">
-          <property role="TrG5h" value="email" />
+        <node concept="2pL1p7" id="X0Cj5tbQ8g" role="2pL1p2">
+          <property role="1ipPSI" value="email" />
           <property role="2pL3$w" value="Email" />
           <property role="2pL3FS" value="email" />
-          <property role="2pL3I0" value="true" />
         </node>
-        <node concept="2pL1p7" id="6Y6IXsoZuO3" role="2pL1p2">
-          <property role="TrG5h" value="password" />
-          <property role="2pL3$w" value="Password" />
-          <property role="2pL3FS" value="password" />
-          <property role="2pL3I0" value="true" />
+        <node concept="2pL1p7" id="X0Cj5tbQ8k" role="2pL1p2">
+          <property role="1ipPSI" value="email" />
+          <property role="2pL3$w" value="Email" />
+          <property role="2pL3FS" value="email" />
         </node>
         <node concept="37eYMm" id="6Y6IXsoZuO4" role="2pLS14">
           <ref role="37eYMn" node="6Y6IXsoZuO5" resolve="login" />

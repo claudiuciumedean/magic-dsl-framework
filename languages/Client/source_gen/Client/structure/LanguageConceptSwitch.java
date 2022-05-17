@@ -27,9 +27,11 @@ public final class LanguageConceptSwitch {
   public static final int Mobile = 15;
   public static final int Page = 16;
   public static final int PageReference = 17;
-  public static final int Text = 18;
-  public static final int Title = 19;
-  public static final int UIComponent = 20;
+  public static final int State = 18;
+  public static final int StateUpdate = 19;
+  public static final int Text = 20;
+  public static final int Title = 21;
+  public static final int UIComponent = 22;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x48e57d507e0f4c8fL, 0x93fc859018228309L);
@@ -51,6 +53,8 @@ public final class LanguageConceptSwitch {
     builder.put(0x6f7d3aaeb0cb4640L, Mobile);
     builder.put(0x6f7d3aaeb103b898L, Page);
     builder.put(0xa806554051c0e24L, PageReference);
+    builder.put(0xf40a1315ca69ab9L, State);
+    builder.put(0xf40a1315ccee6edL, StateUpdate);
     builder.put(0xa806554059ff916L, Text);
     builder.put(0xa8065540571b850L, Title);
     builder.put(0xa806554053e9bc3L, UIComponent);

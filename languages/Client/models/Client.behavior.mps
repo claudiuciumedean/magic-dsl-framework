@@ -13,6 +13,7 @@
     <import index="ehhy" ref="r:5258dad9-7f81-478a-88e8-d59dd64939d8(BFF.structure)" />
     <import index="mo5v" ref="r:98ed726a-3e0c-430f-bdae-c3e04664f756(Client.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -480,7 +481,6 @@
                     <ref role="3TtcxE" to="b4dw:1_nQMwLUdQi" resolve="keyValuePairs" />
                   </node>
                 </node>
-                <node concept="2tJIrI" id="N6xdNvztip" role="jymVt" />
                 <node concept="3clFb_" id="N6xdNvztiq" role="jymVt">
                   <property role="TrG5h" value="getName" />
                   <node concept="17QB3L" id="N6xdNvztir" role="3clF45" />
@@ -529,6 +529,29 @@
     </node>
     <node concept="13hLZK" id="N6xdNvzsTw" role="13h7CW">
       <node concept="3clFbS" id="N6xdNvzsTx" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="X0Cj5sJxEY">
+    <property role="3GE5qa" value="ClientRoot" />
+    <ref role="13h7C2" to="mo5v:X0Cj5sDDET" resolve="State" />
+    <node concept="13i0hz" id="X0Cj5sJxF9" role="13h7CS">
+      <property role="TrG5h" value="getPresentation" />
+      <ref role="13i0hy" to="tpcu:hEwIMiw" resolve="getPresentation" />
+      <node concept="3Tm1VV" id="X0Cj5sJxFa" role="1B3o_S" />
+      <node concept="3clFbS" id="X0Cj5sJxFb" role="3clF47">
+        <node concept="3cpWs6" id="X0Cj5sJxFc" role="3cqZAp">
+          <node concept="2OqwBi" id="X0Cj5sJxFd" role="3cqZAk">
+            <node concept="13iPFW" id="X0Cj5sJxFe" role="2Oq$k0" />
+            <node concept="3TrcHB" id="X0Cj5sJy0M" role="2OqNvi">
+              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="X0Cj5sJxFg" role="3clF45" />
+    </node>
+    <node concept="13hLZK" id="X0Cj5sJxEZ" role="13h7CW">
+      <node concept="3clFbS" id="X0Cj5sJxF0" role="2VODD2" />
     </node>
   </node>
 </model>

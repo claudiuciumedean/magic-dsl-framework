@@ -114,8 +114,8 @@
       <node id="3500647199485778514" at="227,93,228,17" concept="0" />
       <node id="3500647199486136014" at="228,17,229,116" concept="0" />
       <node id="3500647199485778518" at="229,116,230,198" concept="0" />
-      <node id="3500647199485938768" at="230,198,231,211" concept="0" />
-      <node id="3500647199485778514" at="231,211,232,22" concept="4" />
+      <node id="3500647199485938768" at="230,198,231,212" concept="0" />
+      <node id="3500647199485778514" at="231,212,232,22" concept="4" />
       <node id="3500647199485778514" at="223,0,234,0" concept="6" trace="createDescriptorForForm#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="3500647199485778514" at="82,38,83,29" />
       <scope id="3500647199485778514" at="223,62,232,22">

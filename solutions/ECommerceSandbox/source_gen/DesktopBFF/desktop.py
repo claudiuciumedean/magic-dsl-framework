@@ -29,10 +29,11 @@ def get_item_1():
     except:
         return "Error", 400
 
+    if type(response) is not list:
+        return response['message'], 400
     for item in response:
         entity=project(item, ['id','name','thumbnail','price',])
         entities.append(entity)
-
     return jsonify(entities)
 
 @bff.route('/item', methods=['GET'])
@@ -62,7 +63,7 @@ def create_item_3():
         return "Error", 400
 
 
-    return jsonify(entity)
+    return jsonify(entity.entity)
 
 @bff.route('/cart', methods=['GET'])
 def get_order_4_by():
@@ -75,8 +76,24 @@ def get_order_4_by():
     except:
         return "Error", 400
 
+    if type(response) is not list:
+         return response['message'], 400
     for item in response:
         entity=project(item, ['thumbnail','name','price',])
         entities.append(entity)
-
     return jsonify(entities)
+
+@bff.route('/create-item', methods=['POST'])
+def create_item_5():
+    entity = None
+    data = request.get_json()
+    headers = {'content-type': 'application/json'}
+
+    try:
+        response = requests.post('http://localhost:3001/create-item', data = json.dumps(data), headers=headers)
+        entity = response.json()
+    except:
+        return "Error", 400
+
+
+    return jsonify(entity.entity)

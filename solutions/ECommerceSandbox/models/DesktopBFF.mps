@@ -195,7 +195,20 @@
         <ref role="3uh$Yy" to="bqge:1GcCT5ob3Nf" resolve="OrdersService" />
       </node>
     </node>
-    <node concept="11cgHj" id="5cGqGoaCF3U" role="11cgHd" />
+    <node concept="2l1_38" id="1NIouMbMac8" role="2l1_3h">
+      <property role="2l1ASO" value="/create-item" />
+      <property role="2l1ASZ" value="/create-item" />
+      <node concept="3KwofT" id="1NIouMbMacT" role="3KwesD" />
+      <node concept="3K_yPg" id="1NIouMbMacV" role="3KABxh" />
+      <node concept="3wFZSN" id="1NIouMbMasz" role="2l1EQz">
+        <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="1hBKNC" id="1NIouMbMas_" role="1hAkf$" />
+      <node concept="3uh$Y_" id="1NIouMbMasB" role="2l1AS3">
+        <ref role="3uh$Yy" to="88nh:1GcCT5ob3GN" resolve="ItemsService" />
+      </node>
+    </node>
+    <node concept="11cgHj" id="1NIouMbUGp_" role="11cgHd" />
   </node>
 </model>
 

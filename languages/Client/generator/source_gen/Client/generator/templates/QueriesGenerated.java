@@ -205,10 +205,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.text$JJNU);
   }
   public static Object propertyMacro_GetValue_5_13(final PropertyMacroContext _context) {
-    if (SLinkOperations.getTarget(_context.getNode(), LINKS.actionOperationRef$QQAn) != null) {
-      return "this." + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.actionOperationRef$QQAn), LINKS.actionOperation$Gs7t), PROPS.name$MnvL) + "(new FormData(e.currentTarget));";
-    }
-    return "console.log('Not calling any method')";
+    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.actionOperationRef$QQAn), LINKS.actionOperation$Gs7t), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_5_14(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.actionText$hWrW);

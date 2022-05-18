@@ -54,8 +54,9 @@ constructor(props) {
 
   fetchState = async () => {
     let entities = null;
+    const params = { : this.props.customer_id };
     try {
-      const response = await axios.get(`http://localhost:5000/desktop-api/items${window.location.search}`);
+      const response = await axios.get(`http://localhost:5000/desktop-api/items${window.location.search}&${queryString.stringify(params)}`);
       entities = response.data;
     } catch (error) {}
     this.setState({ entities });
@@ -132,8 +133,9 @@ this.props.history.push('/items');
 
   fetchState = async () => {
     let entities = null;
+    const params = { : this.props.customer_id };
     try {
-      const response = await axios.get(`http://localhost:5000/desktop-api/item${window.location.search}`);
+      const response = await axios.get(`http://localhost:5000/desktop-api/item${window.location.search}&${queryString.stringify(params)}`);
       entities = response.data;
     } catch (error) {}
     this.setState({ entities });
@@ -200,8 +202,9 @@ constructor(props) {
 
   fetchState = async () => {
     let entities = null;
+    const params = { customer_id: this.props.customer_id,: this.props.customer_id };
     try {
-      const response = await axios.get(`http://localhost:5000/desktop-api/cart${window.location.search}`);
+      const response = await axios.get(`http://localhost:5000/desktop-api/cart${window.location.search}&${queryString.stringify(params)}`);
       entities = response.data;
     } catch (error) {}
     this.setState({ entities });
@@ -272,13 +275,13 @@ this.props.history.push('/items');
 
 <Form.Group>
  <Form.Label>Email</Form.Label>
- <Form.Control type="email" name="email" required/>
+ <Form.Control type="email" name="email" />
 </Form.Group>
 
 
 <Form.Group>
  <Form.Label>Password</Form.Label>
- <Form.Control type="password" name="password" required/>
+ <Form.Control type="password" name="password" />
 </Form.Group>
 
 <br/><Button type="submit">Submit</Button>

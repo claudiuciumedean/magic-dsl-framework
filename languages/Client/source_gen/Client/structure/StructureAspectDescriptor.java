@@ -228,7 +228,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("actionText", 0x3094cc14a9564eceL).type(PrimitiveTypeId.STRING).origin("3500647199486136014").done();
     b.aggregate("inputs", 0x3094cc14a950da56L).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x3094cc14a950da53L).optional(true).ordered(true).multiple(true).origin("3500647199485778518").done();
-    b.aggregate("actionOperationRef", 0x3094cc14a9534c50L).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x7ca1de70bb9a32e6L).optional(true).ordered(true).multiple(false).origin("3500647199485938768").done();
+    b.aggregate("actionOperationRef", 0x3094cc14a9534c50L).target(0x48e57d507e0f4c8fL, 0x93fc859018228309L, 0x7ca1de70bb9a32e6L).optional(false).ordered(true).multiple(false).origin("3500647199485938768").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIClientType() {

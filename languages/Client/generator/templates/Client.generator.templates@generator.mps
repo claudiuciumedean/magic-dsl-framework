@@ -3044,7 +3044,7 @@
           <node concept="356sEK" id="32kN1iDlx2g" role="383Ya9">
             <node concept="2EixSi" id="32kN1iDlx2j" role="2EinRH" />
             <node concept="356sEF" id="32kN1iDlx2k" role="356sEH">
-              <property role="TrG5h" value="&lt;Form onSubmit={(e) =&gt;{ e.preventDefault(); " />
+              <property role="TrG5h" value="&lt;Form onSubmit={(e) =&gt;{ e.preventDefault(); let data = JSON.stringify(Object.fromEntries(new FormData(e.currentTarget))); this." />
             </node>
             <node concept="356sEF" id="32kN1iDlA01" role="356sEH">
               <property role="TrG5h" value="onSubmit" />
@@ -3053,50 +3053,22 @@
                 <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
                 <node concept="3zFVjK" id="32kN1iDlA09" role="3zH0cK">
                   <node concept="3clFbS" id="32kN1iDlA0a" role="2VODD2">
-                    <node concept="3clFbJ" id="32kN1iDlA4O" role="3cqZAp">
-                      <node concept="3clFbS" id="32kN1iDlA4P" role="3clFbx">
-                        <node concept="3cpWs6" id="32kN1iDlA4Q" role="3cqZAp">
-                          <node concept="3cpWs3" id="32kN1iDlA4R" role="3cqZAk">
-                            <node concept="Xl_RD" id="32kN1iDlA4S" role="3uHU7w">
-                              <property role="Xl_RC" value="(new FormData(e.currentTarget));" />
-                            </node>
-                            <node concept="3cpWs3" id="32kN1iDlA4T" role="3uHU7B">
-                              <node concept="Xl_RD" id="32kN1iDlA4U" role="3uHU7B">
-                                <property role="Xl_RC" value="this." />
-                              </node>
-                              <node concept="2OqwBi" id="32kN1iDlA4V" role="3uHU7w">
-                                <node concept="2OqwBi" id="32kN1iDlA4W" role="2Oq$k0">
-                                  <node concept="2OqwBi" id="32kN1iDlA4X" role="2Oq$k0">
-                                    <node concept="30H73N" id="32kN1iDlA4Y" role="2Oq$k0" />
-                                    <node concept="3TrEf2" id="32kN1iDlA4Z" role="2OqNvi">
-                                      <ref role="3Tt5mk" to="mo5v:32kN1iDkOLg" resolve="actionOperationRef" />
-                                    </node>
-                                  </node>
-                                  <node concept="3TrEf2" id="32kN1iDlA50" role="2OqNvi">
-                                    <ref role="3Tt5mk" to="mo5v:7MxRB2VAzbB" resolve="actionOperation" />
-                                  </node>
-                                </node>
-                                <node concept="3TrcHB" id="32kN1iDlA51" role="2OqNvi">
-                                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                                </node>
-                              </node>
+                    <node concept="3clFbF" id="1NIouMbNFqd" role="3cqZAp">
+                      <node concept="2OqwBi" id="32kN1iDlA4V" role="3clFbG">
+                        <node concept="2OqwBi" id="32kN1iDlA4W" role="2Oq$k0">
+                          <node concept="2OqwBi" id="32kN1iDlA4X" role="2Oq$k0">
+                            <node concept="30H73N" id="32kN1iDlA4Y" role="2Oq$k0" />
+                            <node concept="3TrEf2" id="32kN1iDlA4Z" role="2OqNvi">
+                              <ref role="3Tt5mk" to="mo5v:32kN1iDkOLg" resolve="actionOperationRef" />
                             </node>
                           </node>
-                        </node>
-                      </node>
-                      <node concept="3y3z36" id="32kN1iDlA52" role="3clFbw">
-                        <node concept="10Nm6u" id="32kN1iDlA53" role="3uHU7w" />
-                        <node concept="2OqwBi" id="32kN1iDlA54" role="3uHU7B">
-                          <node concept="30H73N" id="32kN1iDlA55" role="2Oq$k0" />
-                          <node concept="3TrEf2" id="32kN1iDlA56" role="2OqNvi">
-                            <ref role="3Tt5mk" to="mo5v:32kN1iDkOLg" resolve="actionOperationRef" />
+                          <node concept="3TrEf2" id="32kN1iDlA50" role="2OqNvi">
+                            <ref role="3Tt5mk" to="mo5v:7MxRB2VAzbB" resolve="actionOperation" />
                           </node>
                         </node>
-                      </node>
-                    </node>
-                    <node concept="3cpWs6" id="32kN1iDlA57" role="3cqZAp">
-                      <node concept="Xl_RD" id="32kN1iDlA58" role="3cqZAk">
-                        <property role="Xl_RC" value="console.log('Not calling any method')" />
+                        <node concept="3TrcHB" id="32kN1iDlA51" role="2OqNvi">
+                          <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                        </node>
                       </node>
                     </node>
                   </node>
@@ -3104,7 +3076,7 @@
               </node>
             </node>
             <node concept="356sEF" id="32kN1iDlA04" role="356sEH">
-              <property role="TrG5h" value="}}&gt;" />
+              <property role="TrG5h" value="(JSON.parse(data)); }}&gt;" />
             </node>
           </node>
           <node concept="356WMU" id="32kN1iDl$EE" role="383Ya9">

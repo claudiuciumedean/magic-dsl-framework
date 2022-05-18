@@ -55,6 +55,8 @@
         <child id="4706807959195293647" name="operationMethod" index="3KwesD" />
       </concept>
       <concept id="4706807959195251489" name="Microservice.structure.GetEntities" flags="ng" index="3Kwof7" />
+      <concept id="4706807959195251487" name="Microservice.structure.CreateEntity" flags="ng" index="3KwofT" />
+      <concept id="4706807959194688950" name="Microservice.structure.CREATE" flags="ng" index="3K_yPg" />
       <concept id="4706807959194649864" name="Microservice.structure.READ" flags="ng" index="3K_FnI" />
       <concept id="4706807959194929334" name="Microservice.structure.IOperationType" flags="ng" index="3KABxg">
         <child id="4706807959194929335" name="operationType" index="3KABxh" />
@@ -116,7 +118,7 @@
       </node>
       <node concept="CJKq$" id="1GcCT5ob3GZ" role="CJKqU">
         <property role="CJKq_" value="name" />
-        <property role="CJ3hK" value="description" />
+        <property role="CJ3hK" value="string" />
       </node>
       <node concept="CJKq$" id="1GcCT5ob3H2" role="CJKqU">
         <property role="CJKq_" value="thumbnail" />
@@ -509,6 +511,21 @@
       <node concept="1hBKNC" id="1GcCT5obmUD" role="1hAkf$" />
       <node concept="1hBKNE" id="1GcCT5obmUF" role="1hwKFe">
         <property role="1hAwxF" value="Item not found" />
+      </node>
+    </node>
+    <node concept="1U0Mo6" id="1NIouMbM6Tr" role="1a5GJw">
+      <node concept="3KwofT" id="1NIouMbM6TH" role="3KwesD" />
+      <node concept="3K_yPg" id="1NIouMbM6TJ" role="3KABxh" />
+      <node concept="1yCgEV" id="1NIouMbM6TL" role="je10B">
+        <ref role="1yCgEW" node="1GcCT5ob3GQ" resolve="items" />
+      </node>
+      <node concept="3wFZSN" id="1NIouMbM6TN" role="3wFZST">
+        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="1hBKNC" id="1NIouMbM6Uq" role="1hBKNI" />
+      <node concept="1hBKNC" id="1NIouMbM6Us" role="1hAkf$" />
+      <node concept="1hBKNE" id="1NIouMbM6Uu" role="1hwKFe">
+        <property role="1hAwxF" value="Item not created" />
       </node>
     </node>
     <node concept="11cgHg" id="1GcCT5ob3GO" role="11cgHd" />

@@ -879,7 +879,7 @@
           <node concept="356sEK" id="3WPyOlYhVlb" role="383Ya9">
             <node concept="2EixSi" id="3WPyOlYhVle" role="2EinRH" />
             <node concept="356sEF" id="3WPyOlYhVlf" role="356sEH">
-              <property role="TrG5h" value="  return res.json(entity);" />
+              <property role="TrG5h" value="  return res.json(entity.entity);" />
             </node>
           </node>
           <node concept="356sEK" id="3WPyOlYhVlh" role="383Ya9">
@@ -1054,6 +1054,12 @@
               <property role="TrG5h" value="  }" />
             </node>
           </node>
+          <node concept="356sEK" id="1NIouMbTI2E" role="383Ya9">
+            <node concept="356sEF" id="1NIouMbTI2F" role="356sEH">
+              <property role="TrG5h" value="if(entities.message) return res.status(400).json({});" />
+            </node>
+            <node concept="2EixSi" id="1NIouMbTI2G" role="2EinRH" />
+          </node>
           <node concept="356sEK" id="5cGqGoaBW6G" role="383Ya9">
             <node concept="356sEF" id="5cGqGoaBW6H" role="356sEH">
               <property role="TrG5h" value="props" />
@@ -1182,6 +1188,9 @@
               </node>
             </node>
             <node concept="2EixSi" id="5cGqGoaBW6I" role="2EinRH" />
+          </node>
+          <node concept="356sEK" id="1NIouMbSEV5" role="383Ya9">
+            <node concept="2EixSi" id="1NIouMbSEV7" role="2EinRH" />
           </node>
           <node concept="356sEK" id="3WPyOlYh9AI" role="383Ya9">
             <node concept="2EixSi" id="3WPyOlYh9AL" role="2EinRH" />
@@ -1363,6 +1372,9 @@
           </node>
           <node concept="356sEK" id="3WPyOlYhRN$" role="383Ya9">
             <node concept="2EixSi" id="3WPyOlYhRN_" role="2EinRH" />
+            <node concept="356sEF" id="1NIouMbTKmK" role="356sEH">
+              <property role="TrG5h" value="if(entities.message) return res.status(400).json({});" />
+            </node>
           </node>
           <node concept="356sEK" id="5cGqGoaC3JZ" role="383Ya9">
             <node concept="356sEF" id="5cGqGoaC3K0" role="356sEH">
@@ -2898,7 +2910,7 @@
           <node concept="356sEK" id="dtI1sb$Ls4" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb$Ls7" role="2EinRH" />
             <node concept="356sEF" id="dtI1sb$Ls8" role="356sEH">
-              <property role="TrG5h" value="    return jsonify(entity)" />
+              <property role="TrG5h" value="    return jsonify(entity.entity)" />
             </node>
           </node>
         </node>
@@ -3110,6 +3122,18 @@
           <node concept="356sEK" id="dtI1sb$VAz" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb$VAA" role="2EinRH" />
           </node>
+          <node concept="356sEK" id="1NIouMbUS8$" role="383Ya9">
+            <node concept="356sEF" id="1NIouMbUS8_" role="356sEH">
+              <property role="TrG5h" value="    if type(response) is not list:" />
+            </node>
+            <node concept="2EixSi" id="1NIouMbUS8A" role="2EinRH" />
+          </node>
+          <node concept="356sEK" id="1NIouMbUSp9" role="383Ya9">
+            <node concept="356sEF" id="1NIouMbUSpa" role="356sEH">
+              <property role="TrG5h" value="        return response['message'], 400" />
+            </node>
+            <node concept="2EixSi" id="1NIouMbUSpb" role="2EinRH" />
+          </node>
           <node concept="356sEK" id="dtI1sb$VAB" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb$VAE" role="2EinRH" />
             <node concept="356sEF" id="dtI1sb$VAF" role="356sEH">
@@ -3250,9 +3274,6 @@
             <node concept="356sEF" id="dtI1sb$VAR" role="356sEH">
               <property role="TrG5h" value="        entities.append(entity)" />
             </node>
-          </node>
-          <node concept="356sEK" id="dtI1sb$VAT" role="383Ya9">
-            <node concept="2EixSi" id="dtI1sb$VAW" role="2EinRH" />
           </node>
           <node concept="356sEK" id="dtI1sb$VAX" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb$VB0" role="2EinRH" />
@@ -3478,6 +3499,18 @@
           <node concept="356sEK" id="dtI1sb_a7Z" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb_a82" role="2EinRH" />
           </node>
+          <node concept="356sEK" id="1NIouMbUMUa" role="383Ya9">
+            <node concept="356sEF" id="1NIouMbUMUb" role="356sEH">
+              <property role="TrG5h" value="    if type(response) is not list:" />
+            </node>
+            <node concept="2EixSi" id="1NIouMbUMUc" role="2EinRH" />
+          </node>
+          <node concept="356sEK" id="1NIouMbUO9P" role="383Ya9">
+            <node concept="356sEF" id="1NIouMbUO9Q" role="356sEH">
+              <property role="TrG5h" value="         return response['message'], 400" />
+            </node>
+            <node concept="2EixSi" id="1NIouMbUO9R" role="2EinRH" />
+          </node>
           <node concept="356sEK" id="dtI1sb_a83" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb_a86" role="2EinRH" />
             <node concept="356sEF" id="dtI1sb_a87" role="356sEH">
@@ -3618,9 +3651,6 @@
             <node concept="356sEF" id="dtI1sb_a8j" role="356sEH">
               <property role="TrG5h" value="        entities.append(entity)" />
             </node>
-          </node>
-          <node concept="356sEK" id="dtI1sb_a8l" role="383Ya9">
-            <node concept="2EixSi" id="dtI1sb_a8o" role="2EinRH" />
           </node>
           <node concept="356sEK" id="dtI1sb_a8p" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb_a8s" role="2EinRH" />

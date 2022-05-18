@@ -106,7 +106,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       @Override
       protected EditorCell createRefCell(EditorContext context, SNode effectiveNode, SNode node) {
         EditorCell cell = new Inline_Builder0(getEditorContext(), myNode, effectiveNode).createCell();
-        installDeleteActions_nullable_aggregation(cell);
+        installDeleteActions_notnull(cell);
         return cell;
       }
     };

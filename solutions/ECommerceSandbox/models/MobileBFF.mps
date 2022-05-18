@@ -35,6 +35,7 @@
         <child id="2468814831964386639" name="supportedLanguage" index="11cgHd" />
       </concept>
       <concept id="2468814831964386642" name="Microservice.structure.NodeJs" flags="ng" index="11cgHg" />
+      <concept id="1949112583390507902" name="Microservice.structure.GetEntitiesBy" flags="ng" index="13c93J" />
       <concept id="6302204855854145288" name="Microservice.structure.Empty" flags="ng" index="1hA7b_" />
       <concept id="6302204855854083592" name="Microservice.structure.IDeliveredPayloadType" flags="ng" index="1hAkf_">
         <child id="6302204855854083593" name="payloadType" index="1hAkf$" />
@@ -138,6 +139,43 @@
       <node concept="1hBKNC" id="6Y6IXsoWTlo" role="1hAkf$" />
       <node concept="3uh$Y_" id="6Y6IXsoWTlq" role="2l1AS3">
         <ref role="3uh$Yy" to="bqge:1GcCT5ob3Nf" resolve="OrdersService" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="X0Cj5sVDpP" role="2l1_3h">
+      <property role="2l1ASO" value="/cart" />
+      <property role="2l1ASZ" value="/get-orders-by" />
+      <node concept="13c93J" id="X0Cj5sVDqt" role="3KwesD" />
+      <node concept="3K_FnI" id="X0Cj5sVDqv" role="3KABxh" />
+      <node concept="3wFZSN" id="X0Cj5sVDqx" role="2l1EQz">
+        <ref role="3wFZSZ" to="bqge:1GcCT5ob3Nn" resolve="order" />
+      </node>
+      <node concept="3wDFX_" id="X0Cj5sVDqz" role="2l1AQ1">
+        <ref role="3wDFX$" to="bqge:3I8kJiZre3f" />
+      </node>
+      <node concept="3wDFX_" id="X0Cj5sVDq_" role="3wDFXz">
+        <ref role="3wDFX$" to="bqge:1GcCT5ob3Ny" />
+      </node>
+      <node concept="3wDFX_" id="X0Cj5sVDqB" role="3wDFXz">
+        <ref role="3wDFX$" to="bqge:1GcCT5ob3GZ" />
+      </node>
+      <node concept="3wDFX_" id="X0Cj5sVDqE" role="3wDFXz">
+        <ref role="3wDFX$" to="bqge:X0Cj5sVC1B" />
+      </node>
+      <node concept="3uh$Y_" id="X0Cj5sVDqI" role="2l1AS3">
+        <ref role="3uh$Yy" to="bqge:1GcCT5ob3Nf" resolve="OrdersService" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="1NIouMbMac8" role="2l1_3h">
+      <property role="2l1ASO" value="/create-item" />
+      <property role="2l1ASZ" value="/create-item" />
+      <node concept="3KwofT" id="1NIouMbMacT" role="3KwesD" />
+      <node concept="3K_yPg" id="1NIouMbMacV" role="3KABxh" />
+      <node concept="3wFZSN" id="1NIouMbMasz" role="2l1EQz">
+        <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="1hBKNC" id="1NIouMbMas_" role="1hAkf$" />
+      <node concept="3uh$Y_" id="1NIouMbMasB" role="2l1AS3">
+        <ref role="3uh$Yy" to="88nh:1GcCT5ob3GN" resolve="ItemsService" />
       </node>
     </node>
     <node concept="11cgHg" id="5cGqGoaB2xf" role="11cgHd" />

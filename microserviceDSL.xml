@@ -633,47 +633,6 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Client-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Client-generator-templates" prefix="module/generator/templates" />
     </jar>
-    <mkdir dir="${build.tmp}/default/ECommerceSandbox.jar" />
-    <mkdir dir="${build.tmp}/default/ECommerceSandbox.jar/META-INF" />
-    <echoxml file="${build.tmp}/default/ECommerceSandbox.jar/META-INF/module.xml">
-      <module namespace="ECommerceSandbox" type="solution" uuid="8b512059-79a2-4825-b4a1-622dfe06d0bb">
-        <dependencies>
-          <module ref="41009928-b490-4ac3-b848-8158d6c0d5db(BFF)" kind="cl" />
-          <module ref="c2a6432b-e821-404b-af0e-22b30531f868(Deployment)" kind="cl" />
-          <module ref="e995fbb6-0310-461a-be22-cc66f48262f1(Microservice)" kind="cl" />
-          <module ref="990507d3-3527-4c54-bfe9-0ca3c9c6247a(com.dslfoundry.plaintextgen)" kind="cl" />
-        </dependencies>
-        <uses>
-          <language id="l:41009928-b490-4ac3-b848-8158d6c0d5db:BFF" />
-          <language id="l:48e57d50-7e0f-4c8f-93fc-859018228309:Client" />
-          <language id="l:c2a6432b-e821-404b-af0e-22b30531f868:Deployment" />
-          <language id="l:e995fbb6-0310-461a-be22-cc66f48262f1:Microservice" />
-          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
-        </uses>
-        <classpath>
-          <entry path="." />
-        </classpath>
-        <sources jar="ECommerceSandbox-src.jar" descriptor="ECommerceSandbox.msd" />
-      </module>
-    </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/ECommerceSandbox.jar" duplicate="preserve">
-      <fileset dir="${build.tmp}/java/out/ECommerceSandbox" />
-      <fileset dir="${basedir}/solutions/ECommerceSandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
-      <fileset dir="${build.tmp}/default/ECommerceSandbox.jar" />
-    </jar>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-ECommerceSandbox-models">
-      <fileset dir="${basedir}/solutions/ECommerceSandbox/models" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/ECommerceSandbox-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/solutions/ECommerceSandbox/source_gen">
-        <exclude name="**/trace.info" />
-        <exclude name="**/exports" />
-        <exclude name="**/checkpoints" />
-        <exclude name="**/*.mps" />
-      </fileset>
-      <zipfileset file="${basedir}/solutions/ECommerceSandbox/ECommerceSandbox.msd" prefix="module" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-ECommerceSandbox-models" prefix="module/models" />
-    </jar>
     <mkdir dir="${build.tmp}/default/MicroserviceDSL.build.jar" />
     <mkdir dir="${build.tmp}/default/MicroserviceDSL.build.jar/META-INF" />
     <echoxml file="${build.tmp}/default/MicroserviceDSL.build.jar/META-INF/module.xml">
@@ -727,7 +686,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.Microservice, java.compile.Microservice.generator, java.compile.BFF, java.compile.BFF.generator, java.compile.Deployment, java.compile.Deployment.generator, java.compile.Client, java.compile.Client.generator, java.compile.ECommerceSandbox, java.compile.MicroserviceDSL.build" />
+  <target name="compileJava" depends="java.compile.Microservice, java.compile.Microservice.generator, java.compile.BFF, java.compile.BFF.generator, java.compile.Deployment, java.compile.Deployment.generator, java.compile.Client, java.compile.Client.generator, java.compile.MicroserviceDSL.build" />
   
   <target name="processResources" />
   
@@ -869,9 +828,6 @@
         <module file="${basedir}/languages/Deployment/Deployment.mpl" />
         <module file="${basedir}/languages/Microservice/Microservice.mpl" />
         <module file="${basedir}/solutions/MicroserviceDSL.build/MicroserviceDSL.build.msd" />
-      </chunk>
-      <chunk>
-        <module file="${basedir}/solutions/ECommerceSandbox/ECommerceSandbox.msd" />
       </chunk>
       <jvmargs>
         <arg value="-ea" />
@@ -1294,56 +1250,6 @@
     </javac>
   </target>
   
-  <target name="java.compile.ECommerceSandbox" depends="java.compile.BFF, java.compile.Deployment, java.compile.Microservice, fetchDependencies">
-    <mkdir dir="${basedir}/solutions/ECommerceSandbox/source_gen" />
-    <mkdir dir="${build.tmp}/java/out/ECommerceSandbox" />
-    <javac destdir="${build.tmp}/java/out/ECommerceSandbox" fork="true" encoding="utf8" includeantruntime="false" debug="true">
-      <compilerarg value="-Xlint:none" />
-      <src>
-        <path location="${basedir}/solutions/ECommerceSandbox/source_gen" />
-      </src>
-      <classpath>
-        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-context.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messages-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messages-for-rules.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
-        <pathelement path="${build.tmp}/java/out/BFF" />
-        <pathelement path="${build.tmp}/java/out/Deployment" />
-        <pathelement path="${build.tmp}/java/out/Microservice" />
-        <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/lib/util.jar" />
-        <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.16.jar" />
-        <fileset file="${artifacts.de.itemis.mps.extensions}/com.dslfoundry.plaintextgen/languages/com.dslfoundry.plaintextgen/com.dslfoundry.plaintextgen.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
-      </classpath>
-    </javac>
-  </target>
-  
   <target name="java.compile.MicroserviceDSL.build">
     <mkdir dir="${basedir}/solutions/MicroserviceDSL.build/source_gen" />
     <mkdir dir="${build.tmp}/java/out/MicroserviceDSL.build" />
@@ -1368,6 +1274,5 @@
     <delete dir="${basedir}/languages/Microservice/source_gen" />
     <delete dir="${basedir}/languages/Microservice/generator/source_gen" />
     <delete dir="${basedir}/solutions/MicroserviceDSL.build/source_gen" />
-    <delete dir="${basedir}/solutions/ECommerceSandbox/source_gen" />
   </target>
 </project>

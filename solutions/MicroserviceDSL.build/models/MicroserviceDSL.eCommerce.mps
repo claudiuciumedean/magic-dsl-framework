@@ -48,6 +48,7 @@
       </concept>
       <concept id="5617550519002745364" name="jetbrains.mps.build.structure.BuildLayout" flags="ng" index="1l3spV" />
       <concept id="5617550519002745363" name="jetbrains.mps.build.structure.BuildProject" flags="ng" index="1l3spW">
+        <property id="4915877860348071612" name="fileName" index="turDy" />
         <property id="5204048710541015587" name="internalBaseDirectory" index="2DA0ip" />
         <child id="4796668409958418110" name="scriptsDir" index="auvoZ" />
         <child id="6647099934206700656" name="plugins" index="10PD9s" />
@@ -142,6 +143,7 @@
   <node concept="1l3spW" id="6QYX$BfZbcE">
     <property role="TrG5h" value="MicroserviceDSL" />
     <property role="2DA0ip" value="../.." />
+    <property role="turDy" value="microserviceDSL.xml" />
     <node concept="10PD9b" id="6QYX$BfZbcF" role="10PD9s" />
     <node concept="3b7kt6" id="6QYX$BfZbcG" role="10PD9s" />
     <node concept="398rNT" id="6QYX$BfZbcH" role="1l3spd">
@@ -710,67 +712,6 @@
           </node>
         </node>
       </node>
-      <node concept="1E1JtA" id="6QYX$BfZbdd" role="2G$12L">
-        <property role="BnDLt" value="true" />
-        <property role="TrG5h" value="ECommerceSandbox" />
-        <property role="3LESm3" value="8b512059-79a2-4825-b4a1-622dfe06d0bb" />
-        <node concept="55IIr" id="6QYX$BfZbd8" role="3LF7KH">
-          <node concept="2Ry0Ak" id="6QYX$BfZbd9" role="iGT6I">
-            <property role="2Ry0Am" value="solutions" />
-            <node concept="2Ry0Ak" id="6QYX$BfZbda" role="2Ry0An">
-              <property role="2Ry0Am" value="ECommerceSandbox" />
-              <node concept="2Ry0Ak" id="6QYX$BfZbdb" role="2Ry0An">
-                <property role="2Ry0Am" value="ECommerceSandbox.msd" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1BupzO" id="6QYX$BfZbeY" role="3bR31x">
-          <property role="3ZfqAx" value="models" />
-          <property role="1Hdu6h" value="true" />
-          <property role="1HemKv" value="true" />
-          <node concept="3LXTmp" id="6QYX$BfZbhL" role="1HemKq">
-            <node concept="398BVA" id="6QYX$BfZbh_" role="3LXTmr">
-              <ref role="398BVh" node="6QYX$BfZbcH" resolve="mps_home" />
-              <node concept="2Ry0Ak" id="6QYX$BfZbhA" role="iGT6I">
-                <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="6QYX$BfZbhB" role="2Ry0An">
-                  <property role="2Ry0Am" value="ECommerceSandbox" />
-                  <node concept="2Ry0Ak" id="6QYX$BfZbhC" role="2Ry0An">
-                    <property role="2Ry0Am" value="models" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3qWCbU" id="6QYX$BfZbhM" role="3LXTna">
-              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
-            </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="6QYX$BfZbhv" role="3bR37C">
-          <node concept="3bR9La" id="6QYX$BfZbhw" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" node="6QYX$BfZbcP" resolve="Microservice" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="6QYX$BfZbhx" role="3bR37C">
-          <node concept="3bR9La" id="6QYX$BfZbhy" role="1SiIV1">
-            <ref role="3bR37D" node="6QYX$BfZbcV" resolve="BFF" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="6QYX$BfZbhz" role="3bR37C">
-          <node concept="3bR9La" id="6QYX$BfZbh$" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" node="6QYX$BfZbd1" resolve="Deployment" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="6QYX$BfZbjP" role="3bR37C">
-          <node concept="3bR9La" id="6QYX$BfZbjQ" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="90a9:2NTGYE$JTGY" resolve="com.dslfoundry.plaintextgen" />
-          </node>
-        </node>
-      </node>
       <node concept="1E1JtA" id="6QYX$BfZbdj" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="MicroserviceDSL.build" />
@@ -824,6 +765,7 @@
   <node concept="1l3spW" id="6QYX$BfZRH6">
     <property role="2DA0ip" value="../.." />
     <property role="TrG5h" value="SandboxBuild" />
+    <property role="turDy" value="sandbox.xml" />
     <node concept="2sgV4H" id="6QYX$BfZRIy" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="6QYX$BfZRIz" role="2JcizS">

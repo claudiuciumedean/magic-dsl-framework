@@ -8,12 +8,17 @@ const _ = require("lodash");
 export default class DesktopApp extends Component {
 constructor(props) {
   super(props);
+if(localStorage.getItem('globalState')) {
+this.globalState = JSON.parse(localStorage.getItem('globalState'));
+} else {
   this.globalState = {
 customer_id: null,
   };
 }
+}
 updateGlobalState = (obj) => {
   this.globalState = {...this.globalState, ...obj};
+  window.localStorage.setItem('globalState',  JSON.stringify(this.globalState));
 }
   render() {
 return (<>
@@ -25,6 +30,7 @@ return (<>
 
 
 <Nav.Link href='/cart'>Cart</Nav.Link>
+<Nav.Link href='/create-item'>CreateItem</Nav.Link>
           </Nav>
         </Navbar>
         <Router>
@@ -33,6 +39,7 @@ return (<>
      <Route exact path='/item' render={props => { let cProps = {...props, ...this.globalState}; return <Item{...cProps} updateGlobalState={this.updateGlobalState}/>;}}/>
      <Route exact path='/' render={props => { let cProps = {...props, ...this.globalState}; return <Login{...cProps} updateGlobalState={this.updateGlobalState}/>;}}/>
      <Route exact path='/cart' render={props => { let cProps = {...props, ...this.globalState}; return <Cart{...cProps} updateGlobalState={this.updateGlobalState}/>;}}/>
+     <Route exact path='/create-item' render={props => { let cProps = {...props, ...this.globalState}; return <CreateItem{...cProps} updateGlobalState={this.updateGlobalState}/>;}}/>
           </Switch>
         </Router>
 
@@ -54,9 +61,9 @@ constructor(props) {
 
   fetchState = async () => {
     let entities = null;
-    const params = { : this.props.customer_id };
+    const params = queryString.stringify({ });
     try {
-      const response = await axios.get(`http://localhost:5000/desktop-api/items${window.location.search}&${queryString.stringify(params)}`);
+      const response = await axios.get(`http://localhost:5000/desktop-api/items${window.location.search}${params.lenght ? params : ""}`);
       entities = response.data;
     } catch (error) {}
     this.setState({ entities });
@@ -133,9 +140,9 @@ this.props.history.push('/items');
 
   fetchState = async () => {
     let entities = null;
-    const params = { : this.props.customer_id };
+    const params = queryString.stringify({ });
     try {
-      const response = await axios.get(`http://localhost:5000/desktop-api/item${window.location.search}&${queryString.stringify(params)}`);
+      const response = await axios.get(`http://localhost:5000/desktop-api/item${window.location.search}${params.lenght ? params : ""}`);
       entities = response.data;
     } catch (error) {}
     this.setState({ entities });
@@ -202,9 +209,9 @@ constructor(props) {
 
   fetchState = async () => {
     let entities = null;
-    const params = { customer_id: this.props.customer_id,: this.props.customer_id };
+    const params = queryString.stringify({ customer_id: this.props.customer_id,});
     try {
-      const response = await axios.get(`http://localhost:5000/desktop-api/cart${window.location.search}&${queryString.stringify(params)}`);
+      const response = await axios.get(`http://localhost:5000/desktop-api/cart${window.location.search}${params.lenght ? params : ""}`);
       entities = response.data;
     } catch (error) {}
     this.setState({ entities });
@@ -271,7 +278,7 @@ this.props.history.push('/items');
           <h2>Login</h2>
           <>
 
-<Form onSubmit={(e) =>{ e.preventDefault(); this.login(new FormData(e.currentTarget));}}>
+<Form onSubmit={(e) =>{ e.preventDefault(); let data = JSON.stringify(Object.fromEntries(new FormData(e.currentTarget))); this.login(JSON.parse(data)); }}>
 
 <Form.Group>
  <Form.Label>Email</Form.Label>
@@ -285,6 +292,67 @@ this.props.history.push('/items');
 </Form.Group>
 
 <br/><Button type="submit">Submit</Button>
+</Form>
+
+          </>
+        </Row>
+      </Container>
+    );
+  }
+}
+class CreateItem extends Component {
+
+async createItem(entityPayload) {
+    let data = null;
+
+    try {
+      const response = await axios.post(`http://localhost:5000/desktop-api/create-item`, entityPayload);
+      data = response.data;
+
+this.props.history.push('/items');
+    } catch (error) {}
+
+    return data;
+  }
+  render() {
+    return (
+      <Container style={{ marginTop: 100 + 'px' }}>
+        <Row>
+          <h2>CreateItem</h2>
+          <>
+
+<Form onSubmit={(e) =>{ e.preventDefault(); let data = JSON.stringify(Object.fromEntries(new FormData(e.currentTarget))); this.createItem(JSON.parse(data)); }}>
+
+<Form.Group>
+ <Form.Label>Name</Form.Label>
+ <Form.Control type="text" name="name" required/>
+</Form.Group>
+
+
+<Form.Group>
+ <Form.Label>Thumbnail</Form.Label>
+ <Form.Control type="text" name="thumbnail" required/>
+</Form.Group>
+
+
+<Form.Group>
+ <Form.Label>Image href</Form.Label>
+ <Form.Control type="text" name="image" required/>
+</Form.Group>
+
+
+<Form.Group>
+ <Form.Label>Price</Form.Label>
+ <Form.Control type="text" name="price" required/>
+</Form.Group>
+
+
+<Form.Group>
+ <Form.Label>Description</Form.Label>
+ <Form.Control type="text" name="description" required/>
+</Form.Group>
+
+<br/><Button type="submit">Create item</Button>
 </Form>
 
           </>

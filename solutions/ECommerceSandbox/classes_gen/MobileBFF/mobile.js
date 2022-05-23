@@ -28,7 +28,9 @@ router.get("/items", async (req, res) => {
   } catch (error) {
     return res.status(400).json({});
   }
+if(entities.message) res.status(400).json({});
 entities=entities.map(e=>_.pick(e, ['id','name','thumbnail','price',]));
+
   return res.json(entities);
 });
 
@@ -43,7 +45,35 @@ router.post("/buy-item", async  (req, res) => {
   }
 
 
-  return res.json(entity);
+  return res.json(entity.entity);
+});
+
+router.get("/cart", async (req, res) => {
+ let entities = null;
+
+  try {
+    const response = await axios.get(`http://localhost:3002/get-orders-by?${querystring.stringify(req.query)}`);
+    entities = response.data;
+  } catch (error) {
+    return res.status(400).json({});
+  }
+if(entities.message) res.status(400).json({});
+entities=entities.map(e=>_.pick(e, ['thumbnail','name','price',]));
+  return res.json(entities);
+});
+
+router.post("/create-item", async  (req, res) => {
+  let entity = null;
+
+  try {
+    const response = await axios.post(`http://localhost:3001/create-item`, req.body);
+    entity = response.data.entity;
+  } catch (error) {
+    return res.status(400).json({});
+  }
+
+
+  return res.json(entity.entity);
 });
 
 

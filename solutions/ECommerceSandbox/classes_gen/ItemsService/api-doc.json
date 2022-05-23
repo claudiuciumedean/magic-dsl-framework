@@ -82,6 +82,44 @@
          }
       }
    }
+},
+"/create-item":{
+   "post":{
+      "tags":[
+         "item"
+      ],
+      "summary":"Create an entity",
+      "operationId":"createEntity",
+      "requestBody":{
+         "description":"Required request body",
+         "content":{
+            "application/json":{
+               "schema":{
+                  "$ref":"#/components/schemas/item"
+               }
+            }
+         },
+         "required":true
+      },
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "message": ""
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": "Item not created"
+               }
+            }
+         }
+      }
+   }
 }
   },
   "components":{
@@ -96,7 +134,7 @@
 },
 
 "name":{
-   "type":"description"
+   "type":"string"
 },
 
 "thumbnail":{

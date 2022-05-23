@@ -25,6 +25,16 @@ app.get("/get-item", (req, res) => {
   res.json(entity);
  });
 
+app.post("/create-item", (req, res) => {
+  const id = uuid.v4();
+  const entity = {id, ...req.body};
+  items.push(entity);
+  res.json({
+    message: ""
+    ,entity
+  });
+});
+
 app.get("/api-documentation", (req, res) => {
   res.sendFile(__dirname + "/APIDoc.html");
 });

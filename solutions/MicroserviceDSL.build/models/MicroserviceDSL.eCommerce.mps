@@ -101,6 +101,9 @@
       <concept id="1500819558095907805" name="jetbrains.mps.build.mps.structure.BuildMps_Group" flags="ng" index="2G$12M">
         <child id="1500819558095907806" name="modules" index="2G$12L" />
       </concept>
+      <concept id="1265949165890536423" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_ModuleJars" flags="ng" index="L2wRC">
+        <reference id="1265949165890536425" name="module" index="L2wRA" />
+      </concept>
       <concept id="8971171305100238972" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyTargetLanguage" flags="ng" index="Rbm2T">
         <reference id="3189788309731922643" name="language" index="1E1Vl2" />
       </concept>
@@ -869,7 +872,11 @@
       </node>
     </node>
     <node concept="55IIr" id="6QYX$BfZRH7" role="auvoZ" />
-    <node concept="1l3spV" id="6QYX$BfZRH8" role="1l3spN" />
+    <node concept="1l3spV" id="6QYX$BfZRH8" role="1l3spN">
+      <node concept="L2wRC" id="6QYX$Bg03K9" role="39821P">
+        <ref role="L2wRA" node="6QYX$BfZRIA" resolve="ECommerceSandbox" />
+      </node>
+    </node>
     <node concept="3b7kt6" id="6QYX$BfZRHa" role="10PD9s" />
     <node concept="10PD9b" id="6QYX$BfZRHc" role="10PD9s" />
     <node concept="1E1JtA" id="6QYX$BfZRIA" role="3989C9">

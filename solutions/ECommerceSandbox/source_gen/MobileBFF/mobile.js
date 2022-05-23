@@ -28,7 +28,7 @@ router.get("/items", async (req, res) => {
   } catch (error) {
     return res.status(400).json({});
   }
-if(entities.message) res.status(400).json({});
+if(entities.message) return res.status(400).json({});
 entities=entities.map(e=>_.pick(e, ['id','name','thumbnail','price',]));
 
   return res.json(entities);
@@ -57,7 +57,7 @@ router.get("/cart", async (req, res) => {
   } catch (error) {
     return res.status(400).json({});
   }
-if(entities.message) res.status(400).json({});
+if(entities.message) return res.status(400).json({});
 entities=entities.map(e=>_.pick(e, ['thumbnail','name','price',]));
   return res.json(entities);
 });

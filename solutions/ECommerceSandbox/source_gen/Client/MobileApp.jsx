@@ -211,13 +211,13 @@ this.props.history.push('/items');
 
 <Form.Group>
  <Form.Label>Email</Form.Label>
- <Form.Control type="email" name="email" />
+ <Form.Control type="email" name="email" required/>
 </Form.Group>
 
 
 <Form.Group>
- <Form.Label>Email</Form.Label>
- <Form.Control type="email" name="email" />
+ <Form.Label>Password</Form.Label>
+ <Form.Control type="password" name="password" required/>
 </Form.Group>
 
 <br/><Button type="submit">Submit</Button>

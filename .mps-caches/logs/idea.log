@@ -176,3 +176,89 @@
 2022-03-15 17:32:57,248 [  25678]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
 2022-03-15 17:33:07,356 [  35786]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,006 s 
 2022-03-15 17:33:07,356 [  35786]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 16:04:16,299 [      0]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-05-23 16:04:16,490 [    191]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-05-23 16:04:16,500 [    201]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-05-23 16:04:16,533 [    234]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-23 16:04:16,533 [    234]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-23 16:04:16,541 [    242]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 189 libraries 
+2022-05-23 16:04:19,824 [   3525]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-05-23 16:04:21,380 [   5081]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 1,549 s 
+2022-05-23 16:04:21,394 [   5095]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 16:04:22,193 [   5894]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-05-23 16:04:22,202 [   5903]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-05-23 16:04:22,208 [   5909]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-05-23 16:04:22,209 [   5910]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-05-23 16:04:22,210 [   5911]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp8199040120878447762' is opened 
+2022-05-23 16:04:22,455 [   6156]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,125 s 
+2022-05-23 16:04:22,465 [   6166]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 16:04:34,052 [  17753]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:04:34,058 [  17759]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:04:34,058 [  17759]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:04:34,998 [  18699]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-23 16:04:35,440 [  19141]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:04:35,442 [  19143]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:04:43,581 [  27282]   INFO - jetbrains.mps.make.ModuleMaker - Cycle of 1 modules 
+2022-05-23 16:04:43,584 [  27285]   INFO - jetbrains.mps.make.ModuleMaker - 	Microservice.generator 
+2022-05-23 16:04:43,585 [  27286]   INFO - jetbrains.mps.make.ModuleMaker - 		[Annotations, JDK, MPS.Core, MPS.Generator, MPS.OpenAPI, Microservice, collections.runtime, jetbrains.mps.lang.behavior.api, jetbrains.mps.lang.core, jetbrains.mps.lang.text, jetbrains.mps.runtime, closures.runtime, jetbrains.mps.baseLanguage.references.runtime, jetbrains.mps.lang.behavior.runtime] 
+2022-05-23 16:04:43,585 [  27286]   INFO - jetbrains.mps.make.ModuleMaker - 		DIRTY  JS:SRC(java 0/2; resources 0/2; to delete 2) 
+2022-05-23 16:04:43,585 [  27286]   INFO - jetbrains.mps.make.ModuleMaker - 		[/Users/claudiuciumedean/Storage/School/DTU/Thesis/language-agnostic-microservice-dsl/languages/Microservice/generator/classes_gen]
+ 
+2022-05-23 16:04:43,585 [  27286]   INFO - jetbrains.mps.make.ModuleMaker - Cycle of 1 modules 
+2022-05-23 16:04:43,585 [  27286]   INFO - jetbrains.mps.make.ModuleMaker - 	MicroserviceDSL.build 
+2022-05-23 16:04:43,585 [  27286]   INFO - jetbrains.mps.make.ModuleMaker - 		[de.itemis.mps.extensions.build, jetbrains.mps.ide.build] 
+2022-05-23 16:04:43,585 [  27286]   INFO - jetbrains.mps.make.ModuleMaker - 		DIRTY  JS:SRC(java 0/0; resources 2/2; to delete 0) 
+2022-05-23 16:04:43,585 [  27286]   INFO - jetbrains.mps.make.ModuleMaker - 		[/Users/claudiuciumedean/Storage/School/DTU/Thesis/language-agnostic-microservice-dsl/solutions/MicroserviceDSL.build/classes_gen]
+ 
+2022-05-23 16:04:43,587 [  27288]   INFO - jetbrains.mps.make.ModuleMaker - Cycle #1: [Microservice.generator] 
+2022-05-23 16:04:43,668 [  27369]   INFO - jetbrains.mps.make.ModuleMaker - Cycle #2: [MicroserviceDSL.build] 
+2022-05-23 16:04:43,676 [  27377]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-23 16:04:44,678 [  28379]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:04:44,684 [  28385]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:04:45,059 [  28760]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-23 16:04:49,421 [  33122]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:04:49,424 [  33125]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:04:49,832 [  33533]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-23 16:04:51,212 [  34913]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-23 16:04:51,243 [  34944]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,022 s 
+2022-05-23 16:04:51,250 [  34951]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 16:04:51,687 [  35388]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,020 s 
+2022-05-23 16:04:51,695 [  35396]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 16:05:01,782 [  45483]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,002 s 
+2022-05-23 16:05:01,782 [  45483]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 16:06:33,320 [      0]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-05-23 16:06:33,543 [    223]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-05-23 16:06:33,555 [    235]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-05-23 16:06:33,592 [    272]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-23 16:06:33,592 [    272]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-23 16:06:33,600 [    280]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 189 libraries 
+2022-05-23 16:06:37,023 [   3703]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-05-23 16:06:38,856 [   5536]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 1,825 s 
+2022-05-23 16:06:38,879 [   5559]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 16:06:39,830 [   6510]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-05-23 16:06:39,835 [   6515]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-05-23 16:06:39,842 [   6522]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-05-23 16:06:39,842 [   6522]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-05-23 16:06:39,843 [   6523]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp3721334935973046623' is opened 
+2022-05-23 16:06:40,179 [   6859]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,150 s 
+2022-05-23 16:06:40,189 [   6869]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 16:06:51,924 [  18604]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:06:51,929 [  18609]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:06:51,930 [  18610]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:06:52,778 [  19458]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-23 16:06:53,279 [  19959]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:06:53,280 [  19960]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:07:01,287 [  27967]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-23 16:07:02,143 [  28823]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:07:02,144 [  28824]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:07:02,460 [  29140]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-23 16:07:06,517 [  33197]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:07:06,519 [  33199]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-23 16:07:06,930 [  33610]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-23 16:07:08,315 [  34995]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-23 16:07:08,346 [  35026]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,023 s 
+2022-05-23 16:07:08,355 [  35035]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 16:07:08,827 [  35507]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,023 s 
+2022-05-23 16:07:08,836 [  35516]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 16:07:18,923 [  45603]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,002 s 
+2022-05-23 16:07:18,923 [  45603]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 

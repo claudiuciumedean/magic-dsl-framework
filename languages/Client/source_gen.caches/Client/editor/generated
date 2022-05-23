@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="d54a6377reepxaapzwzz0wn4340tzxk">
-  <files names="ActionOperationReference_SubstituteMenu.java:ActionOperation_Editor.java:ActionOperation_EditorBuilder_a.java:Card_Editor.java:Card_EditorBuilder_a.java:ClientConfig_Editor.java:ClientConfig_EditorBuilder_a.java:ClientReference_SubstituteMenu.java:ClientTypeComponent.java:ClientTypeComponent_ComponentBuilder_a.java:Client_Editor.java:Client_EditorBuilder_a.java:CrudAction_Editor.java:CrudAction_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:Form_Editor.java:Form_EditorBuilder_a.java:Image_Editor.java:Image_EditorBuilder_a.java:Input_Editor.java:Input_EditorBuilder_a.java:Link_Editor.java:Link_EditorBuilder_a.java:PageReference_SubstituteMenu.java:Page_Editor.java:Page_EditorBuilder_a.java:StateUpdate_Editor.java:StateUpdate_EditorBuilder_a.java:State_Editor.java:State_EditorBuilder_a.java:Text_Editor.java:Text_EditorBuilder_a.java:Title_Editor.java:Title_EditorBuilder_a.java" />
-</product>
-

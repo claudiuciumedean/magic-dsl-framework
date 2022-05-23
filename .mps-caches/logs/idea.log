@@ -471,3 +471,115 @@
 2022-05-23 16:59:23,047 [  11454]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
 2022-05-23 16:59:33,146 [  21553]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,004 s 
 2022-05-23 16:59:33,147 [  21554]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 17:09:28,264 [      0]   WARN - jetbrains.mps.tool.environment.EnvironmentConfig - Can't load plugin. Plugin file or folder was not found: /Users/claudiuciumedean/Storage/School/DTU/Thesis/language-agnostic-microservice-dsl/build/tmp/SandboxBuild/deps/MicroserviceDSL/MicroserviceDSL.zip/MicroserviceDSL 
+2022-05-23 17:09:28,267 [      3]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-05-23 17:09:28,518 [    254]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-05-23 17:09:28,529 [    265]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-05-23 17:09:28,568 [    304]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-23 17:09:28,568 [    304]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-23 17:09:28,577 [    313]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 151 libraries 
+2022-05-23 17:09:32,575 [   4311]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-05-23 17:09:35,004 [   6740]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 2,420 s 
+2022-05-23 17:09:35,049 [   6785]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 17:09:36,256 [   7992]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-05-23 17:09:36,259 [   7995]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-05-23 17:09:36,265 [   8001]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-05-23 17:09:36,266 [   8002]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-05-23 17:09:36,266 [   8002]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp11089816936489120298' is opened 
+2022-05-23 17:09:36,369 [   8105]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,071 s 
+2022-05-23 17:09:36,398 [   8134]   WARN - jetbrains.mps.classloading.ModulesWatcher - 1 modules are marked as invalid roots for class loading out of 281 modules [totally in the repository]: 
+2022-05-23 17:09:36,399 [   8135]   WARN - jetbrains.mps.classloading.ModulesWatcher - ECommerceSandbox [solution] was marked invalid for class loading: The dependency in ECommerceSandbox [solution] cannot be resolved {Default} 41009928-b490-4ac3-b848-8158d6c0d5db(BFF) 
+2022-05-23 17:09:36,399 [   8135]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 1 modules are marked invalid for class loading: 
+2022-05-23 17:09:36,399 [   8135]   INFO - jetbrains.mps.classloading.ModulesWatcher - 8b512059-79a2-4825-b4a1-622dfe06d0bb(ECommerceSandbox) 
+2022-05-23 17:09:36,463 [   8199]   WARN - jetbrains.mps.smodel.SLanguageHierarchy - The language 'Client' is not deployed 
+2022-05-23 17:09:36,464 [   8200]   WARN - jetbrains.mps.smodel.SLanguageHierarchy - The language 'Deployment' is not deployed 
+2022-05-23 17:09:36,464 [   8200]   WARN - jetbrains.mps.smodel.SLanguageHierarchy - The language 'Microservice' is not deployed 
+2022-05-23 17:09:36,464 [   8200]   WARN - jetbrains.mps.smodel.SLanguageHierarchy - The language 'BFF' is not deployed 
+2022-05-23 17:09:37,152 [   8888]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model CustomerService uses language Deployment which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:37,153 [   8889]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model CustomerService uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:37,465 [   9201]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept e995fbb6-0310-461a-be22-cc66f48262f1/1826169139604544908. 
+2022-05-23 17:09:37,468 [   9204]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept e995fbb6-0310-461a-be22-cc66f48262f1/8568306897850702777. 
+2022-05-23 17:09:37,469 [   9205]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept e995fbb6-0310-461a-be22-cc66f48262f1/6302204855853965575. 
+2022-05-23 17:09:37,470 [   9206]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept c2a6432b-e821-404b-af0e-22b30531f868/535292525704187332. 
+2022-05-23 17:09:38,437 [  10173]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model OrdersService uses language Deployment which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,437 [  10173]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model OrdersService uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,439 [  10175]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model ItemsService uses language Deployment which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,439 [  10175]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model ItemsService uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,442 [  10178]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model MobileBFF uses language BFF which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,442 [  10178]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model MobileBFF uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,443 [  10179]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 41009928-b490-4ac3-b848-8158d6c0d5db/5020122306378030674. 
+2022-05-23 17:09:38,443 [  10179]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 41009928-b490-4ac3-b848-8158d6c0d5db/5020122306378030699. 
+2022-05-23 17:09:38,446 [  10182]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model DesktopBFF uses language BFF which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,446 [  10182]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model DesktopBFF uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,448 [  10184]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model Client uses language BFF which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,448 [  10184]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model Client uses language Client which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,449 [  10185]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model Client uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:09:38,449 [  10185]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/756716148935626254. 
+2022-05-23 17:09:38,449 [  10185]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/8033641832267364504. 
+2022-05-23 17:09:38,449 [  10185]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/756716148943048266. 
+2022-05-23 17:09:38,449 [  10185]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/920569258022129211. 
+2022-05-23 17:09:38,449 [  10185]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/1099055542460933869. 
+2022-05-23 17:09:38,449 [  10185]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/756716148943844282. 
+2022-05-23 17:09:38,450 [  10186]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/8980703707718628039. 
+2022-05-23 17:09:38,450 [  10186]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/3500647199485778514. 
+2022-05-23 17:09:38,450 [  10186]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/3500647199485778515. 
+2022-05-23 17:09:38,609 [  10345]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,032 s 
+2022-05-23 17:09:38,625 [  10361]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 17:09:48,789 [  20525]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,005 s 
+2022-05-23 17:09:48,790 [  20526]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 17:13:55,922 [      0]   WARN - jetbrains.mps.tool.environment.EnvironmentConfig - Can't load plugin. Plugin file or folder was not found: /Users/claudiuciumedean/Storage/School/DTU/Thesis/language-agnostic-microservice-dsl/build/tmp/SandboxBuild/deps/MicroserviceDSL/MicroserviceDSL.zip/MicroserviceDSL 
+2022-05-23 17:13:55,924 [      2]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-05-23 17:13:56,204 [    282]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-05-23 17:13:56,214 [    292]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-05-23 17:13:56,259 [    337]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-23 17:13:56,259 [    337]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-23 17:13:56,270 [    348]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 151 libraries 
+2022-05-23 17:14:01,428 [   5506]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-05-23 17:14:04,147 [   8225]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 2,709 s 
+2022-05-23 17:14:04,167 [   8245]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 17:14:05,207 [   9285]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-05-23 17:14:05,211 [   9289]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-05-23 17:14:05,216 [   9294]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-05-23 17:14:05,217 [   9295]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-05-23 17:14:05,217 [   9295]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp16492876187875284218' is opened 
+2022-05-23 17:14:05,364 [   9442]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,103 s 
+2022-05-23 17:14:05,382 [   9460]   WARN - jetbrains.mps.classloading.ModulesWatcher - 1 modules are marked as invalid roots for class loading out of 281 modules [totally in the repository]: 
+2022-05-23 17:14:05,382 [   9460]   WARN - jetbrains.mps.classloading.ModulesWatcher - ECommerceSandbox [solution] was marked invalid for class loading: The dependency in ECommerceSandbox [solution] cannot be resolved {Default} 41009928-b490-4ac3-b848-8158d6c0d5db(BFF) 
+2022-05-23 17:14:05,382 [   9460]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 1 modules are marked invalid for class loading: 
+2022-05-23 17:14:05,382 [   9460]   INFO - jetbrains.mps.classloading.ModulesWatcher - 8b512059-79a2-4825-b4a1-622dfe06d0bb(ECommerceSandbox) 
+2022-05-23 17:14:05,456 [   9534]   WARN - jetbrains.mps.smodel.SLanguageHierarchy - The language 'Client' is not deployed 
+2022-05-23 17:14:05,458 [   9536]   WARN - jetbrains.mps.smodel.SLanguageHierarchy - The language 'Deployment' is not deployed 
+2022-05-23 17:14:05,458 [   9536]   WARN - jetbrains.mps.smodel.SLanguageHierarchy - The language 'Microservice' is not deployed 
+2022-05-23 17:14:05,458 [   9536]   WARN - jetbrains.mps.smodel.SLanguageHierarchy - The language 'BFF' is not deployed 
+2022-05-23 17:14:06,181 [  10259]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model CustomerService uses language Deployment which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:06,181 [  10259]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model CustomerService uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:06,404 [  10482]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept e995fbb6-0310-461a-be22-cc66f48262f1/1826169139604544908. 
+2022-05-23 17:14:06,406 [  10484]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept e995fbb6-0310-461a-be22-cc66f48262f1/8568306897850702777. 
+2022-05-23 17:14:06,407 [  10485]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept e995fbb6-0310-461a-be22-cc66f48262f1/6302204855853965575. 
+2022-05-23 17:14:06,408 [  10486]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept c2a6432b-e821-404b-af0e-22b30531f868/535292525704187332. 
+2022-05-23 17:14:07,477 [  11555]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model OrdersService uses language Deployment which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,481 [  11559]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model OrdersService uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,492 [  11570]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model ItemsService uses language Deployment which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,493 [  11571]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model ItemsService uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,510 [  11588]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model MobileBFF uses language BFF which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,510 [  11588]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model MobileBFF uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,510 [  11588]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 41009928-b490-4ac3-b848-8158d6c0d5db/5020122306378030674. 
+2022-05-23 17:14:07,512 [  11590]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 41009928-b490-4ac3-b848-8158d6c0d5db/5020122306378030699. 
+2022-05-23 17:14:07,518 [  11596]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model DesktopBFF uses language BFF which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,519 [  11597]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model DesktopBFF uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,523 [  11601]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model Client uses language BFF which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,523 [  11601]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model Client uses language Client which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,524 [  11602]  ERROR - jetbrains.mps.generator.impl.plan.GenerationPlan - Model Client uses language Microservice which is missing (likely is not yet generated or is a bootstrap dependency) 
+2022-05-23 17:14:07,525 [  11603]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/756716148935626254. 
+2022-05-23 17:14:07,525 [  11603]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/8033641832267364504. 
+2022-05-23 17:14:07,525 [  11603]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/756716148943048266. 
+2022-05-23 17:14:07,526 [  11604]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/920569258022129211. 
+2022-05-23 17:14:07,526 [  11604]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/1099055542460933869. 
+2022-05-23 17:14:07,526 [  11604]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/756716148943844282. 
+2022-05-23 17:14:07,526 [  11604]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/8980703707718628039. 
+2022-05-23 17:14:07,526 [  11604]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/3500647199485778514. 
+2022-05-23 17:14:07,527 [  11605]   WARN - etbrains.mps.smodel.runtime.illegal.IllegalConceptDescriptor - IllegalConceptDescriptor created for concept 48e57d50-7e0f-4c8f-93fc-859018228309/3500647199485778515. 
+2022-05-23 17:14:07,761 [  11839]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,036 s 
+2022-05-23 17:14:07,777 [  11855]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-23 17:14:17,882 [  21960]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,003 s 
+2022-05-23 17:14:17,882 [  21960]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 

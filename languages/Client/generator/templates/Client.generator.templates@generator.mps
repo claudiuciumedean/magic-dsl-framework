@@ -1547,7 +1547,7 @@
             </node>
             <node concept="356sEK" id="X0Cj5temnB" role="383Ya9">
               <node concept="356sEF" id="X0Cj5temnC" role="356sEH">
-                <property role="TrG5h" value="    const params = queryString.stringify({ " />
+                <property role="TrG5h" value="    const params = { " />
               </node>
               <node concept="356sEF" id="X0Cj5temHh" role="356sEH">
                 <property role="TrG5h" value="globalStateParams" />
@@ -1573,9 +1573,7 @@
                         </node>
                         <node concept="3clFbS" id="X0Cj5temNf" role="3clFbx">
                           <node concept="3cpWs6" id="X0Cj5texqR" role="3cqZAp">
-                            <node concept="Xl_RD" id="X0Cj5texv9" role="3cqZAk">
-                              <property role="Xl_RC" value="" />
-                            </node>
+                            <node concept="Xl_RD" id="X0Cj5texv9" role="3cqZAk" />
                           </node>
                         </node>
                       </node>
@@ -1677,9 +1675,21 @@
                 </node>
               </node>
               <node concept="356sEF" id="X0Cj5temHw" role="356sEH">
-                <property role="TrG5h" value="});" />
+                <property role="TrG5h" value="};" />
               </node>
               <node concept="2EixSi" id="X0Cj5temnD" role="2EinRH" />
+            </node>
+            <node concept="356sEK" id="68NrdXOwHYT" role="383Ya9">
+              <node concept="356sEF" id="68NrdXOwHYU" role="356sEH">
+                <property role="TrG5h" value="    const urlSearch = queryString.parseUrl(window.location.href); " />
+              </node>
+              <node concept="2EixSi" id="68NrdXOwHYV" role="2EinRH" />
+            </node>
+            <node concept="356sEK" id="68NrdXOwJcd" role="383Ya9">
+              <node concept="356sEF" id="68NrdXOwJce" role="356sEH">
+                <property role="TrG5h" value="    const query = queryString.stringify({...urlSearch.query, ...params});" />
+              </node>
+              <node concept="2EixSi" id="68NrdXOwJcf" role="2EinRH" />
             </node>
             <node concept="356sEK" id="E0plg5pES_" role="383Ya9">
               <node concept="2EixSi" id="E0plg5pESC" role="2EinRH" />
@@ -1776,7 +1786,7 @@
                 </node>
               </node>
               <node concept="356sEF" id="E0plg5q_5m" role="356sEH">
-                <property role="TrG5h" value="${window.location.search}${params.lenght ? params : &quot;&quot;}`);" />
+                <property role="TrG5h" value="${query.length ? &quot;?&quot; + query: &quot;&quot;}`);" />
               </node>
             </node>
             <node concept="356sEK" id="E0plg5pESL" role="383Ya9">

@@ -150,11 +150,8 @@
         <node concept="3oM_SD" id="1GcCT5ob3Hz" role="1PaTwD">
           <property role="3oM_SC" value="" />
         </node>
-        <node concept="3oM_SD" id="1GcCT5ob3H$" role="1PaTwD">
-          <property role="3oM_SC" value="{" />
-        </node>
-        <node concept="3oM_SD" id="1GcCT5ob3H_" role="1PaTwD">
-          <property role="3oM_SC" value="&#13;" />
+        <node concept="3oM_SD" id="68NrdXOroa7" role="1PaTwD">
+          <property role="3oM_SC" value="{&#13;" />
         </node>
       </node>
       <node concept="1PaTwC" id="1GcCT5ob3HA" role="1PaQFQ">
@@ -228,7 +225,7 @@
           <property role="3oM_SC" value="" />
         </node>
         <node concept="3oM_SD" id="1GcCT5ob3HZ" role="1PaTwD">
-          <property role="3oM_SC" value="&quot;thumbnail:&quot;" />
+          <property role="3oM_SC" value="&quot;thumbnail&quot;" />
         </node>
         <node concept="3oM_SD" id="32kN1iD9rPA" role="1PaTwD">
           <property role="3oM_SC" value=":" />
@@ -400,7 +397,7 @@
           <property role="3oM_SC" value="" />
         </node>
         <node concept="3oM_SD" id="1GcCT5ob3IX" role="1PaTwD">
-          <property role="3oM_SC" value="&quot;thumbnail:&quot;" />
+          <property role="3oM_SC" value="&quot;thumbnail&quot;" />
         </node>
         <node concept="3oM_SD" id="32kN1iD9rzs" role="1PaTwD">
           <property role="3oM_SC" value=":" />

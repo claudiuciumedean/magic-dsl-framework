@@ -3438,9 +3438,7 @@
                       </node>
                     </node>
                     <node concept="3cpWs6" id="69f6Qm3bl6p" role="3cqZAp">
-                      <node concept="Xl_RD" id="69f6Qm3bl6q" role="3cqZAk">
-                        <property role="Xl_RC" value="" />
-                      </node>
+                      <node concept="Xl_RD" id="69f6Qm3bl6q" role="3cqZAk" />
                     </node>
                   </node>
                 </node>

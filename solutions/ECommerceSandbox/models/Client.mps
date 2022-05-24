@@ -407,19 +407,24 @@
       <property role="fS2L6" value="/items" />
       <property role="2pCN9U" value="true" />
       <property role="2pNyDz" value="true" />
-      <node concept="3jiOFB" id="6Y6IXsoZuNE" role="3jiPDh">
+      <node concept="3jiOFB" id="68NrdXOxE9C" role="3jiPDh">
         <property role="TrG5h" value="buyItem" />
         <property role="3jiOEs" value="/buy-item" />
-        <node concept="3K_yPg" id="6Y6IXsoZuNG" role="3KABxh" />
-        <node concept="3wFZSN" id="6Y6IXsoZuNH" role="1RtzAg">
-          <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
+        <node concept="1jz$vs" id="68NrdXOxE9D" role="1iio1x">
+          <property role="1j_NJJ" value="customer_id" />
+          <node concept="3wDFX_" id="68NrdXOxE9E" role="1jz$v1">
+            <ref role="3wDFX$" to="bqge:3I8kJiZre3f" />
+          </node>
         </node>
-        <node concept="1hBKNC" id="6Y6IXsoZuNI" role="1hAkf$" />
-        <node concept="fB6HK" id="6Y6IXsoZuNW" role="1Rr_s1">
-          <ref role="fB1DU" node="6Y6IXsoZuNk" resolve="Items" />
+        <node concept="3K_yPg" id="68NrdXOxE9G" role="3KABxh" />
+        <node concept="3wFZSN" id="68NrdXOxE9H" role="1RtzAg">
+          <ref role="3wFZSZ" to="bqge:1GcCT5ob3Nn" resolve="order" />
         </node>
-        <node concept="fLJYe" id="6Y6IXsoZuNY" role="37cMqC">
+        <node concept="fLJYe" id="68NrdXOxE9Q" role="37cMqC">
           <ref role="fLJYf" to="wqkn:4mF3EfgFMLR" resolve="mobile" />
+        </node>
+        <node concept="fB6HK" id="68NrdXOxE9U" role="1Rr_s1">
+          <ref role="fB1DU" node="1NIouMbVnAi" resolve="Cart" />
         </node>
       </node>
       <node concept="3wFZSN" id="6Y6IXsoZuNl" role="fS2RL">
@@ -438,8 +443,8 @@
         <node concept="37eYMR" id="6Y6IXsoZuNQ" role="f3jHk">
           <property role="37eYPe" value="Buy item" />
           <property role="37eYMS" value="primary" />
-          <node concept="37eYMm" id="X0Cj5t9N5E" role="37eYPS">
-            <ref role="37eYMn" node="6Y6IXsoZuNE" resolve="buyItem" />
+          <node concept="37eYMm" id="68NrdXOxE9S" role="37eYPS">
+            <ref role="37eYMn" node="68NrdXOxE9C" resolve="buyItem" />
           </node>
         </node>
       </node>

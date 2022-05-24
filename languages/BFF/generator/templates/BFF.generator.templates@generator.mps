@@ -656,7 +656,7 @@
           <node concept="356sEK" id="3WPyOlYhVkz" role="383Ya9">
             <node concept="2EixSi" id="3WPyOlYhVkA" role="2EinRH" />
             <node concept="356sEF" id="3WPyOlYhVkB" role="356sEH">
-              <property role="TrG5h" value="    const response = await axios.post(`http://localhost:" />
+              <property role="TrG5h" value="    const response = await axios.post(`http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="3WPyOlYhW7w" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -966,7 +966,7 @@
           <node concept="356sEK" id="3WPyOlYh9A0" role="383Ya9">
             <node concept="2EixSi" id="3WPyOlYh9A3" role="2EinRH" />
             <node concept="356sEF" id="3WPyOlYh9A4" role="356sEH">
-              <property role="TrG5h" value="    const response = await axios.get('http://localhost:" />
+              <property role="TrG5h" value="    const response = await axios.get('http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="3WPyOlYhar1" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -1282,7 +1282,7 @@
           <node concept="356sEK" id="3WPyOlYhRMZ" role="383Ya9">
             <node concept="2EixSi" id="3WPyOlYhRN0" role="2EinRH" />
             <node concept="356sEF" id="3WPyOlYhRN1" role="356sEH">
-              <property role="TrG5h" value="    const response = await axios.get(`http://localhost:" />
+              <property role="TrG5h" value="    const response = await axios.get(`http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="3WPyOlYhRN2" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -1595,7 +1595,7 @@
           <node concept="356sEK" id="3WPyOlYhAJO" role="383Ya9">
             <node concept="2EixSi" id="3WPyOlYhAJR" role="2EinRH" />
             <node concept="356sEF" id="3WPyOlYhAJS" role="356sEH">
-              <property role="TrG5h" value="    const response = await axios.get(`http://localhost:" />
+              <property role="TrG5h" value="    const response = await axios.get(`http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="3WPyOlYhBv2" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -1922,7 +1922,7 @@
           <node concept="356sEK" id="3WPyOlYi4GF" role="383Ya9">
             <node concept="2EixSi" id="3WPyOlYi4GI" role="2EinRH" />
             <node concept="356sEF" id="3WPyOlYi4GJ" role="356sEH">
-              <property role="TrG5h" value="    const entity = await axios.put(`http://localhost:" />
+              <property role="TrG5h" value="    const entity = await axios.put(`http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="3WPyOlYi5$p" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -2223,7 +2223,7 @@
           <node concept="356sEK" id="3WPyOlYi8nt" role="383Ya9">
             <node concept="2EixSi" id="3WPyOlYi8nu" role="2EinRH" />
             <node concept="356sEF" id="3WPyOlYi8nv" role="356sEH">
-              <property role="TrG5h" value="    await axios.delete(`http://localhost:" />
+              <property role="TrG5h" value="    await axios.delete(`http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="3WPyOlYi8nw" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -2693,7 +2693,7 @@
           <node concept="356sEK" id="dtI1sb$Lry" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb$Lr_" role="2EinRH" />
             <node concept="356sEF" id="dtI1sb$LrA" role="356sEH">
-              <property role="TrG5h" value="        response = requests.post('http://localhost:" />
+              <property role="TrG5h" value="        response = requests.post('http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="dtI1sb$OOE" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -2900,7 +2900,7 @@
           <node concept="356sEK" id="dtI1sb$Ls4" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb$Ls7" role="2EinRH" />
             <node concept="356sEF" id="dtI1sb$Ls8" role="356sEH">
-              <property role="TrG5h" value="    return jsonify(entity.entity)" />
+              <property role="TrG5h" value="    return jsonify(entity[&quot;entity&quot;])" />
             </node>
           </node>
         </node>
@@ -3037,7 +3037,7 @@
           <node concept="356sEK" id="dtI1sb$VAb" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb$VAe" role="2EinRH" />
             <node concept="356sEF" id="dtI1sb$VAf" role="356sEH">
-              <property role="TrG5h" value="        response = requests.get('http://localhost:" />
+              <property role="TrG5h" value="        response = requests.get('http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="dtI1sb$Wyn" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -3414,7 +3414,7 @@
           <node concept="356sEK" id="dtI1sb_a7B" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb_a7E" role="2EinRH" />
             <node concept="356sEF" id="dtI1sb_a7F" role="356sEH">
-              <property role="TrG5h" value="        response = requests.get('http://localhost:" />
+              <property role="TrG5h" value="        response = requests.get('http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="dtI1sb_b3X" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -3791,7 +3791,7 @@
           <node concept="356sEK" id="dtI1sb_h1j" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb_h1m" role="2EinRH" />
             <node concept="356sEF" id="dtI1sb_h1n" role="356sEH">
-              <property role="TrG5h" value="        response = requests.get('http://localhost:" />
+              <property role="TrG5h" value="        response = requests.get('http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="dtI1sb_i1X" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -4173,7 +4173,7 @@
           <node concept="356sEK" id="dtI1sb_rU8" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb_rUb" role="2EinRH" />
             <node concept="356sEF" id="dtI1sb_rUc" role="356sEH">
-              <property role="TrG5h" value="        response = requests.put('http://localhost:" />
+              <property role="TrG5h" value="        response = requests.put('http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="dtI1sb_sVn" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -4520,7 +4520,7 @@
           <node concept="356sEK" id="dtI1sb_$N6" role="383Ya9">
             <node concept="2EixSi" id="dtI1sb_$N9" role="2EinRH" />
             <node concept="356sEF" id="dtI1sb_$Na" role="356sEH">
-              <property role="TrG5h" value="        response = requests.delete('http://localhost:" />
+              <property role="TrG5h" value="        response = requests.delete('http://host.docker.internal:" />
             </node>
             <node concept="356sEF" id="dtI1sb__Nc" role="356sEH">
               <property role="TrG5h" value="port" />
@@ -4671,12 +4671,6 @@
         <node concept="2EixSi" id="dtI1sbz9Kc" role="2EinRH" />
         <node concept="356sEF" id="dtI1sbz9Kd" role="356sEH">
           <property role="TrG5h" value="funcy" />
-        </node>
-      </node>
-      <node concept="356sEK" id="dtI1sbz9Kf" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbz9Ki" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbz9Kj" role="356sEH">
-          <property role="TrG5h" value="urllib" />
         </node>
       </node>
     </node>

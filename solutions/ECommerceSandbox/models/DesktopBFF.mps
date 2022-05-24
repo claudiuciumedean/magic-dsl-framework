@@ -191,6 +191,9 @@
       <node concept="3wDFX_" id="X0Cj5sVDqE" role="3wDFXz">
         <ref role="3wDFX$" to="bqge:X0Cj5sVC1B" />
       </node>
+      <node concept="3wDFX_" id="68NrdXOxAyD" role="3wDFXz">
+        <ref role="3wDFX$" to="bqge:X0Cj5t8USE" />
+      </node>
       <node concept="3uh$Y_" id="X0Cj5sVDqI" role="2l1AS3">
         <ref role="3uh$Yy" to="bqge:1GcCT5ob3Nf" resolve="OrdersService" />
       </node>

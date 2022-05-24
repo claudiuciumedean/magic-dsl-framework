@@ -219,11 +219,15 @@
       <ref role="30HIoZ" to="mo5v:E0plg570Se" resolve="Client" />
       <ref role="3lhOvi" node="E0plg5atZH" resolve="name" />
     </node>
+    <node concept="3lhOvk" id="68NrdXOhL8b" role="3lj3bC">
+      <ref role="3lhOvi" node="68NrdXOhL87" resolve="Dockerfile" />
+      <ref role="30HIoZ" to="mo5v:5qCKKvQrs32" resolve="ClientConfig" />
+    </node>
   </node>
   <node concept="356sEV" id="5qCKKvQrwTU">
     <property role="TrG5h" value="package" />
     <property role="3Le9LX" value=".json" />
-    <property role="3GE5qa" value="ClientRoot" />
+    <property role="3GE5qa" value="" />
     <node concept="356WMU" id="5qCKKvQrwTY" role="356KY_">
       <node concept="356sEK" id="5qCKKvQrwTZ" role="383Ya9">
         <node concept="2EixSi" id="5qCKKvQrwU2" role="2EinRH" />
@@ -5490,7 +5494,7 @@
     </node>
   </node>
   <node concept="356sEV" id="7MxRB2VLSTL">
-    <property role="3GE5qa" value="ClientRoot" />
+    <property role="3GE5qa" value="" />
     <property role="TrG5h" value="build" />
     <property role="3Le9LX" value=".sh" />
     <node concept="356WMU" id="7MxRB2VLTVO" role="356KY_">
@@ -5617,20 +5621,149 @@
         </node>
         <node concept="2EixSi" id="32kN1iDa195" role="2EinRH" />
       </node>
+      <node concept="356sEK" id="68NrdXOhLiI" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOhLiK" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOlb03" role="383Ya9">
+        <node concept="356sEF" id="68NrdXOlb04" role="356sEH">
+          <property role="TrG5h" value="mkdir -p -- &quot;app&quot;" />
+        </node>
+        <node concept="2EixSi" id="68NrdXOlb05" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOlb7O" role="383Ya9">
+        <node concept="356sEF" id="68NrdXOlb7P" role="356sEH">
+          <property role="TrG5h" value="mv public app" />
+        </node>
+        <node concept="2EixSi" id="68NrdXOlb7Q" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOlbi1" role="383Ya9">
+        <node concept="356sEF" id="68NrdXOlbi2" role="356sEH">
+          <property role="TrG5h" value="mv src app" />
+        </node>
+        <node concept="2EixSi" id="68NrdXOlbi3" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOlbm0" role="383Ya9">
+        <node concept="356sEF" id="68NrdXOlbm1" role="356sEH">
+          <property role="TrG5h" value="mv package.json app" />
+        </node>
+        <node concept="2EixSi" id="68NrdXOlbm2" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOlb3U" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlb3W" role="2EinRH" />
+      </node>
       <node concept="356sEK" id="7MxRB2VLTWn" role="383Ya9">
         <node concept="2EixSi" id="7MxRB2VLTWq" role="2EinRH" />
-        <node concept="356sEF" id="7MxRB2VLTWr" role="356sEH">
-          <property role="TrG5h" value="npm install" />
+        <node concept="356sEF" id="68NrdXOhLrX" role="356sEH">
+          <property role="TrG5h" value="# Build docker image" />
         </node>
       </node>
-      <node concept="356sEK" id="7MxRB2VLTWt" role="383Ya9">
-        <node concept="2EixSi" id="7MxRB2VLTWw" role="2EinRH" />
-        <node concept="356sEF" id="7MxRB2VLTWx" role="356sEH">
-          <property role="TrG5h" value="npm start" />
+      <node concept="356sEK" id="68NrdXOhLrZ" role="383Ya9">
+        <node concept="356sEF" id="68NrdXOhLs0" role="356sEH">
+          <property role="TrG5h" value="docker build -t " />
         </node>
+        <node concept="356sEF" id="68NrdXOhLzj" role="356sEH">
+          <property role="TrG5h" value="clientimage" />
+        </node>
+        <node concept="356sEF" id="68NrdXOhLzm" role="356sEH">
+          <property role="TrG5h" value=" ." />
+        </node>
+        <node concept="2EixSi" id="68NrdXOhLs1" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOhOX8" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOhOXa" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOhP0d" role="383Ya9">
+        <node concept="356sEF" id="68NrdXOhP0e" role="356sEH">
+          <property role="TrG5h" value="# Build docker container" />
+        </node>
+        <node concept="2EixSi" id="68NrdXOhP0f" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOhP3i" role="383Ya9">
+        <node concept="356sEF" id="68NrdXOhP3j" role="356sEH">
+          <property role="TrG5h" value="docker run -d -p  " />
+        </node>
+        <node concept="356sEF" id="68NrdXOkibg" role="356sEH">
+          <property role="TrG5h" value="port" />
+          <node concept="17Uvod" id="68NrdXOkibt" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="68NrdXOkibu" role="3zH0cK">
+              <node concept="3clFbS" id="68NrdXOkibv" role="2VODD2">
+                <node concept="3clFbF" id="68NrdXOkiga" role="3cqZAp">
+                  <node concept="2OqwBi" id="68NrdXOkisE" role="3clFbG">
+                    <node concept="30H73N" id="68NrdXOkig9" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="68NrdXOkiSl" role="2OqNvi">
+                      <ref role="3TsBF5" to="mo5v:68NrdXOjujg" resolve="port" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="356sEF" id="68NrdXOkibp" role="356sEH">
+          <property role="TrG5h" value=":3000 --name clientcontainer clientimage" />
+        </node>
+        <node concept="2EixSi" id="68NrdXOhP3k" role="2EinRH" />
       </node>
     </node>
     <node concept="n94m4" id="7MxRB2VLSTN" role="lGtFl">
+      <ref role="n9lRv" to="mo5v:5qCKKvQrs32" resolve="ClientConfig" />
+    </node>
+  </node>
+  <node concept="356sEV" id="68NrdXOhL87">
+    <property role="TrG5h" value="Dockerfile" />
+    <node concept="356WMU" id="68NrdXOlaie" role="356KY_">
+      <node concept="356sEK" id="68NrdXOlaif" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlaii" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOlaij" role="356sEH">
+          <property role="TrG5h" value="FROM node:17" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOlail" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlaio" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOlaip" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlais" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOlait" role="356sEH">
+          <property role="TrG5h" value="WORKDIR /usr/src/" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOlaiv" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlaiy" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOlaiz" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlaiA" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOlaiB" role="356sEH">
+          <property role="TrG5h" value="COPY app  /usr/src" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOlaiD" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlaiG" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOlaiH" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlaiK" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOlaiL" role="356sEH">
+          <property role="TrG5h" value="WORKDIR /usr/src/app" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOlaiN" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlaiQ" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOlaiR" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlaiU" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOlaiV" role="356sEH">
+          <property role="TrG5h" value="RUN npm install" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOlaiX" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOlaj0" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOlaj1" role="356sEH">
+          <property role="TrG5h" value="CMD npm start" />
+        </node>
+      </node>
+    </node>
+    <node concept="n94m4" id="68NrdXOhL89" role="lGtFl">
       <ref role="n9lRv" to="mo5v:5qCKKvQrs32" resolve="ClientConfig" />
     </node>
   </node>

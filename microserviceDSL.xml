@@ -33,11 +33,9 @@
   </path>
   
   <target name="assemble" depends="classes, declare-mps-tasks">
-    <mkdir dir="${build.layout}" />
-    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip" />
-    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL" />
-    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/META-INF" />
-    <echoxml file="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/META-INF/plugin.xml">
+    <mkdir dir="${build.layout}/MicroserviceDSL" />
+    <mkdir dir="${build.layout}/MicroserviceDSL/META-INF" />
+    <echoxml file="${build.layout}/MicroserviceDSL/META-INF/plugin.xml">
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>MicroserviceDSL</id>
         <name>MicroserviceDSL</name>
@@ -52,7 +50,7 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/lib" />
+    <mkdir dir="${build.layout}/MicroserviceDSL/lib" />
     <mkdir dir="${build.tmp}/default/MicroserviceDSL.jar" />
     <mkdir dir="${build.tmp}/default/MicroserviceDSL.jar/META-INF" />
     <echoxml file="${build.tmp}/default/MicroserviceDSL.jar/META-INF/plugin.xml">
@@ -70,11 +68,11 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/lib/MicroserviceDSL.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/lib/MicroserviceDSL.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/default/MicroserviceDSL.jar" />
     </jar>
-    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages" />
-    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL" />
+    <mkdir dir="${build.layout}/MicroserviceDSL/languages" />
+    <mkdir dir="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL" />
     <mkdir dir="${build.tmp}/default/Microservice.jar" />
     <mkdir dir="${build.tmp}/default/Microservice.jar/META-INF" />
     <echoxml file="${build.tmp}/default/Microservice.jar/META-INF/module.xml">
@@ -144,7 +142,7 @@
         <sources jar="Microservice-src.jar" descriptor="Microservice.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Microservice.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/Microservice.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Microservice" />
       <fileset dir="${basedir}/languages/Microservice" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/Microservice/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
@@ -191,7 +189,7 @@
         <sources jar="Microservice-src.jar" descriptor="Microservice.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Microservice-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/Microservice-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Microservice.generator" />
       <fileset dir="${basedir}/languages/Microservice/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/Microservice-generator.jar" />
@@ -202,7 +200,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Microservice-generator-templates">
       <fileset dir="${basedir}/languages/Microservice/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Microservice-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/Microservice-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/languages/Microservice/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -282,7 +280,7 @@
         <sources jar="BFF-src.jar" descriptor="BFF.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/BFF.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/BFF.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/BFF" />
       <fileset dir="${basedir}/languages/BFF" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/BFF/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
@@ -329,7 +327,7 @@
         <sources jar="BFF-src.jar" descriptor="BFF.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/BFF-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/BFF-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/BFF.generator" />
       <fileset dir="${basedir}/languages/BFF/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/BFF-generator.jar" />
@@ -340,7 +338,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-BFF-generator-templates">
       <fileset dir="${basedir}/languages/BFF/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/BFF-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/BFF-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/languages/BFF/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -418,7 +416,7 @@
         <sources jar="Deployment-src.jar" descriptor="Deployment.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Deployment.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/Deployment.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Deployment" />
       <fileset dir="${basedir}/languages/Deployment" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/Deployment/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
@@ -465,7 +463,7 @@
         <sources jar="Deployment-src.jar" descriptor="Deployment.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Deployment-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/Deployment-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Deployment.generator" />
       <fileset dir="${basedir}/languages/Deployment/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/Deployment-generator.jar" />
@@ -476,7 +474,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Deployment-generator-templates">
       <fileset dir="${basedir}/languages/Deployment/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Deployment-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/Deployment-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/languages/Deployment/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -557,7 +555,7 @@
         <sources jar="Client-src.jar" descriptor="Client.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Client.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/Client.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Client" />
       <fileset dir="${basedir}/languages/Client" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/Client/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
@@ -605,7 +603,7 @@
         <sources jar="Client-src.jar" descriptor="Client.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Client-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/Client-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Client.generator" />
       <fileset dir="${basedir}/languages/Client/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/Client-generator.jar" />
@@ -616,7 +614,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Client-generator-templates">
       <fileset dir="${basedir}/languages/Client/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Client-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/Client-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/languages/Client/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -651,12 +649,647 @@
         <sources jar="MicroserviceDSL.build-src.jar" descriptor="MicroserviceDSL.build.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/MicroserviceDSL.build.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/MicroserviceDSL.build.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/MicroserviceDSL.build" />
       <fileset dir="${basedir}/solutions/MicroserviceDSL.build/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/MicroserviceDSL.build.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-MicroserviceDSL.build-models">
+      <fileset dir="${basedir}/solutions/MicroserviceDSL.build/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.layout}/MicroserviceDSL/languages/MicroserviceDSL/MicroserviceDSL.build-src.jar" duplicate="preserve">
+      <fileset dir="${basedir}/solutions/MicroserviceDSL.build/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/solutions/MicroserviceDSL.build/MicroserviceDSL.build.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-MicroserviceDSL.build-models" prefix="module/models" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip" />
+    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL" />
+    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/META-INF" />
+    <echoxml file="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/META-INF/plugin.xml">
+      <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+        <id>MicroserviceDSL</id>
+        <name>MicroserviceDSL</name>
+        <version>1.0</version>
+        <depends>jetbrains.mps.core</depends>
+        <depends>com.dslfoundry.plaintextgen</depends>
+        <depends>de.itemis.mps.extensions.build</depends>
+        <depends>com.intellij.modules.platform</depends>
+        
+        <extensions defaultExtensionNs="com.intellij">
+          <mps.LanguageLibrary dir="/languages" />
+        </extensions>
+      </idea-plugin>
+    </echoxml>
+    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/lib" />
+    <mkdir dir="${build.tmp}/default/MicroserviceDSL.jar1" />
+    <mkdir dir="${build.tmp}/default/MicroserviceDSL.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/MicroserviceDSL.jar1/META-INF/plugin.xml">
+      <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+        <id>MicroserviceDSL</id>
+        <name>MicroserviceDSL</name>
+        <version>1.0</version>
+        <depends>jetbrains.mps.core</depends>
+        <depends>com.dslfoundry.plaintextgen</depends>
+        <depends>de.itemis.mps.extensions.build</depends>
+        <depends>com.intellij.modules.platform</depends>
+        
+        <extensions defaultExtensionNs="com.intellij">
+          <mps.LanguageLibrary dir="/languages" />
+        </extensions>
+      </idea-plugin>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/lib/MicroserviceDSL.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/default/MicroserviceDSL.jar1" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages" />
+    <mkdir dir="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL" />
+    <mkdir dir="${build.tmp}/default/Microservice.jar1" />
+    <mkdir dir="${build.tmp}/default/Microservice.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/Microservice.jar1/META-INF/module.xml">
+      <module namespace="Microservice" type="language" uuid="e995fbb6-0310-461a-be22-cc66f48262f1">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
+          <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
+          <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="990507d3-3527-4c54-bfe9-0ca3c9c6247a(com.dslfoundry.plaintextgen)" kind="cl" />
+          <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="cl" />
+          <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
+          <module ref="c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)" kind="cl" />
+          <module ref="c7fb639f-be78-4307-89b0-b5959c3fa8c8(jetbrains.mps.lang.text)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
+          <language id="l:f159adf4-3c93-40f9-9c5a-1f245a8697af:jetbrains.mps.lang.aspect" />
+          <language id="l:af65afd8-f0dd-4942-87d9-63a55f2a9db1:jetbrains.mps.lang.behavior" />
+          <language id="l:3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1:jetbrains.mps.lang.constraints" />
+          <language id="l:e51810c5-7308-4642-bcb6-469e61b5dd18:jetbrains.mps.lang.constraints.msg.specification" />
+          <language id="l:47257bf3-78d3-470b-89d9-8c3261a61d15:jetbrains.mps.lang.constraints.rules" />
+          <language id="l:5dae8159-ab99-46bb-a40d-0cee30ee7018:jetbrains.mps.lang.constraints.rules.kinds" />
+          <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
+          <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
+          <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
+          <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
+          <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
+          <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
+          <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
+          <language id="l:28f9e497-3b42-4291-aeba-0a1039153ab1:jetbrains.mps.lang.plugin" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:982eb8df-2c96-4bd7-9963-11712ea622e5:jetbrains.mps.lang.resources" />
+          <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
+          <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+          <language id="l:7a5dda62-9140-4668-ab76-d5ed1746f2b2:jetbrains.mps.lang.typesystem" />
+          <language id="l:c9d137c4-3259-44f8-80ff-33ab2b506ee4:jetbrains.mps.lang.util.order" />
+          <language id="l:696c1165-4a59-463b-bc5d-902caab85dd0:jetbrains.mps.make.facet" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="Microservice-src.jar" descriptor="Microservice.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Microservice.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/Microservice" />
+      <fileset dir="${basedir}/languages/Microservice" includes="icons/**, resources/**" />
+      <fileset dir="${basedir}/languages/Microservice/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/Microservice.jar1" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/Microservice-generator.jar1" />
+    <mkdir dir="${build.tmp}/default/Microservice-generator.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/Microservice-generator.jar1/META-INF/module.xml">
+      <module namespace="Microservice.generator" type="generator" uuid="4a520bfb-7148-4aa7-9e46-1659b1109762">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="e995fbb6-0310-461a-be22-cc66f48262f1(Microservice)" kind="cl" />
+          <module ref="c7fb639f-be78-4307-89b0-b5959c3fa8c8(jetbrains.mps.lang.text)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" />
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:b401a680-8325-4110-8fd3-84331ff25bef:jetbrains.mps.lang.generator" />
+          <language id="l:d7706f63-9be2-479c-a3da-ae92af1e64d5:jetbrains.mps.lang.generator.generationContext" />
+          <language id="l:289fcc83-6543-41e8-a5ca-768235715ce4:jetbrains.mps.lang.generator.generationParameters" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="Microservice-src.jar" descriptor="Microservice.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Microservice-generator.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/Microservice.generator" />
+      <fileset dir="${basedir}/languages/Microservice/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/Microservice-generator.jar1" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Microservice-models1">
+      <fileset dir="${basedir}/languages/Microservice/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Microservice-generator-templates1">
+      <fileset dir="${basedir}/languages/Microservice/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Microservice-src.jar" duplicate="preserve">
+      <fileset dir="${basedir}/languages/Microservice/generator/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <fileset dir="${basedir}/languages/Microservice/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/languages/Microservice/Microservice.mpl" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Microservice-models1" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Microservice-generator-templates1" prefix="module/generator/templates" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/BFF.jar1" />
+    <mkdir dir="${build.tmp}/default/BFF.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/BFF.jar1/META-INF/module.xml">
+      <module namespace="BFF" type="language" uuid="41009928-b490-4ac3-b848-8158d6c0d5db">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
+          <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
+          <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="e995fbb6-0310-461a-be22-cc66f48262f1(Microservice)" kind="cl" />
+          <module ref="990507d3-3527-4c54-bfe9-0ca3c9c6247a(com.dslfoundry.plaintextgen)" kind="cl" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="cl" />
+          <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
+          <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
+          <language id="l:af65afd8-f0dd-4942-87d9-63a55f2a9db1:jetbrains.mps.lang.behavior" />
+          <language id="l:3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1:jetbrains.mps.lang.constraints" />
+          <language id="l:e51810c5-7308-4642-bcb6-469e61b5dd18:jetbrains.mps.lang.constraints.msg.specification" />
+          <language id="l:47257bf3-78d3-470b-89d9-8c3261a61d15:jetbrains.mps.lang.constraints.rules" />
+          <language id="l:5dae8159-ab99-46bb-a40d-0cee30ee7018:jetbrains.mps.lang.constraints.rules.kinds" />
+          <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
+          <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
+          <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
+          <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
+          <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
+          <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
+          <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:982eb8df-2c96-4bd7-9963-11712ea622e5:jetbrains.mps.lang.resources" />
+          <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
+          <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+          <language id="l:7a5dda62-9140-4668-ab76-d5ed1746f2b2:jetbrains.mps.lang.typesystem" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="BFF-src.jar" descriptor="BFF.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/BFF.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/BFF" />
+      <fileset dir="${basedir}/languages/BFF" includes="icons/**, resources/**" />
+      <fileset dir="${basedir}/languages/BFF/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/BFF.jar1" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/BFF-generator.jar1" />
+    <mkdir dir="${build.tmp}/default/BFF-generator.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/BFF-generator.jar1/META-INF/module.xml">
+      <module namespace="BFF.generator" type="generator" uuid="8d17877b-00d2-42a7-9bb1-790f189fcf9b">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="41009928-b490-4ac3-b848-8158d6c0d5db(BFF)" kind="cl" />
+          <module ref="e995fbb6-0310-461a-be22-cc66f48262f1(Microservice)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" />
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:b401a680-8325-4110-8fd3-84331ff25bef:jetbrains.mps.lang.generator" />
+          <language id="l:d7706f63-9be2-479c-a3da-ae92af1e64d5:jetbrains.mps.lang.generator.generationContext" />
+          <language id="l:289fcc83-6543-41e8-a5ca-768235715ce4:jetbrains.mps.lang.generator.generationParameters" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="BFF-src.jar" descriptor="BFF.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/BFF-generator.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/BFF.generator" />
+      <fileset dir="${basedir}/languages/BFF/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/BFF-generator.jar1" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-BFF-models1">
+      <fileset dir="${basedir}/languages/BFF/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-BFF-generator-templates1">
+      <fileset dir="${basedir}/languages/BFF/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/BFF-src.jar" duplicate="preserve">
+      <fileset dir="${basedir}/languages/BFF/generator/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <fileset dir="${basedir}/languages/BFF/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/languages/BFF/BFF.mpl" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-BFF-models1" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-BFF-generator-templates1" prefix="module/generator/templates" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/Deployment.jar1" />
+    <mkdir dir="${build.tmp}/default/Deployment.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/Deployment.jar1/META-INF/module.xml">
+      <module namespace="Deployment" type="language" uuid="c2a6432b-e821-404b-af0e-22b30531f868">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
+          <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
+          <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="e995fbb6-0310-461a-be22-cc66f48262f1(Microservice)" kind="cl" />
+          <module ref="990507d3-3527-4c54-bfe9-0ca3c9c6247a(com.dslfoundry.plaintextgen)" kind="cl" />
+          <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
+          <language id="l:af65afd8-f0dd-4942-87d9-63a55f2a9db1:jetbrains.mps.lang.behavior" />
+          <language id="l:3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1:jetbrains.mps.lang.constraints" />
+          <language id="l:e51810c5-7308-4642-bcb6-469e61b5dd18:jetbrains.mps.lang.constraints.msg.specification" />
+          <language id="l:47257bf3-78d3-470b-89d9-8c3261a61d15:jetbrains.mps.lang.constraints.rules" />
+          <language id="l:5dae8159-ab99-46bb-a40d-0cee30ee7018:jetbrains.mps.lang.constraints.rules.kinds" />
+          <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
+          <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
+          <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
+          <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
+          <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
+          <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
+          <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:982eb8df-2c96-4bd7-9963-11712ea622e5:jetbrains.mps.lang.resources" />
+          <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
+          <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+          <language id="l:7a5dda62-9140-4668-ab76-d5ed1746f2b2:jetbrains.mps.lang.typesystem" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="Deployment-src.jar" descriptor="Deployment.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Deployment.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/Deployment" />
+      <fileset dir="${basedir}/languages/Deployment" includes="icons/**, resources/**" />
+      <fileset dir="${basedir}/languages/Deployment/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/Deployment.jar1" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/Deployment-generator.jar1" />
+    <mkdir dir="${build.tmp}/default/Deployment-generator.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/Deployment-generator.jar1/META-INF/module.xml">
+      <module namespace="Deployment.generator" type="generator" uuid="2da340f9-af6a-40f5-9826-13df9039d288">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="c2a6432b-e821-404b-af0e-22b30531f868(Deployment)" kind="cl" />
+          <module ref="e995fbb6-0310-461a-be22-cc66f48262f1(Microservice)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" />
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:b401a680-8325-4110-8fd3-84331ff25bef:jetbrains.mps.lang.generator" />
+          <language id="l:d7706f63-9be2-479c-a3da-ae92af1e64d5:jetbrains.mps.lang.generator.generationContext" />
+          <language id="l:289fcc83-6543-41e8-a5ca-768235715ce4:jetbrains.mps.lang.generator.generationParameters" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="Deployment-src.jar" descriptor="Deployment.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Deployment-generator.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/Deployment.generator" />
+      <fileset dir="${basedir}/languages/Deployment/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/Deployment-generator.jar1" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Deployment-models1">
+      <fileset dir="${basedir}/languages/Deployment/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Deployment-generator-templates1">
+      <fileset dir="${basedir}/languages/Deployment/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Deployment-src.jar" duplicate="preserve">
+      <fileset dir="${basedir}/languages/Deployment/generator/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <fileset dir="${basedir}/languages/Deployment/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/languages/Deployment/Deployment.mpl" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Deployment-models1" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Deployment-generator-templates1" prefix="module/generator/templates" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/Client.jar1" />
+    <mkdir dir="${build.tmp}/default/Client.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/Client.jar1/META-INF/module.xml">
+      <module namespace="Client" type="language" uuid="48e57d50-7e0f-4c8f-93fc-859018228309">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="8e98f4e2-decf-4e97-bf80-9109e8b759ee(jetbrains.mps.lang.constraints.rules.runtime)" kind="rt" />
+          <module ref="0a98f3e2-decf-4e97-bf80-9109eccc59bb(jetbrains.mps.lang.feedback.problem.rules)" kind="rt" />
+          <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="41009928-b490-4ac3-b848-8158d6c0d5db(BFF)" kind="cl" />
+          <module ref="e995fbb6-0310-461a-be22-cc66f48262f1(Microservice)" kind="cl" />
+          <module ref="990507d3-3527-4c54-bfe9-0ca3c9c6247a(com.dslfoundry.plaintextgen)" kind="cl" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" kind="cl" />
+          <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
+          <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:aee9cad2-acd4-4608-aef2-0004f6a1cdbd:jetbrains.mps.lang.actions" />
+          <language id="l:af65afd8-f0dd-4942-87d9-63a55f2a9db1:jetbrains.mps.lang.behavior" />
+          <language id="l:3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1:jetbrains.mps.lang.constraints" />
+          <language id="l:e51810c5-7308-4642-bcb6-469e61b5dd18:jetbrains.mps.lang.constraints.msg.specification" />
+          <language id="l:47257bf3-78d3-470b-89d9-8c3261a61d15:jetbrains.mps.lang.constraints.rules" />
+          <language id="l:5dae8159-ab99-46bb-a40d-0cee30ee7018:jetbrains.mps.lang.constraints.rules.kinds" />
+          <language id="l:134c38d4-e3af-4d9e-b069-1c7df0a4005d:jetbrains.mps.lang.constraints.rules.skeleton" />
+          <language id="l:3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7:jetbrains.mps.lang.context" />
+          <language id="l:ea3159bf-f48e-4720-bde2-86dba75f0d34:jetbrains.mps.lang.context.defs" />
+          <language id="l:f4ad079d-bc71-4ffb-9600-9328705cf998:jetbrains.mps.lang.descriptor" />
+          <language id="l:18bc6592-03a6-4e29-a83a-7ff23bde13ba:jetbrains.mps.lang.editor" />
+          <language id="l:ad93155d-79b2-4759-b10c-55123e763903:jetbrains.mps.lang.messages" />
+          <language id="l:d4615e3b-d671-4ba9-af01-2b78369b0ba7:jetbrains.mps.lang.pattern" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:982eb8df-2c96-4bd7-9963-11712ea622e5:jetbrains.mps.lang.resources" />
+          <language id="l:b3551702-269c-4f05-ba61-58060cef4292:jetbrains.mps.lang.rulesAndMessages" />
+          <language id="l:d8f591ec-4d86-4af2-9f92-a9e93c803ffa:jetbrains.mps.lang.scopes" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+          <language id="l:7a5dda62-9140-4668-ab76-d5ed1746f2b2:jetbrains.mps.lang.typesystem" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="Client-src.jar" descriptor="Client.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Client.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/Client" />
+      <fileset dir="${basedir}/languages/Client" includes="icons/**, resources/**" />
+      <fileset dir="${basedir}/languages/Client/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/Client.jar1" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/Client-generator.jar1" />
+    <mkdir dir="${build.tmp}/default/Client-generator.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/Client-generator.jar1/META-INF/module.xml">
+      <module namespace="Client.generator" type="generator" uuid="529da1fb-86f6-494a-a03b-c2729b49c96d">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" kind="rt" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" kind="rt" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="41009928-b490-4ac3-b848-8158d6c0d5db(BFF)" kind="cl" />
+          <module ref="48e57d50-7e0f-4c8f-93fc-859018228309(Client)" kind="cl" />
+          <module ref="e995fbb6-0310-461a-be22-cc66f48262f1(Microservice)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" />
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+          <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
+          <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+          <language id="l:f2801650-65d5-424e-bb1b-463a8781b786:jetbrains.mps.baseLanguage.javadoc" />
+          <language id="l:760a0a8c-eabb-4521-8bfd-65db761a9ba3:jetbrains.mps.baseLanguage.logging" />
+          <language id="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" />
+          <language id="l:b401a680-8325-4110-8fd3-84331ff25bef:jetbrains.mps.lang.generator" />
+          <language id="l:d7706f63-9be2-479c-a3da-ae92af1e64d5:jetbrains.mps.lang.generator.generationContext" />
+          <language id="l:289fcc83-6543-41e8-a5ca-768235715ce4:jetbrains.mps.lang.generator.generationParameters" />
+          <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
+          <language id="l:13744753-c81f-424a-9c1b-cf8943bf4e86:jetbrains.mps.lang.sharedConcepts" />
+          <language id="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" />
+          <language id="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="Client-src.jar" descriptor="Client.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Client-generator.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/Client.generator" />
+      <fileset dir="${basedir}/languages/Client/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/Client-generator.jar1" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Client-models1">
+      <fileset dir="${basedir}/languages/Client/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Client-generator-templates1">
+      <fileset dir="${basedir}/languages/Client/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/Client-src.jar" duplicate="preserve">
+      <fileset dir="${basedir}/languages/Client/generator/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <fileset dir="${basedir}/languages/Client/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/languages/Client/Client.mpl" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Client-models1" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Client-generator-templates1" prefix="module/generator/templates" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/MicroserviceDSL.build.jar1" />
+    <mkdir dir="${build.tmp}/default/MicroserviceDSL.build.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/MicroserviceDSL.build.jar1/META-INF/module.xml">
+      <module namespace="MicroserviceDSL.build" type="solution" uuid="39bf04ae-b263-46b6-94c2-a7f47eb7963d">
+        <dependencies>
+          <module ref="f1fb7b1c-ce0d-423c-9369-4a661d600029(de.itemis.mps.extensions.build)" kind="cl" />
+          <module ref="422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" />
+          <language id="l:0cf935df-4699-4e9c-a132-fa109541cba3:jetbrains.mps.build.mps" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="MicroserviceDSL.build-src.jar" descriptor="MicroserviceDSL.build.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/MicroserviceDSL.build.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/MicroserviceDSL.build" />
+      <fileset dir="${basedir}/solutions/MicroserviceDSL.build/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/MicroserviceDSL.build.jar1" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-MicroserviceDSL.build-models1">
       <fileset dir="${basedir}/solutions/MicroserviceDSL.build/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/MicroserviceDSL.zip/MicroserviceDSL/languages/MicroserviceDSL/MicroserviceDSL.build-src.jar" duplicate="preserve">
@@ -667,7 +1300,7 @@
         <exclude name="**/*.mps" />
       </fileset>
       <zipfileset file="${basedir}/solutions/MicroserviceDSL.build/MicroserviceDSL.build.msd" prefix="module" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-MicroserviceDSL.build-models" prefix="module/models" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-MicroserviceDSL.build-models1" prefix="module/models" />
     </jar>
     <zip destfile="${build.layout}/MicroserviceDSL.zip">
       <fileset dir="${build.tmp}/default/MicroserviceDSL.zip" />

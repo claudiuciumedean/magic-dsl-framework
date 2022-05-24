@@ -79,6 +79,11 @@
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
+      <concept id="1163668896201" name="jetbrains.mps.baseLanguage.structure.TernaryOperatorExpression" flags="nn" index="3K4zz7">
+        <child id="1163668914799" name="condition" index="3K4Cdx" />
+        <child id="1163668922816" name="ifTrue" index="3K4E3e" />
+        <child id="1163668934364" name="ifFalse" index="3K4GZi" />
+      </concept>
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
     </language>
     <language id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator">
@@ -252,21 +257,21 @@
         </node>
       </node>
     </node>
-    <node concept="3lhOvk" id="dtI1sbzeP2" role="3lj3bC">
+    <node concept="3lhOvk" id="68NrdXOf5LM" role="3lj3bC">
       <ref role="30HIoZ" to="ehhy:4mF3EfgFlTi" resolve="BFF" />
-      <ref role="3lhOvi" node="dtI1sbzfbo" resolve="build" />
-      <node concept="30G5F_" id="dtI1sbzeP3" role="30HLyM">
-        <node concept="3clFbS" id="dtI1sbzeP4" role="2VODD2">
-          <node concept="3clFbF" id="dtI1sbzeP5" role="3cqZAp">
-            <node concept="2OqwBi" id="dtI1sbzeP6" role="3clFbG">
-              <node concept="2OqwBi" id="dtI1sbzeP7" role="2Oq$k0">
-                <node concept="30H73N" id="dtI1sbzeP8" role="2Oq$k0" />
-                <node concept="3TrEf2" id="dtI1sbzeP9" role="2OqNvi">
+      <ref role="3lhOvi" node="68NrdXOf58C" resolve="Dockerfile" />
+      <node concept="30G5F_" id="68NrdXOf5LN" role="30HLyM">
+        <node concept="3clFbS" id="68NrdXOf5LO" role="2VODD2">
+          <node concept="3clFbF" id="68NrdXOf5LP" role="3cqZAp">
+            <node concept="2OqwBi" id="68NrdXOf5LQ" role="3clFbG">
+              <node concept="2OqwBi" id="68NrdXOf5LR" role="2Oq$k0">
+                <node concept="30H73N" id="68NrdXOf5LS" role="2Oq$k0" />
+                <node concept="3TrEf2" id="68NrdXOf5LT" role="2OqNvi">
                   <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
                 </node>
               </node>
-              <node concept="1mIQ4w" id="dtI1sbzePa" role="2OqNvi">
-                <node concept="chp4Y" id="dtI1sbzePb" role="cj9EA">
+              <node concept="1mIQ4w" id="68NrdXOf5LU" role="2OqNvi">
+                <node concept="chp4Y" id="68NrdXOf5LV" role="cj9EA">
                   <ref role="cht4Q" to="b4dw:292Zw9zsZli" resolve="NodeJs" />
                 </node>
               </node>
@@ -344,21 +349,21 @@
         </node>
       </node>
     </node>
-    <node concept="3lhOvk" id="dtI1sbzaW5" role="3lj3bC">
+    <node concept="3lhOvk" id="68NrdXOf6eh" role="3lj3bC">
       <ref role="30HIoZ" to="ehhy:4mF3EfgFlTi" resolve="BFF" />
-      <ref role="3lhOvi" node="dtI1sbzbeL" resolve="build" />
-      <node concept="30G5F_" id="dtI1sbzc42" role="30HLyM">
-        <node concept="3clFbS" id="dtI1sbzc43" role="2VODD2">
-          <node concept="3clFbF" id="dtI1sbzc81" role="3cqZAp">
-            <node concept="2OqwBi" id="dtI1sbzc82" role="3clFbG">
-              <node concept="2OqwBi" id="dtI1sbzc83" role="2Oq$k0">
-                <node concept="30H73N" id="dtI1sbzc84" role="2Oq$k0" />
-                <node concept="3TrEf2" id="dtI1sbzc85" role="2OqNvi">
+      <ref role="3lhOvi" node="68NrdXOf6aL" resolve="Dockerfile" />
+      <node concept="30G5F_" id="68NrdXOf6ei" role="30HLyM">
+        <node concept="3clFbS" id="68NrdXOf6ej" role="2VODD2">
+          <node concept="3clFbF" id="68NrdXOf6ek" role="3cqZAp">
+            <node concept="2OqwBi" id="68NrdXOf6el" role="3clFbG">
+              <node concept="2OqwBi" id="68NrdXOf6em" role="2Oq$k0">
+                <node concept="30H73N" id="68NrdXOf6en" role="2Oq$k0" />
+                <node concept="3TrEf2" id="68NrdXOf6eo" role="2OqNvi">
                   <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
                 </node>
               </node>
-              <node concept="1mIQ4w" id="dtI1sbzc86" role="2OqNvi">
-                <node concept="chp4Y" id="dtI1sbzc87" role="cj9EA">
+              <node concept="1mIQ4w" id="68NrdXOf6ep" role="2OqNvi">
+                <node concept="chp4Y" id="68NrdXOf6eq" role="cj9EA">
                   <ref role="cht4Q" to="b4dw:292Zw9zsZlh" resolve="Python" />
                 </node>
               </node>
@@ -366,6 +371,10 @@
           </node>
         </node>
       </node>
+    </node>
+    <node concept="3lhOvk" id="dtI1sbzaW5" role="3lj3bC">
+      <ref role="30HIoZ" to="ehhy:4mF3EfgFlTi" resolve="BFF" />
+      <ref role="3lhOvi" node="dtI1sbzbeL" resolve="build" />
     </node>
   </node>
   <node concept="356sEV" id="4mF3EfgGikW">
@@ -583,26 +592,7 @@
       <node concept="356sEK" id="3WPyOlYg73l" role="383Ya9">
         <node concept="2EixSi" id="3WPyOlYg73o" role="2EinRH" />
         <node concept="356sEF" id="3WPyOlYg73p" role="356sEH">
-          <property role="TrG5h" value="app.listen(" />
-        </node>
-        <node concept="356sEF" id="3WPyOlYg81g" role="356sEH">
-          <property role="TrG5h" value="port" />
-          <node concept="17Uvod" id="3WPyOlYg87D" role="lGtFl">
-            <property role="2qtEX9" value="name" />
-            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
-            <node concept="3zFVjK" id="3WPyOlYg87E" role="3zH0cK">
-              <node concept="3clFbS" id="3WPyOlYg87F" role="2VODD2">
-                <node concept="3clFbF" id="3WPyOlYg886" role="3cqZAp">
-                  <node concept="2OqwBi" id="3WPyOlYg8lg" role="3clFbG">
-                    <node concept="30H73N" id="3WPyOlYg885" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="3WPyOlYg8Is" role="2OqNvi">
-                      <ref role="3TsBF5" to="ehhy:4mF3EfgFlTw" resolve="port" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
+          <property role="TrG5h" value="app.listen(5000" />
         </node>
         <node concept="356sEF" id="3WPyOlYg81j" role="356sEH">
           <property role="TrG5h" value=", () =&gt; console.log(&quot;BFF is up and running&quot;));" />
@@ -4697,38 +4687,208 @@
   <node concept="356sEV" id="dtI1sbzbeL">
     <property role="TrG5h" value="build" />
     <property role="3Le9LX" value=".sh" />
-    <node concept="356WMU" id="dtI1sbzbeV" role="356KY_">
-      <node concept="356sEK" id="dtI1sbzbeW" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzbeZ" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbzbf0" role="356sEH">
-          <property role="TrG5h" value="# sed -i -e 's/\r$//' build.sh" />
+    <node concept="356WMU" id="68NrdXOfaZQ" role="356KY_">
+      <node concept="356sEK" id="68NrdXOfaZR" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOfaZU" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOfaZV" role="356sEH">
+          <property role="TrG5h" value="# sed -i -e 's/\r$//' build.sh " />
         </node>
       </node>
-      <node concept="356sEK" id="dtI1sbzbf2" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzbf5" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbzbf6" role="356sEH">
-          <property role="TrG5h" value="# chmod 755 build.sh " />
+      <node concept="356sEK" id="68NrdXOfaZX" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOfb00" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOfb01" role="356sEH">
+          <property role="TrG5h" value="# chmod 755 build.sh" />
         </node>
       </node>
-      <node concept="356sEK" id="dtI1sbzbf8" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzbfb" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbzbfc" role="356sEH">
+      <node concept="356sEK" id="68NrdXOfb03" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOfb06" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOfb07" role="356sEH">
           <property role="TrG5h" value="# ./build.sh" />
         </node>
       </node>
-      <node concept="356sEK" id="dtI1sbzbfe" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzbfh" role="2EinRH" />
+      <node concept="356sEK" id="68NrdXOfb09" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOfb0c" role="2EinRH" />
       </node>
-      <node concept="356sEK" id="dtI1sbzbfi" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzbfl" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbzbfm" role="356sEH">
-          <property role="TrG5h" value="pip3 install -r requirements.txt" />
+      <node concept="356sEK" id="68NrdXOfb0d" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOfb0g" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOfb0h" role="356sEH">
+          <property role="TrG5h" value="# Build docker image" />
         </node>
       </node>
-      <node concept="356sEK" id="dtI1sbzbfo" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzbfr" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbzbfs" role="356sEH">
-          <property role="TrG5h" value="python3 -m flask run --host=0.0.0.0" />
+      <node concept="356sEK" id="68NrdXOfb0j" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOfb0m" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOfb0n" role="356sEH">
+          <property role="TrG5h" value="docker build -t " />
+        </node>
+        <node concept="356sEF" id="68NrdXOfflz" role="356sEH">
+          <property role="TrG5h" value="dockerImage" />
+          <node concept="17Uvod" id="68NrdXOfflE" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="68NrdXOfflF" role="3zH0cK">
+              <node concept="3clFbS" id="68NrdXOfflG" role="2VODD2">
+                <node concept="3clFbF" id="3Kwu4vCPViJ" role="3cqZAp">
+                  <node concept="2OqwBi" id="3Kwu4vCQm4O" role="3clFbG">
+                    <node concept="liA8E" id="3Kwu4vCQmOO" role="2OqNvi">
+                      <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                    </node>
+                    <node concept="1eOMI4" id="68NrdXOfgxp" role="2Oq$k0">
+                      <node concept="3cpWs3" id="68NrdXOfgol" role="1eOMHV">
+                        <node concept="2OqwBi" id="3Kwu4vCPWtS" role="3uHU7B">
+                          <node concept="30H73N" id="3Kwu4vCPViI" role="2Oq$k0" />
+                          <node concept="3TrcHB" id="3Kwu4vCPWPj" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                        <node concept="Xl_RD" id="68NrdXOfgpM" role="3uHU7w">
+                          <property role="Xl_RC" value="bff" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="356sEF" id="68NrdXOfflA" role="356sEH">
+          <property role="TrG5h" value=" ." />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOfb0p" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOfb0s" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOfb0t" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOfb0w" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOfb0x" role="356sEH">
+          <property role="TrG5h" value="# Build docker container" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOfb0z" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOfb0A" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOfb0B" role="356sEH">
+          <property role="TrG5h" value="docker run -d -p " />
+        </node>
+        <node concept="356sEF" id="68NrdXOfb13" role="356sEH">
+          <property role="TrG5h" value="port" />
+          <node concept="17Uvod" id="68NrdXOfb1a" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="68NrdXOfb1b" role="3zH0cK">
+              <node concept="3clFbS" id="68NrdXOfb1c" role="2VODD2">
+                <node concept="3clFbF" id="68NrdXOfb5R" role="3cqZAp">
+                  <node concept="2OqwBi" id="68NrdXOfbj1" role="3clFbG">
+                    <node concept="30H73N" id="68NrdXOfb5Q" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="68NrdXOfbD0" role="2OqNvi">
+                      <ref role="3TsBF5" to="ehhy:4mF3EfgFlTw" resolve="port" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="356sEF" id="68NrdXOfb16" role="356sEH">
+          <property role="TrG5h" value=":5000 --name  " />
+        </node>
+        <node concept="356sEF" id="68NrdXOg$bp" role="356sEH">
+          <property role="TrG5h" value="dockerContainer" />
+          <node concept="17Uvod" id="68NrdXOg$Rs" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="68NrdXOg$Rt" role="3zH0cK">
+              <node concept="3clFbS" id="68NrdXOg$Ru" role="2VODD2">
+                <node concept="3cpWs8" id="68NrdXOg$RZ" role="3cqZAp">
+                  <node concept="3cpWsn" id="68NrdXOg$S0" role="3cpWs9">
+                    <property role="TrG5h" value="language" />
+                    <node concept="3uibUv" id="68NrdXOg$S1" role="1tU5fm">
+                      <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+                    </node>
+                    <node concept="3K4zz7" id="68NrdXOg$S2" role="33vP2m">
+                      <node concept="Xl_RD" id="68NrdXOg$S3" role="3K4E3e">
+                        <property role="Xl_RC" value="nodejs" />
+                      </node>
+                      <node concept="Xl_RD" id="68NrdXOg$S4" role="3K4GZi">
+                        <property role="Xl_RC" value="python" />
+                      </node>
+                      <node concept="2OqwBi" id="68NrdXOg$S5" role="3K4Cdx">
+                        <node concept="1mIQ4w" id="68NrdXOg$S6" role="2OqNvi">
+                          <node concept="chp4Y" id="68NrdXOg$S7" role="cj9EA">
+                            <ref role="cht4Q" to="b4dw:292Zw9zsZli" resolve="NodeJs" />
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="68NrdXOg$S8" role="2Oq$k0">
+                          <node concept="30H73N" id="68NrdXOg$S9" role="2Oq$k0" />
+                          <node concept="3TrEf2" id="68NrdXOg$Sa" role="2OqNvi">
+                            <ref role="3Tt5mk" to="b4dw:292Zw9zsZlf" resolve="supportedLanguage" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="68NrdXOg$Sb" role="3cqZAp">
+                  <node concept="2OqwBi" id="68NrdXOg$Sc" role="3clFbG">
+                    <node concept="1eOMI4" id="68NrdXOg$Sd" role="2Oq$k0">
+                      <node concept="3cpWs3" id="68NrdXOg$Se" role="1eOMHV">
+                        <node concept="37vLTw" id="68NrdXOg$Sf" role="3uHU7w">
+                          <ref role="3cqZAo" node="68NrdXOg$S0" resolve="language" />
+                        </node>
+                        <node concept="3cpWs3" id="68NrdXOg$Sg" role="3uHU7B">
+                          <node concept="Xl_RD" id="68NrdXOg$Sh" role="3uHU7w">
+                            <property role="Xl_RC" value="bff" />
+                          </node>
+                          <node concept="2OqwBi" id="68NrdXOg$Si" role="3uHU7B">
+                            <node concept="30H73N" id="68NrdXOg$Sj" role="2Oq$k0" />
+                            <node concept="3TrcHB" id="68NrdXOg$Sk" role="2OqNvi">
+                              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="68NrdXOg$Sl" role="2OqNvi">
+                      <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="356sEF" id="68NrdXOg$Dw" role="356sEH">
+          <property role="TrG5h" value="  " />
+        </node>
+        <node concept="356sEF" id="68NrdXOfbW7" role="356sEH">
+          <property role="TrG5h" value="dockerImage" />
+          <node concept="17Uvod" id="68NrdXOfgG1" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="68NrdXOfgG2" role="3zH0cK">
+              <node concept="3clFbS" id="68NrdXOfgG3" role="2VODD2">
+                <node concept="3clFbF" id="68NrdXOfgGq" role="3cqZAp">
+                  <node concept="2OqwBi" id="68NrdXOfgGr" role="3clFbG">
+                    <node concept="liA8E" id="68NrdXOfgGs" role="2OqNvi">
+                      <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                    </node>
+                    <node concept="1eOMI4" id="68NrdXOfgGt" role="2Oq$k0">
+                      <node concept="3cpWs3" id="68NrdXOfgGu" role="1eOMHV">
+                        <node concept="2OqwBi" id="68NrdXOfgGv" role="3uHU7B">
+                          <node concept="30H73N" id="68NrdXOfgGw" role="2Oq$k0" />
+                          <node concept="3TrcHB" id="68NrdXOfgGx" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                        <node concept="Xl_RD" id="68NrdXOfgGy" role="3uHU7w">
+                          <property role="Xl_RC" value="bff" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
     </node>
@@ -4853,45 +5013,215 @@
       </node>
     </node>
   </node>
-  <node concept="356sEV" id="dtI1sbzfbo">
-    <property role="TrG5h" value="build" />
-    <property role="3Le9LX" value=".sh" />
-    <node concept="356WMU" id="dtI1sbzfby" role="356KY_">
-      <node concept="356sEK" id="dtI1sbzfbz" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzfbA" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbzfbB" role="356sEH">
-          <property role="TrG5h" value="# sed -i -e 's/\r$//' build.sh" />
+  <node concept="356sEV" id="68NrdXOf58C">
+    <property role="TrG5h" value="Dockerfile" />
+    <node concept="356WMU" id="68NrdXOf6cz" role="356KY_">
+      <node concept="356sEK" id="68NrdXOf6c$" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6cB" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6cC" role="356sEH">
+          <property role="TrG5h" value="FROM node:17" />
         </node>
       </node>
-      <node concept="356sEK" id="dtI1sbzfbD" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzfbG" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbzfbH" role="356sEH">
-          <property role="TrG5h" value="# chmod 755 build.sh " />
+      <node concept="356sEK" id="68NrdXOf6cE" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6cH" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6cI" role="356sEH">
+          <property role="TrG5h" value="MAINTAINER " />
+        </node>
+        <node concept="356sEF" id="68NrdXOf6_t" role="356sEH">
+          <property role="TrG5h" value="email" />
+          <node concept="17Uvod" id="68NrdXOf6_A" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="68NrdXOf6_B" role="3zH0cK">
+              <node concept="3clFbS" id="68NrdXOf6_C" role="2VODD2">
+                <node concept="3clFbF" id="68NrdXOf6Em" role="3cqZAp">
+                  <node concept="2OqwBi" id="68NrdXOf6Rw" role="3clFbG">
+                    <node concept="30H73N" id="68NrdXOf6El" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="68NrdXOf7hf" role="2OqNvi">
+                      <ref role="3TsBF5" to="ehhy:4mF3EfgFlTs" resolve="maintainerEmail" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
-      <node concept="356sEK" id="dtI1sbzfbJ" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzfbM" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbzfbN" role="356sEH">
-          <property role="TrG5h" value="# ./build.sh" />
+      <node concept="356sEK" id="68NrdXOf6cK" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6cN" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOf6cO" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6cR" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6cS" role="356sEH">
+          <property role="TrG5h" value="WORKDIR /usr/src" />
         </node>
       </node>
-      <node concept="356sEK" id="dtI1sbzfbP" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzfbS" role="2EinRH" />
+      <node concept="356sEK" id="68NrdXOf6cU" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6cX" role="2EinRH" />
       </node>
-      <node concept="356sEK" id="dtI1sbzfbT" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzfbW" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbzfbX" role="356sEH">
-          <property role="TrG5h" value="npm install" />
+      <node concept="356sEK" id="68NrdXOf6cY" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6d1" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6d2" role="356sEH">
+          <property role="TrG5h" value="COPY package.json /usr/src" />
         </node>
       </node>
-      <node concept="356sEK" id="dtI1sbzfbZ" role="383Ya9">
-        <node concept="2EixSi" id="dtI1sbzfc2" role="2EinRH" />
-        <node concept="356sEF" id="dtI1sbzfc3" role="356sEH">
-          <property role="TrG5h" value="npm start" />
+      <node concept="356sEK" id="68NrdXOf6d4" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6d7" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6d8" role="356sEH">
+          <property role="TrG5h" value="COPY index.js /usr/src" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOf6da" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6dd" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6de" role="356sEH">
+          <property role="TrG5h" value="COPY " />
+        </node>
+        <node concept="356sEF" id="68NrdXOf7ps" role="356sEH">
+          <property role="TrG5h" value="name" />
+          <node concept="17Uvod" id="68NrdXOf7pz" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="68NrdXOf7p$" role="3zH0cK">
+              <node concept="3clFbS" id="68NrdXOf7p_" role="2VODD2">
+                <node concept="3clFbF" id="68NrdXOf7ug" role="3cqZAp">
+                  <node concept="2OqwBi" id="68NrdXOf7Fq" role="3clFbG">
+                    <node concept="30H73N" id="68NrdXOf7uf" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="68NrdXOf80Q" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="356sEF" id="68NrdXOf7pv" role="356sEH">
+          <property role="TrG5h" value=".js /usr/src" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOf6ds" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6dv" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOf6dw" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6dz" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6d$" role="356sEH">
+          <property role="TrG5h" value="RUN npm install" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOf6dA" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6dD" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6dE" role="356sEH">
+          <property role="TrG5h" value="CMD npm start" />
         </node>
       </node>
     </node>
-    <node concept="n94m4" id="dtI1sbzfbq" role="lGtFl">
+    <node concept="n94m4" id="68NrdXOf58E" role="lGtFl">
+      <ref role="n9lRv" to="ehhy:4mF3EfgFlTi" resolve="BFF" />
+    </node>
+  </node>
+  <node concept="356sEV" id="68NrdXOf6aL">
+    <property role="TrG5h" value="Dockerfile" />
+    <node concept="356WMU" id="68NrdXOf6aP" role="356KY_">
+      <node concept="356sEK" id="68NrdXOf6aQ" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6aT" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6aU" role="356sEH">
+          <property role="TrG5h" value="FROM python:3.8-slim-buster" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOf6aW" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6aZ" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6b0" role="356sEH">
+          <property role="TrG5h" value="MAINTAINER " />
+        </node>
+        <node concept="356sEF" id="68NrdXOf8ok" role="356sEH">
+          <property role="TrG5h" value="email" />
+          <node concept="17Uvod" id="68NrdXOf8on" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="68NrdXOf8oo" role="3zH0cK">
+              <node concept="3clFbS" id="68NrdXOf8op" role="2VODD2">
+                <node concept="3clFbF" id="68NrdXOf8oS" role="3cqZAp">
+                  <node concept="2OqwBi" id="68NrdXOf8A2" role="3clFbG">
+                    <node concept="30H73N" id="68NrdXOf8oR" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="68NrdXOf944" role="2OqNvi">
+                      <ref role="3TsBF5" to="ehhy:4mF3EfgFlTs" resolve="maintainerEmail" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOf6b2" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6b5" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOf6b6" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6b9" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6ba" role="356sEH">
+          <property role="TrG5h" value="WORKDIR /usr/src" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOf6bc" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6bf" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOf6bg" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6bj" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6bk" role="356sEH">
+          <property role="TrG5h" value="COPY requirements.txt /usr/src" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOf6bm" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6bp" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6bq" role="356sEH">
+          <property role="TrG5h" value="COPY app.py /usr/src" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOf6bs" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6bv" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6bw" role="356sEH">
+          <property role="TrG5h" value="COPY " />
+        </node>
+        <node concept="356sEF" id="68NrdXOf9fu" role="356sEH">
+          <property role="TrG5h" value="name" />
+          <node concept="17Uvod" id="68NrdXOf9f_" role="lGtFl">
+            <property role="2qtEX9" value="name" />
+            <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+            <node concept="3zFVjK" id="68NrdXOf9fA" role="3zH0cK">
+              <node concept="3clFbS" id="68NrdXOf9fB" role="2VODD2">
+                <node concept="3clFbF" id="68NrdXOf9kl" role="3cqZAp">
+                  <node concept="2OqwBi" id="68NrdXOf9xv" role="3clFbG">
+                    <node concept="30H73N" id="68NrdXOf9kk" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="68NrdXOf9Ve" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="356sEF" id="68NrdXOf9fx" role="356sEH">
+          <property role="TrG5h" value=".py /usr/src" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOf6bI" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6bL" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="68NrdXOf6bM" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6bP" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6bQ" role="356sEH">
+          <property role="TrG5h" value="RUN pip3 install -r requirements.txt" />
+        </node>
+      </node>
+      <node concept="356sEK" id="68NrdXOf6bS" role="383Ya9">
+        <node concept="2EixSi" id="68NrdXOf6bV" role="2EinRH" />
+        <node concept="356sEF" id="68NrdXOf6bW" role="356sEH">
+          <property role="TrG5h" value="CMD [ &quot;python3&quot;, &quot;-m&quot; , &quot;flask&quot;, &quot;run&quot;, &quot;--host=0.0.0.0&quot;]" />
+        </node>
+      </node>
+    </node>
+    <node concept="n94m4" id="68NrdXOf6aN" role="lGtFl">
       <ref role="n9lRv" to="ehhy:4mF3EfgFlTi" resolve="BFF" />
     </node>
   </node>

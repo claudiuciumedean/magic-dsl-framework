@@ -28,6 +28,9 @@
         <reference id="5617550519002745380" name="script" index="1l3spb" />
         <child id="4129895186893471026" name="artifacts" index="2JcizS" />
       </concept>
+      <concept id="2750015747481074431" name="jetbrains.mps.build.structure.BuildLayout_Files" flags="ng" index="2HvfSZ">
+        <child id="2750015747481074432" name="path" index="2HvfZ0" />
+      </concept>
       <concept id="4380385936562003279" name="jetbrains.mps.build.structure.BuildString" flags="ng" index="NbPM2">
         <child id="4903714810883783243" name="parts" index="3MwsjC" />
       </concept>
@@ -40,6 +43,7 @@
       <concept id="7389400916848050060" name="jetbrains.mps.build.structure.BuildLayout_NamedContainer" flags="ng" index="3981dR">
         <child id="4380385936562148502" name="containerName" index="Nbhlr" />
       </concept>
+      <concept id="7389400916848036984" name="jetbrains.mps.build.structure.BuildLayout_Folder" flags="ng" index="398223" />
       <concept id="7389400916848136194" name="jetbrains.mps.build.structure.BuildFolderMacro" flags="ng" index="398rNT">
         <child id="7389400916848144618" name="defaultPath" index="398pKh" />
       </concept>
@@ -232,6 +236,10 @@
       </node>
     </node>
     <node concept="1l3spV" id="6QYX$BfZbdy" role="1l3spN">
+      <node concept="m$_wl" id="6QYX$Bg1fLe" role="39821P">
+        <ref role="m_rDy" node="6QYX$BfZbdl" resolve="MicroserviceDSL" />
+        <node concept="pUk6x" id="6QYX$Bg1fLp" role="pUk7w" />
+      </node>
       <node concept="3981dG" id="6QYX$BfZbdz" role="39821P">
         <node concept="3_J27D" id="6QYX$BfZbd$" role="Nbhlr">
           <node concept="3Mxwew" id="6QYX$BfZbd_" role="3MwsjC">
@@ -871,10 +879,41 @@
         </node>
       </node>
     </node>
+    <node concept="398rNT" id="68NrdXOeZs3" role="1l3spd">
+      <property role="TrG5h" value="outputFolder" />
+      <node concept="55IIr" id="68NrdXOeZsz" role="398pKh">
+        <node concept="2Ry0Ak" id="68NrdXOeZsA" role="iGT6I">
+          <property role="2Ry0Am" value=".." />
+          <node concept="2Ry0Ak" id="68NrdXOeZsD" role="2Ry0An">
+            <property role="2Ry0Am" value="" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="55IIr" id="6QYX$BfZRH7" role="auvoZ" />
     <node concept="1l3spV" id="6QYX$BfZRH8" role="1l3spN">
       <node concept="L2wRC" id="6QYX$Bg03K9" role="39821P">
         <ref role="L2wRA" node="6QYX$BfZRIA" resolve="ECommerceSandbox" />
+      </node>
+      <node concept="398223" id="68NrdXOeI1_" role="39821P">
+        <node concept="3_J27D" id="68NrdXOeI1B" role="Nbhlr">
+          <node concept="3Mxwew" id="68NrdXOeI1J" role="3MwsjC">
+            <property role="3MwjfP" value="Application" />
+          </node>
+        </node>
+        <node concept="2HvfSZ" id="68NrdXOeI1P" role="39821P">
+          <node concept="55IIr" id="68NrdXOeI1Q" role="2HvfZ0">
+            <node concept="2Ry0Ak" id="68NrdXOeI1W" role="iGT6I">
+              <property role="2Ry0Am" value="solutions" />
+              <node concept="2Ry0Ak" id="68NrdXOeI21" role="2Ry0An">
+                <property role="2Ry0Am" value="ECommerceSandbox" />
+                <node concept="2Ry0Ak" id="68NrdXOeI26" role="2Ry0An">
+                  <property role="2Ry0Am" value="source_gen" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node concept="3b7kt6" id="6QYX$BfZRHa" role="10PD9s" />
@@ -936,6 +975,21 @@
         <node concept="3bR9La" id="6QYX$BfZRJk" role="1SiIV1">
           <property role="3bR36h" value="true" />
           <ref role="3bR37D" node="6QYX$BfZbd1" resolve="Deployment" />
+        </node>
+      </node>
+      <node concept="3rtmxn" id="6QYX$Bg0siq" role="3bR31x">
+        <node concept="3LXTmp" id="6QYX$Bg0sir" role="3rtmxm">
+          <node concept="55IIr" id="6QYX$Bg0sis" role="3LXTmr">
+            <node concept="2Ry0Ak" id="6QYX$Bg0sit" role="iGT6I">
+              <property role="2Ry0Am" value="solutions" />
+              <node concept="2Ry0Ak" id="6QYX$Bg0siu" role="2Ry0An">
+                <property role="2Ry0Am" value="ECommerceSandbox" />
+              </node>
+            </node>
+          </node>
+          <node concept="3qWCbU" id="6QYX$Bg0siw" role="3LXTna">
+            <property role="3qWCbO" value="icons/**, *, *.*" />
+          </node>
         </node>
       </node>
     </node>

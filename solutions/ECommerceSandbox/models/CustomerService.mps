@@ -349,7 +349,7 @@
     <property role="TrG5h" value="CustomersService" />
     <property role="1MBK2K" value="1.0" />
     <property role="1MBK2z" value="Microservice for customers" />
-    <property role="1U0Mo1" value="3000" />
+    <property role="1U0Mo1" value="3003" />
     <property role="11TMoy" value="claudiuciumedean@gmail.com" />
     <property role="3GE5qa" value="CustomersService" />
     <node concept="1U0Mo6" id="69f6Qm37Nag" role="1a5GJw">

@@ -82,6 +82,7 @@
         <property id="1099055542466772767" name="name" index="1ipPSI" />
       </concept>
       <concept id="6244455322315768002" name="Client.structure.ClientConfig" flags="ng" index="2wLgf5">
+        <property id="7076119146513949904" name="port" index="mvCwf" />
         <child id="756716148936346067" name="mobileClientRef" index="fDQM7" />
         <child id="756716148936346094" name="desktopClientRef" index="fDQMU" />
       </concept>
@@ -137,6 +138,7 @@
   <node concept="2wLgf5" id="E0plg5f5Mo">
     <property role="3GE5qa" value="Client" />
     <property role="TrG5h" value="MyApp" />
+    <property role="mvCwf" value="3000" />
     <node concept="fDjop" id="7MxRB2VLSjF" role="fDQMU">
       <ref role="fDjoq" node="E0plg57N7w" resolve="MyDesktop" />
     </node>

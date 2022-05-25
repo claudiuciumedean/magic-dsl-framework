@@ -30,6 +30,7 @@
         <reference id="7083910861678503258" name="entityType" index="3wFZSZ" />
       </concept>
       <concept id="4706807959194688950" name="Microservice.structure.CREATE" flags="ng" index="3K_yPg" />
+      <concept id="4706807959194688952" name="Microservice.structure.DELETE" flags="ng" index="3K_yPu" />
       <concept id="4706807959194649864" name="Microservice.structure.READ" flags="ng" index="3K_FnI" />
       <concept id="4706807959194929334" name="Microservice.structure.IOperationType" flags="ng" index="3KABxg">
         <child id="4706807959194929335" name="operationType" index="3KABxh" />
@@ -213,6 +214,23 @@
           <ref role="fB1DU" node="E0plg5xyeQ" resolve="Items" />
         </node>
       </node>
+      <node concept="3jiOFB" id="1J16DXIAOz5" role="3jiPDh">
+        <property role="TrG5h" value="deleteItem" />
+        <property role="3jiOEs" value="/delete-item" />
+        <node concept="fLJYe" id="1J16DXIAOzg" role="37cMqC">
+          <ref role="fLJYf" to="8yoi:5cGqGoaCF3T" resolve="desktop" />
+        </node>
+        <node concept="3K_yPu" id="1J16DXIAO_2" role="3KABxh" />
+        <node concept="3wFZSN" id="1J16DXIAO_4" role="1RtzAg">
+          <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
+        </node>
+        <node concept="3wDFX_" id="1J16DXIAO_6" role="3jiOFy">
+          <ref role="3wDFX$" to="88nh:1GcCT5ob3GT" />
+        </node>
+        <node concept="fB6HK" id="1J16DXIAO_8" role="1Rr_s1">
+          <ref role="fB1DU" node="E0plg5xyeQ" resolve="Items" />
+        </node>
+      </node>
       <node concept="3wFZSN" id="7MxRB2VFu2y" role="fS2RL">
         <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
       </node>
@@ -240,6 +258,13 @@
         <property role="37eYMS" value="primary" />
         <node concept="37eYMm" id="X0Cj5t812o" role="37eYPS">
           <ref role="37eYMn" node="X0Cj5t5mFL" resolve="buyItem" />
+        </node>
+      </node>
+      <node concept="37eYMR" id="1J16DXIAO_a" role="fVvT0">
+        <property role="37eYPe" value="Delete" />
+        <property role="37eYMS" value="danger" />
+        <node concept="37eYMm" id="1J16DXIAO_l" role="37eYPS">
+          <ref role="37eYMn" node="1J16DXIAOz5" resolve="deleteItem" />
         </node>
       </node>
       <node concept="fLJYe" id="32kN1iD9Z57" role="fM1mL">
@@ -327,66 +352,66 @@
         <ref role="3wFZSZ" to="bqge:1GcCT5ob3Nn" resolve="order" />
       </node>
     </node>
-    <node concept="3uvC8Q" id="1NIouMbMb2m" role="fD2fS">
+    <node concept="3uvC8Q" id="1J16DXIAMLp" role="fD2fS">
       <property role="TrG5h" value="CreateItem" />
       <property role="fS2L6" value="/" />
-      <property role="2pCN9U" value="true" />
       <property role="fGGLA" value="/create-item" />
-      <node concept="3jiOFB" id="1NIouMbMb3g" role="3jiPDh">
+      <property role="2pCN9U" value="true" />
+      <node concept="3jiOFB" id="1J16DXIAMMl" role="3jiPDh">
         <property role="TrG5h" value="createItem" />
         <property role="3jiOEs" value="/create-item" />
-        <node concept="fLJYe" id="1NIouMbMb3m" role="37cMqC">
+        <node concept="fLJYe" id="1J16DXIAMMp" role="37cMqC">
           <ref role="fLJYf" to="8yoi:5cGqGoaCF3T" resolve="desktop" />
         </node>
-        <node concept="3K_yPg" id="1NIouMbMb3o" role="3KABxh" />
-        <node concept="3wFZSN" id="1NIouMbMb3q" role="1RtzAg">
+        <node concept="3K_yPg" id="1J16DXIAMMr" role="3KABxh" />
+        <node concept="3wFZSN" id="1J16DXIAMMt" role="1RtzAg">
           <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
         </node>
-        <node concept="1hBKNC" id="1NIouMbMb3s" role="1hAkf$" />
-        <node concept="fB6HK" id="1NIouMbMb3u" role="1Rr_s1">
+        <node concept="1hBKNC" id="1J16DXIAMMv" role="1hAkf$" />
+        <node concept="fB6HK" id="1J16DXIAMMx" role="1Rr_s1">
           <ref role="fB1DU" node="E0plg5xyeQ" resolve="Items" />
         </node>
       </node>
-      <node concept="fLJYe" id="1NIouMbMb3e" role="fM1mL">
+      <node concept="fLJYe" id="1J16DXIAMMh" role="fM1mL">
         <ref role="fLJYf" to="8yoi:5cGqGoaCF3T" resolve="desktop" />
       </node>
-      <node concept="3wFZSN" id="1NIouMbMb3k" role="fS2RL">
+      <node concept="3wFZSN" id="1J16DXIAMMj" role="fS2RL">
         <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
       </node>
-      <node concept="2pL1p6" id="1NIouMbMb3w" role="fVvT0">
-        <property role="2pKCbq" value="Create item" />
-        <node concept="2pL1p7" id="1NIouMbMb3$" role="2pL1p2">
+      <node concept="2pL1p6" id="1J16DXIAMMz" role="fVvT0">
+        <property role="2pKCbq" value="Upload" />
+        <node concept="2pL1p7" id="1J16DXIAMMD" role="2pL1p2">
           <property role="1ipPSI" value="name" />
           <property role="2pL3$w" value="Name" />
-          <property role="2pL3FS" value="text" />
+          <property role="2pL3FS" value="string" />
           <property role="2pL3I0" value="true" />
         </node>
-        <node concept="2pL1p7" id="1NIouMbMb3A" role="2pL1p2">
+        <node concept="2pL1p7" id="1J16DXIAMMF" role="2pL1p2">
           <property role="1ipPSI" value="thumbnail" />
           <property role="2pL3$w" value="Thumbnail" />
-          <property role="2pL3FS" value="text" />
+          <property role="2pL3FS" value="string" />
           <property role="2pL3I0" value="true" />
         </node>
-        <node concept="2pL1p7" id="1NIouMbMb3D" role="2pL1p2">
+        <node concept="2pL1p7" id="1J16DXIAMMI" role="2pL1p2">
           <property role="1ipPSI" value="image" />
-          <property role="2pL3$w" value="Image href" />
-          <property role="2pL3FS" value="text" />
+          <property role="2pL3$w" value="Image" />
+          <property role="2pL3FS" value="string" />
           <property role="2pL3I0" value="true" />
         </node>
-        <node concept="2pL1p7" id="1NIouMbMb3H" role="2pL1p2">
+        <node concept="2pL1p7" id="1J16DXIAMMM" role="2pL1p2">
           <property role="1ipPSI" value="price" />
           <property role="2pL3$w" value="Price" />
-          <property role="2pL3FS" value="text" />
+          <property role="2pL3FS" value="string" />
           <property role="2pL3I0" value="true" />
         </node>
-        <node concept="2pL1p7" id="1NIouMbMb3M" role="2pL1p2">
+        <node concept="2pL1p7" id="1J16DXIAMMR" role="2pL1p2">
           <property role="1ipPSI" value="description" />
           <property role="2pL3$w" value="Description" />
-          <property role="2pL3FS" value="text" />
+          <property role="2pL3FS" value="string" />
           <property role="2pL3I0" value="true" />
         </node>
-        <node concept="37eYMm" id="1NIouMbN_US" role="2pLS14">
-          <ref role="37eYMn" node="1NIouMbMb3g" resolve="createItem" />
+        <node concept="37eYMm" id="1J16DXIAMMB" role="2pLS14">
+          <ref role="37eYMn" node="1J16DXIAMMl" resolve="createItem" />
         </node>
       </node>
     </node>

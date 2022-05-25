@@ -4,29 +4,21 @@ const shell = require('shelljs');
 const process = require('process');
 
 const appRoot = "./build/artifacts/SandboxBuild/Application";
-const folders = fs.readdirSync(appRoot);
 
 //shell.exec(`docker stop $(docker ps -a -q)`);
 //shell.exec(`docker rm $(docker ps -a -q)`);
 
-folders.forEach(name => {
-  const fullPath = path.join(appRoot, name);
+const getScriptsPath = () => {
+  const res = [];
+  fs.readdirSync(appRoot).forEach(name => res.push(path.join(appRoot, name)));
+  return res;
+}
 
-  fs.readdir(fullPath, (err, folders) => {
-    if (err) {
-      console.error("Could not list the directory.", err);
-      process.exit(1);
-    }
+const execShellCommands = (path) => {
+  shell.exec(`sed -i -e 's/\r$//' ./build.sh`, {cwd: path});
+  shell.exec(`chmod 755 ./build.sh`, {cwd: path});
+  shell.exec(`./build.sh`, {cwd: path});
+}
 
-    folders.forEach(() => {
-      process.chdir(fullPath);
-
-      // Execute bash commands
-      shell.exec(`sed -i -e 's/\r$//' ./build.sh`)
-      shell.exec(`chmod 755 ./build.sh`)
-      shell.exec(`./build.sh`)
-
-      process.chdir(__dirname);
-    }); 
-  });
-});
+const scripts = getScriptsPath();
+scripts.forEach(script => execShellCommands(script));

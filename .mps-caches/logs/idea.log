@@ -1228,3 +1228,125 @@
 2022-05-24 20:12:13,351 [   6862]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
 2022-05-24 20:12:23,431 [  16942]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,002 s 
 2022-05-24 20:12:23,431 [  16942]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:19:50,216 [      0]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-05-25 14:19:50,393 [    177]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-05-25 14:19:50,404 [    188]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-05-25 14:19:50,450 [    234]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 14:19:50,450 [    234]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 14:19:50,459 [    243]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 153 libraries 
+2022-05-25 14:19:53,810 [   3594]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-05-25 14:19:56,159 [   5943]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 2,342 s 
+2022-05-25 14:19:56,177 [   5961]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:19:56,949 [   6733]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-05-25 14:19:56,952 [   6736]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-05-25 14:19:56,959 [   6743]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-05-25 14:19:56,959 [   6743]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-05-25 14:19:56,961 [   6745]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp6438260051937139526' is opened 
+2022-05-25 14:19:57,061 [   6845]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,076 s 
+2022-05-25 14:19:57,074 [   6858]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:19:59,270 [   9054]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,028 s 
+2022-05-25 14:19:59,291 [   9075]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:20:09,371 [  19155]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,002 s 
+2022-05-25 14:20:09,371 [  19155]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:27:43,604 [      0]   WARN - jetbrains.mps.tool.environment.EnvironmentConfig - Can't load plugin. Plugin file or folder was not found: /Users/claudiuciumedean/Storage/School/DTU/Thesis/language-agnostic-microservice-dsl/build/artifacts/MicroserviceDSL/MicroserviceDSL 
+2022-05-25 14:27:43,608 [      4]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-05-25 14:27:43,794 [    190]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'languages' to non-existent location 
+2022-05-25 14:27:43,803 [    199]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-05-25 14:27:43,804 [    200]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-05-25 14:27:43,846 [    242]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 14:27:43,846 [    242]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 14:27:43,856 [    252]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 151 libraries 
+2022-05-25 14:27:50,958 [      0]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-05-25 14:27:51,206 [    248]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-05-25 14:27:51,216 [    258]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-05-25 14:27:51,265 [    307]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 14:27:51,265 [    307]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 14:27:51,273 [    315]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 189 libraries 
+2022-05-25 14:27:56,038 [   5080]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-05-25 14:27:57,564 [   6606]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 1,519 s 
+2022-05-25 14:27:57,581 [   6623]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:27:58,376 [   7418]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-05-25 14:27:58,379 [   7421]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-05-25 14:27:58,385 [   7427]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-05-25 14:27:58,385 [   7427]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-05-25 14:27:58,386 [   7428]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp2982980293019698891' is opened 
+2022-05-25 14:27:58,674 [   7716]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,127 s 
+2022-05-25 14:27:58,689 [   7731]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:28:13,765 [  22807]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-25 14:28:13,779 [  22821]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-25 14:28:13,780 [  22822]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-25 14:28:14,971 [  24013]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-25 14:28:15,662 [  24704]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-25 14:28:15,664 [  24706]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-25 14:28:25,994 [  35036]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-25 14:28:27,056 [  36098]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-25 14:28:27,059 [  36101]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-25 14:28:27,515 [  36557]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-25 14:28:31,534 [  40576]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-25 14:28:31,545 [  40587]   INFO - jetbrains.mps.generator.impl.plan.GenerationPlan - No checkpoint registry file found 
+2022-05-25 14:28:32,046 [  41088]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-25 14:28:33,159 [  42201]   INFO - jetbrains.mps.internal.make.runtime.script.Script - No input. Skipping optional target 'jetbrains.mps.make.facets.ReloadClasses.reloadClasses'. 
+2022-05-25 14:28:33,190 [  42232]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,017 s 
+2022-05-25 14:28:33,197 [  42239]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:28:43,265 [  52307]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,002 s 
+2022-05-25 14:28:43,265 [  52307]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:29:18,065 [      0]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-05-25 14:29:18,222 [    157]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-05-25 14:29:18,230 [    165]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-05-25 14:29:18,273 [    208]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 14:29:18,273 [    208]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 14:29:18,281 [    216]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 153 libraries 
+2022-05-25 14:29:20,790 [   2725]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-05-25 14:29:21,933 [   3868]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 1,136 s 
+2022-05-25 14:29:21,945 [   3880]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:29:22,546 [   4481]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-05-25 14:29:22,549 [   4484]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-05-25 14:29:22,553 [   4488]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-05-25 14:29:22,553 [   4488]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-05-25 14:29:22,554 [   4489]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp6733218322817240863' is opened 
+2022-05-25 14:29:22,611 [   4546]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,040 s 
+2022-05-25 14:29:22,619 [   4554]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:29:24,500 [   6435]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,027 s 
+2022-05-25 14:29:24,509 [   6444]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:29:34,577 [  16512]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,002 s 
+2022-05-25 14:29:34,583 [  16518]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:45:02,537 [      0]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-05-25 14:45:02,785 [    248]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-05-25 14:45:02,798 [    261]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-05-25 14:45:02,857 [    320]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 14:45:02,857 [    320]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 14:45:02,868 [    331]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 153 libraries 
+2022-05-25 14:45:08,104 [   5567]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-05-25 14:45:12,729 [  10192]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 4,610 s 
+2022-05-25 14:45:12,763 [  10226]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:45:14,411 [  11874]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-05-25 14:45:14,417 [  11880]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-05-25 14:45:14,427 [  11890]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-05-25 14:45:14,427 [  11890]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-05-25 14:45:14,428 [  11891]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp1806386778615535101' is opened 
+2022-05-25 14:45:14,602 [  12065]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,131 s 
+2022-05-25 14:45:14,630 [  12093]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:45:18,088 [  15551]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,034 s 
+2022-05-25 14:45:18,107 [  15570]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 14:45:28,318 [  25781]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,017 s 
+2022-05-25 14:45:28,320 [  25783]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 15:05:33,613 [      0]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating MPS environment 
+2022-05-25 15:05:33,833 [    220]  ERROR - jetbrains.mps.tool.environment.EnvironmentBase - The macro 'samples_home' to non-existent location 
+2022-05-25 15:05:33,846 [    233]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Initializing libraries 
+2022-05-25 15:05:33,933 [    320]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 15:05:33,933 [    320]   INFO - jetbrains.mps.library.LibraryInitializer - Adding libraries from SetLibraryContributor 
+2022-05-25 15:05:33,955 [    342]   INFO - jetbrains.mps.library.LibraryInitializer - Loading 153 libraries 
+2022-05-25 15:05:37,931 [   4318]   INFO - jetbrains.mps.library.LibraryInitializer - Library update is finished 
+2022-05-25 15:05:39,922 [   6309]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 1,983 s 
+2022-05-25 15:05:39,939 [   6326]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 15:05:40,842 [   7229]   INFO - jetbrains.mps.tool.environment.MpsEnvironment - Creating an empty project 
+2022-05-25 15:05:40,846 [   7233]   INFO - jetbrains.mps.tool.environment.EnvironmentBase - Opening a new project 
+2022-05-25 15:05:40,856 [   7243]   INFO - jetbrains.mps.project.ProjectModuleLoader - Loading modules... 
+2022-05-25 15:05:40,857 [   7244]   INFO - jetbrains.mps.project.ProjectModuleLoader - Modules are loaded: 0 new; 0 removed 
+2022-05-25 15:05:40,858 [   7245]   INFO - jetbrains.mps.project.ProjectBase - Project 'mpstemp9737694005761634436' is opened 
+2022-05-25 15:05:40,943 [   7330]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,056 s 
+2022-05-25 15:05:40,955 [   7342]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 15:05:43,749 [  10136]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,032 s 
+2022-05-25 15:05:43,770 [  10157]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 
+2022-05-25 15:05:53,871 [  20258]   INFO - jetbrains.mps.classloading.ModuleUpdater - Classloading refresh took 0,004 s 
+2022-05-25 15:05:53,871 [  20258]   INFO - jetbrains.mps.classloading.ModulesWatcher - Totally 0 modules are marked invalid for class loading. 

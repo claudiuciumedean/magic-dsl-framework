@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/claudiuciumedean/language-agnostic-microservice-dsl#readme",
   "dependencies": {
+    "await-timeout": "^1.1.1",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
     "shelljs": "^0.8.5"

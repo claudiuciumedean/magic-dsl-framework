@@ -50,12 +50,14 @@
         <reference id="7083910861678503258" name="entityType" index="3wFZSZ" />
       </concept>
       <concept id="7083910861681746051" name="Microservice.structure.GetEntityBy" flags="ng" index="3xnnJA" />
+      <concept id="4706807959195293644" name="Microservice.structure.DeleteEntity" flags="ng" index="3KwesE" />
       <concept id="4706807959195293645" name="Microservice.structure.IOperationMethod" flags="ng" index="3KwesF">
         <child id="4706807959195293647" name="operationMethod" index="3KwesD" />
       </concept>
       <concept id="4706807959195251489" name="Microservice.structure.GetEntities" flags="ng" index="3Kwof7" />
       <concept id="4706807959195251487" name="Microservice.structure.CreateEntity" flags="ng" index="3KwofT" />
       <concept id="4706807959194688950" name="Microservice.structure.CREATE" flags="ng" index="3K_yPg" />
+      <concept id="4706807959194688952" name="Microservice.structure.DELETE" flags="ng" index="3K_yPu" />
       <concept id="4706807959194649864" name="Microservice.structure.READ" flags="ng" index="3K_FnI" />
       <concept id="4706807959194929334" name="Microservice.structure.IOperationType" flags="ng" index="3KABxg">
         <child id="4706807959194929335" name="operationType" index="3KABxh" />
@@ -208,6 +210,21 @@
       </node>
       <node concept="1hBKNC" id="1NIouMbMas_" role="1hAkf$" />
       <node concept="3uh$Y_" id="1NIouMbMasB" role="2l1AS3">
+        <ref role="3uh$Yy" to="88nh:1GcCT5ob3GN" resolve="ItemsService" />
+      </node>
+    </node>
+    <node concept="2l1_38" id="1J16DXIAOzi" role="2l1_3h">
+      <property role="2l1ASO" value="/delete-item" />
+      <property role="2l1ASZ" value="/delete-item" />
+      <node concept="3KwesE" id="1J16DXIAO$S" role="3KwesD" />
+      <node concept="3K_yPu" id="1J16DXIAO$U" role="3KABxh" />
+      <node concept="3wFZSN" id="1J16DXIAO$W" role="2l1EQz">
+        <ref role="3wFZSZ" to="88nh:1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="3wDFX_" id="1J16DXIAO$Y" role="2l1AQ1">
+        <ref role="3wDFX$" to="88nh:1GcCT5ob3GT" />
+      </node>
+      <node concept="3uh$Y_" id="1J16DXIAO_0" role="2l1AS3">
         <ref role="3uh$Yy" to="88nh:1GcCT5ob3GN" resolve="ItemsService" />
       </node>
     </node>

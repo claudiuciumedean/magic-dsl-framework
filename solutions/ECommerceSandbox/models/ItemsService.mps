@@ -51,12 +51,14 @@
       <concept id="6879561139824891603" name="Microservice.structure.DataTypeReference" flags="ng" index="1yCgEV">
         <reference id="6879561139824891604" name="dataType" index="1yCgEW" />
       </concept>
+      <concept id="4706807959195293644" name="Microservice.structure.DeleteEntity" flags="ng" index="3KwesE" />
       <concept id="4706807959195293645" name="Microservice.structure.IOperationMethod" flags="ng" index="3KwesF">
         <child id="4706807959195293647" name="operationMethod" index="3KwesD" />
       </concept>
       <concept id="4706807959195251489" name="Microservice.structure.GetEntities" flags="ng" index="3Kwof7" />
       <concept id="4706807959195251487" name="Microservice.structure.CreateEntity" flags="ng" index="3KwofT" />
       <concept id="4706807959194688950" name="Microservice.structure.CREATE" flags="ng" index="3K_yPg" />
+      <concept id="4706807959194688952" name="Microservice.structure.DELETE" flags="ng" index="3K_yPu" />
       <concept id="4706807959194649864" name="Microservice.structure.READ" flags="ng" index="3K_FnI" />
       <concept id="4706807959194929334" name="Microservice.structure.IOperationType" flags="ng" index="3KABxg">
         <child id="4706807959194929335" name="operationType" index="3KABxh" />
@@ -76,6 +78,7 @@
       <concept id="8568306897850702780" name="Microservice.structure.Operation" flags="ng" index="1U0Mo6">
         <child id="8414754229339498052" name="data" index="je10B" />
         <child id="6302204855854753571" name="errorMessage" index="1hwKFe" />
+        <child id="6302204855855013636" name="successMessage" index="1hzNbD" />
         <child id="7083910861679076358" name="queryParams" index="3wDFXz" />
         <child id="7083910861678503260" name="entityType" index="3wFZST" />
       </concept>
@@ -524,6 +527,27 @@
       <node concept="1hBKNE" id="1NIouMbM6Uu" role="1hwKFe">
         <property role="1hAwxF" value="Item not created" />
       </node>
+    </node>
+    <node concept="1U0Mo6" id="1J16DXIAO$a" role="1a5GJw">
+      <node concept="3KwesE" id="1J16DXIAO$$" role="3KwesD" />
+      <node concept="3K_yPu" id="1J16DXIAO$A" role="3KABxh" />
+      <node concept="1yCgEV" id="1J16DXIAO$C" role="je10B">
+        <ref role="1yCgEW" node="1GcCT5ob3GQ" resolve="items" />
+      </node>
+      <node concept="3wFZSN" id="1J16DXIAO$E" role="3wFZST">
+        <ref role="3wFZSZ" node="1GcCT5ob3GR" resolve="item" />
+      </node>
+      <node concept="3wDFX_" id="1J16DXIAO$I" role="3wDFXz">
+        <ref role="3wDFX$" node="1GcCT5ob3GT" />
+      </node>
+      <node concept="1hBKNC" id="1J16DXIAO$K" role="1hBKNI" />
+      <node concept="1hBKNE" id="1J16DXIAO$M" role="1hzNbD">
+        <property role="1hAwxF" value="Item deleted" />
+      </node>
+      <node concept="1hBKNE" id="1J16DXIAO$O" role="1hwKFe">
+        <property role="1hAwxF" value="Item not found" />
+      </node>
+      <node concept="1hBKNC" id="1J16DXIAO$Q" role="1hAkf$" />
     </node>
     <node concept="11cgHg" id="1GcCT5ob3GO" role="11cgHd" />
     <node concept="1yCgEV" id="1GcCT5ob3MZ" role="1MBK3h">

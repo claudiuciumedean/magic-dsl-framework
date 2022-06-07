@@ -1,16 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const shell = require('shelljs');
-const process = require('process');
+const argv = require('minimist')(process.argv.slice(2));
 
-const appRoot = "./build/artifacts/SandboxBuild/Application";
-
-//shell.exec(`docker stop $(docker ps -a -q)`);
-//shell.exec(`docker rm $(docker ps -a -q)`);
+const location = argv["l"]
 
 const getScriptsPath = () => {
   const res = [];
-  fs.readdirSync(appRoot).forEach(name => res.push(path.join(appRoot, name)));
+  fs.readdirSync(location).forEach(name => res.push(path.join(location, name)));
   return res;
 }
 
@@ -21,4 +18,6 @@ const execShellCommands = (path) => {
 }
 
 const scripts = getScriptsPath();
-scripts.forEach(script => execShellCommands(script));
+scripts.forEach(shellPath => execShellCommands(shellPath));
+
+//./build/artifacts/SandboxBuild/Application

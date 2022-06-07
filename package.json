@@ -19,6 +19,7 @@
   "dependencies": {
     "await-timeout": "^1.1.1",
     "fs": "^0.0.1-security",
+    "minimist": "^1.2.6",
     "path": "^0.12.7",
     "shelljs": "^0.8.5"
   }

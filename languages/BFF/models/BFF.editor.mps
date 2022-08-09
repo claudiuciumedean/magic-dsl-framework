@@ -66,7 +66,7 @@
     <node concept="3EZMnI" id="1xSoLHEUhIY" role="2wV5jI">
       <node concept="l2Vlx" id="1xSoLHEUhIZ" role="2iSdaV" />
       <node concept="3F0ifn" id="1xSoLHEUhJ0" role="3EZMnx">
-        <property role="3F0ifm" value="BFF" />
+        <property role="3F0ifm" value="BFF name" />
       </node>
       <node concept="3F0A7n" id="3WPyOlYiy1y" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />

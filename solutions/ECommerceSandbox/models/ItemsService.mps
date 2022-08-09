@@ -25,7 +25,7 @@
       <concept id="2468814831964386638" name="Microservice.structure.ISupportedLanguage" flags="ng" index="11cgHc">
         <child id="2468814831964386639" name="supportedLanguage" index="11cgHd" />
       </concept>
-      <concept id="2468814831964386642" name="Microservice.structure.NodeJs" flags="ng" index="11cgHg" />
+      <concept id="2468814831964386641" name="Microservice.structure.Python" flags="ng" index="11cgHj" />
       <concept id="6302204855854145288" name="Microservice.structure.Empty" flags="ng" index="1hA7b_" />
       <concept id="6302204855854083592" name="Microservice.structure.IDeliveredPayloadType" flags="ng" index="1hAkf_">
         <child id="6302204855854083593" name="payloadType" index="1hAkf$" />
@@ -549,10 +549,10 @@
       </node>
       <node concept="1hBKNC" id="1J16DXIAO$Q" role="1hAkf$" />
     </node>
-    <node concept="11cgHg" id="1GcCT5ob3GO" role="11cgHd" />
     <node concept="1yCgEV" id="1GcCT5ob3MZ" role="1MBK3h">
       <ref role="1yCgEW" node="1GcCT5ob3GQ" resolve="items" />
     </node>
+    <node concept="11cgHj" id="39zQ7jEeAvX" role="11cgHd" />
   </node>
 </model>
 

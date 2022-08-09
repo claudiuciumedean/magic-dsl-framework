@@ -5,11 +5,7 @@ const argv = require('minimist')(process.argv.slice(2));
 
 const location = argv["l"]
 
-const getScriptsPath = () => {
-  const res = [];
-  fs.readdirSync(location).forEach(name => res.push(path.join(location, name)));
-  return res;
-}
+const getScriptsPath = () => fs.readdirSync(location).map(name => path.join(location, name));
 
 const execShellCommands = (path) => {
   shell.exec(`sed -i -e 's/\r$//' ./build.sh`, {cwd: path});
@@ -17,7 +13,6 @@ const execShellCommands = (path) => {
   shell.exec(`./build.sh`, {cwd: path});
 }
 
-const scripts = getScriptsPath();
-scripts.forEach(shellPath => execShellCommands(shellPath));
+getScriptsPath().forEach(shellPath => execShellCommands(shellPath));
 
 //./build/artifacts/SandboxBuild/Application

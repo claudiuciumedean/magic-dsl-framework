@@ -1,0 +1,159 @@
+{
+  "openapi":"3.0.2",
+  "info":{
+     "title":"OrdersService",
+     "description":"Microservice for customers",
+     "contact":{
+        "email":"claudiu@gmail.com"
+     },
+     "license":{
+        "name":"Apache 2.0",
+        "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
+     },
+     "version":"1.0"
+  },
+  "tags":[
+     {
+        "name":"order"
+     }
+  ],
+  "paths":{
+"/getall-orders":{
+   "get":{
+      "tags":[
+         "order"
+      ],
+      "summary":"Get all entities",
+      "operationId":"getEntities",
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "entities": "orders"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": ""
+               }
+            }
+         }
+      }
+   }
+},
+"/create-order":{
+   "post":{
+      "tags":[
+         "order"
+      ],
+      "summary":"Create an entity",
+      "operationId":"createEntity",
+      "requestBody":{
+         "description":"Required request body",
+         "content":{
+            "application/json":{
+               "schema":{
+                  "$ref":"#/components/schemas/order"
+               }
+            }
+         },
+         "required":true
+      },
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "message": "Order created successfully"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": ""
+               }
+            }
+         }
+      }
+   }
+},
+"/get-orders-by?customer_id={customer_id}":{
+   "get":{
+      "tags":[
+         "order"
+      ],
+      "summary":"Get all entities that match the given params",
+      "operationId":"getEntitiesBy",
+      "parameters":[
+          {
+             "name":"customer_id",
+             "in":"path",
+             "description":"customer_id of entity",
+             "required":true,
+             "schema":{
+                "type":"string"
+             }
+          }
+       ],
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "entities": "orders"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": "No orders found"
+               }
+            }
+         }
+      }
+   }
+}
+  },
+  "components":{
+     "schemas":{
+        "order":{
+           "type":"object",
+           "properties":{
+
+"id":{
+   "type":"string",
+   "readOnly": true
+},
+
+"thumbnail":{
+   "type":"string,"
+},
+
+"name":{
+   "type":"string"
+},
+
+"price":{
+   "type":"number"
+},
+
+"customer_id":{
+   "type":"string"
+},
+
+"image":{
+   "type":"string"
+}
+           }
+        }
+     }
+  }
+}

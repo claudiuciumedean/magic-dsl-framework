@@ -1,0 +1,285 @@
+{
+  "openapi":"3.0.2",
+  "info":{
+     "title":"CustomersService",
+     "description":"Microservice for customers",
+     "contact":{
+        "email":"claudiuciumedean@gmail.com"
+     },
+     "license":{
+        "name":"Apache 2.0",
+        "url":"http://www.apache.org/licenses/LICENSE-2.0.html"
+     },
+     "version":"1.0"
+  },
+  "tags":[
+     {
+        "name":"customer"
+     }
+  ],
+  "paths":{
+"/get-customer?id={id}":{
+   "get":{
+      "tags":[
+         "customer"
+      ],
+      "summary":"Get a single entity by id",
+      "operationId":"getEntity",
+      "parameters":[
+          {
+             "name":"id",
+             "in":"path",
+             "description":"id of entity",
+             "required":true,
+             "schema":{
+                "type":"string"
+             }
+          }
+       ],
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "entity": "customer"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": "No customer was found with the provided id"
+               }
+            }
+         }
+      }
+   }
+},
+"/create-customer":{
+   "post":{
+      "tags":[
+         "customer"
+      ],
+      "summary":"Create an entity",
+      "operationId":"createEntity",
+      "requestBody":{
+         "description":"Required request body",
+         "content":{
+            "application/json":{
+               "schema":{
+                  "$ref":"#/components/schemas/customer"
+               }
+            }
+         },
+         "required":true
+      },
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "message": ""
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": ""
+               }
+            }
+         }
+      }
+   }
+},
+"/getall-customers":{
+   "get":{
+      "tags":[
+         "customer"
+      ],
+      "summary":"Get all entities",
+      "operationId":"getEntities",
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "entities": "customers"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": ""
+               }
+            }
+         }
+      }
+   }
+},
+"/get-customer-by?email={email}&password={password}":{
+   "get":{
+      "tags":[
+         "customer"
+      ],
+      "summary":"Get a single entity by params",
+      "operationId":"getEntityBy",
+      "parameters":[
+          {
+             "name":"email",
+             "in":"path",
+             "description":"email of entity",
+             "required":true,
+             "schema":{
+                "type":"string"
+             }
+          },
+          {
+             "name":"password",
+             "in":"path",
+             "description":"password of entity",
+             "required":true,
+             "schema":{
+                "type":"string"
+             }
+          }
+       ],
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "entity": "customer"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": "No entity found with the corresponding params"
+               }
+            }
+         }
+      }
+   }
+},
+"/update-customer?id={id}":{
+   "put":{
+      "tags":[
+         "customer"
+      ],
+      "summary":"Update an entity",
+      "operationId":"updateEntity",
+      "parameters":[
+          {
+             "name":"id",
+             "in":"path",
+             "description":"id of entity",
+             "required":true,
+             "schema":{
+                "type":"string"
+             }
+          }
+       ],
+        "requestBody":{
+           "description":"Required request body",
+           "content":{
+              "application/json":{
+                 "schema":{
+                    "$ref":"#/components/schemas/customer"
+                 }
+              }
+           },
+           "required":true
+        },
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "message": "Successfully updated a customer"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": "Customer not found"
+               }
+            }
+         }
+      }
+   }
+},
+"/delete-customer?id={id}":{
+   "delete":{
+      "tags":[
+         "customer"
+      ],
+      "summary":"Delete an entity",
+      "operationId":"deleteEntity",
+      "parameters":[
+          {
+             "name":"id",
+             "in":"path",
+             "description":"id of entity",
+             "required":true,
+             "schema":{
+                "type":"string"
+             }
+          }
+       ],
+      "responses":{
+         "200":{
+            "description":"Successful operation",
+            "content":{
+               "application/json":{
+                    "message": "Succesfully deleted the customer"
+               }
+            }
+         },
+         "400":{
+            "description":"Unsuccessful operation",
+            "content": {
+               "application/json": {
+                  "message": "No customer found"
+               }
+            }
+         }
+      }
+   }
+}
+  },
+  "components":{
+     "schemas":{
+        "customer":{
+           "type":"object",
+           "properties":{
+
+"id":{
+   "type":"string",
+   "readOnly": true
+},
+
+"name":{
+   "type":"string"
+},
+
+"email":{
+   "type":"string"
+},
+
+"password":{
+   "type":"string"
+}
+           }
+        }
+     }
+  }
+}

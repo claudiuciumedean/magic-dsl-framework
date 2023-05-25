@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "MaGiC: a DSL Framework for Implementing Language Agnostic Microservice-based Web Applications"
+authors:
+- family-names: "Bucchiarone"
+  given-names: "Antonio"
+- family-names: "Ciumedean"
+  given-names: "Claudiu"
+- family-names: "Soysal"`
+  given-names: "Kemal"
+- family-names: "Dragoni"`
+  given-names: "Nicola"
+- family-names: "Pech"`
+  given-names: "Václav"
+title: "magic-dsl-framework"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2023-05-25
+url: "https://github.com/claudiuciumedean/magic-dsl-framework"

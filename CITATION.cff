@@ -7,9 +7,9 @@ authors:
   given-names: "Claudiu"
 - family-names: "Soysal"`
   given-names: "Kemal"
-- family-names: "Dragoni"`
+- family-names: "Dragoni"
   given-names: "Nicola"
-- family-names: "Pech"`
+- family-names: "Pech"
   given-names: "Václav"
 title: "magic-dsl-framework"
 version: 1.0.0
